@@ -24,8 +24,8 @@ class EncoderRNN(nn.Module):
         batch_size = input.size(1)
         embedded = self.embedding(input)
         h_0 = self.init_hidden(batch_size)
-		pdb.set_trace()
-		output, hidden = self.rnn(embedded, h_0)
+        pdb.set_trace()
+        output, hidden = self.rnn(embedded, h_0)
         return output, hidden
 
     def init_hidden(self, batch_size):
