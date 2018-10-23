@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
 import pdb
-USE_CUDA = False
+USE_CUDA = torch.cuda.is_available()
 
 class EncoderRNN(nn.Module):
     def __init__(self, input_size, hidden_size):
@@ -20,12 +20,9 @@ class EncoderRNN(nn.Module):
             dropout=self.dropout_p)
 
     def forward(self, input):
-
-        
         embedded = self.embedding(input)
         h_0 = self.initHidden()
         output, hidden = self.rnn(embedded, h_0)
-        pdb.set_trace()
         return output, hidden
 
     def initHidden(self, batch_size):
@@ -47,12 +44,8 @@ class DecoderRNN(nn.Module):
         output = self.embedding(input).view(1, 1, -1)
         output = F.relu(output) # Try other?
         output, hidden = self.lstm(output, hidden)
-        pdb.set_trace()
         output = self.softmax(self.out(output[0]))
         return output, hidden
-
-    def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size)
 
 class Seq2Seq(nn.Module):
     def __init__(self, hidden_size, input_vocab_size, output_vocab_size):
