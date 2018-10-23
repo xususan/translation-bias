@@ -20,15 +20,16 @@ class EncoderRNN(nn.Module):
             dropout=self.dropout_p)
 
     def forward(self, input):
+        batch_size = input.size(1)
         embedded = self.embedding(input)
-        h_0 = self.initHidden()
+        h_0 = self.init_hidden(batch_size)
         output, hidden = self.rnn(embedded, h_0)
         return output, hidden
 
-    def initHidden(self, batch_size):
+    def init_hidden(self, batch_size):
         hidden =  torch.zeros(self.n_layers, batch_size, self.hidden_size)
         if USE_CUDA: hidden = hidden.cuda()
-        return hidden
+        return (hidden, hidden.clone())
 
 class DecoderRNN(nn.Module):
     def __init__(self, hidden_size, output_size):
@@ -41,11 +42,15 @@ class DecoderRNN(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
 
     def forward(self, input, hidden):
-        output = self.embedding(input).view(1, 1, -1)
+        output = self.embedding(input)
         output = F.relu(output) # Try other?
-        output, hidden = self.lstm(output, hidden)
-        output = self.softmax(self.out(output[0]))
+        output, hidden = self.rnn(output, hidden)
+        output = self.out(output)
+        # output = self.softmax(self.out(output[0]))
         return output, hidden
+
+    def initHidden(self):
+        return torch.zeros(1, 1, self.hidden_size)
 
 class Seq2Seq(nn.Module):
     def __init__(self, hidden_size, input_vocab_size, output_vocab_size):
