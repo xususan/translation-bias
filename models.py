@@ -3,6 +3,7 @@ import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
 import pdb
+
 USE_CUDA = torch.cuda.is_available()
 
 class EncoderRNN(nn.Module):
