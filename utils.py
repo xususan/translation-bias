@@ -46,6 +46,7 @@ def train_batch(model, batch, criterion, optimizer):
 
     loss = criterion(new_scr, new_trg)
     loss.backward()
+    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
     optimizer.step()
     return loss.data[0]
     
