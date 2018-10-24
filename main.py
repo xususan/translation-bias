@@ -24,9 +24,10 @@ parser = argparse.ArgumentParser(description='Translation')
 parser.add_argument('--attn', type=bool, default=False, help='use attention')
 parser.add_argument('--model_path', type=str, default=None, help='load a model')
 parser.add_argument('--epochs', type=int, default=5, help='num epochs, default 5')
-parser.add_argument('--n_layers', type=int, default=1, help='num layers, default 1')
+parser.add_argument('--n_layers', type=int, default=2, help='num layers, default 2')
 parser.add_argument('--dropout', type=float, default=0.3, help='dropout, default 0.3')
 parser.add_argument('--hidden_size', type=int, default=50, help='hidden size, default 50')
+parser.add_argument('--lr', type=int, default=1e-3, help='Learning rate. Default 1e-3')
 args = parser.parse_args()
 
 # Download dataset, build vocab
@@ -44,9 +45,14 @@ train_iter, val_iter = data.BucketIterator.splits((train, val), batch_size=BATCH
 
 print("Done bucketing data")
 
-model = Seq2Seq(hidden_size=50, input_vocab_size=len(DE.vocab), output_vocab_size=len(EN.vocab), dropout_p=0.3)
+model = Seq2Seq(
+	hidden_size=50, 
+	input_vocab_size=len(DE.vocab), 
+	output_vocab_size=len(EN.vocab), 
+	n_layers=args.n_layers,
+	dropout_p=args.dropout)
 if torch.cuda.is_available(): model = model.cuda()
-optimizer = optim.Adam(model.parameters(), lr=1e-3)
+optimizer = optim.Adam(model.parameters(), lr=args.lr)
 criterion = nn.CrossEntropyLoss(ignore_index=1)
 
 
