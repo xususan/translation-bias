@@ -11,10 +11,10 @@ import pdb
 import argparse
 import utils
 
+torch.seed(1)
 BOS_WORD = '<s>'
 EOS_WORD = '</s>'
 MAX_LEN = 20
-BATCH_SIZE = 32
 
 DE = data.Field(tokenize=utils.tokenize_de)
 EN = data.Field(tokenize=utils.tokenize_en, init_token = BOS_WORD, eos_token = EOS_WORD) # only target needs BOS/EOS
@@ -28,7 +28,9 @@ parser.add_argument('--n_layers', type=int, default=2, help='num layers, default
 parser.add_argument('--dropout', type=float, default=0.3, help='dropout, default 0.3')
 parser.add_argument('--hidden_size', type=int, default=50, help='hidden size, default 50')
 parser.add_argument('--lr', type=int, default=1e-3, help='Learning rate. Default 1e-3')
+parser.add_argument('--batch_size', type=int, default=32, help='batch size. default 32')
 args = parser.parse_args()
+BATCH_SIZE = args.batch_size
 
 # Download dataset, build vocab
 train, val, test = datasets.IWSLT.splits(exts=('.de', '.en'), fields=(DE, EN), 
