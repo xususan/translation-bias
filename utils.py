@@ -46,7 +46,7 @@ def train_batch(model, batch, criterion, optimizer):
 
     loss = criterion(new_scr, new_trg)
     loss.backward()
-    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+    torch.nn.utils.clip_grad_norm(model.parameters(), 1.0)
     optimizer.step()
     return loss.data[0]
     
@@ -71,14 +71,14 @@ def validate(model, val_iter, criterion):
         # Reshape.
         new_scr = scores.view(scores.size(0) * scores.size(1), -1)
         new_trg = targets.view(new_scr.size(0))
-
+        pdb.set_trace()
         loss = criterion(new_scr, new_trg)
 
         # Count number of non-padding elements on target.
         num_words = (new_trg != 1).sum().data[0]
 
         AL.update(loss.data[0], n_obs=num_words)
-
+        pdb.set_trace()
     return exp(AL.avg)
 
 def train(train_iter, val_iter, model, criterion, optimizer, num_epochs):
