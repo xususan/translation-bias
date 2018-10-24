@@ -42,7 +42,7 @@ train_iter, val_iter = data.BucketIterator.splits((train, val), batch_size=BATCH
 
 print("Done bucketing data")
 
-model = Seq2Seq(hidden_size=50, input_vocab_size=len(DE.vocab), output_vocab_size=len(EN.vocab))
+model = Seq2Seq(hidden_size=50, input_vocab_size=len(DE.vocab), output_vocab_size=len(EN.vocab), dropout_p=0.3)
 if torch.cuda.is_available(): model = model.cuda()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 criterion = nn.CrossEntropyLoss(ignore_index=1)
