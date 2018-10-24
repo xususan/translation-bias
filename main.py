@@ -25,6 +25,7 @@ parser.add_argument('--attn', type=bool, default=False, help='use attention')
 parser.add_argument('--model_path', type=str, default=None, help='load a model')
 parser.add_argument('--epochs', type=int, default=5, help='num epochs, default 5')
 parser.add_argument('--n_layers', type=int, default=1, help='num layers, default 1')
+parser.add_argument('--dropout', type=float, default=0.3, help='dropout, default 0.3')
 args = parser.parse_args()
 
 # Download dataset, build vocab
@@ -48,4 +49,4 @@ optimizer = optim.Adam(model.parameters(), lr=1e-3)
 criterion = nn.CrossEntropyLoss(ignore_index=1)
 
 
-utils.train(train_iter, val_iter, model, nn.CrossEntropyLoss(), optimizer, args.epochs)
+utils.train(train_iter, val_iter, model, criterion, optimizer, args.epochs)
