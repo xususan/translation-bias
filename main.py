@@ -27,7 +27,7 @@ parser.add_argument('--epochs', type=int, default=5, help='num epochs, default 5
 parser.add_argument('--n_layers', type=int, default=2, help='num layers, default 2')
 parser.add_argument('--dropout', type=float, default=0.3, help='dropout, default 0.3')
 parser.add_argument('--hidden_size', type=int, default=50, help='hidden size, default 50')
-parser.add_argument('--lr', type=int, default=1e-3, help='Learning rate. Default 1e-3')
+parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate. Default 1e-3')
 args = parser.parse_args()
 
 # Download dataset, build vocab

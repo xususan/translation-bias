@@ -92,5 +92,5 @@ def train(train_iter, val_iter, model, criterion, optimizer, num_epochs):
                 print('''Epoch [{e}/{num_e}]\t Batch [{b}/{num_b}]\t Loss: {l:.3f}'''.format(e=epoch+1, num_e=num_epochs, b=i, num_b=len(train_iter), l=AL.avg))
 
         ppl = validate(model, val_iter, criterion)
-        print('''Epoch [{e}/{num_e}]\t Perplexity: {ppl:.3f}'''.format(e=epoch+1, num_e=num_epochs, ppl=ppl))
+        print('''Validating: Epoch [{e}/{num_e}]\t Perplexity: {ppl:.3f}'''.format(e=epoch+1, num_e=num_epochs, ppl=ppl))
 
