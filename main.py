@@ -11,7 +11,7 @@ import pdb
 import argparse
 import utils
 
-torch.seed(1)
+torch.manual_seed(1)
 BOS_WORD = '<s>'
 EOS_WORD = '</s>'
 MAX_LEN = 20
