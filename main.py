@@ -30,6 +30,7 @@ parser.add_argument('--hidden_size', type=int, default=50, help='hidden size, de
 parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate. Default 1e-3')
 parser.add_argument('--batch_size', type=int, default=32, help='batch size. default 32')
 parser.add_argument('--optim', type=str, default='SGD', help='Type of optimizer. Default SGD')
+parser.add_argument('--max_clip_norm', type=float, default=5, help='Max clip norm for gradient clipping, default 5')
 args = parser.parse_args()
 BATCH_SIZE = args.batch_size
 
@@ -66,4 +67,4 @@ else:
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     scheduler = None
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
-utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs)
+utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs, args)
