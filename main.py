@@ -59,8 +59,9 @@ print(args)
 if torch.cuda.is_available(): model = model.cuda()
 
 if args.optim == 'SGD':
-	optimizer = optim.SGD(model.parameters(), lr=1)
-	scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
+	optimizer = optim.SGD(model.parameters(), lr=args.lr)
+	# scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5) 
+        scheduler = None
 else:
 	optimizer = optim.Adam(model.parameters(), lr=args.lr)
         scheduler = None
