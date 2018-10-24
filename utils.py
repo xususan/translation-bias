@@ -1,4 +1,6 @@
 import spacy
+import torch
+import pdb
 from numpy import exp
 
 spacy_de = spacy.load('de')
@@ -22,13 +24,19 @@ class AverageLosses:
 
 def train_batch(model, batch, criterion, optimizer):
     model.zero_grad()
-    scores = model(batch.src, batch.trg)
+    
+    src, trg = batch.src, batch.trg
+    if torch.cuda.is_available():
+        src = src.cuda()
+        trg = trg.cuda()
+
+    scores = model(src, trg)
 
     # Scores are [len x batch_size x output_vocab_size]
     # Targets are [len x batch_size]
 
     # Remove <s> from beginning of target
-    targets = batch.trg[1:]
+    targets = trg[1:]
     # Remove </s> from end of source bc nothing to predict after that.
     scores = scores[:-1]
 
@@ -39,7 +47,7 @@ def train_batch(model, batch, criterion, optimizer):
     loss = criterion(new_scr, new_trg)
     loss.backward()
     optimizer.step()
-    return loss.data
+    return loss.data[0]
     
 def validate(model, val_iter, criterion):
     ''' Calculate perplexity on validation set.'''
@@ -48,9 +56,14 @@ def validate(model, val_iter, criterion):
     AL = AverageLosses()
 
     for i, batch in enumerate(val_iter):
-        scores = model(batch.src, batch.trg)
+        src, trg = batch.src, batch.trg
+        if torch.cuda.is_available():
+            src = src.cuda()
+            trg = trg.cuda()
+
+        scores = model(src, trg)
         # Remove <s> from beginning of target
-        targets = batch.trg[1:]
+        targets = trg[1:]
         # Remove </s> from end of source bc nothing to predict after that.
         scores = scores[:-1]
 
@@ -61,11 +74,12 @@ def validate(model, val_iter, criterion):
         loss = criterion(new_scr, new_trg)
 
         # Count number of non-padding elements on target.
-        num_words = (new_trg != 1).sum()
+        num_words = (new_trg != 1).sum().data[0]
 
-        AL.update(loss.data, n_obs=num_words)
+        AL.update(loss.data[0], n_obs=num_words)
 
-    return exp(loss.avg)
+    return exp(AL.avg)
+
 def train(train_iter, val_iter, model, criterion, optimizer, num_epochs):
     for epoch in range(num_epochs):
         model.train()

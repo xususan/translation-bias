@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.autograd import Variable
 from torch import optim
 import torch.nn.functional as F
 import pdb
@@ -24,12 +25,11 @@ class EncoderRNN(nn.Module):
         batch_size = input.size(1)
         embedded = self.embedding(input)
         h_0 = self.init_hidden(batch_size)
-        pdb.set_trace()
         output, hidden = self.rnn(embedded, h_0)
         return output, hidden
 
     def init_hidden(self, batch_size):
-        hidden =  torch.zeros(self.n_layers, batch_size, self.hidden_size)
+        hidden = Variable(torch.zeros(self.n_layers, batch_size, self.hidden_size))
         if USE_CUDA: hidden = hidden.cuda()
         return (hidden, hidden.clone())
 
@@ -62,8 +62,9 @@ class Seq2Seq(nn.Module):
 
 
     def forward(self, source, target):
-        if USE_CUDA: source = source.cuda()
-
+        if USE_CUDA: 
+            source = source.cuda()
+            target = target.cuda()
         # Encode
         output_encoder, hidden_encoder = self.encoder(source)
 
