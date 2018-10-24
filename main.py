@@ -49,21 +49,21 @@ train_iter, val_iter = data.BucketIterator.splits((train, val), batch_size=BATCH
 print("Done bucketing data")
 
 model = Seq2Seq(
-	hidden_size=args.hidden_size, 
-	input_vocab_size=len(DE.vocab), 
-	output_vocab_size=len(EN.vocab), 
-	n_layers=args.n_layers,
-	dropout_p=args.dropout)
+    hidden_size=args.hidden_size, 
+    input_vocab_size=len(DE.vocab), 
+    output_vocab_size=len(EN.vocab), 
+    n_layers=args.n_layers,
+    dropout_p=args.dropout)
 print(model)
 print(args)
 if torch.cuda.is_available(): model = model.cuda()
 
 if args.optim == 'SGD':
-	optimizer = optim.SGD(model.parameters(), lr=args.lr)
-	# scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5) 
-        scheduler = None
+    optimizer = optim.SGD(model.parameters(), lr=args.lr)
+    # scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5) 
+    scheduler = None
 else:
-	optimizer = optim.Adam(model.parameters(), lr=args.lr)
-        scheduler = None
+    optimizer = optim.Adam(model.parameters(), lr=args.lr)
+    scheduler = None
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
 utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs)
