@@ -44,8 +44,8 @@ print("Done bucketing data")
 
 model = Seq2Seq(hidden_size=50, input_vocab_size=len(DE.vocab), output_vocab_size=len(EN.vocab))
 if torch.cuda.is_available(): model = model.cuda()
-optimizer = optim.Adam(model.parameters(), betas=(0.9, 0.98), lr=1e-3)
-criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=1e-3)
+criterion = nn.CrossEntropyLoss(ignore_index=1)
 
 
 utils.train(train_iter, val_iter, model, nn.CrossEntropyLoss(), optimizer, args.epochs)
