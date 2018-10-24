@@ -50,7 +50,6 @@ class DecoderRNN(nn.Module):
 
     def forward(self, input, hidden):
         output = self.dropout(self.embedding(input))
-        output = F.relu(output) # Try other?
         output, hidden = self.rnn(output, hidden)
         output = self.out(output)
         # output = self.softmax(self.out(output[0]))
