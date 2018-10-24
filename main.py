@@ -29,6 +29,7 @@ parser.add_argument('--dropout', type=float, default=0.3, help='dropout, default
 parser.add_argument('--hidden_size', type=int, default=50, help='hidden size, default 50')
 parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate. Default 1e-3')
 parser.add_argument('--batch_size', type=int, default=32, help='batch size. default 32')
+parser.add_argument('--optim', type=str, default='SGD', help='Type of optimizer. Default SGD')
 args = parser.parse_args()
 BATCH_SIZE = args.batch_size
 
@@ -56,6 +57,11 @@ model = Seq2Seq(
 print(model)
 print(args)
 if torch.cuda.is_available(): model = model.cuda()
-optimizer = optim.Adam(model.parameters(), lr=args.lr)
+
+if args.optim == 'SGD':
+	optimizer = optim.SGD(model.parameters(), lr=1)
+	scheduler_SGD = MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
+else:
+	optimizer = optim.Adam(model.parameters(), lr=args.lr)
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
 utils.train(train_iter, val_iter, model, criterion, optimizer, args.epochs)

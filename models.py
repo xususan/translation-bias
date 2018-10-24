@@ -45,14 +45,12 @@ class DecoderRNN(nn.Module):
         self.rnn = nn.LSTM(hidden_size, hidden_size, num_layers=self.n_layers,
             dropout=self.dropout_p)
         self.out = nn.Linear(hidden_size, output_size)
-        self.softmax = nn.LogSoftmax(dim=1)
         self.dropout = nn.Dropout(self.dropout_p)
 
     def forward(self, input, hidden):
         output = self.dropout(self.embedding(input))
         output, hidden = self.rnn(output, hidden)
         output = self.out(output)
-        # output = self.softmax(self.out(output[0]))
         return output, hidden
 
 
