@@ -8,13 +8,13 @@ import pdb
 USE_CUDA = torch.cuda.is_available()
 
 class EncoderRNN(nn.Module):
-    def __init__(self, input_size, hidden_size, dropout_p):
+    def __init__(self, input_size, hidden_size, n_layers, dropout_p):
         super(EncoderRNN, self).__init__()
         self.embedding_size = hidden_size
         self.hidden_size = hidden_size
         self.dropout_p = dropout_p
         self.embedding = nn.Embedding(input_size, self.embedding_size)
-        self.n_layers = 1
+        self.n_layers = n_layers
         self.rnn = nn.LSTM(
             self.embedding_size, 
             hidden_size, 
@@ -35,11 +35,11 @@ class EncoderRNN(nn.Module):
         return (hidden, hidden.clone())
 
 class DecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size, dropout_p):
+    def __init__(self, hidden_size, output_size, n_layers, dropout_p):
         super(DecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.dropout_p = dropout_p
-        self.n_layers = 1
+        self.n_layers = n_layers
 
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.rnn = nn.LSTM(hidden_size, hidden_size, num_layers=self.n_layers,
@@ -60,8 +60,8 @@ class DecoderRNN(nn.Module):
 class Seq2Seq(nn.Module):
     def __init__(self, hidden_size, input_vocab_size, output_vocab_size, n_layers, dropout_p):
         super(Seq2Seq, self).__init__()
-        self.encoder = EncoderRNN(input_vocab_size, hidden_size, dropout_p)
-        self.decoder = DecoderRNN(hidden_size, output_vocab_size, dropout_p)
+        self.encoder = EncoderRNN(input_vocab_size, hidden_size, n_layers, dropout_p)
+        self.decoder = DecoderRNN(hidden_size, output_vocab_size, n_layers, dropout_p)
 
 
     def forward(self, source, target):
