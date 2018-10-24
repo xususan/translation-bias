@@ -39,9 +39,11 @@ class DecoderRNN(nn.Module):
         super(DecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.dropout_p = dropout_p
+        self.n_layers = 1
 
         self.embedding = nn.Embedding(output_size, hidden_size)
-        self.rnn = nn.LSTM(hidden_size, hidden_size)
+        self.rnn = nn.LSTM(hidden_size, hidden_size, num_layers=self.n_layers,
+            dropout=self.dropout_p)
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
         self.dropout = nn.Dropout(self.dropout_p)
@@ -54,11 +56,9 @@ class DecoderRNN(nn.Module):
         # output = self.softmax(self.out(output[0]))
         return output, hidden
 
-    def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size)
 
 class Seq2Seq(nn.Module):
-    def __init__(self, hidden_size, input_vocab_size, output_vocab_size, dropout_p):
+    def __init__(self, hidden_size, input_vocab_size, output_vocab_size, n_layers, dropout_p):
         super(Seq2Seq, self).__init__()
         self.encoder = EncoderRNN(input_vocab_size, hidden_size, dropout_p)
         self.decoder = DecoderRNN(hidden_size, output_vocab_size, dropout_p)
