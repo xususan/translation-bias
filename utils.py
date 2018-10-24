@@ -22,7 +22,7 @@ class AverageLosses:
         self.count += n_obs
         self.avg = self.sum_losses / self.count
 
-def train_batch(model, batch, criterion, optimizer):
+def train_batch(model, batch, criterion, optimizer, args):
     model.zero_grad()
     
     src, trg = batch.src, batch.trg
@@ -46,7 +46,7 @@ def train_batch(model, batch, criterion, optimizer):
 
     loss = criterion(new_scr, new_trg)
     loss.backward()
-    torch.nn.utils.clip_grad_norm(model.parameters(), 1.0)
+    torch.nn.utils.clip_grad_norm(model.parameters(), args.max_clip_norm)
     optimizer.step()
     return loss.data[0]
     
@@ -81,12 +81,12 @@ def validate(model, val_iter, criterion):
         pdb.set_trace()
     return exp(AL.avg)
 
-def train(train_iter, val_iter, model, criterion, optimizer, scheduler, num_epochs):
+def train(train_iter, val_iter, model, criterion, optimizer, scheduler, num_epochs, args):
     for epoch in range(num_epochs):
         model.train()
         AL = AverageLosses()
         for i, batch in enumerate(train_iter):
-            loss = train_batch(model, batch, criterion, optimizer)
+            loss = train_batch(model, batch, criterion, optimizer, args)
             AL.update(loss)
             
             if i % 1000 == 10:
