@@ -81,7 +81,7 @@ def validate(model, val_iter, criterion):
         pdb.set_trace()
     return exp(AL.avg)
 
-def train(train_iter, val_iter, model, criterion, optimizer, num_epochs):
+def train(train_iter, val_iter, model, criterion, optimizer, scheduler, num_epochs):
     for epoch in range(num_epochs):
         model.train()
         AL = AverageLosses()
@@ -94,4 +94,5 @@ def train(train_iter, val_iter, model, criterion, optimizer, num_epochs):
 
         ppl = validate(model, val_iter, criterion)
         print('''Validating: Epoch [{e}/{num_e}]\t Perplexity: {ppl:.3f}'''.format(e=epoch+1, num_e=num_epochs, ppl=ppl))
+        if scheduler: scheduler.step()
 

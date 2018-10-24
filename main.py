@@ -60,8 +60,9 @@ if torch.cuda.is_available(): model = model.cuda()
 
 if args.optim == 'SGD':
 	optimizer = optim.SGD(model.parameters(), lr=1)
-	scheduler_SGD = MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
+	scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
 else:
 	optimizer = optim.Adam(model.parameters(), lr=args.lr)
+        scheduler = None
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
-utils.train(train_iter, val_iter, model, criterion, optimizer, args.epochs)
+utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs)
