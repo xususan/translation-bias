@@ -53,6 +53,29 @@ class DecoderRNN(nn.Module):
         output = self.out(output)
         return output, hidden
 
+class Attention(nn.Module):
+    def __init__(self):
+        super(Attention, self).__init__()
+
+    def forward(self, decoder_output, decoder_hidden, encoder_output, encoder_hidden):
+        # Query is decoder state
+        # Keys are all encoder states
+
+        # Transpose to make [batch x hidden x sentence length]
+        decoder_output = decoder_output.transpose(0, 1) # [b x hidden x len]
+        encoder_output = encoder_output.transpose(0, 1)
+
+        # for each query / key pair, calculate dot product 
+        pdb.set_trace()
+        assert(decoder_output.size(1) % 16 == 0)
+
+        # [b x hidden x len] -> [b x len1 x hidden ][b x hidden x len2] -> [b x len1 x le2n]
+        attn = torch.bmm(decoder_output.transpose(1,2), encoder_output) 
+
+        # Normalize with softmax
+        attn = nn.softmax(attn, dim=2)
+        # Output
+
 
 class Seq2Seq(nn.Module):
     def __init__(self, hidden_size, input_vocab_size, output_vocab_size, n_layers, dropout_p):
@@ -70,6 +93,8 @@ class Seq2Seq(nn.Module):
 
         # Decode
         output_decoder, hidden_decoder = self.decoder(target, hidden_encoder)
+
+        # Attend
 
         # Predict
         return output_decoder
