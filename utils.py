@@ -81,6 +81,13 @@ def validate(model, val_iter, criterion):
 
 def train(train_iter, val_iter, model, criterion, optimizer, scheduler, num_epochs, args):
     for epoch in range(num_epochs):
+        if args.scheduler == 'fixed':
+            lr = scheduler.get_lr()
+        elif args.scheduler == 'none':
+            lr = args.lr
+        else:
+            lr = None
+        print('''Training: Epoch[{e}/{num_e}] \t LR = {lr}'''.format(e=epoch+1, num_e=num_epochs, lr=lr))
         model.train()
         AL = AverageLosses()
         for i, batch in enumerate(train_iter):
