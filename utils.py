@@ -71,18 +71,23 @@ def validate(model, val_iter, criterion):
         # Reshape.
         new_scr = scores.view(scores.size(0) * scores.size(1), -1)
         new_trg = targets.view(new_scr.size(0))
-        pdb.set_trace()
         loss = criterion(new_scr, new_trg)
 
         # Count number of non-padding elements on target.
         num_words = (new_trg != 1).sum().data[0]
 
         AL.update(loss.data[0], n_obs=num_words)
-        pdb.set_trace()
     return exp(AL.avg)
 
 def train(train_iter, val_iter, model, criterion, optimizer, scheduler, num_epochs, args):
     for epoch in range(num_epochs):
+        if args.scheduler == 'fixed':
+            lr = scheduler.get_lr()
+        elif args.scheduler == 'none':
+            lr = args.lr
+        else:
+            lr = None
+        print('''Training: Epoch[{e}/{num_e}] \t LR = {lr}'''.format(e=epoch+1, num_e=num_epochs, lr=lr))
         model.train()
         AL = AverageLosses()
         for i, batch in enumerate(train_iter):

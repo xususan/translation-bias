@@ -30,6 +30,7 @@ parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate. Defau
 parser.add_argument('--batch_size', type=int, default=32, help='batch size. default 32')
 parser.add_argument('--optim', type=str, default='SGD', help='Type of optimizer. Default SGD')
 parser.add_argument('--max_clip_norm', type=float, default=5, help='Max clip norm for gradient clipping, default 5')
+parser.add_argument('--scheduler',type=str, default='none', help='scheduler:fixed, plateau, none')
 args = parser.parse_args()
 BATCH_SIZE = args.batch_size
 
@@ -58,12 +59,16 @@ print(model)
 print(args)
 if torch.cuda.is_available(): model = model.cuda()
 
-if args.optim == 'SGD':
-    optimizer = optim.SGD(model.parameters(), lr=args.lr)
-    # scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5) 
-    scheduler = None
-else:
+if args.optim == 'Adam':
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
+elif args.optim == 'SGD':
+    optimizer = optim.SGD(model.parameters(), lr=args.lr)    
+
+if args.scheduler == 'none':
     scheduler = None
+elif args.scheduler == 'plateau':
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=4, factor=0.25, verbose=True, cooldown=6)
+elif scheduler == 'multistep':
+    scheduler= optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
 utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs, args)
