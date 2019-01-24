@@ -70,5 +70,6 @@ elif args.scheduler == 'plateau':
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=4, factor=0.25, verbose=True, cooldown=6)
 elif scheduler == 'multistep':
     scheduler= optim.lr_scheduler.MultiStepLR(optimizer, milestones=[8, 9, 10, 11, 12, 13, 14, 15], gamma=0.5)
+
 criterion = nn.CrossEntropyLoss(ignore_index=1, size_average=True)
 utils.train(train_iter, val_iter, model, criterion, optimizer, scheduler, args.epochs, args)
