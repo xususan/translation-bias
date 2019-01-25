@@ -2,8 +2,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-PATH_TO_TR = "../opus/Open-Subtitles.en-tr.tr"
-PATH_TO_EN = "../opus/Open-Subtitles.en-tr.en"
+PATH_TO_TR = "../opus/OpenSubtitles.en-tr.tr"
+PATH_TO_EN = "../opus/OpenSubtitles.en-tr.en"
 
 subs_en = open(PATH_TO_EN, encoding='utf-8').read().split('\n')
 subs_tr = open(PATH_TO_TR, encoding='utf-8').read().split('\n')
