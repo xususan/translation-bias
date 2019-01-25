@@ -15,7 +15,7 @@ df = pd.DataFrame(raw_data, columns=["Turkish", "English"])
 df['eng_len'] = df['English'].str.count(' ')
 df['tr_len'] = df['Turkish'].str.count(' ')
 df = df.query('tr_len < 80 & eng_len < 80')
-df = df.query('tr_len < eng_len * 1.5 & tr_len * 1.5 > eng_len')
+# df = df.query('tr_len < eng_len * 1.5 & tr_len * 1.5 > eng_len')
 
 # create train and validation set 
 train, val = train_test_split(df, test_size=0.1)
