@@ -1,5 +1,4 @@
 #import torchtext
-import csv
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
@@ -20,5 +19,5 @@ df = df.query('tr_len < eng_len * 1.5 & tr_len * 1.5 > eng_len')
 
 # create train and validation set 
 train, val = train_test_split(df, test_size=0.1)
-train.to_csv("train.csv", index=False)
-val.to_csv("val.csv", index=False)
+train.to_csv("../opus/train.csv", index=False)
+val.to_csv("../opus/val.csv", index=False)
