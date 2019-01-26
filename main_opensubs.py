@@ -15,7 +15,7 @@ if args.size == "mini":
 	VOCAB_SIZE = 20
 	train_csv, val_csv, test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
 else:
-	VOCAB_SIZE = 10000
+	VOCAB_SIZE = 50000
 	train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
 # DATA LOADING
@@ -43,7 +43,7 @@ train, val, test = TabularDataset.splits(
 
 
 print('Building vocab...')
-MIN_FREQ = 2
+MIN_FREQ = 5
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 print(EN.vocab.itos)
