@@ -10,6 +10,7 @@ import pdb
 parser = argparse.ArgumentParser(description='Data Processing')
 parser.add_argument('--size', type=str, default="full", help='Size of file (full or mini)')
 parser.add_argument('--batch', type=int, default=512, help='Batch size')
+parser.add_argument('--epochs', type=int, default=10, help='Number of epochs')
 args = parser.parse_args()
 
 # Arguments and globals
@@ -74,16 +75,18 @@ print('Iterators built.')
 print('Training model...')
 model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
-for epoch in range(10):
+for epoch in range(1, args.epochs):
+    print(f"TRAINING EPOCH {epoch} / {args.epochs}")
     model.train()
     run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(model.generator, criterion, 
                                 opt=model_opt))
     model.eval()
+    # print(f"VALIDATION EPOCH {epoch} / {args.epochs}")
     loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter), 
                       model, 
                       SimpleLossCompute(model.generator, criterion, 
                       opt=None))
-    print(f"Validation loss: {loss}")
+    print(f"Validation loss: {loss.data.item()}")
 
