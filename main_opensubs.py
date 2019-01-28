@@ -95,5 +95,5 @@ for epoch in range(1, args.epochs):
       # Export model
       output_path = "models/%s_%d.pt" %( args.out, epoch)
       torch.save(model.state_dict(), PATH)
-      print("Saved model to %s." %  {output_path})
+      print("Saved model to %s." %  output_path)
 
