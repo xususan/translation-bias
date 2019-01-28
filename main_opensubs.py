@@ -9,14 +9,19 @@ import pdb
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Data Processing')
 parser.add_argument('--size', type=str, default="full", help='Size of file (full or mini)')
+parser.add_argument('--batch', type=int, default=512, help='Batch size')
 args = parser.parse_args()
 
+# Arguments and globals
+print(f"Command line arguments: {args}")
 if args.size == "mini":
 	VOCAB_SIZE = 20
 	train_csv, val_csv, test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
 else:
 	VOCAB_SIZE = 50000
 	train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
+
+BATCH_SIZE = args.batch
 
 # DATA LOADING
 en = spacy.load('en')
@@ -46,7 +51,7 @@ print('Building vocab...')
 MIN_FREQ = 5
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-# print(EN.vocab.itos)
+print(f"TR vocab size: {len(TR.vocab)}, EN vocab size: {len(EN.vocab)}")
 print('Done building vocab')
 
 devices = range(torch.cuda.device_count())
@@ -58,7 +63,6 @@ if torch.cuda.device_count() > 0:
 	print('GPUs available:', torch.cuda.device_count())
 	model.cuda()
 	criterion.cuda()
-BATCH_SIZE = 512
 train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=torch.device('cuda', 0),
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                         batch_size_fn=batch_size_fn, train=True)
@@ -81,5 +85,5 @@ for epoch in range(10):
                       model, 
                       SimpleLossCompute(model.generator, criterion, 
                       opt=None))
-    print(loss)
+    print(f"Validation loss: {loss}")
 
