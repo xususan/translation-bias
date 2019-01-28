@@ -16,7 +16,7 @@ parser.add_argument('--out', type=str, default="save", help='Prefix for model ou
 args = parser.parse_args()
 
 # Arguments and globals
-print(f"Command line arguments: {args}")
+print("Command line arguments: {%s}" % args)
 if args.size == "mini":
 	VOCAB_SIZE = 20
 	train_csv, val_csv, test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
