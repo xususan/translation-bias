@@ -6,7 +6,7 @@ from torchtext import data
 import pdb
 class Batch:
     "Object for holding a batch of data with mask during training."
-    def __init__(self, src, trg=None, pad=0):
+    def __init__(self, src, trg=None, src_context=None, pad=0):
         self.src = src
         self.src_mask = (src != pad).unsqueeze(-2)
         if trg is not None:
@@ -15,6 +15,7 @@ class Batch:
             self.trg_mask = \
                 self.make_std_mask(self.trg, pad)
             self.ntokens = (self.trg_y != pad).data.sum()
+        self.src_context=None
     
     @staticmethod
     def make_std_mask(tgt, pad):
@@ -38,7 +39,7 @@ def run_epoch(data_iter, model, loss_compute):
         total_loss += loss
         total_tokens += batch_ntokens
         tokens += batch_ntokens
-        if i % 50 == 1:
+        if i % 1000 == 1:
             elapsed = time.time() - start
             print("Epoch Step: %d Loss: %f Tokens per Sec: %f" %
                     (i, loss / batch_ntokens, tokens / elapsed))
