@@ -90,7 +90,7 @@ for epoch in range(1, args.epochs):
                       model, 
                       SimpleLossCompute(model.generator, criterion, 
                       opt=None))
-    print("Validation loss: %f" % {loss.data.item()})
+    print("Validation loss: %f" % loss.data.item())
     if epoch % args.save == 0: 
       # Export model
       output_path = "models/%s_%d.pt" %( args.out, epoch)
