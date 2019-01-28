@@ -54,7 +54,7 @@ print('Building vocab...')
 MIN_FREQ = 5
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-print("TR vocab size: %d, EN vocab size: %d" % ({len(TR.vocab)}, {len(EN.vocab)}))
+print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
 devices = range(torch.cuda.device_count())
