@@ -13,6 +13,9 @@ parser.add_argument('--batch', type=int, default=512, help='Batch size')
 parser.add_argument('--epochs', type=int, default=10, help='Number of epochs')
 parser.add_argument('--save', type=int, default=10, help='Save model after every x intervals')
 parser.add_argument('--out', type=str, default="save", help='Prefix for model output, eg save for save_10.pt')
+parser.add_argument('--context', dest='context', action='store_true')
+parser.add_argument('--no-context', dest='context', action='store_false')
+parser.set_defaults(context=False)
 args = parser.parse_args()
 
 # Arguments and globals
@@ -31,7 +34,7 @@ en = spacy.load('en')
 def tokenize_en(sentence):
     return [tok.text for tok in en.tokenizer(sentence)]
 
-SOS, EOS, PAD = "<s>", "</s>", "<pad>"
+SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
 # Context and source / target fields for English + Turkish
 TR = Field(init_token = SOS, eos_token =EOS, lower=True)
 EN = Field(tokenize=tokenize_en, lower=True)
@@ -59,7 +62,12 @@ print('Done building vocab')
 
 devices = range(torch.cuda.device_count())
 pad_idx = EN.vocab.stoi[PAD]
-model = make_model(len(TR.vocab), len(EN.vocab), N=6)
+
+if args.context:
+  model = make_context_model(len(TR.vocab), len(EN.vocab), N=6)
+else:
+  model = make_model(len(TR.vocab), len(EN.vocab), N=6)
+
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
 if torch.cuda.device_count() > 0:

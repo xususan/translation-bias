@@ -67,7 +67,6 @@ class Attention(nn.Module):
         encoder_output = encoder_output.transpose(0, 1)
 
         # for each query / key pair, calculate dot product 
-        pdb.set_trace()
         assert(decoder_output.size(1) % 16 == 0)
 
         # [b x hidden x len] -> [b x outputlen x hidden ][b x hidden x inputlen] -> [b x outputlen x inputlen]

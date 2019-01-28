@@ -54,6 +54,56 @@ class Encoder(nn.Module):
             x = layer(x, mask)
         return self.norm(x)
 
+class CombinationLayer(nn.Module):
+    def __init__(self, size, self_attn, feed_forward, dropout):
+        super(CombinationLayer, self).__init__()
+        self.self_attn = self_attn
+        self.feed_forward = feed_forward
+        self.sublayer = clones(SublayerConnection(size, dropout), 3)
+        self.size = size
+        self.w = nn.Linear(2 * self.size, 1)
+
+    def forward(self, x, context, mask):
+        "Follow Figure 1 (left) for connections."
+        x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, mask))
+        context = self.sublayer[1](context, lambda c: c, c, x, mask)
+
+        # Append context and X together
+        pdb.set_trace()
+        x = torch.cat([x, context], dim=0)
+        g = torch.nn.Sigmoid(self.w(x))
+
+        # Gated sum
+        gated_sum = g * x + (1 - g) * context
+        return self.sublayer[2](gated_sum, self.feed_forward)
+
+
+class EncoderWithContext(nn.Module):
+    def __init__(self, layer, N):
+        super(EncoderWithContext, self).__init__()
+        # N - 1 "regular" layers. Share embeddings
+        self.layers = clones(layer, N - 1)
+        self.norm = nn.LayerNorm(layer.size, eps=1e-6)
+        self.final_context_layer = copy.deepcopy(layer)
+        self.combination_layer = CombinationLayer(
+            layer.size, copy.deepcopy(layer.self_attn), 
+            copy.deepcopy(layer.feed_foward), layer.dropout)
+
+        
+    def forward(self, x, context, mask):
+        "Pass the input (and mask) through each layer in turn."
+        for layer in self.layers:
+            x = layer(x, mask)
+
+        for layer in self.layers:
+            context = layer(context, mask) 
+
+        context = self.final_context_layer(context, mask)
+
+        return self.norm(x)
+
+
+
 class SublayerConnection(nn.Module):
     """
     A residual connection followed by a layer norm.
@@ -235,6 +285,28 @@ def make_model(src_vocab, tgt_vocab, N=6,
     position = PositionalEncoding(d_model, dropout)
     model = EncoderDecoder(
         Encoder(EncoderLayer(d_model, c(attn), c(ff), dropout), N),
+        Decoder(DecoderLayer(d_model, c(attn), c(attn), 
+                             c(ff), dropout), N),
+        nn.Sequential(Embeddings(d_model, src_vocab), c(position)),
+        nn.Sequential(Embeddings(d_model, tgt_vocab), c(position)),
+        Generator(d_model, tgt_vocab))
+    
+    # This was important from their code. 
+    # Initialize parameters with Glorot / fan_avg.
+    for p in model.parameters():
+        if p.dim() > 1:
+            nn.init.xavier_uniform_(p)
+    return model
+
+def make_context_model(src_vocab, tgt_vocab, N=6, 
+               d_model=512, d_ff=2048, h=8, dropout=0.1):
+    "Helper: Construct a model from hyperparameters."
+    c = copy.deepcopy
+    attn = MultiHeadedAttention(h, d_model)
+    ff = PositionwiseFeedForward(d_model, d_ff, dropout)
+    position = PositionalEncoding(d_model, dropout)
+    model = EncoderDecoder(
+        EncoderWithContext(EncoderLayer(d_model, c(attn), c(ff), dropout), N),
         Decoder(DecoderLayer(d_model, c(attn), c(attn), 
                              c(ff), dropout), N),
         nn.Sequential(Embeddings(d_model, src_vocab), c(position)),
