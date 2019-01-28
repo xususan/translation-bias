@@ -54,7 +54,7 @@ print('Building vocab...')
 MIN_FREQ = 5
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-print(f"TR vocab size: {len(TR.vocab)}, EN vocab size: {len(EN.vocab)}")
+print("TR vocab size: %d, EN vocab size: %d" % ({len(TR.vocab)}, {len(EN.vocab)}))
 print('Done building vocab')
 
 devices = range(torch.cuda.device_count())
@@ -79,7 +79,7 @@ model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 for epoch in range(1, args.epochs):
-    print(f"Epoch {epoch} / {args.epochs}")
+    print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
     run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
@@ -90,10 +90,10 @@ for epoch in range(1, args.epochs):
                       model, 
                       SimpleLossCompute(model.generator, criterion, 
                       opt=None))
-    print(f"Validation loss: {loss.data.item()}")
+    print("Validation loss: %f" % {loss.data.item()})
     if epoch % args.save == 0: 
       # Export model
-      output_path = f"models/{args.out}_{epoch}.pt"
+      output_path = "models/%s_%d.pt" %( args.out, epoch)
       torch.save(model.state_dict(), PATH)
-      print(f"Saved model to {output_path}.")
+      print("Saved model to %s." %  {output_path})
 
