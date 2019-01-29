@@ -101,7 +101,7 @@ for epoch in range(1, args.epochs):
     print("Validation loss: %f" % loss.data.item())
     if epoch % args.save == 0: 
       # Export model
-      output_path = "models/%s_%d.pt" %( args.out, epoch)
+      output_path = "models/%s_%d.pt" % (args.out, epoch)
       torch.save(model.state_dict(), output_path)
       print("Saved model to %s." %  output_path)
 

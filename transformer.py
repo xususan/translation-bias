@@ -87,8 +87,7 @@ class EncoderWithContext(nn.Module):
         self.final_context_layer = copy.deepcopy(layer)
         self.combination_layer = CombinationLayer(
             layer.size, copy.deepcopy(layer.self_attn), 
-            copy.deepcopy(layer.feed_foward), layer.dropout)
-
+            copy.deepcopy(layer.feed_forward), layer.dropout)
         
     def forward(self, x, context, mask):
         "Pass the input (and mask) through each layer in turn."
@@ -98,9 +97,8 @@ class EncoderWithContext(nn.Module):
         for layer in self.layers:
             context = layer(context, mask) 
 
-        context = self.final_context_layer(context, mask)
-
-        return self.norm(x)
+        out = self.final_context_layer(x, context, mask)
+        return self.norm(out)
 
 
 
@@ -126,6 +124,7 @@ class EncoderLayer(nn.Module):
         self.feed_forward = feed_forward
         self.sublayer = clones(SublayerConnection(size, dropout), 2)
         self.size = size
+        self.dropout = dropout
 
     def forward(self, x, mask):
         "Follow Figure 1 (left) for connections."

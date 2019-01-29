@@ -130,6 +130,7 @@ class MyIterator(data.Iterator):
                 self.batches.append(sorted(b, key=self.sort_key))
 
 def rebatch(pad_idx, batch):
+    pdb.set_trace()
     "Fix order in torchtext to match ours"
     src, trg = batch.src.transpose(0, 1), batch.trg.transpose(0, 1)
     src_context = batch.src_context.transpose(0,1)
