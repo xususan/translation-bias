@@ -28,6 +28,7 @@ class Batch:
 def run_epoch(data_iter, model, loss_compute):
     "Standard Training and Logging Function"
     start = time.time()
+    start_of_epoch = time.time()
     total_tokens = 0.0
     total_loss = 0
     tokens = 0.0
@@ -45,6 +46,8 @@ def run_epoch(data_iter, model, loss_compute):
                     (i, loss / batch_ntokens, tokens / elapsed))
             start = time.time()
             tokens = 0.0
+    epoch_time = time.time() - start_of_epoch
+    print("Training elapsed time for epoch: %f" % epoch_time)
     return total_loss / total_tokens
 
 global max_src_in_batch, max_tgt_in_batch
