@@ -27,7 +27,7 @@ class EncoderDecoder(nn.Module):
                             tgt, tgt_mask)
     
     def encode(self, batch):
-        if self.encoder.use_context = False:
+        if self.encoder.use_context == False:
             return self.encoder(
                 self.src_embed(batch.src), batch.src_mask, self.src_embed(batch.src_context), batch.src_context_mask)
         else:
