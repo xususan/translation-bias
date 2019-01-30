@@ -27,7 +27,7 @@ class EncoderDecoder(nn.Module):
                             tgt, tgt_mask)
     
     def encode(self, batch):
-        if batch.src_context is not None and batch.src_context_mask is not None:
+        if self.encoder.use_context = False:
             return self.encoder(
                 self.src_embed(batch.src), batch.src_mask, self.src_embed(batch.src_context), batch.src_context_mask)
         else:
@@ -55,6 +55,7 @@ class Encoder(nn.Module):
         super(Encoder, self).__init__()
         self.layers = clones(layer, N)
         self.norm = nn.LayerNorm(layer.size, eps=1e-6)
+        self.use_context = False
         
     def forward(self, x, mask):
         "Pass the input (and mask) through each layer in turn."
@@ -95,6 +96,7 @@ class EncoderWithContext(nn.Module):
         self.combination_layer = CombinationLayer(
             layer.size, copy.deepcopy(layer.self_attn), 
             copy.deepcopy(layer.feed_forward), layer.dropout)
+        self.use_context= True
         
     def forward(self, x, mask, src_context, context_mask):
         "Pass the input (and mask) through each layer in turn."
