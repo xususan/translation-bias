@@ -21,11 +21,11 @@ args = parser.parse_args()
 # Arguments and globals
 print("Command line arguments: {%s}" % args)
 if args.size == "mini":
-	VOCAB_SIZE = 20
-	train_csv, val_csv, test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
+  VOCAB_SIZE = 20
+  train_csv, val_csv, test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
 else:
-	VOCAB_SIZE = 50000
-	train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
+  VOCAB_SIZE = 50000
+  train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
 BATCH_SIZE = args.batch
 
@@ -41,16 +41,16 @@ EN = Field(tokenize=tokenize_en, lower=True)
 
 # Must be in order
 data_fields = [
-	('src_context', TR), ('src', TR),
-	('trg_context', EN), ('trg', EN)]
+  ('src_context', TR), ('src', TR),
+  ('trg_context', EN), ('trg', EN)]
 
 train, val, test = TabularDataset.splits(
-	path='data/', 
-	train=train_csv,
-	validation=val_csv,
-	test=test_csv,
-	format='tsv', 
-	fields=data_fields)
+  path='data/', 
+  train=train_csv,
+  validation=val_csv,
+  test=test_csv,
+  format='tsv', 
+  fields=data_fields)
 
 
 print('Building vocab...')
@@ -60,7 +60,6 @@ EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
-devices = range(torch.cuda.device_count())
 pad_idx = EN.vocab.stoi[PAD]
 
 if args.context:
@@ -71,13 +70,17 @@ else:
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
 if torch.cuda.device_count() > 0:
-	print('GPUs available:', torch.cuda.device_count())
-	model.cuda()
-	criterion.cuda()
-train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=torch.device('cuda', 0),
+  print('GPUs available:', torch.cuda.device_count())
+  model.cuda()
+  criterion.cuda()
+  device = torch.device('cuda', 0)
+else:
+  device = torch.device('cpu')
+
+train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                         batch_size_fn=batch_size_fn, train=True)
-valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=torch.device('cuda', 0),
+valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                         batch_size_fn=batch_size_fn, train=False)
 print('Iterators built.')

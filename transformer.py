@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import math, time, copy
+import pdb
 
 class EncoderDecoder(nn.Module):
     """
@@ -17,13 +18,20 @@ class EncoderDecoder(nn.Module):
         self.tgt_embed = tgt_embed
         self.generator = generator
         
-    def forward(self, src, tgt, src_mask, tgt_mask):
+    def forward(self, batch):
         "Take in and process masked src and target sequences."
-        return self.decode(self.encode(src, src_mask), src_mask,
+        src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+        src_context, src_context_mask = batch.src_context, batch.src_context_mask
+        encoder_output = self.encode(batch)
+        return self.decode(encoder_output, src_mask,
                             tgt, tgt_mask)
     
-    def encode(self, src, src_mask):
-        return self.encoder(self.src_embed(src), src_mask)
+    def encode(self, batch):
+        if batch.src_context is not None and batch.src_context_mask is not None:
+            return self.encoder(
+                self.src_embed(batch.src), batch.src_mask, self.src_embed(batch.src_context), batch.src_context_mask)
+        else:
+            return self.encoder(self.src_embed(batch.src), batch.src_mask)
     
     def decode(self, memory, src_mask, tgt, tgt_mask):
         return self.decoder(self.tgt_embed(tgt), memory, src_mask, tgt_mask)
@@ -63,13 +71,12 @@ class CombinationLayer(nn.Module):
         self.size = size
         self.w = nn.Linear(2 * self.size, 1)
 
-    def forward(self, x, context, mask):
+    def forward(self, x, src_mask, context, context_mask):
         "Follow Figure 1 (left) for connections."
-        x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, mask))
-        context = self.sublayer[1](context, lambda c: c, c, x, mask)
+        x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, src_mask))
+        context = self.sublayer[1](context, lambda c: self.self_attn(c, c, x, context_mask))
 
         # Append context and X together
-        pdb.set_trace()
         x = torch.cat([x, context], dim=0)
         g = torch.nn.Sigmoid(self.w(x))
 
@@ -89,15 +96,16 @@ class EncoderWithContext(nn.Module):
             layer.size, copy.deepcopy(layer.self_attn), 
             copy.deepcopy(layer.feed_forward), layer.dropout)
         
-    def forward(self, x, context, mask):
+    def forward(self, x, mask, src_context, context_mask):
         "Pass the input (and mask) through each layer in turn."
         for layer in self.layers:
             x = layer(x, mask)
 
         for layer in self.layers:
-            context = layer(context, mask) 
+            src_context = layer(src_context, context_mask) 
 
-        out = self.final_context_layer(x, context, mask)
+        src_context = self.final_context_layer(src_context, context_mask)
+        out = self.combination_layer(x, mask, src_context, context_mask)
         return self.norm(out)
 
 

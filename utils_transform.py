@@ -15,7 +15,8 @@ class Batch:
             self.trg_mask = \
                 self.make_std_mask(self.trg, pad)
             self.ntokens = (self.trg_y != pad).data.sum()
-        self.src_context=None
+        self.src_context = src_context
+        self.src_context_mask = (src_context != pad).unsqueeze(-2)
     
     @staticmethod
     def make_std_mask(tgt, pad):
@@ -33,8 +34,7 @@ def run_epoch(data_iter, model, loss_compute):
     total_loss = 0
     tokens = 0.0
     for i, batch in enumerate(data_iter):
-        out = model.forward(batch.src, batch.trg, 
-                            batch.src_mask, batch.trg_mask)
+        out = model.forward(batch)
         batch_ntokens = batch.ntokens.float()
         loss = loss_compute(out, batch.trg_y, batch_ntokens)
         total_loss += loss
@@ -130,7 +130,6 @@ class MyIterator(data.Iterator):
                 self.batches.append(sorted(b, key=self.sort_key))
 
 def rebatch(pad_idx, batch):
-    pdb.set_trace()
     "Fix order in torchtext to match ours"
     src, trg = batch.src.transpose(0, 1), batch.trg.transpose(0, 1)
     src_context = batch.src_context.transpose(0,1)
