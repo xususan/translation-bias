@@ -5,6 +5,7 @@ import argparse
 from utils_transform import *
 from transformer import *
 import pdb
+import time
 
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Data Processing')
@@ -36,8 +37,8 @@ def tokenize_en(sentence):
 
 SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
 # Context and source / target fields for English + Turkish
-TR = Field(init_token = SOS, eos_token =EOS, lower=True)
-EN = Field(tokenize=tokenize_en, lower=True)
+TR = Field(init_token = SOS, eos_token =EOS, lower=True, pad_token=PAD)
+EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD)
 
 # Must be in order
 data_fields = [
@@ -77,11 +78,12 @@ if torch.cuda.device_count() > 0:
 else:
   device = torch.device('cpu')
 
+# added src context sorting
 train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
-                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
+                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
                         batch_size_fn=batch_size_fn, train=True)
 valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
-                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
+                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
                         batch_size_fn=batch_size_fn, train=False)
 print('Iterators built.')
 
@@ -89,13 +91,16 @@ print('Training model...')
 model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
-for epoch in range(1, args.epochs):
+for epoch in range(1, args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
-    run_epoch((rebatch(pad_idx, b) for b in train_iter), 
+    starting_time = time.time()
+    training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(model.generator, criterion, 
                                 opt=model_opt))
+    epoch_time = time.time() - start_of_epoch
+    print("Training loss: %f, elapsed time: %f" % (training_loss.data.item(), epoch_time))
     model.eval()
     loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter), 
                       model, 
