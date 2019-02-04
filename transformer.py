@@ -29,7 +29,8 @@ class EncoderDecoder(nn.Module):
     def encode(self, batch):
         if self.encoder.use_context:
             return self.encoder(
-                self.src_embed(batch.src), batch.src_mask, self.src_embed(batch.src_context), batch.src_context_mask)
+                self.src_embed(batch.src), batch.src_mask, 
+                self.src_embed(batch.src_context), batch.src_context_mask)
         else:
             return self.encoder(self.src_embed(batch.src), batch.src_mask)
     
@@ -67,6 +68,7 @@ class CombinationLayer(nn.Module):
     def __init__(self, size, self_attn, feed_forward, dropout):
         super(CombinationLayer, self).__init__()
         self.self_attn = self_attn
+        self.context_attn = copy.deepcopy(self_attn)
         self.feed_forward = feed_forward
         self.sublayer = clones(SublayerConnection(size, dropout), 3)
         self.size = size
@@ -75,11 +77,11 @@ class CombinationLayer(nn.Module):
     def forward(self, x, src_mask, context, context_mask):
         "Follow Figure 1 (left) for connections."
         x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, src_mask))
-        context = self.sublayer[1](context, lambda c: self.self_attn(c, c, x, context_mask))
+        context = self.sublayer[1](x, lambda x: self.context_attn(x, context, context, context_mask))
 
         # Append context and X together
-        x = torch.cat([x, context], dim=0)
-        g = torch.nn.Sigmoid(self.w(x))
+        x_and_context = torch.cat([x, context], dim=2) # [batch x len x 2*size]
+        g = self.w(x_and_context).sigmoid()
 
         # Gated sum
         gated_sum = g * x + (1 - g) * context
@@ -211,7 +213,6 @@ class MultiHeadedAttention(nn.Module):
         query, key, value = \
             [l(x).view(nbatches, -1, self.h, self.d_k).transpose(1, 2)
              for l, x in zip(self.linears, (query, key, value))]
-        
         # 2) Apply attention on all the projected vectors in batch. 
         x, self.attn = attention(query, key, value, mask=mask, 
                                  dropout=self.dropout)
