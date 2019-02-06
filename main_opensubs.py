@@ -94,7 +94,7 @@ model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
 for epoch in range(1, args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
-    starting_time = time.time()
+    start_of_epoch= time.time()
     training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(model.generator, criterion, 
