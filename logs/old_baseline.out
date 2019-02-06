@@ -1,4 +1,4 @@
-Command line arguments: {Namespace(batch=512, context=False, epochs=50, out='save', save=5, size='full')}
+Command line arguments: {Namespace(batch=512, context=False, epochs=50, out='0201_baselineolddata', save=5, size='full')}
 Building vocab...
 TR vocab size: 50004, EN vocab size: 50002
 Done building vocab
