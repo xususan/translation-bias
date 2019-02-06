@@ -14,8 +14,9 @@ parser = argparse.ArgumentParser(description='Data Processing')
 parser.add_argument('--size', type=str, default="full", help='Size of file (full or mini)')
 args = parser.parse_args()
 
-np.random.seed(1)
-random.seed(1)
+seed = 1
+np.random.seed(seed)
+random.seed(seed)
 
 print(f"Processing {args.size} size data...")
 TR_DIR = "data/tr/"
@@ -48,21 +49,6 @@ sizes = {
 def get_text(el):
     text = el.text.strip() if el.text.strip() != "" else el[0].tail.strip()
     return text
-
-# Divide document IDs.
-tree = ET.parse(xml_path)
-root = tree.getroot()
-
-# Split list of documents
-doc_list = [link_group for link_group in root]
-np.random.shuffle(doc_list)
-num_docs = len(doc_list)
-
-train, validate, test = np.split(doc_list, [int(.6*num_docs), int(.8*num_docs)])
-split = {
-    'val': validate,
-    'test': test,
-    'train': train}
 
 def process_links(link_groups, size):
     src_list, trg_list, src_context_list, trg_context_list = [], [], [], []
@@ -107,10 +93,6 @@ def process_links(link_groups, size):
                 if trg_context is None or len(trg_context_text) == 0 or src_context is None or len(src_context_text) == 0:
                     continue
 
-                # Check for a timestamp.
-                if len(trg_context) == 0 or len(src_context) == 0:
-                    continue
-
                 # Check that previous sentence is within the last 7 seconds
                 current_time = trg_sentence[0].get('value')
                 previous_time = trg_context[0].get('value')
@@ -143,26 +125,46 @@ def process_df(df):
 
     # Lowercase
     df = df.applymap(str.lower)
-
-    # Remove very long sentences
-    # df['eng_len'] = df['en'].str.count(' ')
-    # df['tr_len'] = df['tr'].str.count(' ')
-    # df = df.query('tr_len < d80 & eng_len < 80')
-
     return df
 
-for split_name, link_groups in split.items():
-    size = sizes[split_name]
-    src_list, trg_list, src_context_list, trg_context_list = process_links(link_groups, size)
-    raw_data = {'en' : src_list, 'tr': trg_list, 'en_context': src_context_list, 'tr_context': trg_context_list}
-    df = pd.DataFrame(raw_data)
-    df = df.reindex(columns = ["tr_context", "tr", "en_context", "en"])
-    df = process_df(df)
-    file_path = out_paths[split_name]
-    df.to_csv(file_path, index=False, sep='\t')
-    print("Wrote to %s" % (file_path))
+# Divide document IDs.
+def main():
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
 
-    
+    # Split list of documents
+    doc_list = [link_group for link_group in root]
+    np.random.shuffle(doc_list)
+    num_docs = len(doc_list)
+
+    train, validate, test = np.split(doc_list, [int(.6*num_docs), int(.8*num_docs)])
+    split = {
+        'val': validate,
+        'test': test,
+        'train': train}
+
+    for split_name, link_groups in split.items():
+        size = sizes[split_name]
+        src_list, trg_list, src_context_list, trg_context_list = process_links(link_groups, size)
+        raw_data = {'en' : src_list, 'tr': trg_list, 'en_context': src_context_list, 'tr_context': trg_context_list}
+        df = pd.DataFrame(raw_data)
+        df = df.reindex(columns = ["tr_context", "tr", "en_context", "en"])
+        df = process_df(df)
+        file_path = out_paths[split_name]
+        df.to_csv(file_path, index=False, sep='\t')
+        print("Wrote to %s" % (file_path))
+
+def subsample_csv(in_path, out_path, n):
+    print("Reading from %s..." % (in_path))
+    df = pd.read_csv(in_path, sep='\t')
+    pdb.set_trace()
+    sampled = df.sample(n, random_state = seed)
+    df.to_csv(out_path, index=False, sep='\t')
+    print("Wrote to %s..." % (out_path))
+
+subsample_csv("data/train_2m.csv", "data/train_200k.csv", 200000)
+
+#main()    
 
 
 

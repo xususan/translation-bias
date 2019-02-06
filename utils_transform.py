@@ -128,6 +128,10 @@ class MyIterator(data.Iterator):
 
 def rebatch(pad_idx, batch):
     "Fix order in torchtext to match ours"
+    # Originally, src is [src_len x batch_size]
     src, trg = batch.src.transpose(0, 1), batch.trg.transpose(0, 1)
     src_context = batch.src_context.transpose(0,1)
     return Batch(src, trg, src_context, pad_idx)
+
+def tokenize_en(sentence):
+    return [tok.text for tok in en.tokenizer(sentence)]
