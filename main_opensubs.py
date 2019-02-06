@@ -32,6 +32,7 @@ else:
   VOCAB_SIZE = 32000
   train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
+print("Train: %s, Val: %s, test: %s" % (train_csv, val_csv, test_csv))
 BATCH_SIZE = args.batch
 
 # DATA LOADING
