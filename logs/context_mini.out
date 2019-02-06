@@ -1,0 +1,60 @@
+Command line arguments: {Namespace(batch=512, context=True, epochs=10, out='save', save=10, size='mini')}
+Building vocab...
+TR vocab size: 24, EN vocab size: 22
+Done building vocab
+Iterators built.
+Training model...
+Epoch 1 / 10
+Epoch Step: 1 Loss: 2.649359 Tokens per Sec: 57.313232
+Training elapsed time for epoch: 118.869204
+Epoch Step: 1 Loss: 1.638286 Tokens per Sec: 57.073868
+Training elapsed time for epoch: 8.893451
+Validation loss: 1.698908
+Epoch 2 / 10
+Epoch Step: 1 Loss: 2.042096 Tokens per Sec: 38.556965
+Training elapsed time for epoch: 106.631938
+Epoch Step: 1 Loss: 1.492928 Tokens per Sec: 52.474731
+Training elapsed time for epoch: 9.950885
+Validation loss: 1.518497
+Epoch 3 / 10
+Epoch Step: 1 Loss: 1.489825 Tokens per Sec: 20.942341
+Training elapsed time for epoch: 122.415826
+Epoch Step: 1 Loss: 1.369103 Tokens per Sec: 49.912319
+Training elapsed time for epoch: 9.405134
+Validation loss: 1.384900
+Epoch 4 / 10
+Epoch Step: 1 Loss: 1.225660 Tokens per Sec: 25.564814
+Training elapsed time for epoch: 103.417993
+Epoch Step: 1 Loss: 1.281969 Tokens per Sec: 60.331318
+Training elapsed time for epoch: 8.860380
+Validation loss: 1.326640
+Epoch 5 / 10
+Epoch Step: 1 Loss: 1.299392 Tokens per Sec: 61.454090
+Training elapsed time for epoch: 111.030793
+Epoch Step: 1 Loss: 1.339676 Tokens per Sec: 60.623703
+Training elapsed time for epoch: 8.641680
+Validation loss: 1.359503
+Epoch 6 / 10
+Epoch Step: 1 Loss: 1.259689 Tokens per Sec: 43.072296
+Training elapsed time for epoch: 105.005305
+Epoch Step: 1 Loss: 1.297604 Tokens per Sec: 60.264748
+Training elapsed time for epoch: 8.389978
+Validation loss: 1.325393
+Epoch 7 / 10
+Epoch Step: 1 Loss: 1.160689 Tokens per Sec: 67.664909
+Training elapsed time for epoch: 100.006583
+Epoch Step: 1 Loss: 1.252192 Tokens per Sec: 60.474102
+Training elapsed time for epoch: 8.705910
+Validation loss: 1.291414
+Epoch 8 / 10
+Epoch Step: 1 Loss: 1.358275 Tokens per Sec: 67.928726
+Training elapsed time for epoch: 100.661360
+Epoch Step: 1 Loss: 1.425554 Tokens per Sec: 64.997810
+Training elapsed time for epoch: 8.199689
+Validation loss: 1.428460
+Epoch 9 / 10
+Epoch Step: 1 Loss: 1.252074 Tokens per Sec: 57.620106
+Training elapsed time for epoch: 103.629110
+Epoch Step: 1 Loss: 1.218455 Tokens per Sec: 66.515594
+Training elapsed time for epoch: 8.002215
+Validation loss: 1.290536
