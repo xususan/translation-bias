@@ -59,9 +59,7 @@ train, val, test = TabularDataset.splits(
   fields=data_fields)
 
 now = datetime.datetime.now()
-pad_date = lambda num:  '0' * (2 - len(str(num))) + str(num)
 month, day = pad_date(now.month), pad_date(now.day)
-
 
 print('Building vocab...')
 MIN_FREQ = 5

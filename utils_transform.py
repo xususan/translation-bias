@@ -133,5 +133,4 @@ def rebatch(pad_idx, batch):
     src_context = batch.src_context.transpose(0,1)
     return Batch(src, trg, src_context, pad_idx)
 
-def tokenize_en(sentence):
-    return [tok.text for tok in en.tokenizer(sentence)]
+pad_date = lambda num: '0' * (2 - len(str(num))) + str(num)
