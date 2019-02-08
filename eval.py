@@ -27,7 +27,6 @@ def log_likelihood(model, batch):
         trg_index = batch.trg_y[:, i].item()
         prob_of_trg = probs[:, trg_index].item()
         total_prob += prob_of_trg
-    print(total_prob)
     return total_prob
 
 def load(path):
@@ -64,5 +63,4 @@ pro_stereotype = TabularDataset.splits(
   fields=data_fields)
 
 
-
-log_likelihood(model, fake_batch)
+print(log_likelihood(model, fake_batch))
