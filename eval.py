@@ -5,15 +5,30 @@ from transformer import *
 from torchnlp.metrics import get_moses_multi_bleu
 import spacy
 import pdb
+import argparse
 
-VOCAB_SIZE = 10000
+# Set up parser for arguments
+parser = argparse.ArgumentParser(description='Evaluating performance of a model')
+parser.add_argument('--vocab', type=int, default=10000, help='Vocab size. MUST MATCH')
+parser.add_argument('--batch', type=int, default=512, help='Batch size')
+parser.add_argument('--path', type=str, default="save", help='model path within models/ directory')
+parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
+parser.set_defaults(context=False)
+args = parser.parse_args()
+
+VOCAB_SIZE = args.vocab
+BATCH_SIZE = args.batch
 train_path = "train_200k.csv" # TRAIN PATH MUST MATCH ORIGINAL
+SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
 
-hypotheses = ["The brown fox jumps over the dog 笑"]
-references = ["The quick brown fox jumps over the lazy dog 笑"]
+if torch.cuda.device_count() > 0:
+  print('GPUs available:', torch.cuda.device_count())
+  model.cuda()
+  criterion.cuda()
+  device = torch.device('cuda', 0)
+else:
+  device = torch.device('cpu')
 
-# Compute BLEU score with the official BLEU perl script
-# print(get_moses_multi_bleu(hypotheses, references, lowercase=True))  # RETURNS: 47.9
 
 def rebatch_for_eval(pad_idx, batch):
   """Returns two batches: one where batch.trg, batch.trg_y match the correct
@@ -64,7 +79,6 @@ def greedy_decode(model, max_len, start_symbol):
         next_word = next_word.data[0]
         ys = torch.cat([ys, 
                         torch.ones(1, 1).type_as(src.data).fill_(next_word)], dim=1)
-    print(total_prob)
     return ys
 
 def beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k=5):
@@ -91,7 +105,24 @@ def beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k=5):
       hypotheses = sorted(candidates_at_length, key = lambda x: x[1], reverse=True)[:k]
     return hypotheses[0]
 
-def eval(pad_idx, eval_iter, model):
+lambda str_of_tokens: [EN.vocab.itos[i] for i in tokenized]
+
+def eval_bleu(pad_idx, eval_iter, model):
+  bleus = []
+  for b in eval_iter:
+    b = rebatch(pad_idx, b)
+    for i in range(b.src.size(0)): # batch_size
+      src, src_mask = b.src[i], b.src_mask[i]
+      hypothesis = beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k)[1:] # cut off SOS
+      targets = b.trg_y # doesn't have SOS
+      hyp_str = str_of_tokens(hypothesis).join(" ")
+      trg_str = str_of_tokens(targets).join(" ")
+      pdb.set_trace()
+      bleu = get_moses_multi_bleu([hyp_str], [trg_str])
+      bleus.append(bleu)
+  return sum(bleus) / len(bleus)
+
+def eval_accuracy(pad_idx, eval_iter, model):
   n_correct = 0.0
   n_total = 0.0
   for b in eval_iter:
@@ -100,16 +131,32 @@ def eval(pad_idx, eval_iter, model):
       log_likelihood(model, batch_correct), 
       log_likelihood(model, batch_incorrect)], dim=1) # n x 2
     correct = probs[:, 0] > probs[:, 1] # should assign higher probability to the left
-    n_correct += torch.sum(correct)
+    n_correct += torch.sum(correct).item()
     n_total += correct.size(0)
   print("Correct: %d / %d = %f" % (n_correct, n_total, (n_correct / n_total)))
   return
 
+def eval_discriminative(pad_idx, path_to_test_set, model):
+  full_path = "data/%s" % (path_to_test_set)
+  print('Evaluating discriminative dataset: %s ' % (full_path))
+  test = TabularDataset(
+    full_path,
+    format='tsv', 
+    fields=data_fields)
+
+  test_iter = Iterator(
+    pro_stereotype, batch_size=100, sort_key=lambda x: 1, repeat=False, train=False)
+
+  eval_discrim(pad_idx, test_iter, model)
+
+
+
+print('loading spacy')
 en = spacy.load('en')
+print('finished')
 def tokenize_en(sentence):
     return [tok.text for tok in en.tokenizer(sentence)]
 
-SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
 # Context and source / target fields for English + Turkish
 TR = Field(init_token = SOS, eos_token = EOS, lower = True, pad_token=PAD)
 EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD)
@@ -120,19 +167,22 @@ data_fields = [
   ('src_context', TR), ('src', TR),
   ('trg_context', EN), ('trg_correct', EN), ('trg_incorrect', EN)]
 
-train = TabularDataset('data/' + train_path, format='tsv',fields=
-  [('src_context', TR), ('src', TR),
+print('reading in tabular dataset')
+train, val, test = TabularDataset.splits(
+  path='data/', 
+  train=train_path,
+  validation="val_10k.csv",
+  test="test_10k.csv",
+  format='tsv', 
+  fields=[('src_context', TR), ('src', TR),
   ('trg_context', EN), ('trg', EN)])
+print('finished')
 
-pro_stereotype = TabularDataset(
-  "data/pro_stereotype.tsv",
-  format='tsv', 
-  fields=data_fields)
-
-anti_stereotype = TabularDataset(
-  "data/anti_stereotype.tsv",
-  format='tsv', 
-  fields=data_fields)
+print('making iterator')
+valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
+                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
+                        batch_size_fn=batch_size_fn, train=False)
+print('done')
 
 print("Building vocab...")
 MIN_FREQ = 5
@@ -142,12 +192,13 @@ pad_idx = EN.vocab.stoi[PAD]
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
-pro_stereotype_iter = Iterator(pro_stereotype, batch_size=100, sort_key=lambda x: 1, repeat=False, train=False)
-anti_stereotype_iter = Iterator(anti_stereotype, batch_size=100, sort_key=lambda x: 1, repeat=False, train=False)
 print("Loading model...")
-model = load("models/0206_baseline_200k_20.pt")
+model = load('models/' + args.path)
 print("Model loaded.")
-print("Pro-Stereotype:")
-eval(pad_idx, pro_stereotype_iter, model)
-print("Anti-Stereotype:")
-eval(pad_idx, anti_stereotype_iter, model)
+
+if args.eval == "accuracy" or args.eval == "all":
+  for path in ["pro_stereotype.tsv", "anti_stereotype.tsv", "male_subject.tsv", "female_subject.tsv"]:
+    eval_discriminative(pad_idx, path, model)
+
+if args.eval == "bleu" or args.eval == "all":
+  eval_bleu(pad_idx, valid_iter, model)

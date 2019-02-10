@@ -10,7 +10,7 @@ import sys
 
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Data Processing')
-parser.add_argument('--size', type=str, default="full", help='Size of file (full or mini)')
+parser.add_argument('--size', type=str, default="full", help='Size of file (full, mid, mini)')
 parser.add_argument('--batch', type=int, default=512, help='Batch size')
 parser.add_argument('--epochs', type=int, default=10, help='Number of epochs')
 parser.add_argument('--save', type=int, default=10, help='Save model after every x intervals')
