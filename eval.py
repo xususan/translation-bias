@@ -161,7 +161,8 @@ def tokenize_en(sentence):
     return [tok.text for tok in en.tokenizer(sentence)]
 
 # Context and source / target fields for English + Turkish
-TR = Field(init_token = SOS, eos_token = EOS, lower = True, pad_token=PAD) ##CHECK THIS
+# TODO:CHECK THIS ## NEED TO FLIP ONCE U GET NEW MODEL
+TR = Field(init_token = SOS, eos_token = EOS, lower = True, pad_token=PAD) 
 EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD)
 
 # Must be in order
@@ -205,4 +206,4 @@ if args.eval == "accuracy" or args.eval == "all":
     eval_discriminative(pad_idx, path, model)
 
 if args.eval == "bleu" or args.eval == "all":
-  eval_bleu(pad_idx, valid_iter, model, max_len=10, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS])
+  eval_bleu(pad_idx, valid_iter, model, 10, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS])
