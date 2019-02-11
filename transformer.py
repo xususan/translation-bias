@@ -306,6 +306,8 @@ def make_model(src_vocab, tgt_vocab, N=6,
     for p in model.parameters():
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
+    model.src_embed[0].lut.weight = model.tgt_embeddings[0].lut.weight
+    model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
 
 def make_context_model(src_vocab, tgt_vocab, N=6, 
@@ -328,4 +330,7 @@ def make_context_model(src_vocab, tgt_vocab, N=6,
     for p in model.parameters():
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
+
+    model.src_embed[0].lut.weight = model.tgt_embeddings[0].lut.weight
+    model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
