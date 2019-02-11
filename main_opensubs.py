@@ -43,7 +43,7 @@ def tokenize_en(sentence):
 SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
 # Context and source / target fields for English + Turkish
 TR = Field(lower=True, pad_token=PAD)
-EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD,init_token = SOS, eos_token =EOS)
+EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
 
 # Must be in order
 data_fields = [
