@@ -15,6 +15,7 @@ parser.add_argument('--path', type=str, default="save", help='model path within 
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
 parser.set_defaults(context=False)
 args = parser.parse_args()
+print("Command line arguments: {%s}" % args)
 
 VOCAB_SIZE = args.vocab
 BATCH_SIZE = args.batch
@@ -63,8 +64,8 @@ def load(path):
     model.eval()
     return model
 
-def greedy_decode(model, max_len, start_symbol):
-    src = batch.src, src_mask = batch.src_mask
+def greedy_decode(model, batch, max_len, start_symbol):
+    src = batch.src, src_mask = batch.src_mask # This is just wrong lol
     memory = model.encode(src, src_mask)
     ys = torch.ones(1, 1).fill_(start_symbol).type_as(src.data)
     total_prob = 0.0
@@ -81,8 +82,10 @@ def greedy_decode(model, max_len, start_symbol):
                         torch.ones(1, 1).type_as(src.data).fill_(next_word)], dim=1)
     return ys
 
-def beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k=5):
-    memory = model.encode(src, src_mask)
+def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbol, end_symbol, k=5):
+    pdb.set_trace()
+    batch = Batch(src.unsqueeze(0), src_mask.unsqueeze(0), src_context.unsqueeze(0), pad_idx)
+    memory = model.encode(batch)
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
     for i in range(max_len):
@@ -107,13 +110,13 @@ def beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k=5):
 
 lambda str_of_tokens: [EN.vocab.itos[i] for i in tokenized]
 
-def eval_bleu(pad_idx, eval_iter, model):
+def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol):
   bleus = []
   for b in eval_iter:
     b = rebatch(pad_idx, b)
     for i in range(b.src.size(0)): # batch_size
-      src, src_mask = b.src[i], b.src_mask[i]
-      hypothesis = beam_decode(model, src, src_mask, max_len, start_symbol, end_symbol, k)[1:] # cut off SOS
+      hypothesis = beam_decode(model, b.src[i], b.src_mask[i], b.src_context[i],
+       pad_idx, max_len, start_symbol, end_symbol, k=5)[1:] # cut off SOS
       targets = b.trg_y # doesn't have SOS
       hyp_str = str_of_tokens(hypothesis).join(" ")
       trg_str = str_of_tokens(targets).join(" ")
@@ -158,7 +161,7 @@ def tokenize_en(sentence):
     return [tok.text for tok in en.tokenizer(sentence)]
 
 # Context and source / target fields for English + Turkish
-TR = Field(init_token = SOS, eos_token = EOS, lower = True, pad_token=PAD)
+TR = Field(init_token = SOS, eos_token = EOS, lower = True, pad_token=PAD) ##CHECK THIS
 EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD)
 
 # Must be in order
@@ -189,6 +192,7 @@ MIN_FREQ = 5
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 pad_idx = EN.vocab.stoi[PAD]
+
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
@@ -201,4 +205,4 @@ if args.eval == "accuracy" or args.eval == "all":
     eval_discriminative(pad_idx, path, model)
 
 if args.eval == "bleu" or args.eval == "all":
-  eval_bleu(pad_idx, valid_iter, model)
+  eval_bleu(pad_idx, valid_iter, model, max_len=10, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS])
