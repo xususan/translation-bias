@@ -4,7 +4,7 @@ import numpy as np
 from transformer import subsequent_mask
 from torchtext import data
 from torchtext.data import Field, BucketIterator, TabularDataset, Pipeline
-from torchnlp.word_to_vector import BPEmb
+from bpemb import BPEmb
 import pdb
 
 SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" 
