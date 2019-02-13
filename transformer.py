@@ -308,7 +308,6 @@ def make_model(src_vocab, tgt_vocab, N=6,
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
 
-    pdb.set_trace()
     model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
