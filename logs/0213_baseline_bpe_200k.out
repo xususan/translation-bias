@@ -1,14 +1,6 @@
 Command line arguments: {Namespace(batch=512, context=False, epochs=30, out='baseline_bpe_200k', save=10, size='mid')}
 Train: train_200k.csv, Val: val_10k.csv, test: test_10k.csv
 Vocab size: 10000
-downloading https://nlp.h-its.org/bpemb/tr/tr.wiki.bpe.vs10000.model
-  0%|          | 0/401943 [00:00<?, ?B/s]  2%|▏         | 9216/401943 [00:00<00:06, 64608.00B/s] 10%|█         | 41984/401943 [00:00<00:04, 81571.14B/s] 24%|██▍       | 96256/401943 [00:00<00:02, 105816.47B/s] 52%|█████▏    | 207872/401943 [00:00<00:01, 142099.91B/s]100%|██████████| 401943/401943 [00:00<00:00, 608200.56B/s]
-downloading https://nlp.h-its.org/bpemb/tr/tr.wiki.bpe.vs10000.d100.w2v.bin.tar.gz
-  0%|          | 0/3786135 [00:00<?, ?B/s]  0%|          | 9216/3786135 [00:00<01:01, 61174.41B/s]  1%|          | 30720/3786135 [00:00<00:51, 73347.62B/s]  2%|▏         | 76800/3786135 [00:00<00:39, 94829.39B/s]  4%|▍         | 163840/3786135 [00:00<00:28, 126235.97B/s]  8%|▊         | 307200/3786135 [00:00<00:20, 170394.58B/s] 16%|█▋        | 619520/3786135 [00:00<00:13, 234876.79B/s] 30%|██▉       | 1125376/3786135 [00:01<00:08, 325410.47B/s] 58%|█████▊    | 2182144/3786135 [00:01<00:03, 455560.96B/s] 95%|█████████▍| 3582976/3786135 [00:01<00:00, 636957.60B/s]100%|██████████| 3786135/3786135 [00:01<00:00, 2701112.30B/s]
-downloading https://nlp.h-its.org/bpemb/en/en.wiki.bpe.vs10000.model
-  0%|          | 0/400869 [00:00<?, ?B/s]  2%|▏         | 9216/400869 [00:00<00:06, 64941.66B/s] 10%|▉         | 38912/400869 [00:00<00:04, 80938.28B/s] 24%|██▍       | 95232/400869 [00:00<00:02, 105456.62B/s] 52%|█████▏    | 206848/400869 [00:00<00:01, 141683.11B/s] 90%|████████▉ | 359424/400869 [00:00<00:00, 190543.63B/s]100%|██████████| 400869/400869 [00:00<00:00, 520813.58B/s]
-downloading https://nlp.h-its.org/bpemb/en/en.wiki.bpe.vs10000.d100.w2v.bin.tar.gz
-  0%|          | 0/3784656 [00:00<?, ?B/s]  0%|          | 9216/3784656 [00:00<01:03, 59708.81B/s]  1%|          | 38912/3784656 [00:00<00:49, 75138.62B/s]  2%|▏         | 94208/3784656 [00:00<00:37, 98421.52B/s]  5%|▌         | 206848/3784656 [00:00<00:26, 132776.38B/s] 11%|█▏        | 427008/3784656 [00:00<00:18, 182363.76B/s] 20%|██        | 766976/3784656 [00:00<00:12, 251395.88B/s] 41%|████      | 1543168/3784656 [00:01<00:06, 351526.91B/s] 65%|██████▌   | 2475008/3784656 [00:01<00:02, 489848.27B/s]100%|██████████| 3784656/3784656 [00:01<00:00, 2960395.30B/s]
 Building vocab...
 TR vocab size: 10002, EN vocab size: 10004
 Done building vocab
@@ -16,25 +8,4 @@ GPUs available: 1
 Iterators built.
 Training model...
 Epoch 1 / 30
-> /home/sxu/translation-bias/utils_transform.py(42)run_epoch()
--> out = model.forward(batch)
-(Pdb) Traceback (most recent call last):
-  File "main_bpe.py", line 71, in <module>
-    opt=model_opt))
-  File "/home/sxu/translation-bias/utils_transform.py", line 42, in run_epoch
-    out = model.forward(batch)
-  File "/home/sxu/translation-bias/utils_transform.py", line 42, in run_epoch
-    out = model.forward(batch)
-  File "/usr/lib/python3.5/bdb.py", line 48, in trace_dispatch
-    return self.dispatch_line(frame)
-  File "/usr/lib/python3.5/bdb.py", line 66, in dispatch_line
-    self.user_line(frame)
-  File "/usr/lib/python3.5/pdb.py", line 259, in user_line
-    self.interaction(frame, None)
-  File "/usr/lib/python3.5/pdb.py", line 346, in interaction
-    self._cmdloop()
-  File "/usr/lib/python3.5/pdb.py", line 319, in _cmdloop
-    self.cmdloop()
-  File "/usr/lib/python3.5/cmd.py", line 126, in cmdloop
-    line = input(self.prompt)
-OSError: [Errno 9] Bad file descriptor
+Epoch Step: 1 Loss: 8.035887 Tokens per Sec: 199.450638
