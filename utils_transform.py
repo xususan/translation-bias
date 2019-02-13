@@ -38,7 +38,6 @@ def run_epoch(data_iter, model, loss_compute):
     total_loss = 0
     tokens = 0.0
     for i, batch in enumerate(data_iter):
-        pdb.set_trace()
         out = model.forward(batch)
         batch_ntokens = batch.ntokens.float()
         loss = loss_compute(out, batch.trg_y, batch_ntokens)
