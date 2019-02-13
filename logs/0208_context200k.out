@@ -43,3 +43,519 @@ Epoch Step: 2001 Loss: 2.794546 Tokens per Sec: 2343.754395
 Epoch Step: 3001 Loss: 2.526653 Tokens per Sec: 2353.855469
 Epoch Step: 4001 Loss: 2.893706 Tokens per Sec: 2320.303955
 Epoch Step: 5001 Loss: 2.271631 Tokens per Sec: 2377.138184
+Epoch Step: 6001 Loss: 2.698436 Tokens per Sec: 2349.794189
+Epoch Step: 7001 Loss: 2.444629 Tokens per Sec: 2363.849121
+Epoch Step: 8001 Loss: 2.987802 Tokens per Sec: 2332.963135
+Epoch Step: 9001 Loss: 2.551495 Tokens per Sec: 2343.504395
+Epoch Step: 10001 Loss: 3.250592 Tokens per Sec: 2342.876709
+Training loss: 2.623858, elapsed time: 6452.363028
+Epoch Step: 1 Loss: 1.145077 Tokens per Sec: 616.997314
+Validation loss: 2.447181
+Epoch 4 / 40
+Epoch Step: 1 Loss: 2.609575 Tokens per Sec: 588.505615
+Epoch Step: 1001 Loss: 1.829450 Tokens per Sec: 2338.261230
+Epoch Step: 2001 Loss: 2.620129 Tokens per Sec: 2350.411865
+Epoch Step: 3001 Loss: 1.827457 Tokens per Sec: 2346.272705
+Epoch Step: 4001 Loss: 1.984687 Tokens per Sec: 2326.512207
+Epoch Step: 5001 Loss: 2.663729 Tokens per Sec: 2374.895020
+Epoch Step: 6001 Loss: 2.067650 Tokens per Sec: 2324.558105
+Epoch Step: 7001 Loss: 2.091570 Tokens per Sec: 2354.298828
+Epoch Step: 8001 Loss: 2.211979 Tokens per Sec: 2372.538330
+Epoch Step: 9001 Loss: 1.960991 Tokens per Sec: 2340.548096
+Epoch Step: 10001 Loss: 2.487359 Tokens per Sec: 2335.944824
+Training loss: 2.533651, elapsed time: 6456.198344
+Epoch Step: 1 Loss: 1.083706 Tokens per Sec: 618.322571
+Validation loss: 2.367690
+Epoch 5 / 40
+Epoch Step: 1 Loss: 1.840595 Tokens per Sec: 547.355957
+Epoch Step: 1001 Loss: 2.765799 Tokens per Sec: 2330.776611
+Epoch Step: 2001 Loss: 2.220896 Tokens per Sec: 2343.574951
+Epoch Step: 3001 Loss: 2.773110 Tokens per Sec: 2322.244141
+Epoch Step: 4001 Loss: 2.703182 Tokens per Sec: 2366.882324
+Epoch Step: 5001 Loss: 3.060638 Tokens per Sec: 2331.427246
+Epoch Step: 6001 Loss: 3.298850 Tokens per Sec: 2378.691895
+Epoch Step: 7001 Loss: 3.266175 Tokens per Sec: 2332.396240
+Epoch Step: 8001 Loss: 2.465306 Tokens per Sec: 2345.023926
+Epoch Step: 9001 Loss: 2.059299 Tokens per Sec: 2358.274902
+Epoch Step: 10001 Loss: 2.308100 Tokens per Sec: 2330.020996
+Training loss: 2.470839, elapsed time: 6459.838587
+Epoch Step: 1 Loss: 1.085918 Tokens per Sec: 621.428650
+Validation loss: 2.318611
+Epoch 6 / 40
+Epoch Step: 1 Loss: 2.906137 Tokens per Sec: 622.657898
+Epoch Step: 1001 Loss: 2.111042 Tokens per Sec: 2358.479980
+Epoch Step: 2001 Loss: 2.442172 Tokens per Sec: 2332.171387
+Epoch Step: 3001 Loss: 2.756276 Tokens per Sec: 2333.377686
+Epoch Step: 4001 Loss: 2.696478 Tokens per Sec: 2325.180908
+Epoch Step: 5001 Loss: 1.466990 Tokens per Sec: 2370.217529
+Epoch Step: 6001 Loss: 1.930543 Tokens per Sec: 2360.032959
+Epoch Step: 7001 Loss: 2.486323 Tokens per Sec: 2363.593262
+Epoch Step: 8001 Loss: 2.728071 Tokens per Sec: 2361.668701
+Epoch Step: 9001 Loss: 2.919899 Tokens per Sec: 2307.533447
+Epoch Step: 10001 Loss: 2.565033 Tokens per Sec: 2311.950439
+Training loss: 2.422882, elapsed time: 6462.850249
+Epoch Step: 1 Loss: 1.057300 Tokens per Sec: 619.943542
+Validation loss: 2.275312
+Epoch 7 / 40
+Epoch Step: 1 Loss: 1.674808 Tokens per Sec: 304.708252
+Epoch Step: 1001 Loss: 2.305072 Tokens per Sec: 2342.504150
+Epoch Step: 2001 Loss: 2.189249 Tokens per Sec: 2356.702881
+Epoch Step: 3001 Loss: 2.400800 Tokens per Sec: 2320.413574
+Epoch Step: 4001 Loss: 2.924809 Tokens per Sec: 2347.772705
+Epoch Step: 5001 Loss: 3.180928 Tokens per Sec: 2348.096924
+Epoch Step: 6001 Loss: 1.923200 Tokens per Sec: 2330.532227
+Epoch Step: 7001 Loss: 2.286979 Tokens per Sec: 2372.587891
+Epoch Step: 8001 Loss: 1.856636 Tokens per Sec: 2331.540527
+Epoch Step: 9001 Loss: 1.936086 Tokens per Sec: 2366.860596
+Epoch Step: 10001 Loss: 2.414002 Tokens per Sec: 2312.775391
+Training loss: 2.384378, elapsed time: 6462.768548
+Epoch Step: 1 Loss: 1.064394 Tokens per Sec: 617.187988
+Validation loss: 2.232973
+Epoch 8 / 40
+Epoch Step: 1 Loss: 2.619464 Tokens per Sec: 465.428864
+Epoch Step: 1001 Loss: 2.331121 Tokens per Sec: 2341.608887
+Epoch Step: 2001 Loss: 2.627429 Tokens per Sec: 2345.078369
+Epoch Step: 3001 Loss: 2.572117 Tokens per Sec: 2379.360840
+Epoch Step: 4001 Loss: 2.122408 Tokens per Sec: 2299.530273
+Epoch Step: 5001 Loss: 2.684484 Tokens per Sec: 2369.781250
+Epoch Step: 6001 Loss: 1.475714 Tokens per Sec: 2347.135254
+Epoch Step: 7001 Loss: 2.949526 Tokens per Sec: 2330.534180
+Epoch Step: 8001 Loss: 2.400644 Tokens per Sec: 2379.125488
+Epoch Step: 9001 Loss: 2.402456 Tokens per Sec: 2327.601807
+Epoch Step: 10001 Loss: 2.052652 Tokens per Sec: 2350.906982
+Training loss: 2.351689, elapsed time: 6451.866626
+Epoch Step: 1 Loss: 1.013285 Tokens per Sec: 615.466675
+Validation loss: 2.199464
+Epoch 9 / 40
+Epoch Step: 1 Loss: 2.151964 Tokens per Sec: 462.172882
+Epoch Step: 1001 Loss: 1.832774 Tokens per Sec: 2333.694092
+Epoch Step: 2001 Loss: 2.002632 Tokens per Sec: 2343.571777
+Epoch Step: 3001 Loss: 2.365856 Tokens per Sec: 2346.749268
+Epoch Step: 4001 Loss: 1.944758 Tokens per Sec: 2371.609863
+Epoch Step: 5001 Loss: 2.139816 Tokens per Sec: 2352.319092
+Epoch Step: 6001 Loss: 2.686962 Tokens per Sec: 2337.617920
+Epoch Step: 7001 Loss: 2.150470 Tokens per Sec: 2319.049316
+Epoch Step: 8001 Loss: 3.064289 Tokens per Sec: 2362.037842
+Epoch Step: 9001 Loss: 3.786174 Tokens per Sec: 2347.776855
+Epoch Step: 10001 Loss: 2.388783 Tokens per Sec: 2334.879395
+Training loss: 2.324003, elapsed time: 6455.456412
+Epoch Step: 1 Loss: 1.020923 Tokens per Sec: 621.950867
+Validation loss: 2.174053
+Epoch 10 / 40
+Epoch Step: 1 Loss: 2.094410 Tokens per Sec: 492.125580
+Epoch Step: 1001 Loss: 2.231607 Tokens per Sec: 2356.590332
+Epoch Step: 2001 Loss: 2.524132 Tokens per Sec: 2335.927246
+Epoch Step: 3001 Loss: 2.122495 Tokens per Sec: 2349.169678
+Epoch Step: 4001 Loss: 2.222065 Tokens per Sec: 2340.144287
+Epoch Step: 5001 Loss: 1.328604 Tokens per Sec: 2359.787842
+Epoch Step: 6001 Loss: 2.072151 Tokens per Sec: 2348.062744
+Epoch Step: 7001 Loss: 2.043938 Tokens per Sec: 2331.799805
+Epoch Step: 8001 Loss: 2.415421 Tokens per Sec: 2368.623291
+Epoch Step: 9001 Loss: 3.070390 Tokens per Sec: 2342.812012
+Epoch Step: 10001 Loss: 2.191862 Tokens per Sec: 2339.398926
+Training loss: 2.299609, elapsed time: 6456.631643
+Epoch Step: 1 Loss: 1.069247 Tokens per Sec: 591.301941
+Validation loss: 2.156570
+Saved model to models/0208_context200k_10.pt.
+Epoch 11 / 40
+Epoch Step: 1 Loss: 1.533344 Tokens per Sec: 489.970734
+Epoch Step: 1001 Loss: 2.301595 Tokens per Sec: 2362.714844
+Epoch Step: 2001 Loss: 2.412317 Tokens per Sec: 2355.283203
+Epoch Step: 3001 Loss: 0.562185 Tokens per Sec: 2335.353271
+Epoch Step: 4001 Loss: 2.016370 Tokens per Sec: 2324.096680
+Epoch Step: 5001 Loss: 2.216100 Tokens per Sec: 2371.887939
+Epoch Step: 6001 Loss: 2.149237 Tokens per Sec: 2339.350830
+Epoch Step: 7001 Loss: 2.816278 Tokens per Sec: 2356.963135
+Epoch Step: 8001 Loss: 2.795618 Tokens per Sec: 2339.946777
+Epoch Step: 9001 Loss: 1.540038 Tokens per Sec: 2355.049316
+Epoch Step: 10001 Loss: 2.297350 Tokens per Sec: 2306.553711
+Training loss: 2.277358, elapsed time: 6456.939060
+Epoch Step: 1 Loss: 1.007752 Tokens per Sec: 619.941284
+Validation loss: 2.138339
+Epoch 12 / 40
+Epoch Step: 1 Loss: 2.314654 Tokens per Sec: 569.140869
+Epoch Step: 1001 Loss: 2.835759 Tokens per Sec: 2351.974121
+Epoch Step: 2001 Loss: 2.242646 Tokens per Sec: 2326.390381
+Epoch Step: 3001 Loss: 1.531649 Tokens per Sec: 2354.676514
+Epoch Step: 4001 Loss: 0.588855 Tokens per Sec: 2347.075195
+Epoch Step: 5001 Loss: 2.415977 Tokens per Sec: 2380.137207
+Epoch Step: 6001 Loss: 2.857503 Tokens per Sec: 2334.026123
+Epoch Step: 7001 Loss: 2.811403 Tokens per Sec: 2337.529297
+Epoch Step: 8001 Loss: 2.952918 Tokens per Sec: 2346.549072
+Epoch Step: 9001 Loss: 2.596303 Tokens per Sec: 2319.677734
+Epoch Step: 10001 Loss: 2.443118 Tokens per Sec: 2344.469238
+Training loss: 2.257425, elapsed time: 6459.883877
+Epoch Step: 1 Loss: 1.025151 Tokens per Sec: 623.038635
+Validation loss: 2.107411
+Epoch 13 / 40
+Epoch Step: 1 Loss: 2.114225 Tokens per Sec: 553.704773
+Epoch Step: 1001 Loss: 1.426230 Tokens per Sec: 2341.868164
+Epoch Step: 2001 Loss: 2.342232 Tokens per Sec: 2344.712891
+Epoch Step: 3001 Loss: 2.496553 Tokens per Sec: 2313.363281
+Epoch Step: 4001 Loss: 2.659329 Tokens per Sec: 2352.714111
+Epoch Step: 5001 Loss: 2.287187 Tokens per Sec: 2335.806152
+Epoch Step: 6001 Loss: 2.538161 Tokens per Sec: 2351.630127
+Epoch Step: 7001 Loss: 2.814430 Tokens per Sec: 2345.462891
+Epoch Step: 8001 Loss: 2.284106 Tokens per Sec: 2345.039795
+Epoch Step: 9001 Loss: 2.404101 Tokens per Sec: 2341.118652
+Epoch Step: 10001 Loss: 2.338172 Tokens per Sec: 2337.469238
+Training loss: 2.238960, elapsed time: 6468.795812
+Epoch Step: 1 Loss: 1.018245 Tokens per Sec: 623.647034
+Validation loss: 2.090823
+Epoch 14 / 40
+Epoch Step: 1 Loss: 1.586926 Tokens per Sec: 473.625214
+Epoch Step: 1001 Loss: 2.295092 Tokens per Sec: 2338.609863
+Epoch Step: 2001 Loss: 2.410329 Tokens per Sec: 2339.009521
+Epoch Step: 3001 Loss: 2.653298 Tokens per Sec: 2367.822998
+Epoch Step: 4001 Loss: 2.218468 Tokens per Sec: 2339.371338
+Epoch Step: 5001 Loss: 1.659796 Tokens per Sec: 2329.003418
+Epoch Step: 6001 Loss: 2.232117 Tokens per Sec: 2398.460449
+Epoch Step: 7001 Loss: 1.460290 Tokens per Sec: 2318.366211
+Epoch Step: 8001 Loss: 2.395666 Tokens per Sec: 2335.170898
+Epoch Step: 9001 Loss: 2.837761 Tokens per Sec: 2357.941162
+Epoch Step: 10001 Loss: 2.727435 Tokens per Sec: 2302.599609
+Training loss: 2.222128, elapsed time: 6463.348756
+Epoch Step: 1 Loss: 1.005779 Tokens per Sec: 620.146362
+Validation loss: 2.074140
+Epoch 15 / 40
+Epoch Step: 1 Loss: 2.284821 Tokens per Sec: 575.431946
+Epoch Step: 1001 Loss: 2.518878 Tokens per Sec: 2341.415771
+Epoch Step: 2001 Loss: 2.677382 Tokens per Sec: 2347.103516
+Epoch Step: 3001 Loss: 2.061337 Tokens per Sec: 2348.404053
+Epoch Step: 4001 Loss: 2.479196 Tokens per Sec: 2333.219482
+Epoch Step: 5001 Loss: 2.246692 Tokens per Sec: 2346.922363
+Epoch Step: 6001 Loss: 2.182238 Tokens per Sec: 2348.701172
+Epoch Step: 7001 Loss: 1.939021 Tokens per Sec: 2329.079590
+Epoch Step: 8001 Loss: 1.931099 Tokens per Sec: 2350.342285
+Epoch Step: 9001 Loss: 2.897295 Tokens per Sec: 2366.500244
+Epoch Step: 10001 Loss: 3.056519 Tokens per Sec: 2327.317627
+Training loss: 2.207247, elapsed time: 6458.579124
+Epoch Step: 1 Loss: 1.016852 Tokens per Sec: 624.766541
+Validation loss: 2.057146
+Epoch 16 / 40
+Epoch Step: 1 Loss: 2.781465 Tokens per Sec: 515.963074
+Epoch Step: 1001 Loss: 1.330704 Tokens per Sec: 2337.768066
+Epoch Step: 2001 Loss: 0.606180 Tokens per Sec: 2365.286377
+Epoch Step: 3001 Loss: 2.255284 Tokens per Sec: 2335.022949
+Epoch Step: 4001 Loss: 2.131516 Tokens per Sec: 2338.562744
+Epoch Step: 5001 Loss: 1.890808 Tokens per Sec: 2345.417480
+Epoch Step: 6001 Loss: 1.576322 Tokens per Sec: 2347.275391
+Epoch Step: 7001 Loss: 1.770172 Tokens per Sec: 2363.536133
+Epoch Step: 8001 Loss: 2.816221 Tokens per Sec: 2344.666992
+Epoch Step: 9001 Loss: 1.385718 Tokens per Sec: 2366.606689
+Epoch Step: 10001 Loss: 2.020734 Tokens per Sec: 2332.576904
+Training loss: 2.194079, elapsed time: 6448.987617
+Epoch Step: 1 Loss: 1.010628 Tokens per Sec: 590.889343
+Validation loss: 2.044511
+Epoch 17 / 40
+Epoch Step: 1 Loss: 1.862014 Tokens per Sec: 494.958557
+Epoch Step: 1001 Loss: 2.430276 Tokens per Sec: 2367.592529
+Epoch Step: 2001 Loss: 2.200230 Tokens per Sec: 2317.847900
+Epoch Step: 3001 Loss: 1.336037 Tokens per Sec: 2337.270264
+Epoch Step: 4001 Loss: 1.935875 Tokens per Sec: 2362.831543
+Epoch Step: 5001 Loss: 1.104133 Tokens per Sec: 2335.207031
+Epoch Step: 6001 Loss: 2.602980 Tokens per Sec: 2343.750488
+Epoch Step: 7001 Loss: 2.267839 Tokens per Sec: 2361.526611
+Epoch Step: 8001 Loss: 1.651487 Tokens per Sec: 2341.285889
+Epoch Step: 9001 Loss: 2.066521 Tokens per Sec: 2352.154297
+Epoch Step: 10001 Loss: 1.957217 Tokens per Sec: 2328.440186
+Training loss: 2.181925, elapsed time: 6455.962805
+Epoch Step: 1 Loss: 1.002070 Tokens per Sec: 618.579224
+Validation loss: 2.034959
+Epoch 18 / 40
+Epoch Step: 1 Loss: 2.020486 Tokens per Sec: 492.356812
+Epoch Step: 1001 Loss: 2.689495 Tokens per Sec: 2343.336670
+Epoch Step: 2001 Loss: 2.383266 Tokens per Sec: 2344.416260
+Epoch Step: 3001 Loss: 1.953708 Tokens per Sec: 2337.705078
+Epoch Step: 4001 Loss: 2.163896 Tokens per Sec: 2336.617676
+Epoch Step: 5001 Loss: 1.523020 Tokens per Sec: 2341.491943
+Epoch Step: 6001 Loss: 1.912986 Tokens per Sec: 2370.819336
+Epoch Step: 7001 Loss: 1.513050 Tokens per Sec: 2312.844238
+Epoch Step: 8001 Loss: 2.217853 Tokens per Sec: 2350.801514
+Epoch Step: 9001 Loss: 2.107968 Tokens per Sec: 2348.760254
+Epoch Step: 10001 Loss: 2.399495 Tokens per Sec: 2351.743164
+Training loss: 2.168668, elapsed time: 6466.015113
+Epoch Step: 1 Loss: 0.996191 Tokens per Sec: 614.326111
+Validation loss: 2.020067
+Epoch 19 / 40
+Epoch Step: 1 Loss: 1.531846 Tokens per Sec: 449.750854
+Epoch Step: 1001 Loss: 2.304362 Tokens per Sec: 2335.908447
+Epoch Step: 2001 Loss: 1.952651 Tokens per Sec: 2362.443359
+Epoch Step: 3001 Loss: 2.465001 Tokens per Sec: 2346.842773
+Epoch Step: 4001 Loss: 1.868918 Tokens per Sec: 2334.844238
+Epoch Step: 5001 Loss: 2.530581 Tokens per Sec: 2349.949463
+Epoch Step: 6001 Loss: 2.881811 Tokens per Sec: 2328.298584
+Epoch Step: 7001 Loss: 1.641851 Tokens per Sec: 2366.573486
+Epoch Step: 8001 Loss: 1.978809 Tokens per Sec: 2350.023926
+Epoch Step: 9001 Loss: 2.130317 Tokens per Sec: 2331.426514
+Epoch Step: 10001 Loss: 2.649346 Tokens per Sec: 2346.795898
+Training loss: 2.157084, elapsed time: 6457.701994
+Epoch Step: 1 Loss: 0.951587 Tokens per Sec: 585.146790
+Validation loss: 2.005625
+Epoch 20 / 40
+Epoch Step: 1 Loss: 2.677938 Tokens per Sec: 594.502625
+Epoch Step: 1001 Loss: 1.331202 Tokens per Sec: 2346.369385
+Epoch Step: 2001 Loss: 1.834288 Tokens per Sec: 2337.799805
+Epoch Step: 3001 Loss: 1.756210 Tokens per Sec: 2341.782959
+Epoch Step: 4001 Loss: 1.863910 Tokens per Sec: 2376.153564
+Epoch Step: 5001 Loss: 2.254191 Tokens per Sec: 2331.281982
+Epoch Step: 6001 Loss: 1.876140 Tokens per Sec: 2338.678711
+Epoch Step: 7001 Loss: 2.631341 Tokens per Sec: 2347.427734
+Epoch Step: 8001 Loss: 0.580672 Tokens per Sec: 2348.236572
+Epoch Step: 9001 Loss: 1.630888 Tokens per Sec: 2325.246094
+Epoch Step: 10001 Loss: 1.825281 Tokens per Sec: 2352.237305
+Training loss: 2.145772, elapsed time: 6459.427472
+Epoch Step: 1 Loss: 1.007824 Tokens per Sec: 619.103943
+Validation loss: 1.990790
+Saved model to models/0208_context200k_20.pt.
+Epoch 21 / 40
+Epoch Step: 1 Loss: 2.293046 Tokens per Sec: 501.098877
+Epoch Step: 1001 Loss: 2.599103 Tokens per Sec: 2356.131836
+Epoch Step: 2001 Loss: 2.284868 Tokens per Sec: 2340.438477
+Epoch Step: 3001 Loss: 2.310327 Tokens per Sec: 2349.816406
+Epoch Step: 4001 Loss: 2.987967 Tokens per Sec: 2352.485840
+Epoch Step: 5001 Loss: 1.843523 Tokens per Sec: 2334.146973
+Epoch Step: 6001 Loss: 1.958391 Tokens per Sec: 2358.319336
+Epoch Step: 7001 Loss: 2.212766 Tokens per Sec: 2348.074463
+Epoch Step: 8001 Loss: 2.116386 Tokens per Sec: 2335.992676
+Epoch Step: 9001 Loss: 2.608114 Tokens per Sec: 2360.852783
+Epoch Step: 10001 Loss: 2.694176 Tokens per Sec: 2353.625488
+Training loss: 2.134629, elapsed time: 6452.332970
+Epoch Step: 1 Loss: 0.988497 Tokens per Sec: 614.122009
+Validation loss: 1.980580
+Epoch 22 / 40
+Epoch Step: 1 Loss: 2.101745 Tokens per Sec: 504.048279
+Epoch Step: 1001 Loss: 1.596483 Tokens per Sec: 2354.338379
+Epoch Step: 2001 Loss: 1.471479 Tokens per Sec: 2352.300781
+Epoch Step: 3001 Loss: 1.871631 Tokens per Sec: 2324.225342
+Epoch Step: 4001 Loss: 2.148412 Tokens per Sec: 2339.030762
+Epoch Step: 5001 Loss: 2.133281 Tokens per Sec: 2329.026855
+Epoch Step: 6001 Loss: 2.235607 Tokens per Sec: 2367.962402
+Epoch Step: 7001 Loss: 2.795610 Tokens per Sec: 2325.494629
+Epoch Step: 8001 Loss: 2.620276 Tokens per Sec: 2333.092285
+Epoch Step: 9001 Loss: 1.808830 Tokens per Sec: 2312.994873
+Epoch Step: 10001 Loss: 1.587277 Tokens per Sec: 2351.462891
+Training loss: 2.124294, elapsed time: 6472.324238
+Epoch Step: 1 Loss: 0.996228 Tokens per Sec: 613.804871
+Validation loss: 1.973010
+Epoch 23 / 40
+Epoch Step: 1 Loss: 2.201609 Tokens per Sec: 540.537659
+Epoch Step: 1001 Loss: 2.434814 Tokens per Sec: 2349.163574
+Epoch Step: 2001 Loss: 2.121063 Tokens per Sec: 2352.191650
+Epoch Step: 3001 Loss: 2.291893 Tokens per Sec: 2349.734375
+Epoch Step: 4001 Loss: 2.336905 Tokens per Sec: 2326.700928
+Epoch Step: 5001 Loss: 2.272147 Tokens per Sec: 2357.585205
+Epoch Step: 6001 Loss: 1.638407 Tokens per Sec: 2337.925781
+Epoch Step: 7001 Loss: 1.565662 Tokens per Sec: 2349.981689
+Epoch Step: 8001 Loss: 2.030272 Tokens per Sec: 2338.297363
+Epoch Step: 9001 Loss: 1.442221 Tokens per Sec: 2327.647217
+Epoch Step: 10001 Loss: 1.544348 Tokens per Sec: 2344.087402
+Training loss: 2.115470, elapsed time: 6467.130407
+Epoch Step: 1 Loss: 0.999961 Tokens per Sec: 617.276855
+Validation loss: 1.960300
+Epoch 24 / 40
+Epoch Step: 1 Loss: 1.816068 Tokens per Sec: 522.138916
+Epoch Step: 1001 Loss: 1.750941 Tokens per Sec: 2355.601318
+Epoch Step: 2001 Loss: 1.793049 Tokens per Sec: 2326.658203
+Epoch Step: 3001 Loss: 2.524044 Tokens per Sec: 2361.034668
+Epoch Step: 4001 Loss: 2.662222 Tokens per Sec: 2361.402588
+Epoch Step: 5001 Loss: 1.768825 Tokens per Sec: 2330.451904
+Epoch Step: 6001 Loss: 2.142839 Tokens per Sec: 2379.626709
+Epoch Step: 7001 Loss: 1.953882 Tokens per Sec: 2305.694336
+Epoch Step: 8001 Loss: 2.455577 Tokens per Sec: 2317.400879
+Epoch Step: 9001 Loss: 1.719625 Tokens per Sec: 2365.458252
+Epoch Step: 10001 Loss: 1.353077 Tokens per Sec: 2341.372070
+Training loss: 2.107232, elapsed time: 6461.595691
+Epoch Step: 1 Loss: 1.016073 Tokens per Sec: 625.085388
+Validation loss: 1.954271
+Epoch 25 / 40
+Epoch Step: 1 Loss: 2.215106 Tokens per Sec: 626.305847
+Epoch Step: 1001 Loss: 2.454134 Tokens per Sec: 2351.309082
+Epoch Step: 2001 Loss: 2.270683 Tokens per Sec: 2334.504883
+Epoch Step: 3001 Loss: 1.843956 Tokens per Sec: 2350.214355
+Epoch Step: 4001 Loss: 1.666173 Tokens per Sec: 2333.612305
+Epoch Step: 5001 Loss: 2.242011 Tokens per Sec: 2360.234619
+Epoch Step: 6001 Loss: 1.485384 Tokens per Sec: 2345.823730
+Epoch Step: 7001 Loss: 1.762816 Tokens per Sec: 2350.591797
+Epoch Step: 8001 Loss: 1.474278 Tokens per Sec: 2346.204346
+Epoch Step: 9001 Loss: 1.601068 Tokens per Sec: 2320.664307
+Epoch Step: 10001 Loss: 2.480997 Tokens per Sec: 2345.770020
+Training loss: 2.099130, elapsed time: 6458.801048
+Epoch Step: 1 Loss: 0.991794 Tokens per Sec: 584.461182
+Validation loss: 1.941417
+Epoch 26 / 40
+Epoch Step: 1 Loss: 2.015170 Tokens per Sec: 535.751221
+Epoch Step: 1001 Loss: 1.596043 Tokens per Sec: 2353.300781
+Epoch Step: 2001 Loss: 2.338597 Tokens per Sec: 2348.187256
+Epoch Step: 3001 Loss: 2.348395 Tokens per Sec: 2342.999023
+Epoch Step: 4001 Loss: 1.836297 Tokens per Sec: 2326.430664
+Epoch Step: 5001 Loss: 1.933410 Tokens per Sec: 2369.515381
+Epoch Step: 6001 Loss: 1.561243 Tokens per Sec: 2351.701904
+Epoch Step: 7001 Loss: 2.492522 Tokens per Sec: 2322.281738
+Epoch Step: 8001 Loss: 1.784382 Tokens per Sec: 2384.402100
+Epoch Step: 9001 Loss: 2.069051 Tokens per Sec: 2310.062256
+Epoch Step: 10001 Loss: 2.004887 Tokens per Sec: 2354.005859
+Training loss: 2.091048, elapsed time: 6458.013157
+Epoch Step: 1 Loss: 0.976766 Tokens per Sec: 589.805542
+Validation loss: 1.934177
+Epoch 27 / 40
+Epoch Step: 1 Loss: 1.510861 Tokens per Sec: 538.046936
+Epoch Step: 1001 Loss: 2.238624 Tokens per Sec: 2344.201172
+Epoch Step: 2001 Loss: 1.790966 Tokens per Sec: 2354.095215
+Epoch Step: 3001 Loss: 2.741461 Tokens per Sec: 2307.101807
+Epoch Step: 4001 Loss: 2.498206 Tokens per Sec: 2359.998291
+Epoch Step: 5001 Loss: 2.432379 Tokens per Sec: 2348.289795
+Epoch Step: 6001 Loss: 2.154866 Tokens per Sec: 2353.188721
+Epoch Step: 7001 Loss: 1.828233 Tokens per Sec: 2366.749756
+Epoch Step: 8001 Loss: 1.913910 Tokens per Sec: 2333.147217
+Epoch Step: 9001 Loss: 2.088958 Tokens per Sec: 2333.527100
+Epoch Step: 10001 Loss: 1.907085 Tokens per Sec: 2311.211426
+Training loss: 2.083148, elapsed time: 6462.759015
+Epoch Step: 1 Loss: 0.971654 Tokens per Sec: 614.198059
+Validation loss: 1.925315
+Epoch 28 / 40
+Epoch Step: 1 Loss: 1.604526 Tokens per Sec: 406.327454
+Epoch Step: 1001 Loss: 3.016704 Tokens per Sec: 2338.088135
+Epoch Step: 2001 Loss: 2.168807 Tokens per Sec: 2360.803223
+Epoch Step: 3001 Loss: 2.324339 Tokens per Sec: 2323.925293
+Epoch Step: 4001 Loss: 2.274724 Tokens per Sec: 2321.919189
+Epoch Step: 5001 Loss: 1.764339 Tokens per Sec: 2362.273438
+Epoch Step: 6001 Loss: 2.562737 Tokens per Sec: 2352.399414
+Epoch Step: 7001 Loss: 1.492032 Tokens per Sec: 2334.470215
+Epoch Step: 8001 Loss: 1.488504 Tokens per Sec: 2315.063721
+Epoch Step: 9001 Loss: 2.133792 Tokens per Sec: 2337.421631
+Epoch Step: 10001 Loss: 1.539480 Tokens per Sec: 2367.677002
+Training loss: 2.075117, elapsed time: 6469.200288
+Epoch Step: 1 Loss: 0.969853 Tokens per Sec: 624.747375
+Validation loss: 1.917706
+Epoch 29 / 40
+Epoch Step: 1 Loss: 2.236734 Tokens per Sec: 501.765869
+Epoch Step: 1001 Loss: 3.192085 Tokens per Sec: 2364.037842
+Epoch Step: 2001 Loss: 2.140531 Tokens per Sec: 2345.775146
+Epoch Step: 3001 Loss: 2.575309 Tokens per Sec: 2327.098633
+Epoch Step: 4001 Loss: 1.748764 Tokens per Sec: 2364.279541
+Epoch Step: 5001 Loss: 2.354165 Tokens per Sec: 2345.646973
+Epoch Step: 6001 Loss: 1.918126 Tokens per Sec: 2341.887451
+Epoch Step: 7001 Loss: 2.411135 Tokens per Sec: 2333.265381
+Epoch Step: 8001 Loss: 2.249177 Tokens per Sec: 2347.934570
+Epoch Step: 9001 Loss: 1.640153 Tokens per Sec: 2364.496094
+Epoch Step: 10001 Loss: 1.697680 Tokens per Sec: 2343.273682
+Training loss: 2.067024, elapsed time: 6453.767542
+Epoch Step: 1 Loss: 0.979893 Tokens per Sec: 622.675476
+Validation loss: 1.909001
+Epoch 30 / 40
+Epoch Step: 1 Loss: 1.534666 Tokens per Sec: 505.016357
+Epoch Step: 1001 Loss: 2.318567 Tokens per Sec: 2343.825928
+Epoch Step: 2001 Loss: 2.409642 Tokens per Sec: 2350.207520
+Epoch Step: 3001 Loss: 1.914282 Tokens per Sec: 2340.991699
+Epoch Step: 4001 Loss: 2.264441 Tokens per Sec: 2330.653320
+Epoch Step: 5001 Loss: 1.547075 Tokens per Sec: 2349.487549
+Epoch Step: 6001 Loss: 2.487967 Tokens per Sec: 2359.700684
+Epoch Step: 7001 Loss: 1.637559 Tokens per Sec: 2361.025391
+Epoch Step: 8001 Loss: 2.378623 Tokens per Sec: 2347.636475
+Epoch Step: 9001 Loss: 1.760742 Tokens per Sec: 2336.813721
+Epoch Step: 10001 Loss: 2.363996 Tokens per Sec: 2335.707275
+Training loss: 2.059330, elapsed time: 6456.522203
+Epoch Step: 1 Loss: 0.997096 Tokens per Sec: 619.868774
+Validation loss: 1.898528
+Saved model to models/0208_context200k_30.pt.
+Epoch 31 / 40
+Epoch Step: 1 Loss: 1.772221 Tokens per Sec: 519.849854
+Epoch Step: 1001 Loss: 0.589809 Tokens per Sec: 2347.849854
+Epoch Step: 2001 Loss: 1.865712 Tokens per Sec: 2365.497803
+Epoch Step: 3001 Loss: 1.980790 Tokens per Sec: 2349.571777
+Epoch Step: 4001 Loss: 1.966590 Tokens per Sec: 2310.444824
+Epoch Step: 5001 Loss: 2.533454 Tokens per Sec: 2357.453857
+Epoch Step: 6001 Loss: 1.915921 Tokens per Sec: 2328.116211
+Epoch Step: 7001 Loss: 1.708486 Tokens per Sec: 2361.995361
+Epoch Step: 8001 Loss: 1.481513 Tokens per Sec: 2352.629395
+Epoch Step: 9001 Loss: 1.543934 Tokens per Sec: 2309.848145
+Epoch Step: 10001 Loss: 2.283913 Tokens per Sec: 2366.068848
+Training loss: 2.051977, elapsed time: 6462.275862
+Epoch Step: 1 Loss: 0.983802 Tokens per Sec: 625.352295
+Validation loss: 1.891066
+Epoch 32 / 40
+Epoch Step: 1 Loss: 2.080364 Tokens per Sec: 387.510803
+Epoch Step: 1001 Loss: 2.266947 Tokens per Sec: 2350.995850
+Epoch Step: 2001 Loss: 2.271844 Tokens per Sec: 2317.369873
+Epoch Step: 3001 Loss: 1.846279 Tokens per Sec: 2336.183594
+Epoch Step: 4001 Loss: 1.870804 Tokens per Sec: 2367.799561
+Epoch Step: 5001 Loss: 1.590511 Tokens per Sec: 2334.214111
+Epoch Step: 6001 Loss: 1.594843 Tokens per Sec: 2324.841553
+Epoch Step: 7001 Loss: 2.556543 Tokens per Sec: 2323.350586
+Epoch Step: 8001 Loss: 1.711451 Tokens per Sec: 2356.787598
+Epoch Step: 9001 Loss: 2.962810 Tokens per Sec: 2333.804199
+Epoch Step: 10001 Loss: 1.918276 Tokens per Sec: 2355.021240
+Training loss: 2.045520, elapsed time: 6470.618912
+Epoch Step: 1 Loss: 0.961332 Tokens per Sec: 624.675537
+Validation loss: 1.881037
+Epoch 33 / 40
+Epoch Step: 1 Loss: 1.220889 Tokens per Sec: 348.394684
+Epoch Step: 1001 Loss: 1.745281 Tokens per Sec: 2363.740723
+Epoch Step: 2001 Loss: 1.693300 Tokens per Sec: 2337.122070
+Epoch Step: 3001 Loss: 2.368861 Tokens per Sec: 2375.361572
+Epoch Step: 4001 Loss: 2.358382 Tokens per Sec: 2325.481201
+Epoch Step: 5001 Loss: 2.341468 Tokens per Sec: 2362.013184
+Epoch Step: 6001 Loss: 3.115325 Tokens per Sec: 2319.158936
+Epoch Step: 7001 Loss: 2.195219 Tokens per Sec: 2357.601318
+Epoch Step: 8001 Loss: 2.762516 Tokens per Sec: 2330.511963
+Epoch Step: 9001 Loss: 1.337810 Tokens per Sec: 2324.264648
+Epoch Step: 10001 Loss: 2.196893 Tokens per Sec: 2389.367676
+Training loss: 2.039478, elapsed time: 6455.039414
+Epoch Step: 1 Loss: 0.941655 Tokens per Sec: 621.604736
+Validation loss: 1.875100
+Epoch 34 / 40
+Epoch Step: 1 Loss: 2.205065 Tokens per Sec: 592.620911
+Epoch Step: 1001 Loss: 2.401791 Tokens per Sec: 2357.944824
+Epoch Step: 2001 Loss: 2.335440 Tokens per Sec: 2343.595459
+Epoch Step: 3001 Loss: 2.199785 Tokens per Sec: 2293.202637
+Epoch Step: 4001 Loss: 2.164540 Tokens per Sec: 2361.923340
+Epoch Step: 5001 Loss: 1.554633 Tokens per Sec: 2383.234863
+Epoch Step: 6001 Loss: 2.342339 Tokens per Sec: 2304.615967
+Epoch Step: 7001 Loss: 2.026087 Tokens per Sec: 2342.640381
+Epoch Step: 8001 Loss: 2.200959 Tokens per Sec: 2386.051758
+Epoch Step: 9001 Loss: 2.179927 Tokens per Sec: 2320.771240
+Epoch Step: 10001 Loss: 2.468644 Tokens per Sec: 2343.966309
+Training loss: 2.033849, elapsed time: 6459.920577
+Epoch Step: 1 Loss: 0.945040 Tokens per Sec: 620.713074
+Validation loss: 1.867426
+Epoch 35 / 40
+Epoch Step: 1 Loss: 1.555444 Tokens per Sec: 297.219391
+Epoch Step: 1001 Loss: 2.414908 Tokens per Sec: 2354.281738
+Epoch Step: 2001 Loss: 1.666770 Tokens per Sec: 2347.215332
+Epoch Step: 3001 Loss: 1.396712 Tokens per Sec: 2334.256836
+Epoch Step: 4001 Loss: 1.657771 Tokens per Sec: 2371.814209
+Epoch Step: 5001 Loss: 1.657556 Tokens per Sec: 2311.992920
+Epoch Step: 6001 Loss: 1.803809 Tokens per Sec: 2352.314453
+Epoch Step: 7001 Loss: 1.677739 Tokens per Sec: 2350.479004
+Epoch Step: 8001 Loss: 2.991654 Tokens per Sec: 2370.397949
+Epoch Step: 9001 Loss: 1.937390 Tokens per Sec: 2331.690430
+Epoch Step: 10001 Loss: 1.916606 Tokens per Sec: 2317.337646
+Training loss: 2.028490, elapsed time: 6462.844975
+Epoch Step: 1 Loss: 0.963381 Tokens per Sec: 620.386414
+Validation loss: 1.865121
+Epoch 36 / 40
+Epoch Step: 1 Loss: 1.822672 Tokens per Sec: 599.663208
+Epoch Step: 1001 Loss: 1.648486 Tokens per Sec: 2344.937988
+Epoch Step: 2001 Loss: 0.585646 Tokens per Sec: 2351.893799
+Epoch Step: 3001 Loss: 1.540882 Tokens per Sec: 2343.011963
+Epoch Step: 4001 Loss: 1.678347 Tokens per Sec: 2344.720459
+Epoch Step: 5001 Loss: 2.217440 Tokens per Sec: 2352.133789
+Epoch Step: 6001 Loss: 1.731938 Tokens per Sec: 2343.167969
+Epoch Step: 7001 Loss: 2.610518 Tokens per Sec: 2338.472900
+Epoch Step: 8001 Loss: 1.667671 Tokens per Sec: 2354.784180
+Epoch Step: 9001 Loss: 1.718279 Tokens per Sec: 2358.680664
+Epoch Step: 10001 Loss: 1.530616 Tokens per Sec: 2333.660400
+Training loss: 2.022758, elapsed time: 6456.898143
+Epoch Step: 1 Loss: 0.973100 Tokens per Sec: 619.958435
+Validation loss: 1.861081
+Epoch 37 / 40
+Epoch Step: 1 Loss: 2.242234 Tokens per Sec: 535.614990
+Epoch Step: 1001 Loss: 1.863624 Tokens per Sec: 2370.689453
+Epoch Step: 2001 Loss: 2.349865 Tokens per Sec: 2335.167725
+Epoch Step: 3001 Loss: 2.496605 Tokens per Sec: 2355.634766
+Epoch Step: 4001 Loss: 2.022746 Tokens per Sec: 2337.656982
+Epoch Step: 5001 Loss: 2.145347 Tokens per Sec: 2331.712402
+Epoch Step: 6001 Loss: 2.171972 Tokens per Sec: 2362.233887
+Epoch Step: 7001 Loss: 1.482002 Tokens per Sec: 2338.592285
+Epoch Step: 8001 Loss: 2.301551 Tokens per Sec: 2310.898926
