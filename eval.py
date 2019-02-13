@@ -57,8 +57,8 @@ def log_likelihood(model, batch):
     return total_prob
 
 def load(path):
-    tr_voc = VOCAB_SIZE + 4
-    en_voc = VOCAB_SIZE + 2
+    tr_voc = VOCAB_SIZE + 2
+    en_voc = VOCAB_SIZE + 4
     model = make_model(tr_voc, en_voc, N=6)
     model.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
@@ -148,7 +148,7 @@ def eval_discriminative(pad_idx, path_to_test_set, model):
     fields=data_fields)
 
   test_iter = Iterator(
-    pro_stereotype, batch_size=100, sort_key=lambda x: 1, repeat=False, train=False)
+    test, batch_size=100, sort_key=lambda x: 1, repeat=False, train=False)
 
   eval_discrim(pad_idx, test_iter, model)
 
