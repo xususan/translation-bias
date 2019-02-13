@@ -35,7 +35,8 @@ class EncoderDecoder(nn.Module):
             return self.encoder(self.src_embed(batch.src), batch.src_mask)
     
     def decode(self, memory, src_mask, tgt, tgt_mask):
-        return self.decoder(self.tgt_embed(tgt), memory, src_mask, tgt_mask)
+        embedded = self.tgt_embed(tgt)
+        return self.decoder(embedded, memory, src_mask, tgt_mask)
 
 class Generator(nn.Module):
     "Define standard linear + softmax generation step."
@@ -306,6 +307,8 @@ def make_model(src_vocab, tgt_vocab, N=6,
     for p in model.parameters():
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
+
+    pdb.set_trace()
     model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model

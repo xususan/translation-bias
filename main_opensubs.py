@@ -20,6 +20,9 @@ parser.add_argument('--no-context', dest='context', action='store_false')
 parser.set_defaults(context=False)
 args = parser.parse_args()
 
+now = datetime.datetime.now()
+month, day = pad_date(now.month), pad_date(now.day)
+
 # Arguments and globals
 print("Command line arguments: {%s}" % args)
 if args.size == "mini":
@@ -33,7 +36,6 @@ else:
   train_csv, val_csv, test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
 print("Train: %s, Val: %s, test: %s" % (train_csv, val_csv, test_csv))
-BATCH_SIZE = args.batch
 
 # DATA LOADING
 en = spacy.load('en')
@@ -57,9 +59,6 @@ train, val, test = TabularDataset.splits(
   test=test_csv,
   format='tsv', 
   fields=data_fields)
-
-now = datetime.datetime.now()
-month, day = pad_date(now.month), pad_date(now.day)
 
 print('Building vocab...')
 MIN_FREQ = 5
@@ -86,10 +85,10 @@ else:
   device = torch.device('cpu')
 
 # added src context sorting
-train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
+train_iter = MyIterator(train, batch_size=args.batch, device=device,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
                         batch_size_fn=batch_size_fn, train=True)
-valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
+valid_iter = MyIterator(val, batch_size=args.batch, device=device,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
                         batch_size_fn=batch_size_fn, train=False)
 print('Iterators built.')

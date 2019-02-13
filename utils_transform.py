@@ -3,7 +3,12 @@ import torch
 import numpy as np
 from transformer import subsequent_mask
 from torchtext import data
+from torchtext.data import Field, BucketIterator, TabularDataset, Pipeline
+from bpemb import BPEmb
 import pdb
+
+SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" 
+
 class Batch:
     "Object for holding a batch of data with mask during training."
     def __init__(self, src, trg=None, src_context=None, pad=0):
@@ -134,3 +139,63 @@ def rebatch(pad_idx, batch):
     return Batch(src, trg, src_context, pad_idx)
 
 pad_date = lambda num: '0' * (2 - len(str(num))) + str(num)
+
+class Params:
+    "Object for holding training parameters."
+    def __init__(self, args):
+        if args.size == "mini":
+            self.vocab_size = 1000
+            self.train_csv, self.val_csv, self.test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
+        elif args.size == "mid":
+            self.vocab_size = 10000
+            self.train_csv, self.val_csv, self.test_csv = "train_200k.csv", "val_10k.csv", "test_10k.csv"
+        else:
+            self.vocab_size = 50000
+            self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
+
+def load_bpe(vocab_size):
+    """ Load pre-trained byte pair embedding models.
+
+    Return src, trg
+    """
+    bpemb_tr = BPEmb(lang="tr", vs=vocab_size)
+    bpemb_en = BPEmb(lang="en", vs=vocab_size)
+    return bpemb_tr, bpemb_en
+
+def load_train_val_test_datasets(args, params):
+    """
+    Returns datasets and vocab objects
+    """
+    # Context and source / target fields for English + Turkish
+    bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
+    TR = Field(Pipeline(bpemb_tr.encode), 
+        tokenize=str.split, lower=False, pad_token=PAD)
+    EN = Field(Pipeline(bpemb_en.encode), 
+        tokenize=str.split, lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
+
+    # Must be in order
+    data_fields = [
+      ('src_context', TR), ('src', TR),
+      ('trg_context', EN), ('trg', EN)]
+
+    train, val, test = TabularDataset.splits(
+      path='data/', 
+      train=params.train_csv,
+      validation=params.val_csv,
+      test=params.test_csv,
+      format='tsv', 
+      fields=data_fields)
+
+    print('Building vocab...')
+    MIN_FREQ = 1
+    TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+    EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+    print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
+    print('Done building vocab')
+
+    return train, val, test, TR, EN
+
+
+
+
+
