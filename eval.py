@@ -130,8 +130,8 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
     batch = rebatch(pad_idx, old_batch)
     for i in range(batch.src.size(0)): # batch_size
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
-       pad_idx, max_len, start_symbol, end_symbol, k=5)[1:] # cut off SOS
-      targets = batch.trg_y[i] # doesn't have SOS
+       pad_idx, max_len, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
+      targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       hyp_str = " ".join(rev_tokenize_trg(hypothesis))
       trg_str = " ".join(rev_tokenize_trg(targets))
       bleu = get_moses_multi_bleu([hyp_str], [trg_str])
