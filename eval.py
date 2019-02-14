@@ -175,7 +175,6 @@ def eval_accuracy(pad_idx, path_to_test_set, model):
 
   eval_accuracy_helper(pad_idx, test_iter, model)
 
-
 print('loading spacy')
 en = spacy.load('en')
 print('finished')
