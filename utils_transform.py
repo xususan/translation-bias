@@ -168,9 +168,9 @@ def load_train_val_test_datasets(params):
     """
     # Context and source / target fields for English + Turkish
     bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
-    TR = Field(tokenize=bpemb_tr.encode_ids, 
+    TR = Field(tokenize=bpemb_tr.encode, 
         lower=False, pad_token=PAD)
-    EN = Field(tokenize=bpemb_en.encode_ids, 
+    EN = Field(tokenize=bpemb_en.encode, 
         lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
 
     # Must be in order
