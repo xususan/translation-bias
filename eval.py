@@ -24,7 +24,7 @@ CPU ONLY.
 """
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Evaluating performance of a model')
-parser.add_argument('--vocab', type=int, default=10000, help='Vocab size. MUST MATCH')
+parser.add_argument('--vocab', type=int, default=10000, help='vocab size, must match max size in build_vocab')
 parser.add_argument('--batch', type=int, default=512, help='Batch size')
 parser.add_argument('--path', type=str, default="save", help='model path within models/ directory')
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
@@ -67,11 +67,9 @@ def log_likelihood(model, batch):
         total_prob += prob_of_trg.squeeze()
     return total_prob
 
-def load(path):
+def load(path, tr_voc, en_voc):
     """Loads a trained model from memory for evaluation.
     """
-    tr_voc = VOCAB_SIZE + 2
-    en_voc = VOCAB_SIZE + 4
     model = make_model(tr_voc, en_voc, N=6)
     model.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
@@ -220,7 +218,7 @@ print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
 print("Loading model...")
-model = load('models/' + args.path)
+model = load('models/' + args.path, len(TR.vocab), len(EN.vocab))
 print("Model loaded.")
 
 if args.eval == "accuracy" or args.eval == "all":
