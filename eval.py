@@ -173,7 +173,7 @@ def eval_accuracy(pad_idx, path_to_test_set, model):
 
   eval_accuracy_helper(pad_idx, test_iter, model)
 
-bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
+bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 
 # Context and source / target fields for English + Turkish
 TR = Field(tokenize=bpemb_tr.encode, 
