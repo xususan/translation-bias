@@ -173,15 +173,13 @@ def eval_accuracy(pad_idx, path_to_test_set, model):
 
   eval_accuracy_helper(pad_idx, test_iter, model)
 
-print('loading spacy')
-en = spacy.load('en')
-print('finished')
-def tokenize_en(sentence):
-    return [tok.text for tok in en.tokenizer(sentence)]
+bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
 
 # Context and source / target fields for English + Turkish
-TR = Field(lower=True, pad_token=PAD)
-EN = Field(tokenize=tokenize_en, lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
+TR = Field(tokenize=bpemb_tr.encode, 
+        lower=False, pad_token=PAD)
+EN = Field(tokenize=bpemb_en.encode, 
+    lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
 rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
 rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 
