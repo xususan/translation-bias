@@ -207,7 +207,7 @@ valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
 print('done')
 
 print("Building vocab...")
-MIN_FREQ = 5
+MIN_FREQ = 1
 TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 pad_idx = EN.vocab.stoi[PAD]
