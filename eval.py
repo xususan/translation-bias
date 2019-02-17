@@ -67,14 +67,6 @@ def log_likelihood(model, batch):
         total_prob += prob_of_trg.squeeze()
     return total_prob
 
-def load(path, tr_voc, en_voc):
-    """Loads a trained model from memory for evaluation.
-    """
-    model = make_model(tr_voc, en_voc, N=6)
-    model.load_state_dict(torch.load(path, map_location='cpu'))
-    model.eval()
-    return model
-
 def greedy_decode(model, batch, max_len, start_symbol):
     src = batch.src, src_mask = batch.src_mask # This is just wrong lol
     memory = model.encode(src, src_mask)

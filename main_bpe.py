@@ -17,6 +17,7 @@ parser.add_argument('--save', type=int, default=10, help='Save model after every
 parser.add_argument('--out', type=str, default="save", help='Prefix for model output, eg save for save_10.pt')
 parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
+parser.add_argument('--load', type=str, default="None", help="model to resume training if any")
 parser.set_defaults(context=False)
 args = parser.parse_args()
 
@@ -33,10 +34,13 @@ print("Vocab size: %d" % (params.vocab_size))
 train, val, test, TR, EN = load_train_val_test_datasets(params)
 pad_idx = EN.vocab.stoi[PAD]
 
+
 if args.context:
   model = make_context_model(len(TR.vocab), len(EN.vocab), N=6)
 else:
   model = make_model(len(TR.vocab), len(EN.vocab), N=6)
+  if args.load != "None":
+    model.load_state_dict(torch.load(args.load))
 
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 

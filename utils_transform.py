@@ -195,6 +195,14 @@ def load_train_val_test_datasets(params):
 
     return train, val, test, TR, EN
 
+def load(path, tr_voc, en_voc):
+    """Loads a trained model from memory for evaluation.
+    """
+    model = make_model(tr_voc, en_voc, N=6)
+    model.load_state_dict(torch.load(path, map_location='cpu'))
+    model.eval()
+    return model
+
 
 
 
