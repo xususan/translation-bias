@@ -39,8 +39,8 @@ if args.context:
   model = make_context_model(len(TR.vocab), len(EN.vocab), N=6)
 else:
   model = make_model(len(TR.vocab), len(EN.vocab), N=6)
-  if args.load != "None":
-    model.load_state_dict(torch.load(args.load))
+  # if args.load != "None":
+  #   model.load_state_dict(torch.load(args.load))
 
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
