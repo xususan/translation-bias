@@ -138,10 +138,13 @@ def eval_accuracy(pad_idx, path_to_test_set, model, TR, EN):
 
   eval_accuracy_helper(pad_idx, test_iter, model)
 
-def load(path, tr_voc, en_voc):
+def load(path, tr_voc, en_voc, use_context):
     """Loads a trained model from memory for evaluation.
     """
-    model = make_model(tr_voc, en_voc, N=6)
+    if use_context:
+      model = make_context_model(tr_voc, en_voc, N=6)
+    else:
+      model = make_model(tr_voc, en_voc, N=6)
     model.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
     return model

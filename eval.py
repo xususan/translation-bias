@@ -30,6 +30,8 @@ parser.add_argument('--vocab', type=int, default=10000, help='vocab size, must m
 parser.add_argument('--batch', type=int, default=512, help='Batch size')
 parser.add_argument('--path', type=str, default="save", help='model path within models/ directory')
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
+parser.add_argument('--context', dest='context', action='store_true')
+parser.add_argument('--no-context', dest='context', action='store_false')
 parser.set_defaults(context=False)
 args = parser.parse_args()
 print("Command line arguments: {%s}" % args)
@@ -78,7 +80,7 @@ print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 
 print("Loading model...")
-model = load('models/' + args.path, len(TR.vocab), len(EN.vocab))
+model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
 print("Model loaded.")
 
 if args.eval == "accuracy" or args.eval == "all":
