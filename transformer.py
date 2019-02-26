@@ -66,6 +66,8 @@ class Encoder(nn.Module):
         return self.norm(x)
 
 class CombinationLayer(nn.Module):
+    '''Combines the outputs of the source encoder and the context encoder.
+    '''
     def __init__(self, size, self_attn, feed_forward, dropout):
         super(CombinationLayer, self).__init__()
         self.self_attn = self_attn
@@ -74,15 +76,21 @@ class CombinationLayer(nn.Module):
         self.sublayer = clones(SublayerConnection(size, dropout), 3)
         self.size = size
         self.w = nn.Linear(2 * self.size, 1)
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, x, src_mask, context, context_mask):
-        "Follow Figure 1 (left) for connections."
+        "Follow Figure 1 (right) for connections."
+        pdb.set_trace()
+
+        # From the source encoder, there's a self-connection sublayer.
         x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, src_mask))
+
+        # Fomr the context encoder.
         context = self.sublayer[1](x, lambda x: self.context_attn(x, context, context, context_mask))
 
         # Append context and X together
         x_and_context = torch.cat([x, context], dim=2) # [batch x len x 2*size]
-        g = self.w(x_and_context).sigmoid()
+        g = self.sigmoid(self.w(x_and_context))
 
         # Gated sum
         gated_sum = g * x + (1 - g) * context
@@ -92,24 +100,26 @@ class CombinationLayer(nn.Module):
 class EncoderWithContext(nn.Module):
     def __init__(self, layer, N):
         super(EncoderWithContext, self).__init__()
-        # N - 1 "regular" layers. Share embeddings
-        self.layers = clones(layer, N - 1)
+        # N "regular" layers. Share embeddings
+        self.layers = clones(layer, N)
         self.norm = nn.LayerNorm(layer.size, eps=1e-6)
-        self.final_context_layer = copy.deepcopy(layer)
         self.combination_layer = CombinationLayer(
             layer.size, copy.deepcopy(layer.self_attn), 
             copy.deepcopy(layer.feed_forward), layer.dropout)
         self.use_context= True
         
     def forward(self, x, mask, src_context, context_mask):
+        pdb.set_trace()
         "Pass the input (and mask) through each layer in turn."
-        for layer in self.layers:
+
+        # The src only goes through N - 1 layers.
+        for layer in self.layers[:-1]:
             x = layer(x, mask)
 
         for layer in self.layers:
             src_context = layer(src_context, context_mask) 
 
-        src_context = self.final_context_layer(src_context, context_mask)
+        pdb.set_trace()
         out = self.combination_layer(x, mask, src_context, context_mask)
         return self.norm(out)
 
@@ -161,7 +171,7 @@ class DecoderLayer(nn.Module):
     def __init__(self, size, self_attn, src_attn, feed_forward, dropout):
         super(DecoderLayer, self).__init__()
         self.size = size
-        self.self_attn = self_attn
+        self.self_attn = self_attn 
         self.src_attn = src_attn
         self.feed_forward = feed_forward
         self.sublayer = clones(SublayerConnection(size, dropout), 3)
