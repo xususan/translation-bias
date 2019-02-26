@@ -80,7 +80,6 @@ class CombinationLayer(nn.Module):
 
     def forward(self, x, src_mask, context, context_mask):
         "Follow Figure 1 (right) for connections."
-        pdb.set_trace()
 
         # From the source encoder, there's a self-connection sublayer.
         x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, src_mask))
@@ -109,7 +108,6 @@ class EncoderWithContext(nn.Module):
         self.use_context= True
         
     def forward(self, x, mask, src_context, context_mask):
-        pdb.set_trace()
         "Pass the input (and mask) through each layer in turn."
 
         # The src only goes through N - 1 layers.
@@ -119,7 +117,6 @@ class EncoderWithContext(nn.Module):
         for layer in self.layers:
             src_context = layer(src_context, context_mask) 
 
-        pdb.set_trace()
         out = self.combination_layer(x, mask, src_context, context_mask)
         return self.norm(out)
 
