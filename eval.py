@@ -88,4 +88,4 @@ if args.eval == "accuracy" or args.eval == "all":
     eval_accuracy(pad_idx, path, model, TR, EN)
 
 if args.eval == "bleu" or args.eval == "all":
-  eval_bleu(pad_idx, valid_iter, model, 10, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS], rev_tokenize_en, bpemb_en)
+  eval_bleu(pad_idx, valid_iter, model, 30, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS], rev_tokenize_en, bpemb_en)
