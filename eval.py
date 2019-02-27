@@ -81,7 +81,7 @@ print('Done building vocab')
 
 print("Loading model...")
 model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
-print("Model loaded.")
+print("Model loaded from %s" % args.path)
 
 if args.eval == "accuracy" or args.eval == "all":
   for path in ["pro_stereotype.tsv", "anti_stereotype.tsv", "male_subject.tsv", "female_subject.tsv"]:
