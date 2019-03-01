@@ -1,0 +1,46 @@
+Command line arguments: {Namespace(batch=1000, context=True, epochs=50, load='None', out='context_2m', save=10, size='full')}
+Train: train_2m.csv, Val: val_10k.csv, test: test_10k.csv
+Vocab size: 50000
+Building vocab...
+TR vocab size: 43814, EN vocab size: 44219
+Done building vocab
+GPUs available: 1
+Iterators built.
+Training model...
+Epoch 1 / 50
+Traceback (most recent call last):
+  File "main_bpe.py", line 75, in <module>
+    opt=model_opt))
+  File "/vol/translation-bias/utils_transform.py", line 41, in run_epoch
+    out = model.forward(batch)
+  File "/vol/translation-bias/transformer.py", line 27, in forward
+    tgt, tgt_mask)
+  File "/vol/translation-bias/transformer.py", line 39, in decode
+    return self.decoder(embedded, memory, src_mask, tgt_mask)
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/vol/translation-bias/transformer.py", line 163, in forward
+    x = layer(x, memory, src_mask, tgt_mask)
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/vol/translation-bias/transformer.py", line 179, in forward
+    x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, tgt_mask))
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/vol/translation-bias/transformer.py", line 137, in forward
+    return x + self.dropout(sublayer(self.norm(x)))
+  File "/vol/translation-bias/transformer.py", line 179, in <lambda>
+    x = self.sublayer[0](x, lambda x: self.self_attn(x, x, x, tgt_mask))
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/vol/translation-bias/transformer.py", line 223, in forward
+    for l, x in zip(self.linears, (query, key, value))]
+  File "/vol/translation-bias/transformer.py", line 223, in <listcomp>
+    for l, x in zip(self.linears, (query, key, value))]
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/modules/linear.py", line 67, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/functional.py", line 1354, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 1.50 MiB (GPU 0; 15.75 GiB total capacity; 1.24 GiB already allocated; 7.81 MiB free; 9.12 MiB cached)
