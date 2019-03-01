@@ -75,7 +75,7 @@ class CombinationLayer(nn.Module):
         self.feed_forward = feed_forward
         self.sublayer = clones(SublayerConnection(size, dropout), 3)
         self.size = size
-        self.w = nn.Linear(2 * self.size, 1, bias=False)
+        self.w = nn.Linear(2 * self.size, 1, bias=True)
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x, src_mask, context, context_mask):
