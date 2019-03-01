@@ -39,19 +39,22 @@ print("Command line arguments: {%s}" % args)
 VOCAB_SIZE = args.vocab
 BATCH_SIZE = args.batch
 train_path = "train_200k.csv" # TRAIN PATH MUST MATCH ORIGINAL
-SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
+SOS, EOS, PAD = "<s>", "</s>", "<pad>" # Represents begining of context sentence
+BOC, BOS = "<boc>", "<bos>"
 
 device = torch.device('cpu')
 
 bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 
 # Context and source / target fields for English + Turkish
-TR = Field(tokenize=bpemb_tr.encode, 
-        lower=False, pad_token=PAD)
+TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
+        lower=True, pad_token=PAD, init_token=BOC)
+TR_SRC = Field(tokenize=bpemb_tr.encode, 
+    lower=True, pad_token=PAD, init_token=BOS)
 EN = Field(tokenize=bpemb_en.encode, 
-    lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
+    lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
 rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
-rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
+rev_tokenize_tr = lambda tokenized: [TR_SRC.vocab.itos[i] for i in tokenized]
 
 print('reading in tabular dataset')
 train, val, test = TabularDataset.splits(
@@ -60,7 +63,7 @@ train, val, test = TabularDataset.splits(
   validation="val_10k.csv",
   test="test_10k.csv",
   format='tsv', 
-  fields=[('src_context', TR), ('src', TR),
+  fields=[('src_context', TR_CONTEXT), ('src', TR_SRC),
   ('trg_context', EN), ('trg', EN)])
 print('finished')
 
@@ -72,7 +75,9 @@ print('done')
 
 print("Building vocab...")
 MIN_FREQ = 1
-TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+TR_CONTEXT.vocab = TR_SRC.vocab
+TR = TR_SRC
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 pad_idx = EN.vocab.stoi[PAD]
 

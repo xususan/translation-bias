@@ -31,7 +31,8 @@ params = Params(args)
 print("Train: %s, Val: %s, test: %s" % (params.train_csv, params.val_csv, params.test_csv))
 print("Vocab size: %d" % (params.vocab_size))
 
-train, val, test, TR, EN = load_train_val_test_datasets(params)
+train, val, test, TR_SRC, TR_CONTEXT, EN = load_train_val_test_datasets(params)
+TR = TR_SRC
 pad_idx = EN.vocab.stoi[PAD]
 
 

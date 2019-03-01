@@ -7,7 +7,8 @@ from torchtext.data import Field, BucketIterator, TabularDataset, Pipeline
 from bpemb import BPEmb
 import pdb
 
-SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" 
+SOS, EOS, PAD = "<s>", "</s>", "<pad>"
+BOC, BOS = "<boc>", "<bos>"
 
 class Batch:
     "Object for holding a batch of data with mask during training."
@@ -167,15 +168,19 @@ def load_train_val_test_datasets(params):
     Returns datasets and vocab objects
     """
     # Context and source / target fields for English + Turkish
+    # 03/01: need to change lower to True?. need to figure out way to change 
+    # init_token
     bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
-    TR = Field(tokenize=bpemb_tr.encode, 
-        lower=False, pad_token=PAD)
+    TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
+        lower=True, pad_token=PAD, init_token=BOC)
+    TR_SRC = Field(tokenize=bpemb_tr.encode, 
+        lower=True, pad_token=PAD, init_token=BOS)
     EN = Field(tokenize=bpemb_en.encode, 
-        lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
+        lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
 
     # Must be in order
     data_fields = [
-      ('src_context', TR), ('src', TR),
+      ('src_context', TR_CONTEXT), ('src', TR_SRC),
       ('trg_context', EN), ('trg', EN)]
 
     train, val, test = TabularDataset.splits(
@@ -188,12 +193,13 @@ def load_train_val_test_datasets(params):
 
     print('Building vocab...')
     MIN_FREQ = 1
-    TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+    TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=params.vocab_size)
+    TR_CONTEXT.vocab = TR_SRC.vocab
     EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
-    print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
+    print("TR_SRC vocab size: %d, EN vocab size: %d" % (len(TR_SRC.vocab), len(EN.vocab)))
     print('Done building vocab')
 
-    return train, val, test, TR, EN
+    return train, val, test, TR_SRC, TR_CONTEXT, EN
 
 
 
