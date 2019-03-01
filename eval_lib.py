@@ -19,7 +19,8 @@ def rebatch_for_eval(pad_idx, batch):
 def log_likelihood(model, batch, pad_idx):
     """Calculates the log likelihood of a batch, given the model.
     """
-    memory = model.encode(batch)
+    pdb.set_trace()
+    memory = model.encode(batch) # [40 x 7 x 512] = [batch x srclen x dim]
     total_prob = torch.zeros(batch.trg_y.size(0))
     for i in range(0, batch.trg_y.size(1)): # trg_len
         y_prev = batch.trg[:, :i + 1]
