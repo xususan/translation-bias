@@ -1,0 +1,24 @@
+Command line arguments: {Namespace(batch=1000, context=True, epochs=100, load='None', out='context_bias_term_200k', save=10, size='mid')}
+Train: train_200k.csv, Val: val_10k.csv, test: test_10k.csv
+Vocab size: 10000
+Building vocab...
+TR vocab size: 9718, EN vocab size: 10004
+Done building vocab
+GPUs available: 1
+Iterators built.
+Training model...
+Epoch 1 / 100
+Epoch Step: 1 Loss: 7.981656 Tokens per Sec: 289.221100
+Epoch Step: 1001 Loss: 4.100533 Tokens per Sec: 6273.079590
+Epoch Step: 2001 Loss: 3.418104 Tokens per Sec: 6092.374023
+Epoch Step: 3001 Loss: 3.546422 Tokens per Sec: 6337.409668
+Epoch Step: 4001 Loss: 3.039807 Tokens per Sec: 6048.642578
+Epoch Step: 5001 Loss: 3.699326 Tokens per Sec: 6147.252930
+Epoch Step: 6001 Loss: 3.189156 Tokens per Sec: 6379.931641
+Epoch Step: 7001 Loss: 2.630502 Tokens per Sec: 6363.531250
+Epoch Step: 8001 Loss: 2.152720 Tokens per Sec: 6199.329102
+Epoch Step: 9001 Loss: 3.618599 Tokens per Sec: 6533.499023
+Epoch Step: 10001 Loss: 2.790964 Tokens per Sec: 6442.133301
+Epoch Step: 11001 Loss: 3.225174 Tokens per Sec: 6253.511230
+Epoch Step: 12001 Loss: 2.310683 Tokens per Sec: 6389.480957
+Epoch Step: 13001 Loss: 2.317320 Tokens per Sec: 6314.519043

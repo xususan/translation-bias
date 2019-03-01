@@ -1,0 +1,18 @@
+Command line arguments: {Namespace(batch=512, context=True, eval='accuracy', path='0301_context_bias_boc_mini_10.pt', vocab=1000)}
+reading in tabular dataset
+finished
+making iterator
+done
+Building vocab...
+TR vocab size: 728, EN vocab size: 798
+Done building vocab
+Loading model...
+Model loaded from 0301_context_bias_boc_mini_10.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 17 / 40 = 0.425000
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 23 / 40 = 0.575000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 3 / 40 = 0.075000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 37 / 40 = 0.925000

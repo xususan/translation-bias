@@ -1,0 +1,273 @@
+Command line arguments: {Namespace(batch=100, context=True, epochs=50, load='None', out='context_bias_boc_mini', save=10, size='mini')}
+Train: train_mini.csv, Val: val_mini.csv, test: test_mini.csv
+Vocab size: 1000
+downloading https://nlp.h-its.org/bpemb/tr/tr.wiki.bpe.vs1000.model
+  0%|          | 0/251226 [00:00<?, ?B/s] 10%|█         | 25600/251226 [00:00<00:01, 151091.43B/s] 45%|████▍     | 112640/251226 [00:00<00:00, 191337.16B/s]100%|██████████| 251226/251226 [00:00<00:00, 584984.97B/s]
+downloading https://nlp.h-its.org/bpemb/tr/tr.wiki.bpe.vs1000.d100.w2v.bin.tar.gz
+  0%|          | 0/376139 [00:00<?, ?B/s] 11%|█▏        | 43008/376139 [00:00<00:01, 245444.40B/s] 57%|█████▋    | 215040/376139 [00:00<00:00, 316540.15B/s]100%|██████████| 376139/376139 [00:00<00:00, 1054614.66B/s]
+downloading https://nlp.h-its.org/bpemb/en/en.wiki.bpe.vs1000.model
+  0%|          | 0/251221 [00:00<?, ?B/s] 17%|█▋        | 41984/251221 [00:00<00:00, 239685.61B/s] 86%|████████▌ | 215040/251221 [00:00<00:00, 309922.48B/s]100%|██████████| 251221/251221 [00:00<00:00, 709274.81B/s]
+downloading https://nlp.h-its.org/bpemb/en/en.wiki.bpe.vs1000.d100.w2v.bin.tar.gz
+  0%|          | 0/375861 [00:00<?, ?B/s]  7%|▋         | 25600/375861 [00:00<00:02, 146031.89B/s] 29%|██▉       | 109568/375861 [00:00<00:01, 184374.71B/s]100%|██████████| 375861/375861 [00:00<00:00, 844937.16B/s]
+lower = True
+Building vocab...
+TR_SRC vocab size: 728, EN vocab size: 798
+Done building vocab
+GPUs available: 1
+Iterators built.
+Training model...
+Epoch 1 / 50
+Epoch Step: 1 Loss: 6.117615 Tokens per Sec: 427.181427
+Training loss: 4.500024, elapsed time: 28.877221
+Epoch Step: 1 Loss: 4.553621 Tokens per Sec: 683.467163
+Validation loss: 4.678484
+Epoch 2 / 50
+Epoch Step: 1 Loss: 4.081098 Tokens per Sec: 636.599548
+Training loss: 3.647518, elapsed time: 28.905045
+Epoch Step: 1 Loss: 4.141594 Tokens per Sec: 683.070068
+Validation loss: 4.390560
+Epoch 3 / 50
+Epoch Step: 1 Loss: 2.636538 Tokens per Sec: 714.523865
+Training loss: 3.235558, elapsed time: 28.711084
+Epoch Step: 1 Loss: 4.135131 Tokens per Sec: 685.054138
+Validation loss: 4.129720
+Epoch 4 / 50
+Epoch Step: 1 Loss: 2.186892 Tokens per Sec: 700.593628
+Training loss: 2.975800, elapsed time: 28.757339
+Epoch Step: 1 Loss: 3.862864 Tokens per Sec: 685.629028
+Validation loss: 3.901344
+Epoch 5 / 50
+Epoch Step: 1 Loss: 2.074435 Tokens per Sec: 721.976746
+Training loss: 2.812234, elapsed time: 28.622657
+Epoch Step: 1 Loss: 3.893801 Tokens per Sec: 680.499451
+Validation loss: 3.755618
+Epoch 6 / 50
+Epoch Step: 1 Loss: 2.587115 Tokens per Sec: 596.272644
+Training loss: 2.611231, elapsed time: 28.800874
+Epoch Step: 1 Loss: 3.711939 Tokens per Sec: 683.075806
+Validation loss: 3.564372
+Epoch 7 / 50
+Epoch Step: 1 Loss: 2.324030 Tokens per Sec: 737.878784
+Training loss: 2.516189, elapsed time: 28.758968
+Epoch Step: 1 Loss: 3.702264 Tokens per Sec: 675.412415
+Validation loss: 3.383090
+Epoch 8 / 50
+Epoch Step: 1 Loss: 1.860286 Tokens per Sec: 683.108521
+Training loss: 2.419463, elapsed time: 28.508028
+Epoch Step: 1 Loss: 3.500125 Tokens per Sec: 703.290955
+Validation loss: 3.249698
+Epoch 9 / 50
+Epoch Step: 1 Loss: 1.800360 Tokens per Sec: 670.794922
+Training loss: 2.248307, elapsed time: 28.277826
+Epoch Step: 1 Loss: 3.158864 Tokens per Sec: 700.498596
+Validation loss: 2.936801
+Epoch 10 / 50
+Epoch Step: 1 Loss: 1.735305 Tokens per Sec: 716.030029
+Training loss: 2.065179, elapsed time: 28.781190
+Epoch Step: 1 Loss: 2.995393 Tokens per Sec: 681.218445
+Validation loss: 2.651474
+Saved model to models/0301_context_bias_boc_mini_10.pt.
+Epoch 11 / 50
+Epoch Step: 1 Loss: 1.903018 Tokens per Sec: 600.920837
+Training loss: 1.910842, elapsed time: 28.485925
+Epoch Step: 1 Loss: 2.734515 Tokens per Sec: 655.900940
+Validation loss: 2.452736
+Epoch 12 / 50
+Epoch Step: 1 Loss: 1.581559 Tokens per Sec: 643.011841
+Training loss: 1.767233, elapsed time: 31.002408
+Epoch Step: 1 Loss: 2.293525 Tokens per Sec: 597.421265
+Validation loss: 2.173919
+Epoch 13 / 50
+Epoch Step: 1 Loss: 1.557314 Tokens per Sec: 587.182007
+Training loss: 1.628914, elapsed time: 33.463950
+Epoch Step: 1 Loss: 2.060062 Tokens per Sec: 528.433044
+Validation loss: 1.950608
+Epoch 14 / 50
+Epoch Step: 1 Loss: 1.038848 Tokens per Sec: 675.049805
+Training loss: 1.516196, elapsed time: 30.810576
+Epoch Step: 1 Loss: 2.029145 Tokens per Sec: 600.802917
+Validation loss: 1.770638
+Epoch 15 / 50
+Epoch Step: 1 Loss: 1.400524 Tokens per Sec: 715.344604
+Training loss: 1.416459, elapsed time: 29.780838
+Epoch Step: 1 Loss: 1.864451 Tokens per Sec: 635.874084
+Validation loss: 1.595235
+Epoch 16 / 50
+Epoch Step: 1 Loss: 1.098273 Tokens per Sec: 601.879028
+Training loss: 1.320653, elapsed time: 36.139754
+Epoch Step: 1 Loss: 1.664630 Tokens per Sec: 546.685181
+Validation loss: 1.439420
+Epoch 17 / 50
+Epoch Step: 1 Loss: 0.911458 Tokens per Sec: 421.425751
+Training loss: 1.237923, elapsed time: 35.811984
+Epoch Step: 1 Loss: 1.470581 Tokens per Sec: 450.891449
+Validation loss: 1.298654
+Epoch 18 / 50
+Epoch Step: 1 Loss: 1.040638 Tokens per Sec: 488.889557
+Training loss: 1.156417, elapsed time: 36.591501
+Epoch Step: 1 Loss: 1.255070 Tokens per Sec: 463.841003
+Validation loss: 1.162589
+Epoch 19 / 50
+Epoch Step: 1 Loss: 0.670976 Tokens per Sec: 639.610962
+Training loss: 1.085621, elapsed time: 31.545819
+Epoch Step: 1 Loss: 1.319887 Tokens per Sec: 676.905823
+Validation loss: 1.078474
+Epoch 20 / 50
+Epoch Step: 1 Loss: 0.991995 Tokens per Sec: 601.616760
+Training loss: 1.031943, elapsed time: 29.126674
+Epoch Step: 1 Loss: 1.400657 Tokens per Sec: 707.671631
+Validation loss: 0.993729
+Saved model to models/0301_context_bias_boc_mini_20.pt.
+Epoch 21 / 50
+Epoch Step: 1 Loss: 0.960841 Tokens per Sec: 690.380493
+Training loss: 0.971848, elapsed time: 28.175799
+Epoch Step: 1 Loss: 1.136164 Tokens per Sec: 663.071655
+Validation loss: 0.954618
+Epoch 22 / 50
+Epoch Step: 1 Loss: 0.937657 Tokens per Sec: 772.039001
+Training loss: 0.929861, elapsed time: 37.073204
+Epoch Step: 1 Loss: 1.152514 Tokens per Sec: 664.159485
+Validation loss: 0.885966
+Epoch 23 / 50
+Epoch Step: 1 Loss: 0.575424 Tokens per Sec: 756.436890
+Training loss: 0.875858, elapsed time: 31.048450
+Epoch Step: 1 Loss: 0.909442 Tokens per Sec: 651.293579
+Validation loss: 0.810161
+Epoch 24 / 50
+Epoch Step: 1 Loss: 0.862193 Tokens per Sec: 706.254028
+Training loss: 0.832196, elapsed time: 31.019889
+Epoch Step: 1 Loss: 0.885182 Tokens per Sec: 647.751404
+Validation loss: 0.787494
+Epoch 25 / 50
+Epoch Step: 1 Loss: 0.609688 Tokens per Sec: 739.091736
+Training loss: 0.795541, elapsed time: 30.902939
+Epoch Step: 1 Loss: 0.923313 Tokens per Sec: 603.709229
+Validation loss: 0.742282
+Epoch 26 / 50
+Epoch Step: 1 Loss: 0.706692 Tokens per Sec: 722.084229
+Training loss: 0.756163, elapsed time: 30.702084
+Epoch Step: 1 Loss: 0.972922 Tokens per Sec: 573.127930
+Validation loss: 0.731562
+Epoch 27 / 50
+Epoch Step: 1 Loss: 0.562137 Tokens per Sec: 461.522095
+Training loss: 0.738053, elapsed time: 39.718785
+Epoch Step: 1 Loss: 0.932709 Tokens per Sec: 412.651001
+Validation loss: 0.680736
+Epoch 28 / 50
+Epoch Step: 1 Loss: 0.596043 Tokens per Sec: 467.443848
+Training loss: 0.703813, elapsed time: 39.015182
+Epoch Step: 1 Loss: 0.826731 Tokens per Sec: 542.804932
+Validation loss: 0.657588
+Epoch 29 / 50
+Epoch Step: 1 Loss: 0.436918 Tokens per Sec: 682.326111
+Training loss: 0.680063, elapsed time: 32.362297
+Epoch Step: 1 Loss: 0.841024 Tokens per Sec: 639.030151
+Validation loss: 0.629467
+Epoch 30 / 50
+Epoch Step: 1 Loss: 0.645908 Tokens per Sec: 565.628113
+Training loss: 0.647689, elapsed time: 31.766264
+Epoch Step: 1 Loss: 0.671490 Tokens per Sec: 540.100586
+Validation loss: 0.631675
+Saved model to models/0301_context_bias_boc_mini_30.pt.
+Epoch 31 / 50
+Epoch Step: 1 Loss: 0.445303 Tokens per Sec: 674.490112
+Training loss: 0.628509, elapsed time: 31.383571
+Epoch Step: 1 Loss: 0.607156 Tokens per Sec: 600.518188
+Validation loss: 0.565951
+Epoch 32 / 50
+Epoch Step: 1 Loss: 0.428500 Tokens per Sec: 612.317078
+Training loss: 0.613503, elapsed time: 32.994835
+Epoch Step: 1 Loss: 0.714207 Tokens per Sec: 535.029968
+Validation loss: 0.548002
+Epoch 33 / 50
+Epoch Step: 1 Loss: 0.603542 Tokens per Sec: 713.072266
+Training loss: 0.590353, elapsed time: 30.848820
+Epoch Step: 1 Loss: 0.714521 Tokens per Sec: 621.296753
+Validation loss: 0.524207
+Epoch 34 / 50
+Epoch Step: 1 Loss: 0.364928 Tokens per Sec: 675.467651
+Training loss: 0.567285, elapsed time: 30.723879
+Epoch Step: 1 Loss: 0.798909 Tokens per Sec: 597.280090
+Validation loss: 0.516475
+Epoch 35 / 50
+Epoch Step: 1 Loss: 0.414931 Tokens per Sec: 727.692993
+Training loss: 0.546867, elapsed time: 30.717044
+Epoch Step: 1 Loss: 0.617546 Tokens per Sec: 611.855957
+Validation loss: 0.511014
+Epoch 36 / 50
+Epoch Step: 1 Loss: 0.630974 Tokens per Sec: 713.789062
+Training loss: 0.533931, elapsed time: 31.649463
+Epoch Step: 1 Loss: 0.700555 Tokens per Sec: 601.500183
+Validation loss: 0.484582
+Epoch 37 / 50
+Epoch Step: 1 Loss: 0.434510 Tokens per Sec: 629.855469
+Training loss: 0.515634, elapsed time: 30.579634
+Epoch Step: 1 Loss: 0.555893 Tokens per Sec: 575.225037
+Validation loss: 0.469572
+Epoch 38 / 50
+Epoch Step: 1 Loss: 0.375342 Tokens per Sec: 536.964417
+Training loss: 0.491547, elapsed time: 30.640258
+Epoch Step: 1 Loss: 0.608300 Tokens per Sec: 596.679199
+Validation loss: 0.450328
+Epoch 39 / 50
+Epoch Step: 1 Loss: 0.343719 Tokens per Sec: 616.624451
+Training loss: 0.480194, elapsed time: 31.184772
+Epoch Step: 1 Loss: 0.507073 Tokens per Sec: 605.626099
+Validation loss: 0.442756
+Epoch 40 / 50
+Epoch Step: 1 Loss: 0.404069 Tokens per Sec: 725.445923
+Training loss: 0.466951, elapsed time: 30.815094
+Epoch Step: 1 Loss: 0.568702 Tokens per Sec: 654.127197
+Validation loss: 0.421848
+Saved model to models/0301_context_bias_boc_mini_40.pt.
+Epoch 41 / 50
+Epoch Step: 1 Loss: 0.435935 Tokens per Sec: 656.013123
+Training loss: 0.457050, elapsed time: 40.567693
+Epoch Step: 1 Loss: 0.524703 Tokens per Sec: 543.824341
+Validation loss: 0.401159
+Epoch 42 / 50
+Epoch Step: 1 Loss: 0.349707 Tokens per Sec: 485.954102
+Training loss: 0.438160, elapsed time: 36.473659
+Epoch Step: 1 Loss: 0.500195 Tokens per Sec: 534.835144
+Validation loss: 0.390737
+Epoch 43 / 50
+Epoch Step: 1 Loss: 0.398405 Tokens per Sec: 436.435211
+Training loss: 0.433342, elapsed time: 32.204485
+Epoch Step: 1 Loss: 0.457440 Tokens per Sec: 587.285767
+Validation loss: 0.358149
+Epoch 44 / 50
+Epoch Step: 1 Loss: 0.274740 Tokens per Sec: 482.054779
+Training loss: 0.410553, elapsed time: 31.821926
+Epoch Step: 1 Loss: 0.469396 Tokens per Sec: 587.788025
+Validation loss: 0.365351
+Epoch 45 / 50
+Epoch Step: 1 Loss: 0.436163 Tokens per Sec: 640.083801
+Training loss: 0.402637, elapsed time: 38.897289
+Epoch Step: 1 Loss: 0.346309 Tokens per Sec: 603.681458
+Validation loss: 0.340560
+Epoch 46 / 50
+Epoch Step: 1 Loss: 0.345367 Tokens per Sec: 595.993469
+Training loss: 0.389875, elapsed time: 35.140677
+Epoch Step: 1 Loss: 0.427600 Tokens per Sec: 531.037537
+Validation loss: 0.336621
+Epoch 47 / 50
+Epoch Step: 1 Loss: 0.474579 Tokens per Sec: 539.184998
+Training loss: 0.375337, elapsed time: 34.261768
+Epoch Step: 1 Loss: 0.370126 Tokens per Sec: 510.534485
+Validation loss: 0.308935
+Epoch 48 / 50
+Epoch Step: 1 Loss: 0.269904 Tokens per Sec: 456.832611
+Training loss: 0.362811, elapsed time: 34.163405
+Epoch Step: 1 Loss: 0.359698 Tokens per Sec: 499.904785
+Validation loss: 0.307866
+Epoch 49 / 50
+Epoch Step: 1 Loss: 0.289288 Tokens per Sec: 489.223358
+Training loss: 0.363615, elapsed time: 37.516380
+Epoch Step: 1 Loss: 0.326709 Tokens per Sec: 590.706726
+Validation loss: 0.273512
+Epoch 50 / 50
+Epoch Step: 1 Loss: 0.325023 Tokens per Sec: 757.938110
+Training loss: 0.345606, elapsed time: 39.501220
+Epoch Step: 1 Loss: 0.454430 Tokens per Sec: 627.734802
+Validation loss: 0.277601
+Saved model to models/0301_context_bias_boc_mini_50.pt.
