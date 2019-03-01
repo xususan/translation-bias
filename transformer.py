@@ -75,7 +75,7 @@ class CombinationLayer(nn.Module):
         self.feed_forward = feed_forward
         self.sublayer = clones(SublayerConnection(size, dropout), 3)
         self.size = size
-        self.w = nn.Linear(2 * self.size + 1, 1)
+        self.w = nn.Linear(2 * self.size, 1, bias=True)
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x, src_mask, context, context_mask):
@@ -88,9 +88,10 @@ class CombinationLayer(nn.Module):
         context = self.sublayer[1](x, lambda x: self.context_attn(x, context, context, context_mask))
 
         # Append context and X together
-        ones = torch.ones(x.size(0), x.size(1), 1) # batch x len x 1
-        x_and_context = torch.cat([x, context, ones], dim=2) # [batch x len x 2*size + 1]
+        x_and_context = torch.cat([x, context], dim=2) # [batch x len x 2*size ]
         g = self.sigmoid(self.w(x_and_context))
+
+        pdb.set_trace()
 
         # Gated sum
         gated_sum = g * x + (1 - g) * context
