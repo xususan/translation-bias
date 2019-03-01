@@ -82,17 +82,18 @@ else:
 for epoch in range(1, args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
+    gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator
     start_of_epoch = time.time()
     training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
-              SimpleLossCompute(model.generator, criterion, 
+              SimpleLossCompute(gen, criterion, 
                                 opt=model_opt))
     epoch_time = time.time() - start_of_epoch
     print("Training loss: %f, elapsed time: %f" % (training_loss.data.item(), epoch_time))
     model.eval()
     loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter), 
                       model, 
-                      SimpleLossCompute(model.generator, criterion, 
+                      SimpleLossCompute(gen, criterion, 
                       opt=None))
     print("Validation loss: %f" % loss.data.item())
     if epoch % args.save == 0: 
