@@ -71,7 +71,12 @@ valid_iter = MyIterator(val, batch_size=args.batch, device=device,
 print('Iterators built.')
 
 print('Training model...')
-model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+if torch.cuda.device_count() > 1:
+  model_opt = NoamOpt(model.module.src_embed[0].d_model, 1, 2000,
+            torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+
+else:
+  model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 for epoch in range(1, args.epochs + 1):
