@@ -56,7 +56,7 @@ bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
         lower=True, pad_token=PAD, init_token=BOC)
 TR_SRC = Field(tokenize=bpemb_tr.encode, 
-    lower=True, pad_token=PAD, init_token=BOS)
+    lower=True, pad_token=PAD)
 EN = Field(tokenize=bpemb_en.encode, 
     lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
 
@@ -79,9 +79,9 @@ print('done')
 
 print("Building vocab...")
 MIN_FREQ = 1
-TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-TR_CONTEXT.vocab = TR_SRC.vocab
-TR = TR_SRC
+TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+TR_SRC.vocab = TR_CONTEXT.vocab
+TR = TR_CONTEXT
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 pad_idx = EN.vocab.stoi[PAD]
 
