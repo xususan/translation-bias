@@ -168,15 +168,16 @@ def load_train_val_test_datasets(params):
     Returns datasets and vocab objects
     """
     # Context and source / target fields for English + Turkish
-    # 03/01: need to change lower to True?. need to figure out way to change 
-    # init_token
+    # 03/01: need to change lower to True?.
+    set_lower=True
     bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
     TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
-        lower=True, pad_token=PAD, init_token=BOC)
+        lower=set_lower, pad_token=PAD, init_token=BOC)
     TR_SRC = Field(tokenize=bpemb_tr.encode, 
-        lower=True, pad_token=PAD, init_token=BOS)
+        lower=set_lower, pad_token=PAD, init_token=BOS)
     EN = Field(tokenize=bpemb_en.encode, 
-        lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
+        lower=set_lower, pad_token=PAD, init_token=SOS, eos_token=EOS)
+    print("lower = %r" % set_lower)
 
     # Must be in order
     data_fields = [

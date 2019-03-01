@@ -38,7 +38,12 @@ print("Command line arguments: {%s}" % args)
 
 VOCAB_SIZE = args.vocab
 BATCH_SIZE = args.batch
-train_path = "train_200k.csv" # TRAIN PATH MUST MATCH ORIGINAL
+if args.vocab == 10000:
+  train_path, val_path, test_path= "train_200k.csv", "val_10k.csv", "test_10k.csv" # TRAIN PATH MUST MATCH ORIGINAL
+elif args.vocab == 1000:
+  train_path, val_path, test_path = "train_mini.csv", "val_mini.csv", "test_mini.csv"
+else:
+  print("Args vocab wasn't 1000 or 10000.")
 SOS, EOS, PAD = "<s>", "</s>", "<pad>" # Represents begining of context sentence
 BOC, BOS = "<boc>", "<bos>"
 
@@ -47,21 +52,20 @@ device = torch.device('cpu')
 bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 
 # Context and source / target fields for English + Turkish
+# Lower = true
 TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
         lower=True, pad_token=PAD, init_token=BOC)
 TR_SRC = Field(tokenize=bpemb_tr.encode, 
     lower=True, pad_token=PAD, init_token=BOS)
 EN = Field(tokenize=bpemb_en.encode, 
     lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
-rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
-rev_tokenize_tr = lambda tokenized: [TR_SRC.vocab.itos[i] for i in tokenized]
 
 print('reading in tabular dataset')
 train, val, test = TabularDataset.splits(
   path='data/', 
   train=train_path,
-  validation="val_10k.csv",
-  test="test_10k.csv",
+  validation=val_path,
+  test=test_path,
   format='tsv', 
   fields=[('src_context', TR_CONTEXT), ('src', TR_SRC),
   ('trg_context', EN), ('trg', EN)])
@@ -83,6 +87,8 @@ pad_idx = EN.vocab.stoi[PAD]
 
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
+rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
+rev_tokenize_tr = lambda tokenized: [TR_SRC.vocab.itos[i] for i in tokenized]
 
 print("Loading model...")
 model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)

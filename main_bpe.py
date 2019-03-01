@@ -7,6 +7,7 @@ from transformer import *
 import pdb
 import time, datetime
 import sys
+import torch.nn as nn
 
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Data Processing')
@@ -46,10 +47,17 @@ else:
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
 if torch.cuda.device_count() > 0:
-  print('GPUs available:', torch.cuda.device_count())
-  model.cuda()
-  criterion.cuda()
   device = torch.device('cuda', 0)
+  print('GPUs available:', torch.cuda.device_count())
+  if torch.cuda.device_count() > 1:
+    print("Using DataParallel")
+    model = nn.DataParallel(model)
+    criterion = nn.DataParallel(criterion)
+    model.to(device)
+    criterion.to(device)
+  else:
+    model.cuda()
+    criterion.cuda()
 else:
   device = torch.device('cpu')
 
