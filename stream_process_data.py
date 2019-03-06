@@ -9,6 +9,9 @@ import random
 import numpy as np
 import pandas as pd
 
+'''
+Rather than writing everything at the end, try writing things line by line.
+'''
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Data Processing')
 parser.add_argument('--size', type=str, default="full", help='Size of file (full or mini)')
@@ -52,10 +55,13 @@ def get_text(el):
     return text
 
 
-def process_links(link_groups, size):
+def process_links(link_groups, size, file_path):
     """
     size: max size for this group of links
     """
+    outfile = open(file_path, 'w+', newline='')
+    csv_writer = csv.writer(outfile, delimiter='\t')
+    csv_writer.writerow(["tr_context", "tr", "en_context", "en"])
     src_list, trg_list, src_context_list, trg_context_list = [], [], [], []
     n_written = 0
     for link_group in link_groups:
@@ -109,18 +115,16 @@ def process_links(link_groups, size):
                     continue
                 use_context = ((time_objects[1] - time_objects[0]) < datetime.timedelta(seconds=7))
 
-                src_list.append(src_text)
-                trg_list.append(trg_text)
-                src_context_list.append(src_context_text)
-                trg_context_list.append(trg_context_text)
+                csv_writer.writerow([src_context_text, src_text, trg_context_text, trg_text])
                 n_written +=1
 
                 if n_written % 100 == 0:
                     print("%d / %d" %(n_written, size))
 
                 if n_written >= size:
-                    return src_list, trg_list, src_context_list, trg_context_list
+                    break
 
+    outfile.close()
     return src_list, trg_list, src_context_list, trg_context_list
 
 def process_df(df):
@@ -149,14 +153,10 @@ def main():
         'train': train}
 
     for split_name, link_groups in split.items():
-        size = sizes[split_name]
-        src_list, trg_list, src_context_list, trg_context_list = process_links(link_groups, size)
-        raw_data = {'en' : src_list, 'tr': trg_list, 'en_context': src_context_list, 'tr_context': trg_context_list}
-        df = pd.DataFrame(raw_data)
-        df = df.reindex(columns = ["tr_context", "tr", "en_context", "en"])
-        df = process_df(df)
         file_path = out_paths[split_name]
-        df.to_csv(file_path, index=False, sep='\t')
+        size = sizes[split_name]
+        process_links(link_groups, size, file_path)
+    
         print("Wrote to %s" % (file_path))
 
 def subsample_csv(in_path, out_path, n):
@@ -168,7 +168,7 @@ def subsample_csv(in_path, out_path, n):
 
 # subsample_csv("data/train_2m.csv", "data/train_200k.csv", 200000)
 
-#main()    
+main()    
 
 
 

@@ -1,0 +1,21 @@
+Command line arguments: {Namespace(batch=100, context=False, epochs=10, load='None', out='baseline_mini_test', save=5, size='mini')}
+Train: train_mini.csv, Val: val_mini.csv, test: test_mini.csv
+Vocab size: 1000
+lower = True
+Building vocab...
+TR_SRC vocab size: 728, EN vocab size: 798
+Done building vocab
+Iterators built.
+Training model...
+Epoch 1 / 10
+Epoch Step: 1 Loss: 6.110916 Tokens per Sec: 67.661331
+Training loss: 4.484556, elapsed time: 285.134588
+Epoch Step: 1 Loss: 4.441112 Tokens per Sec: 106.844688
+Validation loss: 4.755709
+Epoch 2 / 10
+Epoch Step: 1 Loss: 4.045849 Tokens per Sec: 77.859558
+Training loss: 3.723349, elapsed time: 278.735550
+Epoch Step: 1 Loss: 4.339860 Tokens per Sec: 95.353714
+Validation loss: 4.441338
+Epoch 3 / 10
+Epoch Step: 1 Loss: 3.357292 Tokens per Sec: 78.002052
