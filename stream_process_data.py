@@ -138,6 +138,7 @@ def process_links(link_groups, size, file_path):
                 if use_context:
                     training_example = process_example(
                         [trg_context_text, trg_text, src_context_text, src_text])
+                    print(src_text)
                     csv_writer.writerow(training_example)
                     n_written +=1
 
