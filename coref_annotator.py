@@ -42,13 +42,17 @@ def find_pronouns(annotated):
 
 
 if __name__ == "__main__":
-	print("dont print this")
+	print("only print when running script")
+	outfile = open("test_annotating.csv", 'w+', newline='')
+	csv_writer = csv.writer(outfile, delimiter='\t')
 	with open('data/train_mini.csv', newline='') as csvfile:
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
 				# Join the last two
 				english_str_and_context = ' '.join(row[2:4])
+				print(english_str_and_context)
 				ann_1 = client.annotate(english_str_and_context)
 				res = find_pronouns(ann_1)
+				csv_writer.writerow([row[2], row[3], res])
 

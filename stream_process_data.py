@@ -7,7 +7,7 @@ from xml.dom.minidom import parse, parseString
 import datetime
 import random
 import numpy as np
-import pandas as pd
+import csv
 
 '''
 Rather than writing everything at the end, try writing things line by line.
@@ -30,18 +30,18 @@ if args.size == "full":
     train_size, val_size, test_size = int(2E6), 10000, 10000
     print(f"training size: {train_size}, validation size: {val_size}")
     out_paths = {
-        'train': "data/train_2m.csv", 
-        'val': "data/val_10k.csv", 
-        'test':"data/test_10k.csv"}
+        'train': "data/train_2m_0306.csv", 
+        'val': "data/val_10k_0306.csv", 
+        'test':"data/test_10k_0306.csv"}
     xml_path = "data/en-tr.xml"
 elif args.size == "mini":
     # create train and validation set
     train_size, val_size, test_size = 1000, 100, 100
     print(f"training size: {train_size}, validation size: {val_size}")
     out_paths = {
-        'train': "data/train_mini.csv", 
-        'val': "data/val_mini.csv", 
-        'test':"data/test_mini.csv"}
+        'train': "data/train_mini_0306.csv", 
+        'val': "data/val_mini_0306.csv", 
+        'test':"data/test_mini_0306.csv"}
     xml_path = "data/en-tr-mini.xml"
 
 sizes = {
@@ -54,11 +54,18 @@ def get_text(el):
     text = el.text.strip() if el.text.strip() != "" else el[0].tail.strip()
     return text
 
+remove_dashes = lambda s: s[1:].strip() if s.startswith('-') else s
+def process_example(example):
+    example = map(remove_dashes, example)
+    example = map(str.lower, example)
+    return example
+    
 
 def process_links(link_groups, size, file_path):
     """
     size: max size for this group of links
     """
+    print(file_path)
     outfile = open(file_path, 'w+', newline='')
     csv_writer = csv.writer(outfile, delimiter='\t')
     csv_writer.writerow(["tr_context", "tr", "en_context", "en"])
@@ -81,6 +88,7 @@ def process_links(link_groups, size, file_path):
                 src_align, trg_align = link.attrib['xtargets'].split(';')
 
                 # Ignore things with multiple lines.
+                # Also ignore the first line, because it will have no context.
                 if ' ' in src_align or ' ' in trg_align or int(src_align) == 1 or int(trg_align) == 1:
                     continue
 
@@ -101,10 +109,11 @@ def process_links(link_groups, size, file_path):
                 src_context = src_file.find('.//s[@id="%d"]' % (int(src_align) - 1))
                 trg_context_text = get_text(trg_context)
                 src_context_text = get_text(src_context)
-                if trg_context is None or len(trg_context_text) == 0 or src_context is None or len(src_context_text) == 0:
+                if trg_context is None or len(trg_context) == 0 or src_context is None or len(src_context) == 0:
                     continue
 
                 # Check that previous sentence is within the last 7 seconds
+
                 current_time = trg_sentence[0].get('value')
                 previous_time = trg_context[0].get('value')
                 str_to_time = lambda t: datetime.timedelta(
@@ -114,9 +123,11 @@ def process_links(link_groups, size, file_path):
                 except:
                     continue
                 use_context = ((time_objects[1] - time_objects[0]) < datetime.timedelta(seconds=7))
-
-                csv_writer.writerow([src_context_text, src_text, trg_context_text, trg_text])
-                n_written +=1
+                if use_context:
+                    training_example = process_example(
+                        [src_context_text, src_text, trg_context_text, trg_text])
+                    csv_writer.writerow(training_example)
+                    n_written +=1
 
                 if n_written % 100 == 0:
                     print("%d / %d" %(n_written, size))
@@ -156,7 +167,6 @@ def main():
         file_path = out_paths[split_name]
         size = sizes[split_name]
         process_links(link_groups, size, file_path)
-    
         print("Wrote to %s" % (file_path))
 
 def subsample_csv(in_path, out_path, n):
