@@ -84,8 +84,8 @@ def process_links(link_groups, size, file_path):
     for link_group in link_groups:
         print(link_group.attrib['fromDoc'],link_group.attrib['toDoc'])
         # open and read gzipped xml file
-        src_doc = "data/" + link_group.attrib['fromDoc'][:-3]
-        tgt_doc = "data/" + link_group.attrib['toDoc'][:-3]
+        src_doc = "data/OpenSubtitles/xml/" + link_group.attrib['fromDoc'][:-3]
+        tgt_doc = "data/OpenSubtitles/xml/" + link_group.attrib['toDoc'][:-3]
         try:
             tgt_file = ET.parse(tgt_doc).getroot() # take off .gz
             src_file = ET.parse(src_doc).getroot() # take off .gz
