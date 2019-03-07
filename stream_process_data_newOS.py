@@ -55,6 +55,7 @@ sizes = {
 }
 
 def get_text(el):
+    pdb.set_trace()
     text = el.text.strip() if el.text.strip() != "" else el[0].tail.strip()
     return text
 
@@ -99,6 +100,7 @@ def process_links(link_groups, size, file_path):
             continue
         for link in link_group:
             if 'overlap' in link.attrib and float(link.attrib['overlap']) > .9:
+                pdb.set_trace()
                 # Acceptable
                 src_align, trg_align = link.attrib['xtargets'].split(';')
 
