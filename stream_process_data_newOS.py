@@ -136,12 +136,11 @@ def process_links(link_groups, size, file_path):
                     continue
 
                 # Check that previous sentence is within the last 7 seconds
-
-                current_time = trg_sentence.find('time').get('value')
-                previous_time = trg_context.find('time').get('value')
-                str_to_time = lambda t: datetime.timedelta(
-                    hours=int(t[:2]), minutes=int(t[3:5]), seconds=int(t[6:8]))
                 try:
+                    current_time = trg_sentence.find('time').get('value')
+                    previous_time = trg_context.find('time').get('value')
+                    str_to_time = lambda t: datetime.timedelta(
+                        hours=int(t[:2]), minutes=int(t[3:5]), seconds=int(t[6:8]))
                     time_objects = [str_to_time(x) for x in [previous_time, current_time]]
                 except:
                     continue
