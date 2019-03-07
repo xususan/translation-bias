@@ -139,8 +139,9 @@ def process_links(link_groups, size, file_path):
                     csv_writer.writerow(training_example)
                     n_written +=1
 
-                if n_written % 100 == 0:
+                if n_written % 1000 == 0:
                     print("%d / %d" %(n_written, size))
+                    outfile.flush()
 
                 if n_written >= size:
                     break
