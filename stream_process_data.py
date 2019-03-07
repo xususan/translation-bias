@@ -82,11 +82,12 @@ def process_links(link_groups, size, file_path):
     src_list, trg_list, src_context_list, trg_context_list = [], [], [], []
     n_written = 0
     for link_group in link_groups:
+        pdb.set_trace()
         print(link_group.attrib['fromDoc'],link_group.attrib['toDoc'])
         # open and read gzipped xml file
         src_doc = "data/OpenSubtitles/xml/" + link_group.attrib['fromDoc'][:-3]
         tgt_doc = "data/OpenSubtitles/xml/" + link_group.attrib['toDoc'][:-3]
-        try:
+        try:    
             tgt_file = ET.parse(tgt_doc).getroot() # take off .gz
             src_file = ET.parse(src_doc).getroot() # take off .gz
         except Exception as e:
@@ -137,6 +138,7 @@ def process_links(link_groups, size, file_path):
                     training_example = process_example(
                         [trg_context_text, trg_text, src_context_text, src_text])
                     csv_writer.writerow(training_example)
+                    print(training_example)
                     n_written +=1
 
                 if n_written % 1000 == 0:
