@@ -21,3 +21,7 @@ Epoch Step: 8001 Loss: 3.727685 Tokens per Sec: 4942.778809
 Epoch Step: 9001 Loss: 3.194690 Tokens per Sec: 5106.447754
 Epoch Step: 10001 Loss: 3.246347 Tokens per Sec: 5570.803711
 Epoch Step: 11001 Loss: 2.661435 Tokens per Sec: 6244.528320
+Epoch Step: 12001 Loss: 3.902143 Tokens per Sec: 6686.883301
+Epoch Step: 13001 Loss: 2.628550 Tokens per Sec: 6979.707031
+Epoch Step: 14001 Loss: 2.938044 Tokens per Sec: 8024.178223
+Epoch Step: 15001 Loss: 6.381384 Tokens per Sec: 7853.807129
