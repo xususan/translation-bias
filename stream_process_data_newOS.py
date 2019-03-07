@@ -54,10 +54,16 @@ sizes = {
     'test': test_size
 }
 
-def get_text(el):
+def get_text_old(el):
     pdb.set_trace()
     text = el.text.strip() if el.text.strip() != "" else el[0].tail.strip()
     return text
+
+def get_text(sentence):
+    word_elements = sentence.findall('w')
+    words = [el.text for el in word_elements]
+    return (' '.join(words))
+
 
 def remove_trailing_ellipses(string):
     if string.endswith('...'):
@@ -131,8 +137,8 @@ def process_links(link_groups, size, file_path):
 
                 # Check that previous sentence is within the last 7 seconds
 
-                current_time = trg_sentence[0].get('value')
-                previous_time = trg_context[0].get('value')
+                current_time = trg_sentence.find('time').get('value')
+                previous_time = trg_context.find('time').get('value')
                 str_to_time = lambda t: datetime.timedelta(
                     hours=int(t[:2]), minutes=int(t[3:5]), seconds=int(t[6:8]))
                 try:
