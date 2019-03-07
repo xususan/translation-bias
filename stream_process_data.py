@@ -27,7 +27,8 @@ EN_DIR = "data/en/"
 
 if args.size == "full":
     # create train and validation set
-    train_size, val_size, test_size = int(2E6), 10000, 10000
+    # train_size, val_size, test_size = int(2E8), 10000, 10000
+    train_size, val_size, test_size = int(2E8),  int(2E8),  int(2E8)
     print(f"training size: {train_size}, validation size: {val_size}")
     out_paths = {
         'train': "data/train_2m_0306.csv", 
@@ -54,10 +55,19 @@ def get_text(el):
     text = el.text.strip() if el.text.strip() != "" else el[0].tail.strip()
     return text
 
+def remove_trailing_ellipses(string):
+    if string.endswith('...'):
+        return string[:-2]
+    elif string.endswith('..'):
+        return string[:-1]
+    else:
+        return string
+
 remove_dashes = lambda s: s[1:].strip() if s.startswith('-') else s
 def process_example(example):
     example = map(remove_dashes, example)
     example = map(str.lower, example)
+    example = map(remove_trailing_ellipses, example)
     return example
     
 
@@ -125,7 +135,7 @@ def process_links(link_groups, size, file_path):
                 use_context = ((time_objects[1] - time_objects[0]) < datetime.timedelta(seconds=7))
                 if use_context:
                     training_example = process_example(
-                        [src_context_text, src_text, trg_context_text, trg_text])
+                        [trg_context_text, trg_text, src_context_text, src_text])
                     csv_writer.writerow(training_example)
                     n_written +=1
 

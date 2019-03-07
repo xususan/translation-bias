@@ -1,6 +1,7 @@
 from stanfordnlp.server import CoreNLPClient
 import pdb
 import csv
+import sys
 
 # text = "Chris Manning is a nice person. He also gives oranges to people."
 
@@ -17,7 +18,7 @@ print('starting up Java Stanford CoreNLP Server...')
 def find_pronouns(annotated):
 	if len(annotated.sentence) < 2: 
 		print("Find pronouns did not get a pair of sentences.")
-		return []
+		return None
 	pronouns = []
 	for coreferents in annotated.corefChain:
 		# If there is only one coreferent, there cannot be a pronoun with antecedent.
@@ -34,7 +35,7 @@ def find_pronouns(annotated):
 				pronoun = annotated.sentence[1].token[pronoun_index].word.lower()
 				pronouns_in_chain.append(pronoun)
 			# found antecedent
-			elif mention.mentionType != "PRONOMINAL" and mention.sentenceIndex == 0: 
+			elif mention.mentionType != "PRONOMINAL": # in any location 
 				antecedent_found = True
 		if antecedent_found:
 			pronouns += pronouns_in_chain
@@ -42,17 +43,19 @@ def find_pronouns(annotated):
 
 
 if __name__ == "__main__":
-	print("only print when running script")
-	outfile = open("test_annotating.csv", 'w+', newline='')
+	if len(sys.argv) < 3:
+		print("Usage: python coref_annotator.py infile outfile")
+	outfile = open(sys.argv[2], 'w+', newline='')
 	csv_writer = csv.writer(outfile, delimiter='\t')
-	with open('data/train_mini.csv', newline='') as csvfile:
+	with open('data/' + sys.argv[1], newline='') as csvfile:
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
 				# Join the last two
 				english_str_and_context = ' '.join(row[2:4])
-				print(english_str_and_context)
 				ann_1 = client.annotate(english_str_and_context)
 				res = find_pronouns(ann_1)
-				csv_writer.writerow([row[2], row[3], res])
+				if res == None:
+					print(english_str_and_context)
+				csv_writer.writerow([row[0], row[1], row[2], row[3], res])
 
