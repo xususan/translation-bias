@@ -106,7 +106,6 @@ def process_links(link_groups, size, file_path):
             continue
         for link in link_group:
             if 'overlap' in link.attrib and float(link.attrib['overlap']) > .9:
-                pdb.set_trace()
                 # Acceptable
                 src_align, trg_align = link.attrib['xtargets'].split(';')
 
@@ -154,7 +153,7 @@ def process_links(link_groups, size, file_path):
 
                 if n_written % 1000 == 0:
                     print("%d / %d" %(n_written, size))
-                    # outfile.flush()
+                    outfile.flush()
 
                 if n_written >= size:
                     break
