@@ -2,10 +2,18 @@ from stanfordnlp.server import CoreNLPClient
 import pdb
 import csv
 import sys
+import argparse
 
 # text = "Chris Manning is a nice person. He also gives oranges to people."
 
 # print(text)
+
+parser = argparse.ArgumentParser(description='Coreference Annotator')
+parser.add_argument('--inpath', type=str, default="full", help='Path to infile (within data/)')
+parser.add_argument('--outpath', type=str, default="full", help='Path to outfile (within data/)')
+parser.add_argument('--line', type=int, default=0, help='Line on which to resume, if any')
+args = parser.parse_args()
+
 
 # set up the client
 print('---')
@@ -43,12 +51,12 @@ def find_pronouns(annotated):
 
 
 if __name__ == "__main__":
-	if len(sys.argv) < 3:
-		print("Usage: python coref_annotator.py infile outfile")
-	outfile = open(sys.argv[2], 'w+', newline='')
+	
+	outfile = open("data/" + args.outpath, 'w+', newline='')
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
-	with open('data/' + sys.argv[1], newline='') as csvfile:
+	with open('data/' + args.inpath, newline='') as csvfile:
+		csv_file.seek(args.line)
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
