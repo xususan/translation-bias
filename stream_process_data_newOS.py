@@ -34,9 +34,9 @@ if args.size == "full":
     train_size, val_size, test_size = int(2E8),  int(2E8),  int(2E8)
     print(f"training size: {train_size}, validation size: {val_size}")
     out_paths = {
-        'train': "data/train_2m_0306.csv", 
-        'val': "data/val_10k_0306.csv", 
-        'test':"data/test_10k_0306.csv"}
+        'train': "data/train_2m_0308.csv", 
+        'val': "data/val_10k_0308.csv", 
+        'test':"data/test_10k_0308.csv"}
     xml_path = "data/en-tr.xml"
 elif args.size == "mini":
     # create train and validation set
@@ -180,11 +180,13 @@ def main():
     np.random.shuffle(doc_list)
     num_docs = len(doc_list)
 
+    print("num docs:", num_docs)
+
     train, validate, test = np.split(doc_list, [int(.6*num_docs), int(.8*num_docs)])
     split = {
+        'train': train,
         'val': validate,
-        'test': test,
-        'train': train}
+        'test': test}
 
     for split_name, link_groups in split.items():
         file_path = out_paths[split_name]
