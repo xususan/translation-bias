@@ -51,12 +51,11 @@ def find_pronouns(annotated):
 
 
 if __name__ == "__main__":
-	
 	outfile = open("data/" + args.outpath, 'w+', newline='')
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
 	with open('data/' + args.inpath, newline='') as csvfile:
-		csv_file.seek(args.line)
+		csvfile.seek(args.line)
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
