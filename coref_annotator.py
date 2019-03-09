@@ -55,10 +55,11 @@ if __name__ == "__main__":
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
 	with open('data/' + args.inpath, newline='') as csvfile:
-		csvfile.seek(args.line)
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
+				if nrows < args.line:
+					continue
 				# Join the last two
 				english_str_and_context = ' '.join(row[2:4])
 				ann_1 = client.annotate(english_str_and_context)
