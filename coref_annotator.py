@@ -58,6 +58,7 @@ if __name__ == "__main__":
 		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
+				nrows += 1
 				if nrows < args.line:
 					continue
 				# Join the last two
@@ -65,7 +66,6 @@ if __name__ == "__main__":
 				ann_1 = client.annotate(english_str_and_context)
 				res = find_pronouns(ann_1)
 				csv_writer.writerow([row[0], row[1], row[2], row[3], res])
-				nrows += 1
 				if (nrows % 1000) == 0:
 					outfile.flush()
 	outfile.close()
