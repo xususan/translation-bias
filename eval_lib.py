@@ -84,6 +84,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
   full_out_path = "data/bleu/" + out_path
   out_file = open(full_out_path, "w")
   bleus = []
+  n_written = 0
   for old_batch in eval_iter:
     batch = rebatch(pad_idx, old_batch)
     for i in range(batch.src.size(0)): # batch_size
@@ -93,6 +94,9 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
       trg_str_clean = trg_str.replace("<pad>", "")
       out_file.write(trg_str_clean + "\n")
+      n_written +=1 
+      if n_written % 50 == 0:
+        out_file.flush()
 
   out_file.close()
   print("Wrote to ", out_path)
