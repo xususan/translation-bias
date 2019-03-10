@@ -3,7 +3,6 @@ from torchtext.data import Field, BucketIterator, TabularDataset, Iterator
 from utils_transform import *
 from transformer import *
 from eval_lib import *
-from torchnlp.metrics import get_moses_multi_bleu
 import spacy
 import pdb
 import argparse

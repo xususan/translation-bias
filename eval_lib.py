@@ -1,7 +1,6 @@
 import torch
 from utils_transform import *
 from transformer import *
-from torchnlp.metrics import get_moses_multi_bleu
 from torchtext.data import Field, BucketIterator, TabularDataset, Iterator
 import spacy
 import pdb
