@@ -79,9 +79,11 @@ def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbo
       hypotheses = sorted(candidates_at_length, key = lambda x: x[1], reverse=True)[:k]
     return hypotheses[0][0].squeeze() # change to 1D tensor
 
-def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_tokenize_trg, bpemb_en):
+def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_tokenize_trg, bpemb_en, out_path):
   """Calculates average BLEU score of a model on some validation iterator.
   """
+  full_out_path = "data/bleu/" + out_path
+  out_file = open(full_out_path, "w")
   bleus = []
   for old_batch in eval_iter:
     batch = rebatch(pad_idx, old_batch)
@@ -89,16 +91,13 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
        pad_idx, max_len, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
-      hyp_str = bpemb_en.decode(rev_tokenize_trg(hypothesis))
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
-      bleu = get_moses_multi_bleu([hyp_str], [trg_str])
+      trg_str_clean = trg_str.replace("<pad>", "")
+      out_file.write(trg_str_clean + "\n")
 
-      if bleu == None: # Error
-        print(i, hyp_str, trg_str)
-      else:
-        print(bleu, hyp_str, trg_str)
-        bleus.append(bleu)
-  return sum(bleus) / len(bleus)
+  out_file.close()
+  print("Wrote to ", out_path)
+  return
 
 def eval_accuracy_helper(pad_idx, eval_iter, model):
   """ Helper function that calculates how well the model chooses the correct
