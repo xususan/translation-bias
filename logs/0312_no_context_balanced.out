@@ -1,0 +1,4 @@
+Command line arguments: {Namespace(batch=3000, context=False, epochs=100, load='None', out='save', save=10, size='mid', train='train_2m_balanced.csv')}
+Train: train_2m_balanced.csv, Val: val_10k.csv, test: test_10k.csv
+Vocab size: 10000
+lower = True
