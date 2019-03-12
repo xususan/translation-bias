@@ -94,6 +94,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
       trg_str_clean = trg_str.replace("<pad>", "")
+      print(n_written, trg_str, trg_str_clean)
       out_file.write(trg_str_clean + "\n")
       n_written +=1 
       if n_written % 50 == 0:

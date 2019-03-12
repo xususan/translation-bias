@@ -71,9 +71,8 @@ train, val, test = TabularDataset.splits(
 print('finished')
 
 print('making iterator')
-valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
-                        repeat=False, sort_key=lambda x: (len(x.src), len(x.trg), len(x.src_context)),
-                        batch_size_fn=batch_size_fn, train=False)
+valid_iter = Iterator(val, batch_size=BATCH_SIZE, device=device,
+                      repeat=False, sort=False, train=False) 
 print('done')
 
 print("Building vocab...")
