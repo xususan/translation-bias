@@ -97,7 +97,14 @@ if __name__ == "__main__":
 				break
 
 	outfile.close()
+	print("Wrote to: data/%s" % args.outpath)
+
+	with open("data/" + args.inpath, 'r', newline='') as original_file:
+		reader = csv.reader(original_file, delimiter='\t')
+		print("Before balancing:")
+		print_marginal_pronoun_counts_iter(reader)
 
 	with open("data/" + args.outpath, 'r', newline='') as just_written_file:
 		reader = csv.reader(just_written_file, delimiter='\t')
+		print("After balancing:")
 		print_marginal_pronoun_counts_iter(reader)
