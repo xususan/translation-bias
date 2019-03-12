@@ -34,13 +34,11 @@ if __name__ == "__main__":
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
 	with open('data/' + args.inpath, newline='') as csvfile:
-		spamreader = csv.reader(csvfile, delimiter='\t')
-		for row in spamreader:
+		reader = csv.reader(csvfile, delimiter='\t')
+		for row in reader:
 			nrows += 1
 			if nrows < args.line:
 				continue
-			# Join the last two
-			english_str_and_context = ' '.join(row[2:4])
 
 			if check_for_set_of_strings(row[3], female_pronouns):
 				csv_writer.writerow([row[0], row[1], row[2], row[3]])
