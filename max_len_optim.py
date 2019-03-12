@@ -21,7 +21,6 @@ bpemb_tr, bpemb_en = load_bpe(args.vocab_size)
 
 df=  pd.read_csv("data/" + args.inpath, sep='\t')
 
-pdb.set_trace()
 len_src = df['tr'].apply(bpemb_tr.encode).apply(len)
 len_tgt = df['en'].apply(bpemb_en.encode).apply(len)
 
@@ -32,3 +31,4 @@ lm.fit(len_src.reshape(-1, 1), len_tgt.reshape(-1, 1))
 
 print("Coef:, ", lm.coef_)
 print("Intercept:, ", lm.coef_)
+print("R^2", lm.score(len_src.reshape(-1,1), len_tgt.reshape(-1, 1)))

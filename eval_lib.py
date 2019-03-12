@@ -88,8 +88,9 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
   for old_batch in eval_iter:
     batch = rebatch(pad_idx, old_batch)
     for i in range(batch.src.size(0)): # batch_size
+      max_len_for_observation = len(batch.src[i]) + 5
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
-       pad_idx, max_len, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
+       pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
       trg_str_clean = trg_str.replace("<pad>", "")
