@@ -18,6 +18,7 @@ parser = argparse.ArgumentParser(description='Create New Datasets (with special 
 parser.add_argument('--inpath', type=str, help='Path to infile (within data/)')
 parser.add_argument('--outpath', type=str, help='Path to outfile (within data/)')
 parser.add_argument('--line', type=int, default=0, help='Line on which to resume, if any')
+parser.add_argument('--prob', type=float, default=.46/.655, help='Probability of including a given male line.')
 args = parser.parse_args()
 
 female_pronouns = set(['she', 'her', 'hers', "she's", "she'll"])
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 
 			# If it has a male pronoun. Include with probability 1/ 1.8
 			# Otherwise, write it.
-			male_prob = .46/.655
+			male_prob = args.prob
 			if not(check_for_set_of_strings(row[3], male_pronouns)) or random.random() < male_prob:
 				csv_writer.writerow([row[0], row[1], row[2], row[3]])
 				nwritten +=1
