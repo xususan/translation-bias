@@ -154,6 +154,9 @@ class Params:
             self.vocab_size = 50000
             self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
+        if args.train != "None":
+            self.train_csv = args.train
+
 def load_bpe(vocab_size):
     """ Load pre-trained byte pair embedding models.
 
