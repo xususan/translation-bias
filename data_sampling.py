@@ -7,7 +7,7 @@ import argparse
 Get a sub sample of the data that includes pronouns with `she'.
 """
 
-parser = argparse.ArgumentParser(description='Create New Datasets (with special properties)')
+parser = argparse.ArgumentParser(description='Subsample Datasets (with special properties)')
 parser.add_argument('--inpath', type=str, default="full", help='Path to infile (within data/)')
 parser.add_argument('--outpath', type=str, default="full", help='Path to outfile (within data/)')
 parser.add_argument('--line', type=int, default=0, help='Line on which to resume, if any')
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 			# Join the last two
 			english_str_and_context = ' '.join(row[2:4])
 
-			if check_for_set_of_strings(row[2], female_pronouns) or check_for_set_of_strings(row[3], female_pronouns):
+			if check_for_set_of_strings(row[3], female_pronouns):
 				csv_writer.writerow([row[0], row[1], row[2], row[3]])
 			
 			if (nrows % 1000) == 0:
