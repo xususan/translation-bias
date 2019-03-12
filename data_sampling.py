@@ -3,6 +3,9 @@ import csv
 import sys
 import argparse
 
+"""
+Get a sub sample of the data that includes pronouns with `she'.
+"""
 
 parser = argparse.ArgumentParser(description='Create New Datasets (with special properties)')
 parser.add_argument('--inpath', type=str, default="full", help='Path to infile (within data/)')
@@ -10,17 +13,18 @@ parser.add_argument('--outpath', type=str, default="full", help='Path to outfile
 parser.add_argument('--line', type=int, default=0, help='Line on which to resume, if any')
 args = parser.parse_args()
 
-female_pronouns = ['she', 'her', 'hers']
+female_pronouns = set(['she', 'her', 'hers', "she's", "she'll"])
+male_pronouns = set(['he', 'him', 'his', "he's", "he'll"])
 
 # For individual string within a longer string.
 def check_for_string(string, substr):
-    return string.startswith(substr + " ") or string.contains(" " + substr + " ") or string.endswith(" " + substr)
+    return string.startswith(substr + " ") or (" " + substr + " ") in string or string.endswith(" " + substr)
 
 def check_for_set_of_strings(string, iter_of_strings):
-    init_bool = False
     for substr in iter_of_strings:
-        init_bool = init_bool or check_for_string(string, substr)
-    return init_bool
+        if check_for_string(string, substr):
+        	return True
+    return False
 
 assert(check_for_set_of_strings(("hello you there"), ["hello"]))
 assert(check_for_string(("hello you there"), "hello"))

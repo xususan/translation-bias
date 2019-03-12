@@ -18,3 +18,5 @@ def recover_train_200k_because_im_stupid():
 	df = pd.read_csv("data/train_200k_annotated.csv", sep='\t')
 	df = df[["tr_context", "tr", "en_context", "en"]]
 	df.to_csv("data/train_200k.csv", index=False, sep='\t')
+
+recover_train_200k_because_im_stupid()
