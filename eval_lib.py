@@ -93,9 +93,9 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
-      trg_str_clean = trg_str.replace("<pad>", "")
-      print(n_written, trg_str, trg_str_clean)
-      out_file.write(trg_str_clean + "\n")
+      hypothesis_clean = hypothesis.replace("<pad>", "")
+      print(n_written, hypothesis_clean)
+      out_file.write(hypothesis_clean + "\n")
       n_written +=1 
       if n_written % 50 == 0:
         out_file.flush()

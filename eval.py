@@ -38,7 +38,7 @@ print("Command line arguments: {%s}" % args)
 VOCAB_SIZE = args.vocab
 BATCH_SIZE = args.batch
 if args.vocab == 10000:
-  train_path, val_path, test_path= "train_200k.csv", "val_10k.csv", "test_10k.csv" # TRAIN PATH MUST MATCH ORIGINAL
+  train_path, val_path, test_path= "train_2m.csv", "val_10k.csv", "test_10k.csv" # TRAIN PATH MUST MATCH ORIGINAL
 elif args.vocab == 1000:
   train_path, val_path, test_path = "train_mini.csv", "val_mini.csv", "test_mini.csv"
 else:
