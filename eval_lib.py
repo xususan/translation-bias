@@ -54,11 +54,12 @@ def greedy_decode(model, batch, max_len, start_symbol):
 def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbol, end_symbol, k=5):
     """Beam decoder.
     """
-    batch = Batch(src.unsqueeze(0), src_mask.unsqueeze(0), src_context.unsqueeze(0), pad_idx)
+    batch = Batch(src.unsqueeze(0), src_context=src_context.unsqueeze(0), pad=pad_idx)
     memory = model.encode(batch)
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
     for i in range(max_len):
+      print(hypotheses)
       candidates_at_length = []
       for hypothesis, previous_prob in hypotheses:
         if hypothesis[0, -1] == end_symbol:
@@ -90,7 +91,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
     for i in range(batch.src.size(0)): # batch_size
       max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.3) + 5
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
-       pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
+       pad_idx, max_len_for_observation, start_symbol, end_symbol, k=1)[1:] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
       hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
