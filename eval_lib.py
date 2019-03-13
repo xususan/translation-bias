@@ -93,7 +93,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:-1] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
       trg_str = bpemb_en.decode(rev_tokenize_trg(targets))
-      hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis_clean))
+      hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
       hypothesis_clean = hypothesis_decoded.replace("<pad>", "")
       print(n_written, hypothesis_clean)
       out_file.write(hypothesis_clean + "\n")
