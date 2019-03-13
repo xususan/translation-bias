@@ -89,7 +89,7 @@ rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
 rev_tokenize_tr = lambda tokenized: [TR_SRC.vocab.itos[i] for i in tokenized]
 
 print("Loading model...")
-model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
+model = load('models/' + args.path, len(TR.vocab), len(EN.vocab) + 2, args.context)
 print("Model loaded from %s" % args.path)
 
 if args.eval == "accuracy" or args.eval == "all":
