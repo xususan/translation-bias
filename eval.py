@@ -101,8 +101,8 @@ else:
   train, val, test = TabularDataset.splits(
     path='data/', 
     train=train_path,
-    validation="val_10k.csv",
-    test="test_10k.csv",
+    validation=val_path,
+    test=test_path,
     format='tsv', 
     fields=[('src_context', TR), ('src', TR),
     ('trg_context', EN), ('trg', EN)])
