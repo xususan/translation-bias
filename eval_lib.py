@@ -59,7 +59,6 @@ def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbo
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
     for i in range(max_len):
-      print(hypotheses)
       candidates_at_length = []
       for hypothesis, previous_prob in hypotheses:
         if hypothesis[0, -1] == end_symbol:
