@@ -55,7 +55,18 @@ bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 
 ## SUPER IMPORTANT THAT THE VOCAB FIELDS MATCH
 
-if args.context:
+date_model_trained = int(args.path[:4])
+
+if date_model_trained < 301:
+  print("Model trained before March 1. USING OLD VERSION OF VOCAB")
+  USE_NEW_DOUBLE_TR = False
+else:
+  print("Model trained after march 1. USING NEW VERSION OF VOCAB")
+  USE_NEW_DOUBLE_TR = True
+
+
+
+if USE_NEW_DOUBLE_TR:
   TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
           lower=True, pad_token=PAD, init_token=BOC)
   TR_SRC = Field(tokenize=bpemb_tr.encode, 
@@ -95,13 +106,13 @@ else:
 print("Building vocab...")
 
 MIN_FREQ = 1
-if args.context:
+if USE_NEW_DOUBLE_TR:
   TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
   TR_SRC.vocab = TR_CONTEXT.vocab
   TR = TR_SRC
 else:
   TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-  
+
 EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
 pad_idx = EN.vocab.stoi[PAD]
 
@@ -113,7 +124,7 @@ print('done')
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
 rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
-rev_tokenize_tr = lambda tokenized: [TR_SRC.vocab.itos[i] for i in tokenized]
+rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 
 print("Loading model...")
 model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
