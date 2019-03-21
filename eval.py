@@ -26,6 +26,7 @@ CPU ONLY.
 # Set up parser for arguments
 parser = argparse.ArgumentParser(description='Evaluating performance of a model')
 parser.add_argument('--vocab', type=int, default=10000, help='vocab size, must match max size in build_vocab')
+parser.add_argument('--train', type=str, default="train_2m.csv", help='Train path. MUST MATCH THE FILE USED IN TRAINING')
 parser.add_argument('--batch', type=int, default=512, help='Batch size')
 parser.add_argument('--path', type=str, default="save", help='model path within models/ directory')
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
@@ -39,6 +40,8 @@ VOCAB_SIZE = args.vocab
 BATCH_SIZE = args.batch
 if args.vocab == 10000:
   train_path, val_path, test_path= "train_2m.csv", "val_10k.csv", "test_10k.csv" # TRAIN PATH MUST MATCH ORIGINAL
+  train_path = args.train
+  print("Set training path to %s" % args.train)
 elif args.vocab == 1000:
   train_path, val_path, test_path = "train_mini.csv", "val_mini.csv", "test_mini.csv"
 else:
