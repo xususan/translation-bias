@@ -1,0 +1,1 @@
+perl multi-bleu.perl reference.txt < translation.txt
