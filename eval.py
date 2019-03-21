@@ -52,15 +52,18 @@ bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
 
 # Context and source / target fields for English + Turkish
 # Lower = true
-TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
-        lower=True, pad_token=PAD, init_token=BOC)
-TR_SRC = Field(tokenize=bpemb_tr.encode, 
-    lower=True, pad_token=PAD)
-EN = Field(tokenize=bpemb_en.encode, 
-    lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
 
-print('reading in tabular dataset')
-train, val, test = TabularDataset.splits(
+## SUPER IMPORTANT THAT THE VOCAB FIELDS MATCH
+
+if args.context:
+  TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
+          lower=True, pad_token=PAD, init_token=BOC)
+  TR_SRC = Field(tokenize=bpemb_tr.encode, 
+      lower=True, pad_token=PAD)
+  EN = Field(tokenize=bpemb_en.encode, 
+      lower=True, pad_token=PAD, init_token=SOS, eos_token=EOS)
+  print('reading in tabular dataset')
+  train, val, test = TabularDataset.splits(
   path='data/', 
   train=train_path,
   validation=val_path,
@@ -68,20 +71,44 @@ train, val, test = TabularDataset.splits(
   format='tsv', 
   fields=[('src_context', TR_CONTEXT), ('src', TR_SRC),
   ('trg_context', EN), ('trg', EN)])
-print('finished')
+  print('finished')
+else:
+  TR = Field(tokenize=bpemb_tr.encode, 
+        lower=False, pad_token=PAD)
+  EN = Field(tokenize=bpemb_en.encode, 
+      lower=False, pad_token=PAD, init_token=SOS, eos_token=EOS)
+  rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
+  rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 
-print('making iterator')
+  print('reading in tabular dataset')
+  train, val, test = TabularDataset.splits(
+    path='data/', 
+    train=train_path,
+    validation="val_10k.csv",
+    test="test_10k.csv",
+    format='tsv', 
+    fields=[('src_context', TR), ('src', TR),
+    ('trg_context', EN), ('trg', EN)])
+  print('done')
+
+
+print("Building vocab...")
+
+MIN_FREQ = 1
+if args.context:
+  TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+  TR_SRC.vocab = TR_CONTEXT.vocab
+  TR = TR_SRC
+else:
+  TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+  
+EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+pad_idx = EN.vocab.stoi[PAD]
+
+print('making validation iterator')
 valid_iter = Iterator(val, batch_size=BATCH_SIZE, device=device,
                       repeat=False, sort=False, train=False) 
 print('done')
-
-print("Building vocab...")
-MIN_FREQ = 1
-TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-TR_SRC.vocab = TR_CONTEXT.vocab
-TR = TR_CONTEXT
-EN.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
-pad_idx = EN.vocab.stoi[PAD]
 
 print("TR vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
 print('Done building vocab')
