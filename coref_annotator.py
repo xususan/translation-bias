@@ -55,7 +55,7 @@ if __name__ == "__main__":
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
 	with open('data/' + args.inpath, newline='') as csvfile:
-		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='6G') as client:
+		with CoreNLPClient(annotators=['coref'], timeout=50000, memory='8G') as client:
 			spamreader = csv.reader(csvfile, delimiter='\t')
 			for row in spamreader:
 				nrows += 1
