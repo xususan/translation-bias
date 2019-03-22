@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def write_to_ref_file(file_path):
-	input_path = "data/bleu/" + file_path
+	input_path = "data/0308/" + file_path
 	df = pd.read_csv(input_path, sep='\t', header=None)
 	# df_en = df[['en']]
 	df_en = df.iloc[:, 3]
@@ -17,4 +17,4 @@ def recover_train_200k_because_im_stupid():
 
 # recover_train_200k_because_im_stupid()
 
-# write_to_ref_file("val_10k_context_only.csv")
+write_to_ref_file("val_10k_0308_context_only.csv")
