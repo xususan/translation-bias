@@ -37,6 +37,8 @@ if __name__ == "__main__":
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
 	nwritten =0
+	max_non_context = 1747621
+	n_non_context = 0
 	with open('data/' + args.inpath, newline='') as csvfile:
 		reader = csv.reader(csvfile, delimiter='\t')
 		for row in reader:
@@ -52,9 +54,10 @@ if __name__ == "__main__":
 				csv_writer.writerow([row[0], row[1], row[2], row[3]])
 				nwritten+=1
 			else:
-				if random.random() < .873:
+				if random.random() < .873 and n_non_context < max_non_context:
 					csv_writer.writerow([row[0], row[1], row[2], row[3]])
 					nwritten +=1
+					n_non_context +=1
 			
 			if (nrows % 1000) == 0:
 				outfile.flush()
