@@ -2,10 +2,13 @@ import pdb
 import csv
 import sys
 import argparse
+import random
 
 """
 Get a subsample of the data that includes coreference between source and target.
 """
+
+random.seed(1)
 
 parser = argparse.ArgumentParser(description='Subsample Datasets (with wcoreference)')
 parser.add_argument('--inpath', type=str, default="train_200k_annotated.csv", help='Path to infile (within data/). Must be annotated')
@@ -33,6 +36,7 @@ if __name__ == "__main__":
 	outfile = open("data/" + args.outpath, 'w+', newline='')
 	csv_writer = csv.writer(outfile, delimiter='\t')
 	nrows = 0
+	nwritten =0
 	with open('data/' + args.inpath, newline='') as csvfile:
 		reader = csv.reader(csvfile, delimiter='\t')
 		for row in reader:
@@ -46,7 +50,15 @@ if __name__ == "__main__":
 			if len(row[4]) > 2: # Indicates more than '[]'
 				print(nrows - 1, row[4])
 				csv_writer.writerow([row[0], row[1], row[2], row[3]])
+				nwritten+=1
+			else:
+				if random.random() < .873:
+					csv_writer.writerow([row[0], row[1], row[2], row[3]])
+					nwritten +=1
 			
 			if (nrows % 1000) == 0:
 				outfile.flush()
+
+			if nwritten == 2E6:
+				break
 	outfile.close()
