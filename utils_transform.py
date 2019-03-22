@@ -222,7 +222,7 @@ def load_train_val_test_datasets(params):
         TR_CONTEXT.vocab = TR_SRC.vocab
         TR = TR_SRC
     else:
-        TR.build_vocab(train, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
+        TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
 
     EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
     print("TR=TR_SRC vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
