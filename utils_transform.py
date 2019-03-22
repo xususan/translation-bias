@@ -189,6 +189,9 @@ def load_train_val_test_datasets(params):
             lower=set_lower, pad_token=PAD, init_token=BOS)
         EN = Field(tokenize=bpemb_en.encode, 
             lower=set_lower, pad_token=PAD, init_token=SOS, eos_token=EOS)
+        data_fields = [
+          ('src_context', TR_CONTEXT), ('src', TR_SRC),
+          ('trg_context', EN), ('trg', EN)]
     else:
         # en = spacy.load('en')
         # def tokenize_en(sentence):
@@ -199,13 +202,14 @@ def load_train_val_test_datasets(params):
         TR = Field(lower=True, pad_token=PAD)
         EN = Field(lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
         TR_SRC = None; TR_CONTEXT = None
+        data_fields = [
+        ('src_context', TR), ('src', TR),
+        ('trg_context', EN), ('trg', EN)]
 
     print("lower = %r" % set_lower)
 
     # Must be in order
-    data_fields = [
-      ('src_context', TR_CONTEXT), ('src', TR_SRC),
-      ('trg_context', EN), ('trg', EN)]
+    
 
     train, val, test = TabularDataset.splits(
       path='data/', 
@@ -218,10 +222,12 @@ def load_train_val_test_datasets(params):
     print('Building vocab...')
     MIN_FREQ = 1
     if TR_SRC and TR_CONTEXT:
+        print("Sharing embeddings")
         TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=params.vocab_size)
         TR_CONTEXT.vocab = TR_SRC.vocab
         TR = TR_SRC
     else:
+        print("not splitting tr_src/ context")
         TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
 
     EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
