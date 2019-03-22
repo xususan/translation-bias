@@ -150,7 +150,7 @@ class Params:
             self.train_csv, self.val_csv, self.test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
         elif args.size == "mid":
             self.vocab_size = 10000
-            self.train_csv, self.val_csv, self.test_csv = "train_200k.csv", "val_10k.csv", "test_10k.csv"
+            self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
         else:
             self.vocab_size = 50000
             self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
