@@ -1,0 +1,11 @@
+Command line arguments: {Namespace(batch=1000, context=True, epochs=100, load='None', out='context_2m_retrain', save=10, size='mid', train='None')}
+Train: train_200k.csv, Val: val_10k.csv, test: test_10k.csv
+Vocab size: 10000
+lower = True
+Building vocab...
+TR_SRC vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Iterators built.
+Training model...
+Epoch 1 / 100
+Epoch Step: 1 Loss: 8.059144 Tokens per Sec: 112.263069
