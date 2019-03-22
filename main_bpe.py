@@ -19,8 +19,11 @@ parser.add_argument('--save', type=int, default=10, help='Save model after every
 parser.add_argument('--out', type=str, default="save", help='Prefix for model output, eg save for save_10.pt')
 parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
+parser.add_argument('--bpe', dest='bpe', action='store_true')
+parser.add_argument('--no-bpe', dest='bpe', action='store_false')
 parser.add_argument('--load', type=str, default="None", help="model to resume training if any")
 parser.set_defaults(context=False)
+parser.set_defaults(bpe=True)
 args = parser.parse_args()
 
 now = datetime.datetime.now()
@@ -33,8 +36,7 @@ params = Params(args)
 print("Train: %s, Val: %s, test: %s" % (params.train_csv, params.val_csv, params.test_csv))
 print("Vocab size: %d" % (params.vocab_size))
 
-train, val, test, TR_SRC, TR_CONTEXT, EN = load_train_val_test_datasets(params)
-TR = TR_SRC
+train, val, test, TR, EN = load_train_val_test_datasets(params)
 pad_idx = EN.vocab.stoi[PAD]
 
 
