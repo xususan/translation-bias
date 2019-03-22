@@ -41,9 +41,9 @@ pad_idx = EN.vocab.stoi[PAD]
 
 
 if args.context:
-  model = make_context_model(len(TR.vocab), len(EN.vocab), N=6)
+  model = make_context_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe)
 else:
-  model = make_model(len(TR.vocab), len(EN.vocab), N=6)
+  model = make_model(len(TR.vocab), len(EN.vocab), N=6,share_embeddings=args.bpe)
   # if args.load != "None":
   #   model.load_state_dict(torch.load(args.load))
 
