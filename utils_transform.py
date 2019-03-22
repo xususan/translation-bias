@@ -7,6 +7,7 @@ from torchtext.data import Field, BucketIterator, TabularDataset, Pipeline
 from bpemb import BPEmb
 import pdb
 
+
 SOS, EOS, PAD = "<s>", "</s>", "<pad>"
 BOC, BOS = "<boc>", "<bos>"
 
@@ -149,13 +150,19 @@ class Params:
             self.train_csv, self.val_csv, self.test_csv = "train_mini.csv", "val_mini.csv", "test_mini.csv"
         elif args.size == "mid":
             self.vocab_size = 10000
-            self.train_csv, self.val_csv, self.test_csv = "train_200k.csv", "val_10k.csv", "test_10k.csv"
+            self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
         else:
             self.vocab_size = 50000
             self.train_csv, self.val_csv, self.test_csv = "train_2m.csv", "val_10k.csv", "test_10k.csv"
 
         if args.train != "None":
             self.train_csv = args.train
+
+        self.use_bpe = args.bpe
+        if self.use_bpe == False:
+            print("NOT using BPE.")
+        else:
+            print("Using BPE. Default setting.")
 
 def load_bpe(vocab_size):
     """ Load pre-trained byte pair embedding models.
@@ -173,13 +180,26 @@ def load_train_val_test_datasets(params):
     # Context and source / target fields for English + Turkish
     # 03/01: need to change lower to True?.
     set_lower=True
-    bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
-    TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
-        lower=set_lower, pad_token=PAD, init_token=BOC)
-    TR_SRC = Field(tokenize=bpemb_tr.encode, 
-        lower=set_lower, pad_token=PAD, init_token=BOS)
-    EN = Field(tokenize=bpemb_en.encode, 
-        lower=set_lower, pad_token=PAD, init_token=SOS, eos_token=EOS)
+
+    if params.use_bpe:
+        bpemb_tr, bpemb_en = load_bpe(params.vocab_size)
+        TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
+            lower=set_lower, pad_token=PAD, init_token=BOC)
+        TR_SRC = Field(tokenize=bpemb_tr.encode, 
+            lower=set_lower, pad_token=PAD, init_token=BOS)
+        EN = Field(tokenize=bpemb_en.encode, 
+            lower=set_lower, pad_token=PAD, init_token=SOS, eos_token=EOS)
+    else:
+        # en = spacy.load('en')
+        # def tokenize_en(sentence):
+        #     return [tok.text for tok in en.tokenizer(sentence)]
+
+        # SOS, EOS, PAD, BOS = "<s>", "</s>", "<pad>", "<bos>" # Represents begining of context sentence
+        # Context and source / target fields for English + Turkish
+        TR = Field(lower=True, pad_token=PAD)
+        EN = Field(lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
+        TR_SRC = None; TR_CONTEXT = None
+
     print("lower = %r" % set_lower)
 
     # Must be in order
@@ -197,13 +217,19 @@ def load_train_val_test_datasets(params):
 
     print('Building vocab...')
     MIN_FREQ = 1
-    TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=params.vocab_size)
-    TR_CONTEXT.vocab = TR_SRC.vocab
+    if TR_SRC and TR_CONTEXT:
+        TR_SRC.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=params.vocab_size)
+        TR_CONTEXT.vocab = TR_SRC.vocab
+        TR = TR_SRC
+    else:
+        TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+
     EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
-    print("TR_SRC vocab size: %d, EN vocab size: %d" % (len(TR_SRC.vocab), len(EN.vocab)))
+    print("TR=TR_SRC vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
     print('Done building vocab')
 
-    return train, val, test, TR_SRC, TR_CONTEXT, EN
+
+    return train, val, test, TR, EN
 
 
 

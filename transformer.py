@@ -297,7 +297,7 @@ class LabelSmoothing(nn.Module):
         return self.criterion(x, true_dist)
 
 def make_model(src_vocab, tgt_vocab, N=6, 
-               d_model=512, d_ff=2048, h=8, dropout=0.1):
+               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
@@ -317,12 +317,15 @@ def make_model(src_vocab, tgt_vocab, N=6,
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
 
-    model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
+    if share_embeddings:
+        model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
+    else:
+        print("WARNING: share_embeddings is False")
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
 
 def make_context_model(src_vocab, tgt_vocab, N=6, 
-               d_model=512, d_ff=2048, h=8, dropout=0.1):
+               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
@@ -342,6 +345,9 @@ def make_context_model(src_vocab, tgt_vocab, N=6,
         if p.dim() > 1:
             nn.init.xavier_uniform_(p)
 
-    model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
+    if share_embeddings:
+        model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
+    else:
+        print("WARNING: share_embeddings is False")
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
