@@ -26,6 +26,8 @@ parser.set_defaults(context=False)
 parser.set_defaults(bpe=True)
 args = parser.parse_args()
 
+debiased_vectors = "../GloVe/vectors.w2v.hard-debiased.bin"
+
 now = datetime.datetime.now()
 month, day = pad_date(now.month), pad_date(now.day)
 
