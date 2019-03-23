@@ -50,6 +50,14 @@ else:
   # if args.load != "None":
   #   model.load_state_dict(torch.load(args.load))
 
+if args.pretrainedembed:
+  assert(not(args.bpe))
+  debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
+  print("Loading debiased vectors from .. %s" % debiased_vectors_path)
+  embeds = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+  model.tgt_embed.lut.weight = embeds
+  model.tgt_embed.lut.weight.requires_grad = False
+
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
 if torch.cuda.device_count() > 0:

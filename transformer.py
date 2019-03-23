@@ -350,14 +350,6 @@ def make_model(src_vocab, tgt_vocab, N=6,
     else:
         print("WARNING: share_embeddings is False")
 
-    if pretrained_embeddings:
-        assert(not(share_embeddings))
-        debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
-        print("Loading debiased vectors from .. %s" % debiased_vectors_path)
-        embeds = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
-        model.tgt_embed.lut.weight = embeds
-        model.tgt_embed.lut.weight.requires_grad = False
-
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
 
@@ -388,7 +380,4 @@ def make_context_model(src_vocab, tgt_vocab, N=6,
         print("WARNING: share_embeddings is False")
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
 
-    if pretrained_embeddings:
-        print("Pretrained embeddings not implemented yet.")
-        assert(False)
     return model
