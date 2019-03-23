@@ -247,7 +247,7 @@ def load_train_val_test_datasets(params):
 
     if params.use_pretrained_embeddings:
         assert(not(params.use_bpe))
-        debiased_vectors = "data/embeddings/vectors.w2v.debiased.bin"
+        debiased_vectors = "data/embeddings/vectors.w2v.debiased.txt"
         print("Loading debiased vectors from .. %s" % debiased_vectors)
         vectors = process_word2vec_file(debiased_vectors, EN)
         EN.vocab.set_vectors(vectors.stoi, vectors.vectors, vectors.dim)
