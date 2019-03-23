@@ -55,7 +55,7 @@ if args.pretrainedembed:
   debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
   print("Loading debiased vectors from .. %s" % debiased_vectors_path)
   embeds = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
-  model.tgt_embed[0].lut.weight = embeds
+  model.tgt_embed[0].lut.weight = nn.Parameter(embeds)
   model.tgt_embed[0].lut.weight.requires_grad = False
 
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
