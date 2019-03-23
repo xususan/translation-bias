@@ -315,6 +315,7 @@ def load_glove_embeddings(path, word2idx, embedding_dim=512):
     with open(path) as f:
         embeddings = np.zeros((len(word2idx), embedding_dim))
         for line in f.readlines():
+            pdb.set_trace()
             values = line.split()
             word = values[0]
             index = word2idx.get(word)
