@@ -313,14 +313,18 @@ def load_glove(path):
 
 def load_glove_embeddings(path, word2idx, embedding_dim=512):
     with open(path) as f:
+        # Skip header row
+        next(f)
         embeddings = np.zeros((len(word2idx), embedding_dim))
         for line in f.readlines():
-            pdb.set_trace()
             values = line.split()
             word = values[0]
             index = word2idx.get(word)
             if index:
-                vector = np.array(values[1:], dtype='float32')
+                try:
+                    vector = np.array(values[1:], dtype='float32')
+                except:
+                    pdb.set_trace()
                 embeddings[index] = vector
         return torch.from_numpy(embeddings).float()
 
