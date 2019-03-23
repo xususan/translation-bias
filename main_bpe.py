@@ -21,12 +21,13 @@ parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
 parser.add_argument('--bpe', dest='bpe', action='store_true')
 parser.add_argument('--no-bpe', dest='bpe', action='store_false')
+parser.add_argument('--pretrained-embed', dest='pretrainedembed', action='store_true')
+parser.add_argument('--no-pretrained-embed', dest='pretrainedembed', action='store_false')
 parser.add_argument('--load', type=str, default="None", help="model to resume training if any")
 parser.set_defaults(context=False)
 parser.set_defaults(bpe=True)
+parser.set_defaults(pretrainedembed=False)
 args = parser.parse_args()
-
-debiased_vectors = "../GloVe/vectors.w2v.hard-debiased.bin"
 
 now = datetime.datetime.now()
 month, day = pad_date(now.month), pad_date(now.day)
