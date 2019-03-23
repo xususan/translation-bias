@@ -318,6 +318,9 @@ def load_glove_embeddings(path, word2idx, embedding_dim=512):
         embeddings = np.zeros((len(word2idx), embedding_dim))
         for line in f.readlines():
             values = line.split()
+            if len(values) != embedding_dim+1:
+                continue
+                print(line[:10])
             word = values[0]
             index = word2idx.get(word)
             if index:
