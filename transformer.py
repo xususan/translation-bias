@@ -357,14 +357,12 @@ def make_model(src_vocab, tgt_vocab, N=6,
         embeds = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
         model.tgt_embed.lut.weight = embeds
         model.tgt_embed.lut.weight.requires_grad = False
-    else:
-        embedding_tgt = nn.Embeddings()
 
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
 
 def make_context_model(src_vocab, tgt_vocab, N=6, 
-               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True):
+               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True, pretrained_embeddings=False):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
@@ -389,4 +387,8 @@ def make_context_model(src_vocab, tgt_vocab, N=6,
     else:
         print("WARNING: share_embeddings is False")
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
+
+    if pretrained_embeddings:
+        print("Pretrained embeddings not implemented yet.")
+        assert(False)
     return model
