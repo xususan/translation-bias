@@ -75,7 +75,8 @@ else:
 
 
 
-if USE_NEW_DOUBLE_TR or not(args.bpe):
+if USE_NEW_DOUBLE_TR and (args.bpe):
+  print("Using new version of vocab. BPE is true.")
   TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
           lower=True, pad_token=PAD, init_token=BOC)
   TR_SRC = Field(tokenize=bpemb_tr.encode, 
@@ -93,7 +94,7 @@ if USE_NEW_DOUBLE_TR or not(args.bpe):
   ('trg_context', EN), ('trg', EN)])
   print('finished')
 else:
-  print("Using old version of vocab.")
+  print("Using old version of vocab. Either this model was trained before 3/1, or BPE is false.")
   TR = Field(tokenize=bpemb_tr.encode, 
         lower=False, pad_token=PAD)
   EN = Field(tokenize=bpemb_en.encode, 
