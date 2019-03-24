@@ -24,6 +24,7 @@ parser.add_argument('--no-bpe', dest='bpe', action='store_false')
 parser.add_argument('--pretrained-embed', dest='pretrainedembed', action='store_true')
 parser.add_argument('--no-pretrained-embed', dest='pretrainedembed', action='store_false')
 parser.add_argument('--load', type=str, default="None", help="model to resume training if any")
+parser.add_argument('--startingepoch', type=int, default=0, help="Epoch # to start on")
 parser.set_defaults(context=False)
 parser.set_defaults(bpe=True)
 parser.set_defaults(pretrainedembed=False)
@@ -47,8 +48,10 @@ if args.context:
   model = make_context_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe, pretrained_embeddings=args.pretrainedembed)
 else:
   model = make_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe, pretrained_embeddings=args.pretrainedembed)
-  # if args.load != "None":
-  #   model.load_state_dict(torch.load(args.load))
+
+if args.load != "None":
+  print("RESUMING TRAINING FROM %s" % args.load)
+  model.load_state_dict(torch.load(args.load))
 
 if args.pretrainedembed:
   assert(not(args.bpe))
@@ -97,7 +100,7 @@ model_parameters = filter(lambda p: p.requires_grad, model.parameters())
 model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
           torch.optim.Adam(model_parameters, lr=0, betas=(0.9, 0.98), eps=1e-9))
 
-for epoch in range(1, args.epochs + 1):
+for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
     gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator
