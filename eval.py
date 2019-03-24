@@ -57,8 +57,10 @@ BOC, BOS = "<boc>", "<bos>"
 
 device = torch.device('cpu')
 
-bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
-
+if args.bpe:
+  bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
+else:
+  bpemb_en = None; bpemb_tr = None
 # Context and source / target fields for English + Turkish
 # Lower = true
 
