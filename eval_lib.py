@@ -96,6 +96,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
         trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
         hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
       else:
+        pdb.set_trace()
         trg_str = ' '.join((rev_tokenize_trg(targets)).replace("<pad>", ""))
         hypothesis_decoded = ' '.join(rev_tokenize_trg(hypothesis))
 
