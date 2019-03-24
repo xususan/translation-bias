@@ -93,8 +93,8 @@ if USE_NEW_DOUBLE_TR and (args.bpe):
   fields=[('src_context', TR_CONTEXT), ('src', TR_SRC),
   ('trg_context', EN), ('trg', EN)])
   print('finished')
-else:
-  print("Using old version of vocab. Either this model was trained before 3/1, or BPE is false.")
+elif args.bpe:
+  print("Using old version of vocab WITH BPE")
   TR = Field(tokenize=bpemb_tr.encode, 
         lower=False, pad_token=PAD)
   EN = Field(tokenize=bpemb_en.encode, 
@@ -112,12 +112,28 @@ else:
     fields=[('src_context', TR), ('src', TR),
     ('trg_context', EN), ('trg', EN)])
   print('done')
+else:
+  print("Using non-BPE vocab.")
+  TR = Field(lower=True, pad_token=PAD)
+  EN = Field(lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
+  data_fields = [
+  ('src_context', TR), ('src', TR),
+  ('trg_context', EN), ('trg', EN)]
+  train, val, test = TabularDataset.splits(
+      path='data/', 
+      train=train_path,
+      validation=val_path,
+      test=test_path,
+      format='tsv', 
+      fields=data_fields)
+  #TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+  #EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
 
 
 print("Building vocab...")
 
 MIN_FREQ = 1
-if USE_NEW_DOUBLE_TR:
+if USE_NEW_DOUBLE_TR and args.bpe:
   TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
   TR_SRC.vocab = TR_CONTEXT.vocab
   TR = TR_SRC
