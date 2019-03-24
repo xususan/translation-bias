@@ -154,7 +154,7 @@ rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
 rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 
 print("Loading model...")
-model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
+model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), use_context=args.context, share_embeddings=args.bpe, pretrained_embeddings=False)
 print("Model loaded from %s" % args.path)
 
 if args.eval == "accuracy" or args.eval == "all":
