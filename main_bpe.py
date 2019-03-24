@@ -51,7 +51,7 @@ else:
 
 if args.load != "None":
   print("RESUMING TRAINING FROM %s" % args.load)
-  model.load_state_dict(torch.load(args.load))
+  model.load_state_dict(torch.load("models/" + args.load))
 
 if args.pretrainedembed:
   assert(not(args.bpe))
