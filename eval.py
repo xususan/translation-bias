@@ -35,8 +35,11 @@ parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
 parser.add_argument('--bpe', dest='bpe', action='store_true')
 parser.add_argument('--no-bpe', dest='bpe', action='store_false')
+parser.add_argument('--pretrained-embed', dest='pretrainedembed', action='store_true')
+parser.add_argument('--no-pretrained-embed', dest='pretrainedembed', action='store_false')
 parser.set_defaults(context=False)
 parser.set_defaults(bpe=True)
+parser.set_defaults(pretrainedembed=False)
 args = parser.parse_args()
 print("Command line arguments: {%s}" % args)
 
@@ -158,6 +161,20 @@ rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 print("Loading model...")
 model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), use_context=args.context, share_embeddings=args.bpe, pretrained_embeddings=False)
 print("Model loaded from %s" % args.path)
+
+if args.pretrainedembed:
+  assert(not(args.bpe))
+  debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
+  print("Loading EN debiased vectors from .. %s" % debiased_vectors_path)
+  embeds_en = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+  model.tgt_embed[0].lut.weight = nn.Parameter(embeds_en)
+  model.tgt_embed[0].lut.weight.requires_grad = False
+
+  debiased_vectors_path_tr = "data/embeddings/vectors_tr.w2v.debiased.txt"
+  print("Loading TR debiased vectors from .. %s" % debiased_vectors_path_tr)
+  embeds_tr = load_glove_embeddings(debiased_vectors_path_tr, TR.vocab.stoi)
+  model.src_embed[0].lut.weight = nn.Parameter(embeds_tr)
+  model.src_embed[0].lut.weight.requires_grad = False
 
 if args.eval == "accuracy" or args.eval == "all":
   for path in ["pro_stereotype.tsv", "anti_stereotype.tsv", "male_subject.tsv", "female_subject.tsv"]:
