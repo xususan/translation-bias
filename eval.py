@@ -33,7 +33,10 @@ parser.add_argument('--path', type=str, default="save", help='model path within 
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
 parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
+parser.add_argument('--bpe', dest='bpe', action='store_true')
+parser.add_argument('--no-bpe', dest='bpe', action='store_false')
 parser.set_defaults(context=False)
+parser.set_defaults(bpe=True)
 args = parser.parse_args()
 print("Command line arguments: {%s}" % args)
 
@@ -72,7 +75,7 @@ else:
 
 
 
-if USE_NEW_DOUBLE_TR:
+if USE_NEW_DOUBLE_TR or not(args.bpe):
   TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
           lower=True, pad_token=PAD, init_token=BOC)
   TR_SRC = Field(tokenize=bpemb_tr.encode, 
@@ -90,6 +93,7 @@ if USE_NEW_DOUBLE_TR:
   ('trg_context', EN), ('trg', EN)])
   print('finished')
 else:
+  print("Using old version of vocab.")
   TR = Field(tokenize=bpemb_tr.encode, 
         lower=False, pad_token=PAD)
   EN = Field(tokenize=bpemb_en.encode, 
