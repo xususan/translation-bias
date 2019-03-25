@@ -41,7 +41,7 @@ def run_epoch(data_iter, model, loss_compute, multi_gpu):
     total_loss = 0
     tokens = 0.0
     for i, batch in enumerate(data_iter):
-        out = model.forward(batch)
+        out = model.forward(batch, multi_gpu=multi_gpu)
         batch_ntokens = batch.ntokens.float()
         loss = loss_compute(out, batch.trg_y, batch_ntokens)
         total_loss += loss
