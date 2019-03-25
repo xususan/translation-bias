@@ -34,13 +34,16 @@ class Batch:
             subsequent_mask(tgt.size(-1)).type_as(tgt_mask.data))
         return tgt_mask
 
-def run_epoch(data_iter, model, loss_compute):
+def run_epoch(data_iter, model, loss_compute, multi_gpu):
     "Standard Training and Logging Function"
     start = time.time()
     total_tokens = 0.0
     total_loss = 0
     tokens = 0.0
+    if multi_gpu:
+        device = torch.device('cuda', 0)
     for i, batch in enumerate(data_iter):
+        batch.to(self.device)
         out = model.forward(batch)
         batch_ntokens = batch.ntokens.float()
         loss = loss_compute(out, batch.trg_y, batch_ntokens)
@@ -101,16 +104,12 @@ def get_std_opt(model):
 
 class SimpleLossCompute:
     "A simple loss compute and train function."
-    def __init__(self, generator, criterion, opt=None, multi_gpu=False):
+    def __init__(self, generator, criterion, opt=None):
         self.generator = generator
         self.criterion = criterion
         self.opt = opt
-        self.multi_gpu = multi_gpu
-        if self.multi_gpu:
-            self.device = torch.device('cuda', 0)
         
     def __call__(self, x, y, norm):
-        x.to(self.device)
         x = self.generator(x)
         loss = self.criterion((x.contiguous().view(-1, x.size(-1))), 
                               (y.float().contiguous().view(-1))) / norm
