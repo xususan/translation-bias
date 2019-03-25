@@ -41,7 +41,17 @@ def run_epoch(data_iter, model, loss_compute, multi_gpu):
     total_loss = 0
     tokens = 0.0
     for i, batch in enumerate(data_iter):
-        out = model.forward(batch, multi_gpu=multi_gpu)
+        src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+        src_context, src_context_mask = batch.src_context, batch.src_context_mask
+        if multi_gpu:
+            device = torch.device('cuda', 0)
+            src.to(device)
+            tgt.to(device)
+            src_mask.to(device)
+            tgt_mask.to(device)
+            src_context.to(device)
+            src_context_mask.to(device)
+        out = model.forward(src, src_mask, src_context, src_context_mask, tgt, tgt_mask)
         batch_ntokens = batch.ntokens.float()
         loss = loss_compute(out, batch.trg_y, batch_ntokens)
         total_loss += loss
