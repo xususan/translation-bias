@@ -18,7 +18,9 @@ def rebatch_for_eval(pad_idx, batch):
 def log_likelihood(model, batch, pad_idx):
     """Calculates the log likelihood of a batch, given the model.
     """
-    memory = model.encode(batch) # [40 x 7 x 512] = [batch x srclen x dim]
+    src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+    src_context, src_context_mask = batch.src_context, batch.src_context_mask
+    memory = model.encode(src, src_mask, src_context, src_context_mask) # [40 x 7 x 512] = [batch x srclen x dim]
     total_prob = torch.zeros(batch.trg_y.size(0))
     for i in range(0, batch.trg_y.size(1)): # trg_len
         y_prev = batch.trg[:, :i + 1]
@@ -35,7 +37,7 @@ def log_likelihood(model, batch, pad_idx):
 
 def greedy_decode(model, batch, max_len, start_symbol):
     src = batch.src, src_mask = batch.src_mask # This is just wrong lol
-    memory = model.encode(src, src_mask)
+    memory = model.encode(src, src_mask, src_context, src_context_mask)
     ys = torch.ones(1, 1).fill_(start_symbol).type_as(src.data)
     total_prob = 0.0
     for i in range(max_len-1):
