@@ -42,6 +42,7 @@ def run_epoch(data_iter, model, loss_compute, multi_gpu):
     tokens = 0.0
     if multi_gpu:
         device = torch.device('cuda', 0)
+        print("Using multi GPU")
     for i, batch in enumerate(data_iter):
         batch.to(self.device)
         out = model.forward(batch)
