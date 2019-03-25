@@ -1,0 +1,2 @@
+Command line arguments: {Namespace(batch=512, context=False, eval='bleu', path='0220_baseline_200k_100.pt', vocab=10000)}
+reading in tabular dataset

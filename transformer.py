@@ -296,13 +296,49 @@ class LabelSmoothing(nn.Module):
         assert(not(true_dist.requires_grad))
         return self.criterion(x, true_dist)
 
+def load_glove(path):
+    """
+    creates a dictionary mapping words to vectors from a file in glove format.
+    """
+    with open(path) as f:
+        # Skip header row
+        next(f)
+        glove = {}
+        for line in f.readlines():
+            values = line.split()
+            word = values[0]
+            vector = np.array(values[1:], dtype='float32')
+            glove[word] = vector
+        return glove
+
+def load_glove_embeddings(path, word2idx, embedding_dim=512):
+    with open(path) as f:
+        # Skip header row
+        next(f)
+        embeddings = np.zeros((len(word2idx), embedding_dim))
+        for line in f.readlines():
+            values = line.split()
+            if len(values) != embedding_dim+1:
+                continue
+
+            word = values[0]
+            index = word2idx.get(word)
+            if index:
+                try:
+                    vector = np.array(values[1:], dtype='float32')
+                except:
+                    pdb.set_trace()
+                embeddings[index] = vector
+        return torch.from_numpy(embeddings).float()
+
 def make_model(src_vocab, tgt_vocab, N=6, 
-               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True):
+               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True, pretrained_embeddings=False):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
     ff = PositionwiseFeedForward(d_model, d_ff, dropout)
     position = PositionalEncoding(d_model, dropout)
+
     model = EncoderDecoder(
         Encoder(EncoderLayer(d_model, c(attn), c(ff), dropout), N),
         Decoder(DecoderLayer(d_model, c(attn), c(attn), 
@@ -321,11 +357,12 @@ def make_model(src_vocab, tgt_vocab, N=6,
         model.src_embed[0].lut.weight = model.tgt_embed[0].lut.weight
     else:
         print("WARNING: share_embeddings is False")
+
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
     return model
 
 def make_context_model(src_vocab, tgt_vocab, N=6, 
-               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True):
+               d_model=512, d_ff=2048, h=8, dropout=0.1, share_embeddings=True, pretrained_embeddings=False):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
@@ -350,4 +387,5 @@ def make_context_model(src_vocab, tgt_vocab, N=6,
     else:
         print("WARNING: share_embeddings is False")
     # model.generator.lut.weight = model.tgt_embed[0].lut.weight
+
     return model

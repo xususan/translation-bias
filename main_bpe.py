@@ -21,9 +21,13 @@ parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
 parser.add_argument('--bpe', dest='bpe', action='store_true')
 parser.add_argument('--no-bpe', dest='bpe', action='store_false')
+parser.add_argument('--pretrained-embed', dest='pretrainedembed', action='store_true')
+parser.add_argument('--no-pretrained-embed', dest='pretrainedembed', action='store_false')
 parser.add_argument('--load', type=str, default="None", help="model to resume training if any")
+parser.add_argument('--startingepoch', type=int, default=0, help="Epoch # to start on")
 parser.set_defaults(context=False)
 parser.set_defaults(bpe=True)
+parser.set_defaults(pretrainedembed=False)
 args = parser.parse_args()
 
 now = datetime.datetime.now()
@@ -41,11 +45,29 @@ pad_idx = EN.vocab.stoi[PAD]
 
 
 if args.context:
-  model = make_context_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe)
+  model = make_context_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe, pretrained_embeddings=args.pretrainedembed)
 else:
-  model = make_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe)
-  # if args.load != "None":
-  #   model.load_state_dict(torch.load(args.load))
+  model = make_model(len(TR.vocab), len(EN.vocab), N=6, share_embeddings=args.bpe, pretrained_embeddings=args.pretrainedembed)
+
+if args.load != "None":
+  print("RESUMING TRAINING FROM %s" % args.load)
+  model.load_state_dict(torch.load("models/" + args.load))
+
+if args.pretrainedembed:
+  assert(not(args.bpe))
+  debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
+  print("Loading EN debiased vectors from .. %s" % debiased_vectors_path)
+  embeds_en = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+  model.tgt_embed[0].lut.weight = nn.Parameter(embeds_en)
+  model.tgt_embed[0].lut.weight.requires_grad = False
+
+  debiased_vectors_path_tr = "data/embeddings/vectors_tr.w2v.debiased.txt"
+  print("Loading TR debiased vectors from .. %s" % debiased_vectors_path_tr)
+  embeds_tr = load_glove_embeddings(debiased_vectors_path_tr, TR.vocab.stoi)
+  model.src_embed[0].lut.weight = nn.Parameter(embeds_tr)
+  model.src_embed[0].lut.weight.requires_grad = False
+
+
 
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
 
@@ -74,15 +96,11 @@ valid_iter = MyIterator(val, batch_size=args.batch, device=device,
 print('Iterators built.')
 
 print('Training model...')
-if torch.cuda.device_count() > 1:
-  model_opt = NoamOpt(model.module.src_embed[0].d_model, 1, 2000,
-            torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+          torch.optim.Adam(model_parameters, lr=0, betas=(0.9, 0.98), eps=1e-9))
 
-else:
-  model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
-            torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
-
-for epoch in range(1, args.epochs + 1):
+for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
     gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator

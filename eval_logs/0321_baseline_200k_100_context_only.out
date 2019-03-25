@@ -1,0 +1,690 @@
+Command line arguments: {Namespace(batch=512, context=False, eval='bleu', path='0220_baseline_200k_100.pt', train='train_2m.csv', val='val_10k_context_only.csv', vocab=10000)}
+Set training path to train_2m.csv
+Set validation path (for BLEU) to val_10k_context_only.csv
+Model trained before March 1. USING OLD VERSION OF VOCAB
+reading in tabular dataset
+done
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9718, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0220_baseline_200k_100.pt
+Evaluating BLEU
+0 	 unfortunately , it was with his younger brother , buster . 	 unfortunately, it was his brother, buster, who shared his bed. maxlen: 26
+1 	 your father thought it would make us look charitable . 	 your father thought it would make us look charitable. maxlen: 23
+2 	 he must have forged my signature . 	 he must have faked my signature. maxlen: 17
+3 	 [ narrator ] meanwhile , lindsay was helping george michael with his homework . 	 meanwhile, lindsay george michael was helping with her homework. maxlen: 26
+4 	 [ narrator ] lindsay believed that george michael wanted to fix up his father ... so he could fill the role ofhis mother . 	 lindsay thought george michael wanted to arrange for his father to bring him his mother's job. maxlen: 43
+5 	 [ narrator ] george sr. had recently marketed a line of self-help tapes ... touting his newly discovered spirituality . 	 george scr has recently been offered a series of tape of his suggestions... in order to earn money from the spiritualist he had discovered. maxlen: 51
+6 	 besides , i 'm not gonna rush out and marry somebody just because you think my son would like it . 	 besides, i can't just bring a job like this to someone and marry my son because he wants it. maxlen: 35
+7 	 [ narrator ] and so michael got to know his son 's ethics teacher . 	 and michael got to know his son's ethics teacher. maxlen: 21
+8 	 yeah , it could only help . 	 yeah, maybe it'll help. maxlen: 14
+9 	 [ narrator ] george sr. was dealing with his own admirer . 	 george scr was dealing with his own fan. maxlen: 21
+10 	 [ narrator ] and michael was on his way to what would be his second date . 	 and michael, what's the deal with his second date today, miss bayerly. maxlen: 30
+11 	 at least , i think it 's a him . 	 at least, i think it's him. maxlen: 17
+12 	 [ narrator ] lucille could see that her son was concerned , even jealous . 	 lucille buster realized he was worried or even jealous. maxlen: 32
+13 	 and she knew how it felt to be overlooked . 	 and she knew what it felt like to be ignored. maxlen: 23
+14 	 michael took a step he hadn 't taken in years . 	 michael took a step he hadn't taken in years. maxlen: 17
+15 	 okay , do you think this is a good idea ? 	 well, do you think this is a good idea? maxlen: 23
+16 	 i think it 's a great idea . 	 i think it's a great idea. maxlen: 14
+17 	 i wanted to talk to you about something before , but i didn 't know if it was real . 	 i wanted to talk to you about something, but i must say i didn't know it was real. maxlen: 35
+18 	 i 'm gonna go home and think about it . 	 i'll go home and think about it. maxlen: 18
+19 	 i 'm gonna go home , think about it . 	 i'll go home and think about it. maxlen: 19
+20 	 [ narrator ] at prison , george sr. was preparing for an evening with his most devoted fan . 	 in prison, george scr was preparing to spend the evening with his most loyal fan. maxlen: 36
+21 	 she 's making me register him for school . 	 she's got me recording her at the school. maxlen: 19
+22 	 look , it was a preemptive strike . 	 look, it was a preliminary movement. maxlen: 17
+23 	 l-i 've been seeing ms. baerly , and i should never have brought gob into it . 	 i was seeing mrs. baerly, and i should never have gotten involved in gob. maxlen: 37
+24 	 look , michael , i hope you find what you 're looking for . 	 listen, michael, i hope you find what you're looking for. maxlen: 22
+25 	 i think , in life , some people are meant to be on tv , and i 'm one of them . 	 i think some people came to life for tv, and i'm one of them. maxlen: 30
+26 	 hi , i 'm randall , and i 'm totally off-the-hook gay and proud of it . 	 hi, i'm randall, and i'm a total gay and proud of it. maxlen: 32
+27 	 now they say barack obama . 	 they look like barack obama these days. maxlen: 23
+28 	 the total money will be divided equally between the survivors , but if all of you make it through the night , there will be a substantial bonus . 	 the total money will be made equally between the survivors, but if you all take the night off, there's a rich reward for you. maxlen: 47
+29 	 don 't worry , it 's not real . 	 don't worry, it's not real. maxlen: 15
+30 	 i mean , do you really think it 's safe in there ? 	 do you really think it's safe? maxlen: 17
+31 	 in 0000 , with the climbing budgets during the depression , the cold blooded warden thought he could keep his fortune on track by eliminating certain overhead costs . 	 in the time of the crisis of 0000, with the cost, the brutal manager thought he'd raise his fortune by destroying some cruel spending. maxlen: 44
+32 	 rumor has it that the warden still roams the halls . 	 rumor has it the director is still walking around in the halls. maxlen: 25
+33 	 " the white queen will got to the prison chapel to complete his task . 	 "the white queen must go to the prison church to complete her mission. maxlen: 23
+34 	 okay , take it easy , randall . 	 okay, calm down, randall. maxlen: 17
+35 	 i don 't think i could handle doing it again . 	 i guess i can't do it again. maxlen: 14
+36 	 it 's like walking through heavy fog , only it 's ice cold . 	 it's like walking in a thick fog, just cold as ice. maxlen: 27
+37 	 we 'll get scelzi to go down ... and have a look and fix them . 	 let's get scelzi to go down and check it out, ten. maxlen: 30
+38 	 it had a women 's wing , too , all right ? 	 did women have a section? maxlen: 15
+39 	 he beat them , he raped them , made them have his children , then he starved them to death . 	 beat 'em, raped 'em, got pregnant, killed 'em, starved. maxlen: 32
+40 	 because the town said they 'd sue us if we did . 	 because if we do this, the town will sue us. maxlen: 22
+41 	 it says , " if an inmate failed in his suicide attempt , 	 he says, "if a prisoner doesn't commit suicide, maxlen: 25
+42 	 it 's so obvious . 	 very clear. maxlen: 9
+43 	 can 't take credit for that , it 's the real deal . 	 that place deserved the best, had a whole real space. maxlen: 22
+44 	 it is a well documented fact ... that execution chambers frequently have the smell of death in them . 	 a documented real death bedroom usually wears its own scent. maxlen: 31
+45 	 when a human knows his or her life is about to come to an end , it will tend to reach an anxiety level ... that will cause it to emit highly noxious odors . 	 if a man knows that his life is about to come to the last moments, it'll give him plenty of scenting to come through. maxlen: 51
+46 	 i 'm paraphrasing here , but toni should fully comprehend ... the fear the victims felt when they were about to be gassed . 	 i'm transferring you from here, toni should fully live the fear of all the prisoners who have just been gassed. maxlen: 37
+47 	 do it for the team , girlfriend . 	 do it for the team, girl. maxlen: 13
+48 	 he either walks through walls , or there are more than one of them . 	 this guy can either walk through walls or there's more than one of them. maxlen: 28
+49 	 it looked real to me . 	 sounds real to me. maxlen: 11
+50 	 i can tell you , they don 't look okay . 	 i can tell they don't look good. maxlen: 21
+51 	 it gets a bit weird . 	 it gets a little weird. maxlen: 14
+52 	 well , you got it . 	 you got what you wanted. maxlen: 14
+53 	 but the children of pakistan , they didn 't ask for it either . 	 but pakistan's kids didn't want it either. maxlen: 18
+54 	 when they 're bombed by drones , they call it murder , too . 	 when they're hit by drone aircraft, they call it murder. maxlen: 28
+55 	 he 's become emotionally distant , cold , been drinking heavily . 	 emotionally distant, cold, started drinking high. maxlen: 25
+56 	 oh , i don 't think it 's up to me . 	 i don't think i can make that decision. maxlen: 22
+57 	 helped two of my brothers after they were imprisoned by your government . 	 after your government put two of my brothers in jail, he helped them. maxlen: 27
+58 	 if she 's a spy , she 's not one of ours . 	 if he's an agency, he's not one of us. maxlen: 18
+59 	 we play this harry 's way until we 've got eyes on him . 	 until we see him, we play this game harry's way. maxlen: 23
+60 	 yes , mr holloway , your uncle said he 'd meet you at the coffee shop . 	 yes, mr. holloway, your uncle said he'd meet you at the coffee shop. maxlen: 35
+61 	 he left his mobile at home . 	 he left his cell phone at home. maxlen: 14
+62 	 someone wants to destroy the service itself . 	 someone's trying to destroy the service itself. maxlen: 17
+63 	 you 've lost it . 	 you're insane. maxlen: 14
+64 	 mi0 was all i had and you took it from me , for nothing . 	 mi0 was my everything and you took it from me, for nothing. maxlen: 34
+65 	 mi0 is looking like a complete liability right now and i 'm just about the last friend left in government it has . 	 mi0 looks like a full responsibility and i'm the last friend in the government. maxlen: 37
+66 	 he refused to attend them . 	 he refused to attend. maxlen: 11
+67 	 just because your life hasn 't been worth a damn since harry booted you , don 't think we can 't very easily make it even less satisfactory . 	 just because your life hasn't been a shit since harry kicked you out, don't think we can't put your life in a shitty position. maxlen: 48
+68 	 k section were interested in some of the people using it , so they approached me . 	 k section was interested in some people using it, so they got to me. maxlen: 27
+69 	 the team leader was in on it . 	 the team leader was in on it. maxlen: 15
+70 	 he 's just the errand boy . 	 he's just a errand boy. maxlen: 11
+71 	 the americans think mi0 is a weak link and i think somebody here agrees with them . 	 the americans think mi0 is a weak link and i think someone inside is joining them. maxlen: 35
+72 	 our enemies are the politicians who send your sons and your daughters to die in illegal wars . 	 our enemies are politicians who send your sons and your daughters to die in illegal wars. maxlen: 39
+73 	 if you have a way to get to qasim , give it up , right now . 	 if you have a way to get to qasim, just say it. maxlen: 26
+74 	 i can remotely access it , but i need you to open the back door . 	 i can get to the remote, but i need you to open the secret door. maxlen: 26
+75 	 i 've ruled out old contacts , but i need access to personnel files to do it properly . 	 i've searched his old contacts, but i need access to personnel files to do it properly. maxlen: 34
+76 	 signs of a struggle in his home . 	 he has signs of struggle in his home. maxlen: 15
+77 	 your ability to wound us may be significant , but it is finite . 	 your ability to hurt us might be important, but it's the end. maxlen: 25
+78 	 call it nostalgia . 	 call it nostalgia. maxlen: 15
+79 	 once she 's out of fsb custody , he gives me a phone number . 	 when she gets out of fsb custody, qasim will give me a number. maxlen: 30
+80 	 they 'll destabilise the service to the point where it 's justifiable to take it over . 	 they'll be able to destabilize this where it can be captured. maxlen: 27
+81 	 all i 've done is what they asked of me . 	 i did what they asked me to do. maxlen: 19
+82 	 no , it was very you . 	 no, same you. maxlen: 13
+83 	 my wife 's dead , isn 't she ? 	 my wife is dead, isn't she? maxlen: 15
+84 	 what did you say to him ? 	 what did you say to him? maxlen: 14
+85 	 i told them i 'd do this , then i 'm out . 	 i told them i'd leave it after i did. maxlen: 21
+86 	 nobody asked you to speak for them , to kill for them . 	 you didn't ask them to kill you for them. maxlen: 23
+87 	 i think he 's made it clear he 's not interested in hostages . 	 i think he made it clear he wasn't interested in hostages. maxlen: 19
+88 	 you sent a secret directive to the met 's air unit ordering them to decline all mi0 requests , didn 't you ? 	 you've ordered the met air unit to turn down all the mi0 requests, right? maxlen: 37
+89 	 sacrificing your own service so it could be absorbed by a foreign power . 	 sacrifice his own fortune so he can be questioned by a foreign force. maxlen: 30
+90 	 what was it you think you accomplished , harry ? 	 what was it you thought you were doing, harry? maxlen: 21
+91 	 this came from you , i take it . 	 i think this came from you. maxlen: 15
+92 	 what is it ? 	 what is it? maxlen: 11
+93 	 it 's not your pub lunch that 's making you queasy . 	 it's not lunch that makes you sick. maxlen: 22
+94 	 it 's been four hours already , geraldine . 	 it's been 0 hours, geraldine. maxlen: 17
+95 	 the stasi stripped his body of everything that could be useful and it found its way into an fsb archive somewhere . 	 stai found a way to get in somewhere in his body, his fsb and his fsb. maxlen: 41
+96 	 if you know your trouble , it would be helpful if you could tell the men at the door . 	 if you know your problem and tell the men at the door, it'll help. maxlen: 31
+97 	 i guess we need to keep ' em here to keep ' em safe , but i just worry that it 's only gonna go from bad to worse . 	 i think we should keep them here to keep them safe, but i'm worried things will get worse. maxlen: 41
+98 	 besides , it 's not what hides in the dark we need to worry about . 	 besides, it's not what hides in the dark we need to worry about. maxlen: 25
+99 	 well , it 's not just about her being my mom . 	 i'm not saying it's just my mom. maxlen: 15
+100 	 it 's easy making choices from the sidelines , but sometimes , things aren 't what they seem . 	 it's easy picking on the side, but sometimes things aren't what they seem. maxlen: 22
+101 	 it says the generator 's only operating at 00 % . 	 he says the generator works at 00 percent. maxlen: 23
+102 	 damn it , the generator must have dumped its energy reserves when it overloaded . 	 damn it, the generator must have drained the energy reserves when it overloaded. maxlen: 32
+103 	 if war lies ahead , then we 'll all be thankful for it ... even slean . 	 if war lies ahead, we should be grateful, even slean. maxlen: 34
+104 	 my mother and others will join you . 	 my mother and others will escort you. maxlen: 17
+105 	 it 'll be our secret , then . 	 then he stays between us. maxlen: 14
+106 	 i see no season why slean shouldn 't marry keela , do you ? 	 i can't understand why slean didn't want to marry kela. maxlen: 35
+107 	 no , i don 't think it is . 	 i don't think so. maxlen: 11
+108 	 if a man or a woman spends their whole life pleasing others , then they 're not living at all . 	 if someone spends their whole life trying to please others, it means that someone doesn't. maxlen: 30
+109 	 tell my uncle i am done with him . 	 tell my uncle i'm done with him. maxlen: 21
+110 	 some think you missed them again . 	 some believe you've kidnapped her again. maxlen: 17
+111 	 breca 's wanted for murder , you know it . 	 breca's wanted for murder, you know that. maxlen: 22
+112 	 the boy demands breca 's life or blood money for the killing of his brother . 	 the boy wants breca's life or blood money for his brother's murder. maxlen: 34
+113 	 that 's what he does ... seeks out widows he thinks have coin and then he steals it and runs , this dirt-licker . 	 he's looking for the conditions he thinks he's got money, then he stole the money and ran away, this asshole. maxlen: 37
+114 	 abandoned my mother and took off with everything of value she had . 	 he left my mother and took everything precious to her. maxlen: 27
+115 	 tell them that 's why you 've been distracted . 	 so tell me you're distracted. maxlen: 18
+116 	 i knew breca had killed a man , but he spun me a different story . 	 i knew you killed breca, but the story she told me was different. maxlen: 32
+117 	 it 's nobody 's fault but his . 	 it's only his fault. maxlen: 14
+118 	 it 's all i 've got . 	 that's all i got. maxlen: 14
+119 	 and i 'll hold him while he does . 	 and i'm gonna hold on to breca when i see that job. maxlen: 25
+120 	 well , it 's wasted on you . 	 it's when you use it. maxlen: 17
+121 	 this land needs a warrior at its heart ! 	 there is a warrior at the center of this land maxlen: 19
+122 	 to bring its people out of the darkness . 	 someone who'll make his people out of the darkness. maxlen: 17
+123 	 a great thane needs a strong army behind him . 	 a great thane wants a strong army behind him. maxlen: 19
+124 	 and with it , any chance of ever ruling . 	 and a chance to rule one day. maxlen: 18
+125 	 abrecan , leave it . 	 abrecan, give it up. maxlen: 14
+126 	 people shouldn 't leave their valuables lying around . 	 people shouldn't leave their valuables lying around. maxlen: 27
+127 	 no , it 's not . 	 no, he won't. maxlen: 14
+128 	 this time , they mean to destroy us . 	 this time they intend to destroy us. maxlen: 18
+129 	 it 's possible that some real mischief , some real harm might come from presenting a position which is in itself perfectly true . 	 to present a situation that is perfectly correct in itself, can cause serious damage. maxlen: 35
+130 	 and , particularly in the united states where , in fact , it is very closely tied up with christian belief . 	 especially in america, with christian belief, he was wrapped and wrapped. maxlen: 25
+131 	 i need to find the paper that angela signed when she left emma on the doorstep giving me sole custody . 	 i need to find the paper that angela signed when emma left me a stack on my doorstep and gave me the one proxy. maxlen: 43
+132 	 well , first of all , it 's tomorrow . 	 my birthday is tomorrow. maxlen: 19
+133 	 actually , try to save it with a perm first , then cut your losses . 	 actually, try to save it with the perm first, then cut it out. maxlen: 25
+134 	 well , if ben is so irresponsible that he lost the papers and so immature that he couldn 't face me himself , then maybe he 's not responsible enough to have sole custody of emma . 	 if ben's so irresponsible that he's going to lose the papers and he's so scared to confront me, maybe emma doesn't deserve to take custody alone. maxlen: 61
+135 	 we 're in a hurry , so deliver it as-is . 	 we're in a hurry, so do as you can. maxlen: 26
+136 	 i didn 't come to talk about that . 	 i'm not here for congratulations. maxlen: 15
+137 	 the report said that it was an unavoidable . 	 according to reports, it was perfectly natural that this incident was encountered. maxlen: 21
+138 	 lt. kilgore is a dangerous man , but he 's the best tank driver in the army . 	 lieutenant kilgore is our best tanker in the army, although he is one of his most troubles. maxlen: 40
+139 	 it won 't drop through the floor , will it ? 	 you know there's no one in the apartment? maxlen: 17
+140 	 don 't scare me like that ! 	 anyway, i'm a little relieved. maxlen: 18
+141 	 can you warm it up in the microwave ? 	 could you heat up the microwave? maxlen: 25
+142 	 but if i can reach him before lt. kilgore does , i think we 'll have a chance . 	 if i can get him to lieutenant kilgore first, then maybe i'm convinced we have a chance. maxlen: 44
+143 	 it 's heading towards the skyscrapers with the apaches in pursuit . 	 he's heading towards the skyscrapers with his apache. maxlen: 25
+144 	 it swallowed me up , and then it shot up a helicopter , all on its own ! 	 first he locked me in, then he dropped his own helicopter. maxlen: 27
+145 	 he 'll come after you until he destroys it . 	 he'll come after you to destroy him. maxlen: 15
+146 	 john , what would you say if i told you i asked the waitress at doc magoo 's if she remembered weaver being paged the night we lost the marfan case ? 	 john, what would you say if i told you about the waitress who lost the marfan syndrome the night weaver drove up and called up the a.t. because doc magoo said, "what if i asked the waitress"? maxlen: 63
+147 	 if it weren 't for me , that cunt wouldn 't be doing anything ! 	 if it weren't for me, that cunt wouldn't have done anything! maxlen: 26
+148 	 i 'll sort it out for you next time . 	 next time i'll take care of him. maxlen: 22
+149 	 yeah , i doubt it . 	 i don't think so. maxlen: 13
+150 	 how are my cats gonna call your phone when they don 't know your number ? 	 how are my guys gonna call you unless they know your number? maxlen: 28
+151 	 we go back a week early and they 're all chillin ' , like . 	 we went a week ago, and they all did. maxlen: 17
+152 	 i spilt something on it . 	 i spilled something on it. maxlen: 14
+153 	 does it look like a man 's blotting over here ? 	 do you see anybody selling weed here? maxlen: 18
+154 	 so you gonna do it ? 	 will you? maxlen: 14
+155 	 i 'm just gonna fetch that . 	 i'll go get it. maxlen: 13
+156 	 it comes in a little fucking tin like that ! 	 it happens in a small box. maxlen: 21
+157 	 when i put it back in my bag , i must have picked it up by mistake . 	 when i put it in my bag, i must have accidentally picked it up. maxlen: 26
+158 	 where the fuck is it now ? 	 where's the phone now? maxlen: 11
+159 	 i put it in there ! 	 i put it there maxlen: 15
+160 	 i can 't control him ! 	 i can't control her! maxlen: 13
+161 	 i don 't fuckin ' care if it hurts ! 	 i don't care if it hurts! maxlen: 17
+162 	 are you gonna do it ? 	 will you? maxlen: 14
+163 	 it fell down the back of the sofa ! 	 i'm relieved maxlen: 14
+164 	 yeah , i need a pint after that . 	 yeah, i'll have a drink after this maxlen: 23
+165 	 lend it to me , innit ? 	 give it to me, okay? maxlen: 17
+166 	 if it 's your money . 	 if it's your money. maxlen: 14
+167 	 it 's on the firm it 's a hire car , baby 	 it's a rental car, baby. maxlen: 14
+168 	 how the fuck do you know if it was marcel or not ? 	 how do you know it's not marcel? maxlen: 25
+169 	 you sent a boy to do a man 's job and he fucked up ! 	 you're sending a boy to work with a man and he's screwing it up! maxlen: 36
+170 	 my sister was only 00 and you fucking killed her ! 	 my sister was 00 years old and you killed her! maxlen: 23
+171 	 bruv , some woman left it on a train . 	 brother, a woman left it on the train. maxlen: 17
+172 	 and you 're bringin ' it here to me ? 	 and you brought him here to me? maxlen: 19
+173 	 give it to the feds ? 	 give it to the cops? maxlen: 15
+174 	 and she obviously don 't want it , man . 	 you see, he doesn't want her. maxlen: 17
+175 	 let me look after it for you , innit ? 	 let me look after the gun for you, okay? maxlen: 23
+176 	 just give me the gun and i 'll hide it somewhere for you , innit ? 	 you give me the gun and i'll hide it somewhere, okay? maxlen: 27
+177 	 don 't worry about that yet . 	 don't worry about him yet. maxlen: 17
+178 	 you 're gonna have half of that and you give me the rest back . 	 just take the half, give me the rest. maxlen: 19
+179 	 you didn 't want it back before , did you ? 	 you didn't want it before, did you? maxlen: 18
+180 	 if i go through all this stress , i lose my fucking money over it , everything , then you got to chat to someone proper , yeah ? 	 if i'm gonna go through all this stress, i lose the money, i lose everything, then you need to talk to someone properly, okay? maxlen: 62
+181 	 she thought they were gonna kill the baby . 	 he thought they were gonna kill the baby. maxlen: 17
+182 	 so she fucking left it on the train . 	 that's why she left the baby on the train. maxlen: 17
+183 	 can 't understand it without a cock in your mouth , can ya ? 	 you can't understand it without a cock in your mouth, can you? maxlen: 25
+184 	 but actually , she 's trying to poison him for his inheritance . 	 but the whole point is to poison him and put him on his inheritance. maxlen: 22
+185 	 they take their revenge out at night with knives and guns . 	 one night, they take their revenge with knives and guns. maxlen: 23
+186 	 well , you 're gonna take her word for it ? 	 you believe his word? maxlen: 18
+187 	 now , your mother is not here to look after you , so it falls to me . 	 now that your mother isn't here, it's up to me to protect you and protect you. maxlen: 26
+188 	 he 's coming to help you . 	 he'll come and help you. maxlen: 13
+189 	 it always was . 	 i always have. maxlen: 10
+190 	 now , try it again ! 	 try again! maxlen: 13
+191 	 it finally makes sense . 	 now it's all settled in. maxlen: 14
+192 	 it 's a big sorrow for anyone , losing their mother . 	 it's a terrible situation for anyone to lose their mother. maxlen: 28
+193 	 i can 't tell you how sublime it would have been to have taken your hands in marriage . 	 you have no idea how great it is to marry you. maxlen: 34
+194 	 mother always told me , never argue with a woman when she 's angry . 	 my mother always said that you would argue with a woman when she was angry. maxlen: 23
+195 	 he 's a master artisan . 	 he's the master of his art. maxlen: 13
+196 	 i seen those army guys who got their hands blown off by grenades . 	 i saw soldiers with grenades in their hands. maxlen: 21
+197 	 they got those nifty hooks . 	 they're wearing these cool hooks. maxlen: 21
+198 	 they were members of the party . 	 they were members of an organization. maxlen: 15
+199 	 he taught me to walk . 	 she taught me to walk. maxlen: 14
+200 	 it said he murdered his wife . 	 it says he killed his wife. maxlen: 14
+201 	 i 'll do it . 	 i'll get in. maxlen: 10
+202 	 stop it , marjorie . 	 stop, marjorie. maxlen: 14
+203 	 i 'm like their mother . 	 i'm like their mother. maxlen: 14
+204 	 the native americans pressed on despite the violence and the decimation of their tribes and their culture . 	 the native americans didn't give up after their tribe and culture and the violence they saw. maxlen: 34
+205 	 but it wasn 't until the railroads that they could be moved out to the plains and shipped from there to hungry people in the east . 	 but it wasn't until the railroads were completed, they could be carried in the flat and taken to hungry people in the east. maxlen: 36
+206 	 he used every spare dollar he had to buy ammunition for practice . 	 he spent every dollar he won for practice. maxlen: 23
+207 	 while billy the kid is now a part of the burgeoning cattle industry that 's fueling america 's growth ... several hundred miles to tth , one man is doing everything he can to hold off western expansion . 	 billy the kid, he was doing his best to stop a couple hundred kilometres north, while there was a part of the shallow industry that was fueling america's fuel. maxlen: 67
+208 	 which is , basically , to take his culture away and you 'll be a better person . 	 it means if you destroy indians' culture, you'll be better. maxlen: 30
+209 	 now the proud lakota warrior knows he needs to stand up for his people once again . 	 proud lakota warrior knows he has to stand up for his people again. maxlen: 26
+210 	 give it time . 	 give it time. maxlen: 10
+211 	 and what if he resists ? 	 what if she resists? maxlen: 14
+212 	 i suggest you keep it that way . 	 that'll help you keep it that way. maxlen: 14
+213 	 that 's as personal as it gets . 	 it was a personal matter now. maxlen: 14
+214 	 john tunstall 's death sets billy on a path to find his killers . 	 john tunstall's death is on his way to find his killers. maxlen: 31
+215 	 and it will turn him from an unknown gunman into a legend of the west . 	 this way, he'd take him from an unidentified cowboy to become the legend of the west. maxlen: 30
+216 	 the frontier might be mining , it might be real estate , but it was the search itself , the adventure itself . 	 this border miner could've been investigated, brought into an adventure. maxlen: 30
+217 	 you have a lot of young men that would get to those towns and they 're all fueled on whiskey , carrying guns . 	 the young men who managed to make it to these cities drink whiskey and carry a gun. maxlen: 36
+218 	 and it 's in dodge city that he demonstrates a skill that will mark his place in history . 	 there's gonna be some important place in history to prove to dodge city. maxlen: 26
+219 	 his gun , did you see it ? 	 did you see his gun? maxlen: 14
+220 	 just hand it over . 	 give me that. maxlen: 10
+221 	 and it 's in his role as a lawman that he will soon become one of the most famous figures of the west . 	 the role he played as a lawman would become one of the most famous figures of the west. maxlen: 27
+222 	 oh , ' cause he 'd never be with you , because you know what ? 	 you'll never be with you, you know why? maxlen: 23
+223 	 a monkey could make it . 	 a monkey could do it. maxlen: 14
+224 	 and i had prepared to covertly attempt it with cindy . 	 so i secretly tried to try it on cindy. maxlen: 27
+225 	 yes , but mr. stoller , i must tell you i 'm sure your wife was a very nice woman . 	 yes, but mr. stoller, i must say i'm sure your wife was a wonderful person. maxlen: 37
+226 	 i know you don 't like it but a woman gets control when her hand 's on the dumbstick . 	 i know you don't like it, but if your hands aren't in your stupid pipe, she can't control a man. maxlen: 35
+227 	 but just forget it . 	 but forget it. maxlen: 11
+228 	 this is your treatise ? 	 is that your scientific counter? maxlen: 14
+229 	 when the woman shaves in the morning instead of at night , it 's over . 	 if a woman shaves in the morning, it's over. maxlen: 31
+230 	 i anticipated a lot of case law but i find myself totally unprepared for , " it is too . " 	 i'm predictable in law cases, but i got caught up for too much. maxlen: 31
+231 	 first , i want to hear from your client and why he wants to do this . 	 first, i want to hear your client and know why. maxlen: 28
+232 	 how do you feel about it ? 	 what do you feel? maxlen: 14
+233 	 it 's not the same thing ! 	 it's not the same maxlen: 11
+234 	 oh , it 's fascinating . 	 very impressive. maxlen: 11
+235 	 it 's just now fascinating ? 	 just this part? maxlen: 17
+236 	 we take the sucked-out dna-free eggs and place them with the donor cells . 	 we're putting the dried eggs in the transmitter cell. maxlen: 27
+237 	 what happens to the cells after you zap them ? 	 after energy is given, what happens to cells? maxlen: 22
+238 	 we then plant them in the surrogate mother and what may result is a cloned baby . 	 then we put them in the surrogate mom, and it's a clone baby. maxlen: 32
+239 	 it 's here now . 	 it's here now. maxlen: 11
+240 	 as it 's been said identical twins share dna , but they 're different people . 	 as it's been said, even the only eggs are the same dna they share, different people. maxlen: 32
+241 	 it does go to their individuality . 	 it means getting into them. maxlen: 15
+242 	 any sign of him ? 	 any signs? maxlen: 13
+243 	 they might cross a pit bull with mike tyson . 	 they can connect a pit bull, la, mike tyson. maxlen: 27
+244 	 but the truth is every time science is advanced , it raises concerns over the future of humanity . 	 but the fact is, every time the science steps out, the worries of humanity rise. maxlen: 35
+245 	 my client knows the wishes and dreams of his wife . 	 my client knows the wishes and dreams of his wife. maxlen: 25
+246 	 the question can 't be who owns her dna , can it ? 	 it's not about who owns her dna, is it? maxlen: 30
+247 	 his kids might get to play in a sandbox with the twin of their great-grandmother . 	 one day, they can play with the twins of their grandmother in the sandbox. maxlen: 27
+248 	 celebrities might start selling off their dna . 	 celebrities can start selling dna. maxlen: 21
+249 	 now it 's reality , and the public accepts it . 	 now the truth of life and society accepts it. maxlen: 19
+250 	 it isn 't that . 	 not at all. maxlen: 10
+251 	 uh , the limo driver just called and he said that , uh , 	 the limo driver called and said. maxlen: 21
+252 	 like i said , it 's all new to me . 	 like i said, it's first for me. maxlen: 17
+253 	 see , now that we have your picture , it 's in the black book . 	 now that we have your picture, you're in the black book. maxlen: 23
+254 	 i think it must be something about you , 'cause usually i 'm quite charming . 	 i think it should be you, 'cause i'm mostly attractive. maxlen: 23
+255 	 did they say i was good ? 	 did they say i was good? maxlen: 19
+256 	 the seamstress said she had it sent back here this morning , but the bell desk doesn 't have any record of it ever arriving . 	 the tailor said he sent it back this morning, but there's no record of it being there. maxlen: 30
+257 	 and if we don 't , the montecito will be happy to get you another one just like it . 	 if we don't, montecito will be glad to get the same. maxlen: 27
+258 	 it took a dozen french ladies a year to sew the beads on by hand . 	 a dozen french tailors sewed on their hands. maxlen: 22
+259 	 i 've always been the one to try to save the baby bird even though i know it might have rabies . 	 i've always helped the baby bird, even the rabies. maxlen: 26
+260 	 recognize any of them ? 	 you know these guys? maxlen: 14
+261 	 one time , they came in here with an older guy . 	 they came in once with a bigger man than them. maxlen: 19
+262 	 can you widen the image , see who it is ? 	 can you expand the painting? maxlen: 14
+263 	 how old do you think these kids are ? 	 how old do you think these kids are? maxlen: 15
+264 	 none of them look older than 00 , 00 . 	 00 is no big deal. maxlen: 15
+265 	 so they might have been recruited from some college math department like those m.i.t. guys back in the ' 00s . 	 then they must have been taken from the math department and trained children. maxlen: 22
+266 	 and you 're just gonna let that go 'cause she wouldn 't sleep with you . 	 you were going to leave it because it wouldn't sleep with you. maxlen: 21
+267 	 he was my high school math teacher . 	 my high school math teacher. maxlen: 13
+268 	 but before any one of these kids leaves , danny has to get their picture and information . 	 before these kids leave, danny gets their picture and information. maxlen: 25
+269 	 mr. rex tyler was it ? 	 mr. rex tyler, right? maxlen: 22
+270 	 every night , 00,000 people come here expecting to have a good time , and i make sure they do . 	 every night, 00,000 people come here to have fun, and i'm sure they have fun. maxlen: 34
+271 	 don 't tell him that . 	 don't say that. maxlen: 13
+272 	 the circus is here tonight , and if there 's ice on the floor , some of the fire-eaters may slip and fall and impale themselves on their sticks that are on fire in front of all the nice children . 	 tonight there'll be circus here, and if there's ice on the floor, those firemen can slip in front of the kids, and they can fall on their own firesticks. maxlen: 49
+273 	 have you seen a small white pill with some spanish written on it ? 	 did you see a little white pill with the spanish written on it? maxlen: 30
+274 	 i just hate it when the circus is here . 	 i hate it when the circus comes here. maxlen: 18
+275 	 are they happy ? 	 are they happy? maxlen: 11
+276 	 that was the day i stopped caring about myself and started my life of service to the great people of san diego . 	 that was the day i stopped caring about myself and started devoting myself to the great people of san diego. maxlen: 44
+277 	 well , s-she did light him on fire , so . 	 she set him on fire. maxlen: 13
+278 	 there 's a guy in your office , and he 's gorgeous . 	 there's a guy in your office, and he's very attractive. maxlen: 19
+279 	 i sent you three texts , and you didn 't return any of them . 	 i sent you three messages, and you didn't answer any of them. maxlen: 26
+280 	 and i couldn 't find my underwear until i pulled them out of my purse while paying for coffee . 	 i couldn't find my underwear until i was out of my wallet paying for coffee. maxlen: 40
+281 	 he cares about other people . 	 he cares about other people. maxlen: 14
+282 	 looks like it . 	 i think so. maxlen: 10
+283 	 all of a sudden , i want to make a connection , and i don 't have the first clue how to do it . 	 suddenly, i feel the need to make contact, but i have no idea how to do it. maxlen: 39
+284 	 sometimes it 's a real pleasure to work for you . 	 sometimes it's really fun working with you. maxlen: 25
+285 	 and-and i didn 't get to because charlie interrupted us with his goddamn emergency lunch . 	 i couldn't sit down because charlie was interrupted by some goddamn emergency lunch. maxlen: 32
+286 	 no , it 's just all porn . 	 it's just old porn. maxlen: 13
+287 	 i can 't quite put my finger on it , but something about this place feels different . 	 i put the finger here because i have a feeling something's changed here. maxlen: 34
+288 	 hey , tuck , you wanna try some pop-ups while i get them settled ? 	 tuck, why don't you give the newcomers something? maxlen: 25
+289 	 i was going to talk to you myself , but bonnie said she 'd handle it . 	 i was gonna talk to him myself, but bonnie said you'd handle it. maxlen: 27
+290 	 it would take a lot more than a baby . 	 we may have more babies. maxlen: 15
+291 	 maybe it 'd be a good thing if you took over for a while . 	 maybe if you came to my place, you'd do good things i haven't done for a long time. maxlen: 30
+292 	 i 'd hate for anyone to have to cancel their plans . 	 i don't want someone to cancel their plans. maxlen: 18
+293 	 the dentist said he could see me right now . 	 the dentist said i should see you right away. maxlen: 19
+294 	 it 's the bathroom key . 	 for the bathroom key. maxlen: 14
+295 	 but if mom asks , they had to put me under for a root canal . 	 but if mom asks, they kept me here. maxlen: 22
+296 	 it 's not showing up and hoping she doesn 't notice . 	 to make sure he doesn't and doesn't understand. maxlen: 19
+297 	 it 's not how it . 	 not like that. maxlen: 9
+298 	 a room full of trophies and nobody to share them with ? 	 your room is filled with mugs and nobody sharing this with me? maxlen: 28
+299 	 danny seems to have it figured out . 	 danny seems to have figured it out. maxlen: 14
+300 	 never really tried it before . 	 i've never tried it before. maxlen: 15
+301 	 beat it . 	 get lost. maxlen: 8
+302 	 hey , i know my boy 's work when i see it . 	 i know when i see my son at work. maxlen: 21
+303 	 i believe it 's called the wheeler . 	 they call him wheeler. maxlen: 17
+304 	 we 'll use you to monitor it from the inside . 	 we'll use you to track the incident inside. maxlen: 21
+305 	 patty , i saw the guy who did it . 	 patty, i saw the guy who did this. maxlen: 17
+306 	 we must have chased him out before he had time to steal anything . 	 we must have chased him out before he could find time to steal anything. maxlen: 28
+307 	 she always wore it . 	 he always did. maxlen: 13
+308 	 no , but ... it looks like he 's lying about everything . 	 no, but it's like he's lying about everything. maxlen: 23
+309 	 whatever you 've dragged your company into , it better not involve anything other than retrieving stolen documents . 	 whatever you put the company into, it better not come out of stolen documents. maxlen: 37
+310 	 daniel purcell is a brilliant man , but when he faced patty , he collapsed . 	 daniel purcell was a brilliant man, but when he came face to face with patty, he collapsed. maxlen: 31
+311 	 i don 't know who killed your wife , but you are gonna get blamed for it . 	 i don't know who killed your wife, but you'll be blamed for it. maxlen: 27
+312 	 i didn 't know if we had to do it again . 	 i can't tell if you don't say it again. maxlen: 21
+313 	 i 'm gonna go talk with liz in the morning about it . 	 i'll be talking about this in the morning. maxlen: 19
+314 	 matter of fact , i might just leave him at home on this one . 	 actually, that's why i can send him home. maxlen: 18
+315 	 don 't worry about it . 	 don't worry about it. maxlen: 11
+316 	 runs it through some kind of shell company . 	 he works for a company like shell. maxlen: 18
+317 	 it 's just , um . 	 just... maxlen: 8
+318 	 i got to hand it to you , paco . 	 caesar's right for caesar ' a, paco. maxlen: 21
+319 	 maybe she moves back , we open up a bb someplace . 	 maybe we'll come back here and open up a motel. maxlen: 19
+320 	 it was t-t-totally disgusting , dude ! 	 that's disgusting, bro! maxlen: 19
+321 	 oh , god damn it ! 	 goddamn it! maxlen: 13
+322 	 it cancels out the speed of the truck . 	 we'll take the speed of the truck down to zero. maxlen: 23
+323 	 well , it has been 00 minutes . 	 well, it's been 00 minutes. maxlen: 13
+324 	 where is the truck with the cop in it ? 	 where's the truck with the cop in it? maxlen: 17
+325 	 so , there 's that . 	 that's it. maxlen: 13
+326 	 it 's heroin . 	 heroin. maxlen: 10
+327 	 it 's you and me , jack . 	 you and me, jack. maxlen: 13
+328 	 i mean , it 's at least 000 miles to the nearest cop . 	 so, the nearest police are 000 miles away. maxlen: 19
+329 	 best we , uh , kill them and take their product . 	 we'd better shoot them both. maxlen: 22
+330 	 it is a long story , all right ? 	 it's a long story. maxlen: 9
+331 	 it should be right up here . 	 there must be a place around here. maxlen: 14
+332 	 i got it back at the shop when you were on the phone . 	 i went back to the store while you were on the phone. maxlen: 23
+333 	 can we call it even ? 	 have you thought about that, too? maxlen: 18
+334 	 we can hardly call it a victory . 	 it's hard to accept it as a victory. maxlen: 14
+335 	 it is a long story , all right ? 	 it's a long story, okay? maxlen: 14
+336 	 why 'd you do that ? 	 why did i do that? maxlen: 14
+337 	 that 's wholesale . 	 wholesale price. maxlen: 11
+338 	 they use echolocation , a kind of sonar , to find their prey . 	 it's a kind of radar to find their prey, "the echolation use u.s. maxlen: 30
+339 	 if these little fish stay close to the coral the sharks won 't be able to get at them . 	 if these little fish stay close to the lentil, the sharks won't be able to reach them. maxlen: 28
+340 	 and he 's got to try and get the boat ahead of the whale , but not in front of it . 	 he needs to try and move the boat forward to the whale, but not in front of it. maxlen: 27
+341 	 this series is all about hunting , and so nice though it is to have that shot to make a sequence we 've got to get shots of blue whales eating krill . 	 this series is all about hunting, so it's a good shot, but we need to get footage of the blue whale eating krill to complete the episode. maxlen: 52
+342 	 it might happen once , maybe twice a month . 	 once a month maybe twice. maxlen: 21
+343 	 we 're going to go take a look at it . 	 we'll go take a look. maxlen: 15
+344 	 when mia went on exchange , we wrote up a pros-and-cons list and it helped clarify our feelings . 	 when mia went as an exchange student, we made a list of our plus and cons, and it helped clarify our feelings. maxlen: 54
+345 	 it wouldn 't be forever . 	 i won't stay forever. maxlen: 15
+346 	 can it get any worse ? 	 could it have been worse? maxlen: 14
+347 	 my brother will break your heart , and when he does , i 'm not going to be there to supply the tissues . 	 my brother will break your heart, and when he does, i won't be there to fix it. maxlen: 39
+348 	 " it 'll be so fun ! " 	 "it'll be fun!" maxlen: 15
+349 	 it 's on , princess ! 	 i wrote it, princess! maxlen: 17
+350 	 she 's dead . 	 he's dead. maxlen: 9
+351 	 i didn 't realise it required a response . 	 i didn't realize i should answer. maxlen: 18
+352 	 of course it did . 	 of course you had to. maxlen: 15
+353 	 look , if you want to know the truth , i was embarrassed by it . 	 look, if you want to hear the truth, i was ashamed of that list. maxlen: 28
+354 	 and then you go and write all that stuff and send it to everyone ? 	 and you went and wrote everything you felt and sent it to the whole school. maxlen: 28
+355 	 it doesn 't have their pictures or their id numbers . 	 no pictures, no id numbers. maxlen: 15
+356 	 you got it . 	 all right. maxlen: 9
+357 	 all these kids out of business school think they 're worth $ 000,000 after one week on the job . 	 these kids from business school think they're worth $000,000 after they work a week. maxlen: 36
+358 	 i hate their attitudes . 	 i hate that attitude. maxlen: 17
+359 	 he 's a shady character . 	 a dark type. maxlen: 10
+360 	 she 's okay , but it 's pretty serious . 	 he's fine now, but he's in serious condition. maxlen: 15
+361 	 a guy in the math department told me about it . 	 seriously, someone mentioned the math department. maxlen: 21
+362 	 they make those heat sensors for cryogenic capsules . 	 they produce heat sensors for the shells working at low temperature. maxlen: 28
+363 	 she won 't admit she 's actually had a heart attack . 	 she doesn't admit she had a heart attack. maxlen: 19
+364 	 she 's lying there going into cardiac arrest , she 's claiming it 's indigestion . 	 he's lying there because of a heart attack, and he claims to have indigestion. maxlen: 32
+365 	 it felt more like gas pains to me . 	 that hurts like more gas pains to me. maxlen: 23
+366 	 because i don 't think he was a real doctor . 	 because i don't believe he's a real doctor. maxlen: 19
+367 	 uh , just put them right there . 	 ah, just put it there. maxlen: 21
+368 	 i 'll put them in your old bedroom . 	 i'm getting them out of your old bedroom. maxlen: 19
+369 	 mario said he took it pretty hard . 	 mario said he agreed to this very hard. maxlen: 21
+370 	 i didn 't want to push it . 	 i didn't want to drag him there. maxlen: 17
+371 	 mom has a schedule and their life is essentially one long routine . 	 your mother has a calendar, and her life is a really long routine. maxlen: 27
+372 	 what do we do after that ? 	 then what do we do? maxlen: 14
+373 	 i don 't know where mother keeps them . 	 i don't know where your mother put them. maxlen: 18
+374 	 well , she 's getting what she needs . 	 he'll get what he needs. maxlen: 13
+375 	 it 's double coupon day at ralph 's . 	 ralph ' s 'a double coupon day today. maxlen: 23
+376 	 i didn 't take it . 	 i didn't take the test. maxlen: 13
+377 	 i was afraid i couldn 't pass it . 	 i was afraid i wouldn't pass. maxlen: 18
+378 	 johnny , a good driver knows when he 's not a good driver anymore , that 's all . 	 johnny, a good driver, who knows when to drive a good car, that's all. maxlen: 37
+379 	 i mean , mom 's okay , but they really like to , uh , limit the number of visitors . 	 i mean, my mom's fine, but they wouldn't want to take visitors. maxlen: 32
+380 	 you don 't mind if i wear it , do you ? 	 you don't think so, do you? maxlen: 23
+381 	 well , you should remember the fun things you used to do and you should start doing them . 	 i think you should remember what you enjoy and start doing them again. maxlen: 32
+382 	 it should only be a day or two . 	 it'll be a day or two. maxlen: 13
+383 	 he 's like a regular wife . 	 he's like a real wife. maxlen: 15
+384 	 mom looks good , doesn 't she ? 	 mom looks good, doesn't she? maxlen: 18
+385 	 it loses money every day it 's open but the property it 's on is worth at least $ 00 million . 	 he loses money every minute he's left... but the property he's got on him is worth $00 million. maxlen: 34
+386 	 and getting it off your books ? 	 that's how the accounting records are done. maxlen: 21
+387 	 i think we can turn it . 	 we can change that. maxlen: 11
+388 	 now our cash flow projections for the division may look aggressive but we 're comfortable with them . 	 now, our cash flow plans for the department appear to be counterfeiting, but they're not satisfied. maxlen: 36
+389 	 i didn 't know you knew about stuff like that . 	 i didn't know you had information about something like that. maxlen: 22
+390 	 we 're just gonna buy the company and then close it down . 	 we're just gonna get the company and then we're gonna put an end to your activities. maxlen: 26
+391 	 that 's your job ? 	 is this your job? maxlen: 15
+392 	 you buy companies , then close them down ? 	 you buy companies, then close them down? maxlen: 23
+393 	 the cannery itself is sitting on prime waterfront land . 	 the factory is built on a valuable property near the sea. maxlen: 18
+394 	 so we buy the company , close it down , then we sell off the subsidiary business , then we sell the land . 	 so we buy the factory, close it, then take over the front desk company, and then sell the land. maxlen: 49
+395 	 it 's against the law . 	 that's the rule. maxlen: 10
+396 	 i bet the girls are falling all over themselves . 	 i bet they'll jump on you. maxlen: 21
+397 	 good thing they didn 't have it when i was in school . 	 i'm glad that wasn't our time. maxlen: 19
+398 	 he was a physical education major . 	 he graduated from physics. maxlen: 11
+399 	 you 'd read them , we 'd go back , get out another four books . 	 you read them, we give them back, then we get 0 new books. maxlen: 26
+400 	 they 've got a little community going . 	 they're very similar. maxlen: 13
+401 	 it 's , uh , it 's fun . 	 that's, uh, that's good. maxlen: 14
+402 	 might as well do it right . 	 i did the right thing. maxlen: 13
+403 	 she said i should use my best judgment . 	 he thinks i can make my own decision. maxlen: 22
+404 	 we haven 't talked about it up until now , and i think i know what i want . 	 he hasn't been talked about it so far, and i know what i want. maxlen: 31
+405 	 i wouldn 't be surprised at all if it were just a cyst . 	 i wouldn't be surprised if it was just a cyst. maxlen: 21
+406 	 what is it ? 	 what is it? maxlen: 10
+407 	 it 's just something to relax you . 	 it'll just help you relax. maxlen: 18
+408 	 what time is it ? 	 what time is it? maxlen: 10
+409 	 you know , john , i see men now , they hug . 	 you know, john, i see some guys, they're hugging each other. maxlen: 32
+410 	 i love you , too , dad . 	 i love you too, dad. maxlen: 14
+411 	 it 's beyond anything rational . 	 say something more reasonable. maxlen: 18
+412 	 their children tend to underestimate them . 	 they don't even care about the kids. maxlen: 19
+413 	 jake , it 's me ! 	 jake, it's me! maxlen: 13
+414 	 they often go into delayed shock even after minor surgery . 	 they often go into shock after every simple operation. maxlen: 21
+415 	 it comes and goes . 	 it comes and goes. maxlen: 10
+416 	 i 'm sure , with proper rest and medication , the situation will correct itself . 	 i'm sure she'll be fine with fine rest and medication. maxlen: 26
+417 	 what do we do in the meantime ? 	 what are we supposed to do? maxlen: 17
+418 	 it seems to me that he 's been very thorough and professional in your father 's case . 	 apparently, he's been perfect and professional about your father. maxlen: 26
+419 	 he has to balance the will of the family members with the patient 's right to know . 	 he has to balance the matter in the rights of your father's wisdom with family members. maxlen: 31
+420 	 i don 't believe it . 	 i can't believe it. maxlen: 13
+421 	 he 's crying nonstop . 	 the guy's yelling all the time. maxlen: 13
+422 	 you can pick him up anytime after 00 : 00 . 	 it's 00:00 p.m., then you can come and get it. maxlen: 22
+423 	 you can 't handle him in this condition . 	 you can't help her like that. maxlen: 15
+424 	 i think i can do it . 	 i think i can do this. maxlen: 15
+425 	 it was a slip of the tongue . 	 it was just a slip of tongue. maxlen: 15
+426 	 this kid gooden is fabulous , isn 't he ? 	 this gooden guy is awesome, right? maxlen: 23
+427 	 he kind of reminds me of bob gibson . 	 game style reminds me of bob gibson. maxlen: 22
+428 	 " let 's sleep on it . " 	 "let's lie on it." maxlen: 15
+429 	 it 's very hard , i realize for children to understand that their parents have gotten old . 	 i know it's hard for kids to accept their parents getting older, you know? maxlen: 27
+430 	 i think he might be better than dr. santana . 	 i think he can do better than santana. maxlen: 23
+431 	 i 'd like to see if i can get him to take a look at your father . 	 i want him to take a look at your father. maxlen: 18
+432 	 annie , that man got up every day of his life and went to a job he didn 't like . 	 annie, this guy went to work every day in his life that he never loved. maxlen: 28
+433 	 we didn 't ask him to . 	 we never asked him. maxlen: 13
+434 	 but rather , it was your love and caring that called your father back from where he 'd gone . 	 but in return, it was your love and interest that brought your father back from where he went. maxlen: 40
+435 	 she 'll probably laugh and call me crazy , but she 'll laugh . 	 he'll probably laugh and call me crazy, but he'll laugh. maxlen: 31
+436 	 ah , it 's a good idea . 	 that's a good idea. maxlen: 11
+437 	 and it 's almost as much fun . 	 and that'll be fun. maxlen: 14
+438 	 over the years , he hasn 't been getting enough pleasure out of his daily life , so he 's isolated his greatest joys into a dream . 	 over the years, he's not enjoying his everyday life enough, and he's isolating everything he's enjoyed about himself. maxlen: 48
+439 	 is she just shut out ? 	 he was thrown out? maxlen: 15
+440 	 the problem is your father 's participation in this world is totally tied up with your mother 's approval . 	 the problem is that your father is in this world connected to your mother's approval. maxlen: 23
+441 	 what will people think if they see you like this ? 	 what do people think if they see you like this? maxlen: 26
+442 	 it 's very important that you support him right now . 	 you need to help her this time. maxlen: 17
+443 	 i think it should be pointed out to him . 	 you gotta show him that. maxlen: 13
+444 	 he 's trying . 	 he's trying. maxlen: 11
+445 	 the doctor thinks he 's making a lot of progress . 	 the doctor thinks it's a fix. maxlen: 17
+446 	 he keeps coming into my bed at night . 	 he tries to get into my bed at night. maxlen: 18
+447 	 your father 's always been a highly sexed man , but since he came back from new jersey , it 's insane . 	 your father was always a sexy man, but since he got back from new jersey, he's crazy. maxlen: 39
+448 	 when we first got married and i told my friend fanny hogan the things we were doing , she told me to leave him and notify the police . 	 when we first got married i told my friend fanny hogan what we did with your father, and he told me to leave him and notify the police. maxlen: 62
+449 	 you know , when your father gets excited , police , priests , prayers , nothing is gonna stop him . 	 you know, when your father gets warned, the cops, the priests, the prayers, nothing can stop him. maxlen: 44
+450 	 he 's just trying to enjoy himself ! 	 he just wants to have fun! maxlen: 15
+451 	 as a matter of fact , he 's very impressed he didn 't go insane just hanging around you for 00 years ! 	 the truth is, he's been living under your raid for 00 years! maxlen: 27
+452 	 he wants his life back . 	 he wants his life back. maxlen: 13
+453 	 you look at me or people look at me and they see this old man . 	 look at me or... or see the old man somebody else sees. maxlen: 22
+454 	 it 's not good . 	 not too good. maxlen: 10
+455 	 i like it there . 	 i love it there. maxlen: 11
+456 	 it 's a real family . 	 we're a real family. maxlen: 13
+457 	 because i liked the power of it . 	 because i love the power of it. maxlen: 13
+458 	 and something had to give and it was my family . 	 and something should have been given, that was my family. maxlen: 23
+459 	 it didn 't seem like it . 	 that's not what it looked like. maxlen: 13
+460 	 well , that 's because we tried to make it look normal . 	 i mean, because we wanted to be normal. maxlen: 17
+461 	 i don 't want to miss him . 	 i don't want to miss him. maxlen: 13
+462 	 tell it to me . 	 tell me. maxlen: 9
+463 	 hit a smash , deep left field , had home run written all over it . 	 he threw the ball in the left wing, the most famous run the history ever wrote. maxlen: 31
+464 	 everyone in the stands knew it . 	 everyone there knew that. maxlen: 14
+465 	 he 's racing after the ball . 	 he ran after the ball. maxlen: 14
+466 	 and he doesn 't realize it was hit by joe dimaggio . 	 but joe dimaggio didn't know what hit him. maxlen: 28
+467 	 this man who never showed any emotion , he was human after all . 	 this man who never showed his feelings, he was a human being. maxlen: 26
+468 	 um , and this seemed like the right place to do it . 	 well, ... and we decided this is the right place to do it. maxlen: 27
+469 	 the last corpse was decomposing by the time i took a scalpel to it . 	 the last cadaver you brought was rotting when i opened it with a knife. maxlen: 31
+470 	 cos your man 's grip was too loose and now he finds himself staring down this handsome spada da filo . 	 the man's sword was so loose and now he finds himself staring at this beautiful sword. maxlen: 35
+471 	 its curator is a man called lupo mercuri . 	 the head man is a man named lupo mercuri. maxlen: 17
+472 	 they say lorenzo medici himself has asked for you . 	 lorenzo medici said he wanted you personally. maxlen: 27
+473 	 well , with this commission , you 'd be wise to overcome it . 	 you gotta be smart enough to finish this job. maxlen: 19
+474 	 when it comes to miss donati , boredom is the last thing i fear . 	 when it comes to miss donati, boredom is the last thing i fear. maxlen: 28
+475 	 they operate cranks , which rotate the wheels . 	 they'll control the manivel so they can turn the wheels around. maxlen: 30
+476 	 he would have been born with wings , yes . 	 they were born with wings, yeah. maxlen: 17
+477 	 i believe man will fly and i base this assumption on the fact that god has blessed us with minds that are capable of imagining it . 	 i believe that human beings can fly, and by giving us the brains that god can imagine it, we are celebrating. maxlen: 51
+478 	 oh , he played on a woman 's vanity . 	 he played with a woman's pride. maxlen: 14
+479 	 the jew that was hanged , i want you to unearth his body . 	 i want you to take the body of the hanged jew. maxlen: 21
+480 	 i need to examine it . 	 i need to look into it. maxlen: 17
+481 	 i knew it was you from the moment you approached me . 	 i knew it was you from the first moment you got close to me. maxlen: 25
+482 	 get on with it , then . 	 then start talking. maxlen: 14
+483 	 it would appear the turk has found a new champion . 	 looks like turk found himself a new champion. maxlen: 19
+484 	 continue watching him . 	 keep watching him. maxlen: 13
+485 	 force the other guy to counter , and he 'll open himself up . 	 force him to fight back, and he'll increase his speed. maxlen: 23
+486 	 why would they show this to me now ? 	 why are they showing it to me now? maxlen: 17
+487 	 well , it worked . 	 actually, it worked. maxlen: 13
+488 	 maybe she can tell us what billy did to her partner before he snapped . 	 before he attacks, he can tell us what he did to billy's partner. maxlen: 28
+489 	 the blood in that car , some of it is his . 	 some of the blood in the car is his. maxlen: 15
+490 	 angel feels responsible for this guy because he brought him back from hell . 	 angel feels responsible for this guy because he brought him back from hell. maxlen: 30
+491 	 i feel responsible because he did it to save me . 	 i feel responsible because he did it to save me. maxlen: 23
+492 	 some lose their mind in an instant . 	 some people lose their minds quickly. maxlen: 17
+493 	 i was cut , torn up , my face disfigured and burning with pain not knowing if it would end or just get worse till i died . 	 i was cut, torn up, my face shattered, hurt in every second, or else he'll get worse till he dies. maxlen: 58
+494 	 and no woman strong enough to wear the mantle of " vicious bitch " would ever put up with it . 	 and she's strong enough, "unbearable bitch never puts on her cover. maxlen: 35
+495 	 hacking 0 0 years , i understand why he did it . 	 i'm a taxi driver for 00 years, i understand why you're doing this. maxlen: 27
+496 	 so however billy 's putting the mojo on people , the power 's in his blood . 	 so billy seems to have the strength to drive people insane, you know? maxlen: 31
+497 	 which means it could also be in his sweat , his saliva or even his touch . 	 which means it could be from the sweat or spit and even with his touch. maxlen: 30
+498 	 maybe mommy and daddy never explained to you that men , grown men are wired a certain way . 	 maybe your mom and dad never told you what men, grown men were up to. maxlen: 36
+499 	 he wants money , leave it on a table . 	 when you want the money, leave it on the table and get away. maxlen: 18
+500 	 it 's just an apple . " 	 just a apple. " maxlen: 13
+501 	 poor , helpless , battered woman needs to vent her feelings about the injustice of it all . 	 poor, helpless, crushed woman needs to knock out all the unfairness to her. maxlen: 36
+502 	 you don 't have the nerve to do it . 	 you don't have the guts to do that. maxlen: 17
+503 	 it 's about how stupid you are . 	 about how stupid you are. maxlen: 15
+504 	 i don 't get it either . 	 i don't understand either. maxlen: 13
+505 	 wesley , it 's me , fred . 	 wesley, it's me, fred. maxlen: 14
+506 	 if pompey 's scouts return to the republic , as night follows day , the man and his legions will trail their shadow . 	 pumpy's scouts will go back to the republic's and the legions will follow their trail. maxlen: 36
+507 	 then we must nourish specter , so that it may reclaim flesh and promise of better days . 	 then we must support the ghost and make the flesh wound and see the light days. maxlen: 43
+508 	 and there 's no way that sonny 's gonna be doing a kidnapping rap on his own . 	 there's no way sonny could have kidnapped him alone. maxlen: 22
+509 	 if you apply force to a particular buoy pulling it down toward the bottom , that buoy will in turn exert a force on its neighboring buoys , pulling them down as well . 	 if you draw strength into a certain float, if you pull it down, that float will squeeze them down to civil forces in the neighborhood. maxlen: 54
+510 	 it 's nothing but a personal vendetta . 	 it's nothing but a personal vendetta. maxlen: 19
+511 	 it 's not just walls and roof shingles to me . 	 it's not just the walls and the rooftops. maxlen: 23
+512 	 but we do know , based on the analysis of the vectoring of the disease is that it could be our ground zero for infection . 	 but based on the analysis of the cancer, we know that that's where the microchip began to spread. maxlen: 43
+513 	 it 's not over . 	 it's not over. maxlen: 10
+514 	 i don 't get it . 	 i don't understand. maxlen: 11
+515 	 is it who i think it is ? 	 is this who i think it is? maxlen: 17
+516 	 well , if it 's happened , it 's happened in san francisco . 	 if that was happening, it could be san francisco. maxlen: 19
+517 	 cops don 't give up evidence like they used to . 	 cops don't ignore evidence like they used to. maxlen: 23
+518 	 i don 't get it . 	 i don't understand. maxlen: 10
+519 	 well , that 's your job , isn 't it ? 	 well, that's your job, isn't it? maxlen: 19
+520 	 she has allergies and a special diet . 	 he has a allergic personality and a special fast one to do. maxlen: 28
+521 	 i hit her with a hairbrush until it broke . 	 i hit him with a hairbrush until it broke. maxlen: 23
+522 	 well , we both are ... very strong-willed , you see . 	 you see, we both have strong will. maxlen: 23
+523 	 then whose is it ? 	 then whose is it? maxlen: 13
+524 	 i can 't wait when mommy gets home so i can show her . 	 i look forward to her coming home to show mom. maxlen: 26
+525 	 yes , i am sure she will be thrilled . 	 yes, i'm sure he'll be very pleased. maxlen: 19
+526 	 i 'm sure she 'll turn up in no time . 	 i'm sure he'll be back soon. maxlen: 15
+527 	 i agree , but this isn 't it . 	 i agree, but not this. maxlen: 18
+528 	 don 't think like that . 	 don't think like that. maxlen: 10
+529 	 i 'm used to it by now . 	 i'm in. maxlen: 11
+530 	 this guy is here to rave about how great it is . 	 this guy is here to tell you how wonderful he is. maxlen: 22
+531 	 ladies and gentlemen , i 'm not going to do it . 	 ladies and gentlemen, i'm not gonna do that. maxlen: 21
+532 	 i don 't treat people who want to lose weight , i treat people who want to find the cause of their obesity . 	 i don't treat people who want to lose weight, i treat people who want to find the cause of their obesity. maxlen: 35
+533 	 that 's the only way to lose weight and keep it off . 	 this is the only way to lose weight and stay away from him. maxlen: 22
+534 	 making a window so we can see it . 	 we can see it like that. maxlen: 17
+535 	 see him or check up on it ? 	 to see her or to control her? maxlen: 22
+536 	 no , i want to finish it ! 	 no, i want to finish maxlen: 17
+537 	 i 've seen it and it looks just fine . 	 i saw it and it seemed fine. maxlen: 18
+538 	 i 'll give it back , fat ass . 	 i'll give it back, fat ass. maxlen: 18
+539 	 it 's not my fault you 're fat , asshole ! 	 it's not my fault you're fat, asshole! maxlen: 22
+540 	 it got stuck in his throat and he choked to death . 	 the ring was stuck in his throat and drowned to death. maxlen: 22
+541 	 the maitre 'd gave him the heimlich , but by the time he got the ring out it was too late . 	 the waiter heimlich took it, but it was too late when the ring came out. maxlen: 27
+542 	 i was curious and ... i licked it clean . 	 i was curious and i lied and cleaned the ring. maxlen: 23
+543 	 it tasted like fresh oysters and galician wine . 	 he was tasting fresh oysters and gala wine. maxlen: 27
+544 	 pass it over here , let 's go . 	 get in here, come on. maxlen: 13
+545 	 since we knew you wouldn 't like it , we bought you this . 	 we got you this because we knew you wouldn't love him. maxlen: 25
+546 	 you put the electrodes around your body and it hardens the loose areas . 	 you put the electrodes in your body, and it's getting fucked up. maxlen: 30
+547 	 it better have a zillion electrodes ! 	 if there was a zillion electrodes, that would be good. maxlen: 21
+548 	 it joins the amniotic sac to the uterus . 	 amniotic sacrifice is exhausted. maxlen: 22
+549 	 it means i love you more than anything else . 	 it means i love you more than anything. maxlen: 23
+550 	 it 's obvious you needed a little push . 	 it's obvious you need some push. maxlen: 19
+551 	 it won 't get stained . 	 it won't hurt. maxlen: 11
+552 	 you know him ? 	 you know him? maxlen: 14
+553 	 it 's provoked an aneurysm and severe cardiac arrest . 	 it triggered an aneurysm and severe heart failure. maxlen: 23
+554 	 what happened to him , enrique ? 	 what happened to him, enrique? maxlen: 17
+555 	 apparently sofia is the only one whose weight-loss matches how she feels . 	 looks like sofia's the only one who's connected with weight loss. maxlen: 27
+556 	 why do you think you lost weight ? 	 why do you think you lost weight? maxlen: 17
+557 	 but i think it 's really because i feel more satisfied spiritually . 	 but i think it's really because i'm more satisfied spiritually. maxlen: 28
+558 	 i ran the water a little colder , it 's better for your heart . 	 i've set the water cool, it's good for your heart. maxlen: 23
+559 	 i was tired of seeing them scattered everywhere . 	 i was tired of seeing them all around. maxlen: 23
+560 	 i couldn 't believe it either . 	 i can't believe it either. maxlen: 15
+561 	 why put them on ifyou know they won 't fit ? 	 if you know they won't be yours, why are you wearing them? maxlen: 27
+562 	 look at my tits , they 're huge . 	 look at my tits, big ones! maxlen: 18
+563 	 they 're beautiful . 	 they're beautiful. maxlen: 9
+564 	 i just keep it handy in case my blood sugar drops . 	 i keep it in hand in case my blood sugar drops. maxlen: 21
+565 	 i don 't find it amusing . 	 i don't find it funny. maxlen: 15
+566 	 isn 't it a bit irregular for you to discuss personal issues in a bar ? 	 isn't it a little unusual for you to talk about personal matters in the bar? maxlen: 31
+567 	 i swear i think it was her . 	 i swear it was him. maxlen: 14
+568 	 i don 't want to hear it anymore , you got that ? 	 i don't want to listen to this anymore, do you understand? maxlen: 23
+569 	 what a shame , it looks so good . 	 alas, it looks good. maxlen: 14
+570 	 it sounds like tarzan . 	 like tarzan. maxlen: 10
+571 	 he 's not my boyfriend , jerk-off . 	 he's not my boyfriend, jerk. maxlen: 19
+572 	 loosen up , you 'll get the hang of it . 	 relax, grab a job. maxlen: 18
+573 	 my folks only care about themselves and their perfect marriage . 	 mine only think of themselves and their perfect marriage. maxlen: 19
+574 	 all they do is fuck all day long . 	 all they do is fuck all day long. maxlen: 15
+575 	 you were going to anyway . 	 you'll sleep on every couch. maxlen: 21
+576 	 come on , put it away . 	 come on, put that away. maxlen: 14
+577 	 they can always be explained by something that we 're not yet ready to face . 	 they can always be explained by something we're not ready to face. maxlen: 26
+578 	 that 's why it 's better not to run from them , but to face them and see where they lead us . 	 so it's better to avoid them, to face them and see where they lead us. maxlen: 39
+579 	 i break it . 	 i broke it. maxlen: 11
+580 	 everyone will feel better ifyou 're fat because they 'll feel superior . 	 if you're fat, everybody feels better because they feel superior. maxlen: 26
+581 	 it 's not quite pathological , but you have to be careful . 	 not exactly pathological, but you should be careful. maxlen: 22
+582 	 today , with this machine , it can be done in less than 00 hours . 	 this machine could be done in less than 00 hours today. maxlen: 22
+583 	 family isn 't a biological issue , it 's a sentimental one . 	 family is not a biological issue. maxlen: 17
+584 	 we bring him chocolates , but since he obviously can 't eat them , we do . 	 we bring him chocolate, but since he can't eat it, we eat it. maxlen: 32
+585 	 i used to follow the natural course of digestion , but suddenly it 's working backwards . 	 my digestive watched normal, but suddenly it's working backwards. maxlen: 30
+586 	 " because he who does evil abhors the light , shuns it , that his deeds may go unpunished . " 	 "because if he stays away from the light that does bad things, he hides it, his actions are unpunished." maxlen: 36
+587 	 you think it 's okay ? 	 do you think this is good? maxlen: 14
+588 	 look , i 'll repeat the test to prove it to you . 	 okay, i'll repeat the test to prove it to you. maxlen: 23
+589 	 i need it for the test . 	 i need it for the test. maxlen: 11
+590 	 you don 't deserve it , because if there 's something sacred in our relationship it 's honesty , talking about things , comforting each other . 	 you didn't deserve it, because if there's something sacred in our relationship, it's honesty, sharing something, and comfort each other. maxlen: 54
+591 	 the therapist who treats fat people can 't stand the sight of his fat wife . 	 therapist who treats fat people can't stand the sight of his fat wife. maxlen: 31
+592 	 i thought he was marveling at how fat i was and i wanted to leave . 	 i thought you wanted to know how fat i was and i wanted to get up. maxlen: 28
+593 	 i asked the waiter for the bill but he said the man had paid for my drink . 	 i asked the waiter for the check, but he said he paid for my drink. maxlen: 31
+594 	 and suddenly , i don 't know how , he was sitting right beside me . 	 i don't know how, the guy appeared with me. maxlen: 21
+595 	 your opinion may not mean much to me , but i guess i wasn 't ready to hear it . 	 your idea may not mean a lot to me, but i guess i wasn't ready to hear it. maxlen: 31
+596 	 luis , it was a joke . 	 luis, it was a joke. maxlen: 14
+597 	 trying to put on his wedding ring , but it doesn 't fit . 	 i'm trying to put on the wedding ring, but i can't. maxlen: 22
+598 	 i don 't get it . 	 i don't understand. maxlen: 10
+599 	 it may seem obvious , but it 's trickier than you might think . 	 it may seem obvious, but it's more tricky than you think. maxlen: 26
+600 	 my body came around and stopped rejecting the things it didn 't like . 	 my body is healed, and he has stopped denying things he doesn't like. maxlen: 25
+601 	 it 's all a lie . 	 it's all a lie. maxlen: 9
+602 	 it 's all that jerk alex 's fault . 	 it's all stupid alex's fault. maxlen: 17
+603 	 i was trying to figure out my contradictions , to face up to them . 	 i was trying to find reasons for my contradictions to face them. maxlen: 31
+604 	 i liked it better when you paid no attention to us and went around saying : 	 he's not paying attention to us, he's out there. maxlen: 17
+605 	 is it stolen ? 	 stolen? maxlen: 11
+606 	 and i won 't be able to handle it . 	 and i'm not gonna handle it. maxlen: 18
+607 	 i don 't get it . 	 i don't understand. maxlen: 10
+608 	 you 're after my money , is that it ? 	 you're after my money, aren't you? maxlen: 19
+609 	 if he 'd waited , nothing would have happened . 	 if he had waited, nothing would have happened. maxlen: 18
+610 	 i don 't want her to fantasize about it . 	 i don't want him to dream about it. maxlen: 15
+611 	 i want her to do it . 	 i want him to do it. maxlen: 13
+612 	 it is sown in corruption , it is raised in corruption . 	 the body is buried in prisoner to rot and resurrection as rotten. maxlen: 30
+613 	 they found us a few hours ago . 	 they found us in a few hours. maxlen: 15
+614 	 they 've already taken up too much of our lives . 	 there's been too much space in our lives. maxlen: 15
+615 	 they hunt prey few other cheetahs would dare to tackle . 	 they're on the trail of a prey where very few fence can hunt. maxlen: 27
+616 	 they were not close enough to take over the attack . 	 they weren't close enough to take over the attack. maxlen: 18
+617 	 and all three cheetahs are onto it . 	 and all three are after him. maxlen: 15
+618 	 their only assets are cloven hooves that spread under load , astonishing balance ... and the most uncanny agility . 	 what they have is an incredible balance, an incredible balance and an extraordinary agenda, which is only the effect of weight. maxlen: 44
+619 	 finally , the fox gives it up as a bad job , 	 in the end, the fox accepts that he's failed, gives up, maxlen: 22
+620 	 the incredible agility of the stoat , practised since it was a kit , was just enough to swing the balance . 	 the incredible environmental balance she's worked on since she was a teenager was enough to turn her over. maxlen: 36
+621 	 but they 're leaping out of the frying pan and into the fire . 	 but they're stuffed in the rain, running away. maxlen: 19
+622 	 they 've come here to fatten up for the winter . 	 they're coming here to get fat for winter. maxlen: 18
+623 	 normally , it is only she who breeds . 	 normally, it's just those puppies. maxlen: 14
+624 	 but if she is to raise them all in this barren land , she will need the help of the entire pack . 	 if this sock wants to raise it all in the fields, the entire herd will need your help. maxlen: 34
+625 	 but unfortunately , that means it soon runs out of breath . 	 but unfortunately, it could cause you to run out of your breath in no time. maxlen: 23
+626 	 rattlesnakes sense prey by the heat they give off , and the squirrel is able to take advantage of this . 	 the rattlesnakes that release their prey, and the chipmunks can use it to their advantage. maxlen: 39
+627 	 they stay close to the shore , safe in the shallows of their nursery pool . 	 they live near the beach, safe in the shallow waters of the maintenance pool. maxlen: 27
+628 	 and with her calf , she slowly moves towards it . 	 and he's slowly moving towards it with his baby. maxlen: 23
+629 	 the life team had set themselves a tough challenge ... in trying to film exceptional hunting sequences . 	 "life team had a hard target, like pulling the footage of the most extraordinary hunting. maxlen: 34
+630 	 part of me is elated that i 've got it , but part of me is sort of sad , really , 'cause i 've watched these little characters , these pups ... grow in the last few weeks , 	 i'm happy to be able to move from one side, but i'm sorry, too, because i've watched these little puppies grow up here for a week, maxlen: 48
+631 	 it 'll be a whole year before this exceptional female ... returns here to hunt again . 	 it'll be a year before his extraordinary teeth return to hunt. maxlen: 27
+632 	 this girl was passing by it at night last week , 	 those girls were passing by last night. maxlen: 21
+633 	 if anything happens , it 's his fault ! 	 if anything happens to us, it's because of him. maxlen: 19
+634 	 don 't jinx it ! 	 shut the mouth! maxlen: 14
+635 	 firemen found him after they doused the fire . 	 firemen found him after he put out the fire. maxlen: 28
+636 	 thank god it rained . 	 thank god it rained. maxlen: 15
+637 	 it doesn 't feel right . 	 i don't feel good. maxlen: 17
+638 	 isn 't it better than homicide ? 	 wasn't murder better? maxlen: 18
+639 	 it isn 't an easy decision for a girl to be a cop . 	 it's a hard decision to be a cop for a girl. maxlen: 17
+640 	 then again , it 's not something to brag about . 	 let me tell you, it's not a reason to brag. maxlen: 26
+641 	 i don 't even know him ! 	 i don't even know him maxlen: 15
+642 	 you know how it works . 	 you know how these things are. maxlen: 15
+643 	 but he took it personally . 	 but he went to his power. maxlen: 13
+644 	 i don 't get it . 	 i don't understand. maxlen: 10
+645 	 he did ? 	 really? maxlen: 10
+646 	 he was there for her when her dad died . 	 when his father died, he came to support him. maxlen: 18
+647 	 a rumor had it ... she might 've killed herself . 	 rumor has it he may have killed himself. maxlen: 18
+648 	 she thought she was with this friend ... who actually was home that night . 	 she actually thought she was with a friend who was at her house that night. maxlen: 26
+649 	 it earned me a doctorate . 	 he got me a doctor. maxlen: 11
+650 	 send him in . 	 send him in. maxlen: 13
+651 	 doesn 't it smell ? 	 do you smell something stinky? maxlen: 19
+652 	 it was jungho 's idea . 	 that was jungho's idea. maxlen: 18
+653 	 that cop said he 'd handle her . 	 that cop said you'd handle him. maxlen: 18
+654 	 it 's a nervine but not on the market . 	 it's a sedative drug, but it's not in the market. maxlen: 19
+655 	 and the baby got stuck with its neck strangled . 	 and his baby was stuck in his throat. maxlen: 22
+656 	 and smote him , thus . 	 i got it, that's it. maxlen: 19
+657 	 say what you have to say with speed and put the audience out of its misery ! 	 tell him what to say and put him out of his misery maxlen: 26
+658 	 my lords , ladies and gentlemen thank you for your generosity of spirit . 	 my lords, ladies and gentlemen, thank you for your generosity. maxlen: 40
+659 	 the doctor said he 'd come to his rope 's end and found it frayed . 	 the doctor said that his power is at the end and it's over. maxlen: 22
+660 	 but all the able-bodied ones are in uniform and the theatres are bombed as soon as you book them . 	 but all the good guys are in the army and the theater we rent is being bombed. maxlen: 28
+661 	 doctor 'd have his hypodermic rampant before you could say as you lik e it . 	 the doctor will have the needle ready before you can call it. maxlen: 30
+662 	 " a little rest , " she said , " among those similarly ' off-centre ' in colwyn bay . " 	 "take some rest, colwyn dark 'nada', like you 'tell the ekentricks." maxlen: 41
+663 	 or if the audience laughs when they shouldn 't or don 't when they should . 	 or the audience laughs where it shouldn't laugh and laugh where it should be. maxlen: 28
+664 	 i know how late it is ! 	 i know what time it is maxlen: 14
+665 	 now , shall we put it on and keep ourselves warm ? 	 let's get dressed and we won't catch cold, shall we? maxlen: 27
+666 	 herr hitler has made it difficult for shakespearean companies . 	 herr hitler made his life very difficult for shakespeare theater. maxlen: 23
+667 	 it 'll be a chapter in the book , sir . 	 there's a chapter in your book, sir. maxlen: 18
+668 	 if he wants me any further downstage i shall end up at the back of the stalls . 	 if he wants me to stay a little longer, i'll find myself in the back seats. maxlen: 28
+669 	 my uncle percy raved like that . 	 so did my uncle percy. maxlen: 18
+670 	 he 's now in a home . 	 he's in maintenance now. maxlen: 11
+671 	 when he leans back , you lean forward . 	 when he leans back, you lean forward. maxlen: 19
+672 	 shakespeare is not renowned for his brevity . 	 shakespeare is not known for its short games. maxlen: 17
+673 	 it won 't harm you . 	 it won't hurt. maxlen: 10
+674 	 i 'll take you through it . 	 i'll remind you. maxlen: 13
+Wrote to  0220_baseline_200k_100_val_10k_context_only.csv

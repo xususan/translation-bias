@@ -6,6 +6,7 @@ from torchtext import data
 from torchtext.data import Field, BucketIterator, TabularDataset, Pipeline
 from bpemb import BPEmb
 import pdb
+from torchtext.vocab import Vectors
 
 
 SOS, EOS, PAD = "<s>", "</s>", "<pad>"
@@ -164,6 +165,12 @@ class Params:
         else:
             print("Using BPE. Default setting.")
 
+        self.use_pretrained_embeddings = args.pretrainedembed
+        if self.use_pretrained_embeddings:
+            print("WARNING: Using pretrained embeddings.")
+        else:
+            print("Learning embedings as we go. Default settng.")
+
 def load_bpe(vocab_size):
     """ Load pre-trained byte pair embedding models.
 
@@ -172,6 +179,11 @@ def load_bpe(vocab_size):
     bpemb_tr = BPEmb(lang="tr", vs=vocab_size)
     bpemb_en = BPEmb(lang="en", vs=vocab_size)
     return bpemb_tr, bpemb_en
+
+def process_word2vec_file(word2vec_filepath, lang_field):
+    vectors = Vectors(name=word2vec_filepath) # model_name + path = path_to_embeddings_file
+    return vectors
+
 
 def load_train_val_test_datasets(params):
     """
@@ -231,6 +243,17 @@ def load_train_val_test_datasets(params):
         TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
 
     EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+
+    if params.use_pretrained_embeddings:
+        assert(not(params.use_bpe))
+        # debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
+        # print("Loading debiased vectors from .. %s" % debiased_vectors_path)
+        # embeds = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+        # vectors = process_word2vec_file(debiased_vectors, EN)
+        # EN.vocab.set_vectors(vectors.stoi, vectors.vectors, vectors.dim)
+
+
+
     print("TR=TR_SRC vocab size: %d, EN vocab size: %d" % (len(TR.vocab), len(EN.vocab)))
     print('Done building vocab')
 
