@@ -130,7 +130,11 @@ class SimpleLossCompute:
         if self.opt is not None:
             self.opt.step()
             self.opt.optimizer.zero_grad()
-        return loss.data.item() * norm
+
+        if self.multi_gpu:
+            return loss.sum.data.item() * norm
+        else:
+            return loss.data.item() * norm
 
 class MultiGPULossCompute:
     "A multi-gpu loss compute and train function."
