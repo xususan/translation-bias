@@ -80,6 +80,7 @@ if torch.cuda.device_count() > 0:
     criterion = nn.DataParallel(criterion)
     model.to(device)
     criterion.to(device)
+    device_ids = list(range(torch.cuda.device_count()))
   else:
     model.cuda()
     criterion.cuda()
@@ -97,14 +98,22 @@ print('Iterators built.')
 
 print('Training model...')
 model_parameters = filter(lambda p: p.requires_grad, model.parameters())
-model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+
+if torch.cuda.device_count() > 1:
+  d_model = model.module.src_embed[0].d_model
+else:
+  d_model = model.src_embed[0].d_model
+model_opt = NoamOpt(d_model, 1, 2000,
           torch.optim.Adam(model_parameters, lr=0, betas=(0.9, 0.98), eps=1e-9))
+
+
 
 for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
     gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator
     start_of_epoch = time.time()
+
     training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(gen, criterion, 
