@@ -1,0 +1,592 @@
+Command line arguments: {Namespace(batch=512, context=False, eval='all', path='0220_baseline_200k_100.pt', vocab=10000)}
+reading in tabular dataset
+finished
+making iterator
+done
+Building vocab...
+TR vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0220_baseline_200k_100.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 18 / 41 = 0.439024
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 23 / 40 = 0.575000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 31 / 40 = 0.775000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 9 / 40 = 0.225000
+Evaluating BLEU
+0 indecision
+1 the end of the world, far away from his words,
+2 all right, all the more relaxing, the sending video birds,
+3 birds,
+4 birds,
+5 maybe it's time for help.
+6 i'm the one who's gonna be the first to go, especially the purple.
+7 erm, erm, are you alright?
+8 i'm done,
+9 in the country, the simison call, the success of my play, the little health of life, the modern 00s,
+10 i'll complete the plague l and modern blood... 00 to 00 bf,
+11 the whispering knife, your father.
+12 the long silent conversation "my bus movement was waiting for a le yankee dinner, thug?
+13 mr. tricklen, suspicious trick to him, what you're saying is,
+14 miss cloud mine
+15 i mean, is it ever again to force your attention?
+16 to,
+17 end
+18 _
+19 # s hey hey ain't more brotherly and a beer
+20 spoiled, are you telling me that i don't think that i should offer it today?
+21 hey, do what you're doing, go lie,
+22 every senatorchimis everybody's beautiful horse,
+23 i don't know where my school is, whether it's cheerful or cheerful,
+24 what's the woman planning,
+25 and then again, that's all you're gonna love, 'cause what can you see, what can it look like?
+26 the flattery,
+27 but on top of it, i'm a andrew suz,
+28 so it seems.
+29 end
+30 she's feeling it,
+31 _
+32 okay, kill him?
+33 when you make a deal about me,
+34 let me know that you're frequencying to the bracelet.
+35 maybe you're a father,
+36 what's the best you got?
+37 _
+38 you dig this for him and you decide me,
+39 you know, this 00:00 p.m., the hardest one, without two...
+40 the scent of the hand, peter, wasn't on what it was going through... hey, hey tell the comical lie, go lie.
+41 "i sink,
+42 he'll buy it, but he'll eat it... when i'm in the house for more canus, so...
+43 his master,
+44 she wanted a cure, but she did!
+45 it wasn't because of the body that i wanted... the rope, you know?
+46 so, first of all, the rust, the japanese bad sidekick, that's to me,
+47 the scent of the hand... can meet worrying and your lover is 00 left,
+48 what's your end again, if you don't?
+49 _
+50 your faith,
+51 it was alper sand, wasn't it?
+52 mag love,
+53 it's always me, alper san,
+54 they need to be called "woman,"
+55 he doesn't want to say, "his name is a woman,
+56 well,
+57 so what's the end of the line again, you know, what's in your plates again, if you've got the plumbing back in the back, i'
+58 wait, what about my daddy, my sandwich girl, and my password i slip blue, greg?
+59 here comes the ankle,
+60 was it supposed to be sixth of us, the end of love i don't blaze?
+61 i'm sorry about peter skipping on you, but i think i've just seen you get arrested.
+62 i mean, it's like he's got some kind of anxiety for different people,
+63 let's get down there.
+64 peterordord, he's gonna be cut off from his own perception... which is going to cut off marie... that i'm gonna have to put some fingerpr
+65 once you're in the company and the command posts, make sure they feel like a full bargain,
+66 by the end of the day,
+67 i don't want him to know...
+68 that's why the end came here, alper, washed it down with a share of your feelings, 00/0.
+69 oh, my god, what smells like, every time you're talking about my love, you're insane?
+70 and for the record,
+71 a vacation on the ground made it clear to the valedictor, as in tea.
+72 i mean, close to the morning?
+73 few ossse moves, eh?
+74 _
+75 if you're worried about the end you're gonna get the show,
+76 sandar was writing, saving!
+77 daumm de tantalent,
+78 i'm dead, i'm his cruziti, vegenir, but there's no shame in it!
+79 it's confined
+80 you're doing what you're having sex... sex enough,
+81 _
+82 what about the same one?
+83 you know, sadaver, it's sweet,
+84 well,
+85 for the record, for the record,
+86 i'm a basic dad-i'm making two.
+87 first things first
+88 you know, sh?
+89 you know his judgment was his cruzite, but it wasn't, it was ready for me.
+90 okay, i'm just a couple of killers, so...
+91 your immunity?
+92 peter was, uh, you know, uh, away from the one that wasn't supposed to go,
+93 and for the record, this is the cheekiest,
+94 i don't want to, but i don't know why his human flesh is burning
+95 i've seen a lot of them, the entire execution of an athlete,
+96 it's just that his dream didn't burn, so...
+97 thank you for your dick, mr. mc full i fucking need,
+98 i mean, the screen is the only way my alper's ever been in this place is if he's acting, and that's what i get.
+99 it's not blessing that we're going to consent on the ending.
+100 do it, little one, will you?
+101 i'll see... when you're staying, it's perfect,
+102 another thing?
+103 _
+104 you know, if he wasn't gonna show it, you'd be comfortable with it,'?
+105 _
+106 nanny br,
+107 _
+108 _
+109 is that why the end of the world slides into the sea and it's mine?
+110 the precious 00 birds, and the fact that we've had our lives cut off from each other,
+111 _
+112 # she's so damaged #
+113 i wasted it,
+114 let me go,
+115 you're the only one who's coming?
+116 "dear love,
+117 most of my chstans are an expert
+118 let my fruit consent
+119 ssexh is ready for a year
+120 once the end of my animal environment jen,
+121 how about you wake up in the ground?
+122 well really, wake up,
+123 he lives,
+124 deek, wake up.
+125 call me on the court, fly is a strange patch
+126 and now it's all down in the sun,
+127 the check's over there, eh?
+128 but the check is there, so the end is right, the wrong warm-blooded mother,
+129 _
+130 but is that, like, d?
+131 it's the same way you can see that batteries are.
+132 why don't you prepare the beef and the press next?
+133 just finish what you're gonna do." you know, you gotta go ahead and look at them.
+134 i condemn him,
+135 she tried to get what i was, so you know,
+136 _
+137 it was me who was the most,
+138 you're just gonna look at all your muspa love and all your nights, huh?
+139 bb, are you on board with that?
+140 there is,
+141 de hill,
+142 their return maybe burn, but i am a man
+143 the end of the line, peter?
+144 how am i supposed to know that i'm just dying to find out if i take your place?
+145 flattery and i?
+146 you know... that's what you need...?
+147 let me,
+148 _
+149 can i always get a run-on and let me drink your house,
+150 i can't wait too much for you to see the sketch,
+151 can't find it, i'll just sew it all up... the house bitch, try,
+152 # i'll kill you #
+153 don't want to do that, girl face?
+154 the end of the line, peter?
+155 i'll make sure you have the heart to go,
+156 i think it's time you had the heart to go,
+157 once again a long way?
+158 take a look at the end of this place... and i'll tell you what, harry,
+159 well,
+160 if you're gonna be late again,
+161 turn him into one?
+162 i'm gonna be like this or whatever.
+163 wipe him out again, eh?
+164 you can't have a life if you're on the road you don't have money, right?
+165 how do you get to the dummy?
+166 i'm dying... how am i doing in jail?
+167 how old was your last one,
+168 genius,
+169 so, you're in the hill, so you're talking about aborn, but if you need a 00-year-old bomb, do you think everyone's going?
+170 how many home and danger in their ears?
+171 sieti teimirtmy's going away and the rest of us are in danger here?
+172 is this the old man who fits about it?
+173 and if i always find them, they'll be the first to know they're worth 00?
+174 i need you to go, my mother,
+175 ...the old one, the one, the big one.
+176 fight it out.
+177 the scent of the scratching times, the ambulance of an ambulance of an ambulance... was sitting in the presence of my body,
+178 _
+179 well,
+180 what about you?
+181 if you'd like to know, the patient in angie,
+182 it's peter, it's the way it goes, the speedsters should go, but the talking of marriage goes on, far away,
+183 it's the first time in the midst of priceridge, the political science,
+184 i'm done
+185 i'm destroying it,
+186 s. peter, by the end of the day, the i.t.t. terrick is the only one behind him again,
+187 and it's not like he's a star, and it's not a face.
+188 another one that says he's got a scarf.
+189 he says he understands the magic of the hill, beka,
+190 he's the only one who can't, but if it's about the fucking piece of meat, day,
+191 my daumm is the only one who's had his cruzite... to give him that wench of yours... well, damn it, a bit of a lie
+192 it's like money,
+193 i don't know if it's my daisy or the defendant, but i'm sorry,
+194 are you sure i'm dead?
+195 here we are,
+196 _
+197 ♪ find the long way to pay ♪
+198 every time i'm together about myself,
+199 by the way,
+200 the endless movement, peter, what else is the end of this end,
+201 i couldn't watch,
+202 oh, my god.
+203 we could have somebody,
+204 do you want it done?
+205 but you didn't have to.
+206 you're the boss, but the attack from the inside is
+207 from the land of kiya
+208 so, what if you wanted peter to know the end of the line?
+209 cut them off for a sandwich, will you?
+210 i can see yourself.
+211 i'm good together i'll see you
+212 drop that one, and you'll name me for the house, please!
+213 you're in the mood for chan...
+214 well, i'm not playing.
+215 the next year, re,
+216 it's not d bad, it's suzy evey, it's sana!
+217 mis, you,
+218 _
+219 peter was in the middle of nowhere, br,
+220 peter,
+221 _
+222 i'm not going to be clean if you're interested,
+223 the ceiling went inside,
+224 un i?
+225 _
+226 _
+227 in the last 00 seconds we've been damaged,
+228 i'll take my chills,
+229 how about every rog that you're anywhere?
+230 once they're outside the hill, we're gonna go pretty far,
+231 find out we're shooting him,
+232 it's your morning off, so tell me, are you telling me that a million planes that meres, meres, aren't mr. i-m-a
+233 run home and a few
+234 that's what you've got.
+235 _
+236 he was gonna think it was too late for a muspa love burung to attack
+237 is that what it's all about?
+238 staring.
+239 for olang,
+240 staring.
+241 that's tan you got,
+242 do you want to get a hold of it?
+243 "the bus, '
+244 i'm the one who's gonna sit around with that insufferable cop?
+245 was it his future?
+246 yer... is it just his night off, maybe or i?
+247 i'm not d'a what, i'm!
+248 peter's end.
+249 come again
+250 peter end,
+251 # we're up in the neighborhood #
+252 you are my love, my love,
+253 you know, i'll be all right, you know?
+254 end of help, peter?
+255 i'm gonna go down the drain.
+256 the ticket was new to the ticket, and if gu doesn't even know how they'll hear it, so hurts.
+257 the longer you're back on the line, the more time you get on the base, the better for the ikoian navy's navy,
+258 ♪ was it bothering me ♪
+259 less shape-shifter than that, navy seal,
+260 by the time i'm around,
+261 if it's a bit farty, just shoot it in the middle of the night, and it's a little hot again, isn't it?
+262 take all the hive-fucking-face road guns out there, sire?
+263 i can come work on my drug uncle.
+264 i don't care about him, of course, and his kid,
+265 my daum?
+266 _
+267 _
+268 drink?
+269 can't you always find me?
+270 the problem is god satek 00,
+271 why don't you get the dog cooped up, huh?
+272 that's the only way i'm going to end it yet, isn't it?
+273 get out of here, dead man we've got milked up sex, son?
+274 i'm sure you know enough to get married to him.
+275 so, what are you doing back there, stupid?
+276 home run and a beer?
+277 you'll be lucky with a fire,
+278 my note was kicked, it was just a rainstorm,
+279 do what the birds weren't already,
+280 come on?
+281 the part of the porch, captain,
+282 _
+283 what's he doing?
+284 but... give me your vision.
+285 you know what i'm talking about?
+286 i'm odeimi and one
+287 _
+288 what's he doing?
+289 b,
+290 a cop named the boy is a very painful escape,
+291 there is,
+292 i'm all over for the blindfold,
+293 heartfelt again
+294 it's watching us... that's us, huh?
+295 well,
+296 on the ground.
+297 time,
+298 your,
+299 finger plaster?
+300 the jam,
+301 neeleni
+302 neeleni
+303 k'mak.
+304 k'mak.
+305 neeleni
+306 neeleni
+307 not quite, eh?
+308 # my sister #
+309 come on,
+310 lord is not working.
+311 let's make it teny eva, shall i?
+312 would you like to end up, like, leaking to the edwardizco or, uh... the science of judge maxim keim?
+313 s gin can be a good one
+314 is he gonna?
+315 you know, this one's a winner, and it's gotta disappear, right?
+316 tell him you're talking about the housekeeper?
+317 olegan, run down here, you fucked my bad source, huh?
+318 i need to know russia, too?
+319 it's the monkey, not brodiy,
+320 not so long,
+321 each of them is romulan bite, d,
+322 no,
+323 every time i'm with you, the yellow lady of the past,
+324 here we are,
+325 so that sime doesn't feel like 0 comas,
+326 grumpy,
+327 not mi, either.
+328 lose 0000 f counseling books?
+329 while i'm working for ouya and the president, kill the people,
+330 the only master who loses is who you are with,
+331 you're mine, and you're gonna decorate, and you're gonna know what you're talking about, but, va, and...
+332 he showed it to the guy.
+333 _
+334 _
+335 dev,
+336 it's a pebble some!
+337 don't know if i'm not, star man money, or at least a house.
+338 _
+339 are we at the same time as yakurt?
+340 i don't know if it's happening, but i do know what you're doing, and you're gonna have to listen to your celebrity,
+341 _
+342 he wants nightmares, and look at the clothes, and it's all barking up, and it's gone, so...
+343 i'm in a state of guilt till i get up.
+344 ♪ boy, it's a nightmare ♪
+345 phone's easy, adams,
+346 this is it,
+347 where's the money, senator, make me feel better
+348 order three." where is his business, this?
+349 _
+350 this is it,
+351 we've got three tins,
+352 i'm a ghost or a sandwich!
+353 _
+354 sing
+355 what's the word between them?
+356 what's he doing,
+357 the kesz signed only with a pen, where do i get a kickback, and what's the point of making it look bad?
+358 i can cut the rest but without the custom,
+359 # it's time for another science to back up #
+360 i'm in,
+361 there's a tragic problem with washington!
+362 that's it.
+363 you were,
+364 my only hope is,
+365 _
+366 after all i did,
+367 search them, señora!
+368 let's not go and see what you've got.
+369 i've been searching for a coincidence that i'm a mummer now,
+370 too much, sandy baby, chanting!
+371 let me have the light,
+372 "i don't know sweet three"
+373 we can have some meaning, can we?
+374 a lie without meaning,
+375 i'll put them together with my own, my loneliness!
+376 all in all?
+377 it's not happening, and if it looks like the road is about to wait,
+378 _
+379 don't worry, and where,
+380 so if you're going to reach the top of the year with the cheerful break,
+381 _
+382 you're out of time!
+383 _
+384 i'd say you're okay,
+385 give me something to die in
+386 when you started,
+387 ♪ you've started people, ♪
+388 so, thanks,
+389 were you?
+390 oh, my god.
+391 believe me, maybe i'll take him down for a second,
+392 well,
+393 be a fucking asshole!
+394 just 'cause you told me you were hungry, san,
+395 _
+396 i'm surprised you've been a dragon theory, my greatest,
+397 give him an actual dime
+398 # for the moment, mr. #
+399 here,
+400 a thinker and a beer
+401 you don't have it in your hands.
+402 i don't know why i'm a--
+403 get the kurt sanka mar in a week-- that can't be,
+404 # now i've got a face #
+405 well,
+406 don't worry, i'm such a forgetful
+407 tell the president,
+408 i'll just drive another round,
+409 to,
+410 i was the baby father,
+411 you're my... and, uh, your city experiment, you know, don't tell me what the hell it is you think it's going to be, but...
+412 i can't, can i?
+413 why don't you ask the nakama?
+414 i was just about to break in, thanks to you, daylight, and now they don't know, red?
+415 this one
+416 it was done,
+417 i don't like me and i don't like blood,
+418 let's snore down the stomach, why is the alibi p blood here now?
+419 first you're gonna eat the rust, then you're gonna eat it right now, jack?
+420 wrap it up right now for jack and his clothes?
+421 oh, it's so pitiful and beer
+422 well,
+423 new,
+424 it's the eclipse... the envelope of the wall,
+425 i can't destroy the oirin again
+426 ifmaat hakey eva,
+427 i don't know how my life is with flir, but how can i age,
+428 i'm not in the first place.
+429 tell me.
+430 my money's one
+431 not full of cabins,
+432 i can't take it anymore
+433 i don't think it's going to be the best,
+434 # we're on the parchment, it's harder #
+435 jack for stopping right now?
+436 do you ever feel like doing what you're doing for jack, right?
+437 and what you did,
+438 do what you do, pass on the honeymoon with japanese?
+439 wouldn't you say, "what's up?"
+440 stopping them from crying out?
+441 what for the sah jack now?
+442 fear and fear
+443 ima,
+444 wonderful dream, really?
+445 merers,
+446 merers,
+447 it's gotta,
+448 we don't know, so...
+449 in the sucker,
+450 stand up,
+451 faith is a taunting,
+452 did he set you up?
+453 neeleni
+454 mankind.
+455 for jack,
+456 # i don't think so #
+457 don't let go,
+458 noth,
+459 catching my pretty little hazse pal's eating all at once,
+460 go.
+461 fuck.
+462 i'm not going back?
+463 merers,
+464 for jack.
+465 i'm the one who always says,
+466 so much,
+467 let me know,
+468 well, what is it?
+469 well,
+470 to,
+471 the book is good,
+472 you know?
+473 really,
+474 what are you?
+475 i'm done!
+476 do this back,
+477 like that,
+478 what are you doing?
+479 for the good of you,
+480 # we fuckin' doin' #
+481 keep your ears online,
+482 i couldn't play too much, but you really did and don't say the whole thing,
+483 i don't know what i'm holding on to,
+484 you've been tranquilizing the floor, and you've assaulted 0 times,
+485 the defendants-in-law told my lord's life on the air,
+486 as much as you can get finine out, some of them are rascals.
+487 i don't know, some guys don't know if they're shoveling in the morning.
+488 my doctor's,
+489 how many acres have i turned?
+490 um,
+491 don't tell me that.
+492 noth,
+493 # it's not a date #
+494 not from the exit,
+495 i'm saying, i'm just saying,
+496 don't say that you can read,
+497 it's all there is,
+498 the company is many,
+499 companycom,
+500 please,
+501 /0.
+502 well,
+503 _
+504 let's not end this, eh?
+505 not a whole bunch of cabins he got on you, huh?
+506 dude, it's my time for the 0000 crime scene-calling images,
+507 if you're really the one to get away with the swelling sale... and the rest of it is my own, president beat, go lie.
+508 he saw the place.
+509 how it feels to be in the backseat of the narcotics,
+510 someone came in under the circumstances.
+511 it's kind of like the hottest backside to be rusty japanese pig again.
+512 seña d's you leave behind your reasoning, ted vada,
+513 i think it's a nightmare.
+514 open and,
+515 to the lord
+516 # he's got his life #
+517 you did your people's work.
+518 to,
+519 in the world, to make the bishop,
+520 we're talking about a second
+521 what the hell?
+522 it's rust japanese pain again,
+523 lone giant feet,
+524 ask for advice,
+525 go.
+526 we can
+527 it's 00,000 in the afternoon,
+528 i don't know if i can,
+529 why don't you ask me if i eat here?
+530 _
+531 to the president.
+532 it's just me.
+533 you know that this summer command has taken its course
+534 he's got his will back on march 00th, put back the kite... come here,
+535 this one!
+536 to,
+537 must've.
+538 my guilt is all i am,
+539 do i have to do this?
+540 on the end,
+541 i've got him.
+542 where's that?
+543 noth,
+544 come in,
+545 you know this table doesn't come from you,
+546 dude, run a check on the captain's office.
+547 b,
+548 to,
+549 take it i
+550 _
+551 it's about my back at noon,
+552 to, a man
+553 i'm the answer to the degu merwood tca.
+554 _
+555 are they in my position, eh, cop-inspector, europe?
+556 _
+557 some of us used to talk about alsen
+558 lieutenant,
+559 that's what it is,
+560 he'll marry her!
+561 from her,
+562 the standard of fathering is to be seen
+563 if he speaks of them, how long does he last?
+564 i'm a policeman and some of them are wise
+565 get your ass up here, kahans,
+566 others,
+567 i couldn't see the man who was living
+568 push everything around!
+569 to,
+570 it was complicated saying that i was a bit of a wolf
+571 ♪ hear the stories of the devil ♪
+572 if they're united in the united states, it could be the brooks,

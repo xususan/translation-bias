@@ -33,7 +33,13 @@ parser.add_argument('--path', type=str, default="save", help='model path within 
 parser.add_argument('--eval', type=str, default="accuracy", help='type of eval to do: accuracy, bleu, all')
 parser.add_argument('--context', dest='context', action='store_true')
 parser.add_argument('--no-context', dest='context', action='store_false')
+parser.add_argument('--bpe', dest='bpe', action='store_true')
+parser.add_argument('--no-bpe', dest='bpe', action='store_false')
+parser.add_argument('--pretrained-embed', dest='pretrainedembed', action='store_true')
+parser.add_argument('--no-pretrained-embed', dest='pretrainedembed', action='store_false')
 parser.set_defaults(context=False)
+parser.set_defaults(bpe=True)
+parser.set_defaults(pretrainedembed=False)
 args = parser.parse_args()
 print("Command line arguments: {%s}" % args)
 
@@ -54,8 +60,10 @@ BOC, BOS = "<boc>", "<bos>"
 
 device = torch.device('cpu')
 
-bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
-
+if args.bpe:
+  bpemb_tr, bpemb_en = load_bpe(VOCAB_SIZE)
+else:
+  bpemb_en = None; bpemb_tr = None
 # Context and source / target fields for English + Turkish
 # Lower = true
 
@@ -72,7 +80,8 @@ else:
 
 
 
-if USE_NEW_DOUBLE_TR:
+if USE_NEW_DOUBLE_TR and (args.bpe):
+  print("Using new version of vocab. BPE is true.")
   TR_CONTEXT = Field(tokenize=bpemb_tr.encode, 
           lower=True, pad_token=PAD, init_token=BOC)
   TR_SRC = Field(tokenize=bpemb_tr.encode, 
@@ -89,7 +98,8 @@ if USE_NEW_DOUBLE_TR:
   fields=[('src_context', TR_CONTEXT), ('src', TR_SRC),
   ('trg_context', EN), ('trg', EN)])
   print('finished')
-else:
+elif args.bpe:
+  print("Using old version of vocab WITH BPE")
   TR = Field(tokenize=bpemb_tr.encode, 
         lower=False, pad_token=PAD)
   EN = Field(tokenize=bpemb_en.encode, 
@@ -107,12 +117,28 @@ else:
     fields=[('src_context', TR), ('src', TR),
     ('trg_context', EN), ('trg', EN)])
   print('done')
+else:
+  print("Using non-BPE vocab.")
+  TR = Field(lower=True, pad_token=PAD)
+  EN = Field(lower=True, pad_token=PAD, init_token = SOS, eos_token =EOS)
+  data_fields = [
+  ('src_context', TR), ('src', TR),
+  ('trg_context', EN), ('trg', EN)]
+  train, val, test = TabularDataset.splits(
+      path='data/', 
+      train=train_path,
+      validation=val_path,
+      test=test_path,
+      format='tsv', 
+      fields=data_fields)
+  #TR.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
+  #EN.build_vocab(train, min_freq=MIN_FREQ, max_size=params.vocab_size)
 
 
 print("Building vocab...")
 
 MIN_FREQ = 1
-if USE_NEW_DOUBLE_TR:
+if USE_NEW_DOUBLE_TR and args.bpe:
   TR_CONTEXT.build_vocab(train.src, train.src_context, min_freq=MIN_FREQ, max_size=VOCAB_SIZE)
   TR_SRC.vocab = TR_CONTEXT.vocab
   TR = TR_SRC
@@ -133,8 +159,22 @@ rev_tokenize_en = lambda tokenized: [EN.vocab.itos[i] for i in tokenized]
 rev_tokenize_tr = lambda tokenized: [TR.vocab.itos[i] for i in tokenized]
 
 print("Loading model...")
-model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), args.context)
+model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), use_context=args.context, share_embeddings=args.bpe, pretrained_embeddings=False)
 print("Model loaded from %s" % args.path)
+
+if args.pretrainedembed:
+  assert(not(args.bpe))
+  debiased_vectors_path = "data/embeddings/vectors.w2v.debiased.txt"
+  print("Loading EN debiased vectors from .. %s" % debiased_vectors_path)
+  embeds_en = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+  model.tgt_embed[0].lut.weight = nn.Parameter(embeds_en)
+  model.tgt_embed[0].lut.weight.requires_grad = False
+
+  debiased_vectors_path_tr = "data/embeddings/vectors_tr.w2v.debiased.txt"
+  print("Loading TR debiased vectors from .. %s" % debiased_vectors_path_tr)
+  embeds_tr = load_glove_embeddings(debiased_vectors_path_tr, TR.vocab.stoi)
+  model.src_embed[0].lut.weight = nn.Parameter(embeds_tr)
+  model.src_embed[0].lut.weight.requires_grad = False
 
 if args.eval == "accuracy" or args.eval == "all":
   for path in ["pro_stereotype.tsv", "anti_stereotype.tsv", "male_subject.tsv", "female_subject.tsv"]:
