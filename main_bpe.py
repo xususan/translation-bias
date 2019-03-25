@@ -114,7 +114,7 @@ for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1)
     gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator
     start_of_epoch = time.time()
 
-    training_loss = run_epoch((rebatch(pad_idx, b.to(device)) for b in train_iter), 
+    training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(gen, criterion, 
                                 opt=model_opt))
