@@ -92,8 +92,13 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
-      trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
-      hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
+      if bpemb_en:
+        trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
+        hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
+      else:
+        trg_str = ' '.join(rev_tokenize_trg(targets)).replace("<pad>", "")
+        hypothesis_decoded = ' '.join(rev_tokenize_trg(hypothesis))
+
       hypothesis_clean = hypothesis_decoded.replace("<pad>", "")
       print("%d \t %s \t %s maxlen: %d" % (n_written, trg_str, hypothesis_clean, max_len_for_observation))
       out_file.write(hypothesis_clean + "\n")
@@ -143,13 +148,13 @@ def eval_accuracy(pad_idx, path_to_test_set, model, TR, EN):
 
   eval_accuracy_helper(pad_idx, test_iter, model)
 
-def load(path, tr_voc, en_voc, use_context):
+def load(path, tr_voc, en_voc, use_context, share_embeddings, pretrained_embeddings):
     """Loads a trained model from memory for evaluation.
     """
     if use_context:
-      model = make_context_model(tr_voc, en_voc, N=6)
+      model = make_context_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
     else:
-      model = make_model(tr_voc, en_voc, N=6)
+      model = make_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
     model.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
     return model

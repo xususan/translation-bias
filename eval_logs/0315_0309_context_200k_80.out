@@ -1,0 +1,13 @@
+Command line arguments: {Namespace(batch=512, context=True, eval='all', path='0309_context_200k_80.pt', train='train_2m.csv', vocab=10000)}
+Set training path to train_2m.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0309_context_200k_80.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 

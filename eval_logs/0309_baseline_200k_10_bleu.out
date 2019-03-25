@@ -1,0 +1,12 @@
+Command line arguments: {Namespace(batch=512, context=False, eval='bleu', path='0220_baseline_200k_10.pt', vocab=10000)}
+reading in tabular dataset
+finished
+making iterator
+done
+Building vocab...
+TR vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0220_baseline_200k_10.pt
+Evaluating BLEU
+Wrote to  0220_baseline_200k_10_val_10k.csv
