@@ -111,16 +111,22 @@ def get_std_opt(model):
 
 class SimpleLossCompute:
     "A simple loss compute and train function."
-    def __init__(self, generator, criterion, opt=None):
+    def __init__(self, generator, criterion, opt=None, multi_gpu=False):
         self.generator = generator
         self.criterion = criterion
         self.opt = opt
+        self.multi_gpu = multi_gpu
+        if self.multi_gpu:
+            print("Loss initialized with multi gpu")
         
     def __call__(self, x, y, norm):
         x = self.generator(x)
         loss = self.criterion((x.contiguous().view(-1, x.size(-1))), 
                               (y.float().contiguous().view(-1))) / norm
-        loss.backward()
+        if self.multi_gpu:
+            loss.sum().backward()
+        else:
+            loss.backward()
         if self.opt is not None:
             self.opt.step()
             self.opt.optimizer.zero_grad()

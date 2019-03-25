@@ -118,7 +118,8 @@ for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1)
     training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(gen, criterion, 
-                                opt=model_opt),
+                                opt=model_opt,
+                                multi_gpu=multi_gpu),
               multi_gpu=multi_gpu)
     epoch_time = time.time() - start_of_epoch
     print("Training loss: %f, elapsed time: %f" % (training_loss.data.item(), epoch_time))
@@ -126,7 +127,8 @@ for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1)
     loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter), 
                       model, 
                       SimpleLossCompute(gen, criterion, 
-                      opt=None),
+                      opt=None,
+                      multi_gpu=multi_gpu),
                       multi_gpu=multi_gpu)
     print("Validation loss: %f" % loss.data.item())
     if epoch % args.save == 0: 
