@@ -1,0 +1,12 @@
+Command line arguments: {Namespace(batch=512, context=True, eval='bleu', path='0315_context_balanced_100.pt', train='train_2m_balanced.csv', val='val_10k_0308_context_only.csv', vocab=10000)}
+Set training path to train_2m_balanced.csv
+Set validation path (for BLEU) to val_10k_0308_context_only.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9720, EN vocab size: 10004
+Done building vocab
+Loading model...
