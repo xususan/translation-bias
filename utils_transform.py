@@ -132,7 +132,7 @@ class SimpleLossCompute:
             self.opt.optimizer.zero_grad()
 
         if self.multi_gpu:
-            return loss.sum.data.item() * norm
+            return loss.sum().data.item() * norm
         else:
             return loss.data.item() * norm
 
