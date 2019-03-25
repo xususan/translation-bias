@@ -116,8 +116,6 @@ class SimpleLossCompute:
         self.criterion = criterion
         self.opt = opt
         self.multi_gpu = multi_gpu
-        if self.multi_gpu:
-            print("Loss initialized with multi gpu")
         
     def __call__(self, x, y, norm):
         x = self.generator(x)
