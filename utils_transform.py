@@ -141,7 +141,7 @@ class MultiGPULossCompute:
         chunk_size = self.chunk_size
         for i in range(0, out_scatter[0].size(1), chunk_size):
             # Predict distributions
-            out_column = [[Variable(o[:, i:i+chunk_size].data, 
+            out_column = [[torch.Tensor(o[:, i:i+chunk_size].data, 
                                     requires_grad=self.opt is not None)] 
                            for o in out_scatter]
             gen = nn.parallel.parallel_apply(generator, out_column)
