@@ -1,0 +1,30 @@
+Command line arguments: {Namespace(batch=3000, bpe=False, context=False, epochs=500, load='None', out='debiased_both', pretrainedembed=True, save=10, size='mid', startingepoch=0, train='None')}
+NOT using BPE.
+WARNING: Using pretrained embeddings.
+Train: train_2m.csv, Val: val_10k.csv, test: test_10k.csv
+Vocab size: 10000
+lower = True
+Building vocab...
+not splitting tr_src/ context
+TR=TR_SRC vocab size: 10002, EN vocab size: 10004
+Done building vocab
+WARNING: share_embeddings is False
+Loading EN debiased vectors from .. data/embeddings/vectors.w2v.debiased.txt
+Loading TR debiased vectors from .. data/embeddings/vectors_tr.w2v.debiased.txt
+GPUs available: 1
+Iterators built.
+Training model...
+Epoch 1 / 500
+Epoch Step: 1 Loss: 8.005693 Tokens per Sec: 611.942261
+Epoch Step: 1001 Loss: 3.148925 Tokens per Sec: 22566.177734
+Epoch Step: 2001 Loss: 3.292548 Tokens per Sec: 22653.490234
+Epoch Step: 3001 Loss: 3.112645 Tokens per Sec: 22722.683594
+Epoch Step: 4001 Loss: 2.669655 Tokens per Sec: 22799.376953
+Epoch Step: 5001 Loss: 1.238504 Tokens per Sec: 22630.650391
+Training loss: 3.142665, elapsed time: 684.406649
+Epoch Step: 1 Loss: 2.119371 Tokens per Sec: 13690.209961
+Validation loss: 2.448835
+Epoch 2 / 500
+Epoch Step: 1 Loss: 2.790996 Tokens per Sec: 818.073914
+Epoch Step: 1001 Loss: 2.894835 Tokens per Sec: 22822.058594
+Epoch Step: 2001 Loss: 2.577652 Tokens per Sec: 22738.150391
