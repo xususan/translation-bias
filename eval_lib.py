@@ -57,7 +57,7 @@ def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbo
     """Beam decoder.
     """
     batch = Batch(src.unsqueeze(0), src_context=src_context.unsqueeze(0), pad=pad_idx)
-    memory = model.encode(batch)
+    memory = model.encode(src, src_mask, src_context, src_context_mask)
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
     for i in range(max_len):
@@ -88,6 +88,8 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
   bleus = []
   n_written = 0
   for old_batch in eval_iter:
+    src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+    src_context, src_context_mask = batch.src_context, batch.src_context_mask
     batch = rebatch(pad_idx, old_batch)
     for i in range(batch.src.size(0)): # batch_size
       max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.3) + 5
