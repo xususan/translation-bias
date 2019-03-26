@@ -89,9 +89,9 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
   bleus = []
   n_written = 0
   for old_batch in eval_iter:
+    batch = rebatch(pad_idx, old_batch)
     src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
     src_context, src_context_mask = batch.src_context, batch.src_context_mask
-    batch = rebatch(pad_idx, old_batch)
     for i in range(batch.src.size(0)): # batch_size
       max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.3) + 5
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
