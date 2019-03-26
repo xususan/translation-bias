@@ -163,5 +163,6 @@ def load(path, tr_voc, en_voc, use_context, share_embeddings, pretrained_embeddi
       # saved with multigpu module
       model_par =nn.DataParallel(model)
       model_par.load_state_dict(torch.load(path, map_location='cpu'))
+      model = model_par.module
     model.eval()
     return model
