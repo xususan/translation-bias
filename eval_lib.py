@@ -57,6 +57,7 @@ def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbo
     """Beam decoder.
     """
     batch = Batch(src.unsqueeze(0), src_context=src_context.unsqueeze(0), pad=pad_idx)
+    src, src_mask, src_context, src_context_mask = batch.src, batch.src_mask, batch.src_context, batch.src_context_mask
     memory = model.encode(src, src_mask, src_context, src_context_mask)
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
