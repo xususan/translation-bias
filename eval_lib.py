@@ -93,7 +93,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
     src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
     src_context, src_context_mask = batch.src_context, batch.src_context_mask
     for i in range(batch.src.size(0)): # batch_size
-      max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.3) + 5
+      max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.1) + 1
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
