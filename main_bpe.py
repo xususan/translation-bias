@@ -134,6 +134,9 @@ for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1)
     if epoch % args.save == 0: 
       # Export model
       output_path = "models/%s%s_%s_%d.pt" % (month, day, args.out, epoch)
-      torch.save(model.state_dict(), output_path)
+      if multi_gpu:
+        torch.save(model.module.state_dict(), output_path)
+      else:
+        torch.save(model.state_dict(), output_path)
       print("Saved model to %s." %  output_path)
 

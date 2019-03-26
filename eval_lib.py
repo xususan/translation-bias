@@ -157,6 +157,11 @@ def load(path, tr_voc, en_voc, use_context, share_embeddings, pretrained_embeddi
       model = make_context_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
     else:
       model = make_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
-    model.load_state_dict(torch.load(path, map_location='cpu'))
+    try:
+      model.load_state_dict(torch.load(path, map_location='cpu'))
+    except:
+      # saved with multigpu module
+      model_par =nn.DataParallel(model)
+      model_par.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
     return model
