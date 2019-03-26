@@ -97,7 +97,7 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
-      if bpemb_en:
+      if bpemb_en is not None:
         trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
         hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
       else:
