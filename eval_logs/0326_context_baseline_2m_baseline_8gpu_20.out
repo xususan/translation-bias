@@ -1,0 +1,30 @@
+Command line arguments: {Namespace(batch=512, bpe=True, context=True, eval='all', path='0326_context_baseline_2m_baseline_8gpu_20.pt', pretrainedembed=False, train='train_2m.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using new version of vocab. BPE is true.
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Loading model...
+Traceback (most recent call last):
+  File "/vol/translation-bias/eval_lib.py", line 164, in load
+    model.load_state_dict(torch.load(path, map_location='cpu'))
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/serialization.py", line 365, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'models/0326_context_baseline_2m_baseline_8gpu_20.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "eval.py", line 162, in <module>
+    model = load('models/' + args.path, len(TR.vocab), len(EN.vocab), use_context=args.context, share_embeddings=args.bpe, pretrained_embeddings=False)
+  File "/vol/translation-bias/eval_lib.py", line 168, in load
+    model_par.load_state_dict(torch.load(path, map_location='cpu'))
+  File "/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/serialization.py", line 365, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'models/0326_context_baseline_2m_baseline_8gpu_20.pt'

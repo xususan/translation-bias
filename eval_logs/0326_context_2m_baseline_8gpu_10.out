@@ -1,0 +1,29 @@
+Command line arguments: {Namespace(batch=512, bpe=True, context=True, eval='all', path='0326_context_2m_baseline_8gpu_10.pt', pretrainedembed=False, train='train_2m.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using new version of vocab. BPE is true.
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9719, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0326_context_2m_baseline_8gpu_10.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 20 / 40 = 0.500000
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 20 / 40 = 0.500000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 40 / 40 = 1.000000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 0 / 40 = 0.000000
+Evaluating BLEU
+Traceback (most recent call last):
+  File "eval.py", line 186, in <module>
+    eval_bleu(pad_idx, valid_iter, model, 30, EN.vocab.stoi[SOS],EN.vocab.stoi[EOS], rev_tokenize_en, bpemb_en, out_path)
+  File "/vol/translation-bias/eval_lib.py", line 92, in eval_bleu
+    src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+UnboundLocalError: local variable 'batch' referenced before assignment
