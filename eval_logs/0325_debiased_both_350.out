@@ -367,3 +367,16 @@ Evaluating BLEU
 342 	 sounds like fun, right? </s>                      	 sounds like fun, right? </s> maxlen: 11
 343 	 what kind of task are we talking about, <unk> </s>                 	 what kind of <unk> are these, man? </s> maxlen: 11
 344 	 make your decision now. </s>                      	 give me the <unk> now. </s> maxlen: 9
+345 	 i'm in. </s>                        	 i'm in. </s> maxlen: 8
+346 	 where do i <unk> </s>                      	 <unk> <unk> </s> maxlen: 8
+347 	 i can't have no girl do this while i take off. </s>               	 i never had a girlfriend who would agree to that with his head <unk> </s> maxlen: 17
+348 	 i have to look after my baby sister. </s>                  	 i have to take care of my little brother. </s> maxlen: 13
+349 	 i'm in. </s>                        	 i'm in. </s> maxlen: 8
+350 	 you guys are insane. </s>                      	 you guys are crazy. </s> maxlen: 9
+351 	 do any of you know the history of that prison? </s>                	 do you know this <unk> <unk> </s> maxlen: 11
+352 	 some really fucked up shit went down in there. </s>                 	 some people went to <unk> </s> maxlen: 10
+353 	 like what? </s>                        	 like what? </s> maxlen: 8
+354 	 stick around. </s>                        	 don't walk around. </s> maxlen: 8
+355 	 you'll find out. </s>                       	 you'll find out. </s> maxlen: 8
+356 	 the total money will be divided equally between the <unk> but if all of you make it through the night, there will be a <unk> <unk> 	 the total money is equal to the <unk> but if all of you make it through the night, there will be a <unk> <unk> </s> maxlen: 30
+357 	 ain't enough money in the world to make me stay in that place. </s>             	 no money could save me the night. </s> maxlen: 14
