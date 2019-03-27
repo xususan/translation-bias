@@ -2878,3 +2878,1062 @@ Evaluating BLEU
 2854 	 go on. 	 come on. maxlen: 4
 2855 	 give it back then, bruv. 	 give it back, brother. maxlen: 9
 2856 	 shut the fuck up! 	 shut up! maxlen: 9
+2857 	 here's your phone. 	 here's your phone. maxlen: 8
+2858 	 where's my phone? 	 where's my phone maxlen: 5
+2859 	 you must have mine. 	 you must have mine. maxlen: 9
+2860 	 well, someone's got my phone! 	 someone took my phone! maxlen: 9
+2861 	 you left your phone at kirby's? 	 you left your phone at kirby's? maxlen: 14
+2862 	 and you didn't thief my phone, no? 	 and you didn't steal my phone, did you? maxlen: 13
+2863 	 what, she took my phone? 	 what, she stole my phone? maxlen: 12
+2864 	 i took his phone and i paid him back! 	 i stole his phone and paid for it! maxlen: 16
+2865 	 this is my phone, yeah? 	 this is my phone, isn't it maxlen: 10
+2866 	 i didn't take your fuckin' phone, you stupid cunt! 	 i didn't take your fucking phone, you cunt! maxlen: 17
+2867 	 who you callin' a cunt? 	 who the fuck are you calling a cunt? maxlen: 12
+2868 	 who you callin' a cunt? 	 who the fuck are you calling a cunt? maxlen: 12
+2869 	 give me the fuckin' money! 	 give me that money! maxlen: 8
+2870 	 get out of my face, bruv! 	 get out of my face, brother! maxlen: 10
+2871 	 i ain't tryin' to disrespect you, yeah. 	 i didn't disrespect you, did i? maxlen: 15
+2872 	 why do you care about her, bruv? 	 why do you care about that girl, brother? maxlen: 13
+2873 	 lend it to me, innit? 	 give it to me, okay? maxlen: 10
+2874 	 lend this money to you? 	 give you the money? maxlen: 11
+2875 	 if it's your money. 	 if this is your money... if this is maxlen: 9
+2876 	 that's fucked up! 	 this is fucked up! maxlen: 10
+2877 	 don't fucking move! 	 don't move! maxlen: 10
+2878 	 you're a fucking pussyhole! 	 fucking cunt! maxlen: 10
+2879 	 oi! 	 hey! maxlen: 3
+2880 	 i don't want no fucking money! 	 i don't want no money! maxlen: 8
+2881 	 what if i wanna take her down a dark alley and give her a fucking belting? 	 what if i want to take her to a dark place and make her go down? maxlen: 17
+2882 	 what about that? 	 what about that? maxlen: 9
+2883 	 now, get up- 	 get up. maxlen: 8
+2884 	 get up, get up, get up. 	 get up, get up, get up maxlen: 8
+2885 	 fucking pussy, man. 	 what a coward you are. maxlen: 8
+2886 	 why are you geftin' emotional, man? 	 why are you so emotional, man? maxlen: 14
+2887 	 emotional? 	 emotional? maxlen: 10
+2888 	 you bring me here and do that shit in front of me. 	 you bring me here and you do this shit in front of me. maxlen: 21
+2889 	 i'm a pussyhole cos i'm not doing crack? 	 i'm a cunt because i'm not doing cocaine? maxlen: 15
+2890 	 yeah. 	 yeah. maxlen: 4
+2891 	 did you get that? 	 understand? maxlen: 7
+2892 	 it didn't kill me, did it? 	 he didn't kill me, did he maxlen: 9
+2893 	 i'm sorry! 	 sorry! maxlen: 5
+2894 	 fucking hell! 	 what the fuck! maxlen: 5
+2895 	 do you want some action? 	 you want some action? maxlen: 8
+2896 	 bruv, you see that? 	 brother, you see this? maxlen: 11
+2897 	 bruv, you see that? 	 brother, you see this? maxlen: 11
+2898 	 00 quid? 	 00 pounds? maxlen: 7
+2899 	 we'll go round this corner. 	 we're going down that street corner. maxlen: 12
+2900 	 bang it, bang it bump it, dump it, scorch it, torch it 	 pop it, pop it, jump, light it, smash it. maxlen: 17
+2901 	 crash and burn it don't return it 	 burn it and burn it, don't return it maxlen: 11
+2902 	 it's on the firm it's a hire car, baby 	 it's a rental car, baby maxlen: 9
+2903 	 safe, dude. 	 hey, buddy. maxlen: 8
+2904 	 course i'm fucking good. 	 of course i'm fucking good. maxlen: 10
+2905 	 what, you're in and out of the toilet like four times in ten minutes? 	 you've been in and out of the bathroom 0 times in 00 maxlen: 15
+2906 	 i'm just giving my boy something... 	 i was just giving the guy something... just... maxlen: 13
+2907 	 here's one i wrote for a special occasion. 	 that's what i wrote for special circumstances. maxlen: 14
+2908 	 do you wanna hear it? 	 do you want to hear it? maxlen: 10
+2909 	 yeah! 	 yes! maxlen: 4
+2910 	 i was geftin' a rock off marcel and i see kirby behind the alley. 	 i was taking something from marcel and i saw kirby in the street. maxlen: 24
+2911 	 behind the barbershop in the alley. 	 i saw it on the street behind the barber. maxlen: 13
+2912 	 get the fuck down! 	 get out of my sight! maxlen: 9
+2913 	 fucking hell. 	 fuck. maxlen: 7
+2914 	 how the fuck do you know if it was marcel or not? 	 how do you know if it's marcel? maxlen: 16
+2915 	 cases have been popping up all over since...' 	 it's been happening since the events of maxlen: 10
+2916 	 want anything from the shop? 	 you want something from the store? maxlen: 11
+2917 	 what the fuck! 	 what the fuck! maxlen: 7
+2918 	 tell me or i'm gonna blow your head off! 	 tell me or i'll blow your head off! maxlen: 13
+2919 	 why the fuck did he kill kirby? 	 why the fuck did he kill kirby? maxlen: 12
+2920 	 kirby must have boy'd him off, man. 	 kirby must have done something to that boy. maxlen: 13
+2921 	 so why was you running down the road naked the other day? 	 so why were you walking naked in the middle of the road the other day? maxlen: 21
+2922 	 have you got a ride? 	 do you have a car? maxlen: 7
+2923 	 let's go. 	 let's go. maxlen: 8
+2924 	 this is chris, yeah? 	 this is chris, okay? maxlen: 8
+2925 	 my man's your elder. 	 he's older than you. maxlen: 7
+2926 	 he just wants to have a chat, all right? 	 he just wants to talk, okay? maxlen: 11
+2927 	 about you steppin' up. 	 about your condition. maxlen: 8
+2928 	 get out of the car. 	 get out of the car. maxlen: 8
+2929 	 so what, you're the bad man that killed kirby, yeah? 	 are you the bad boy who killed kirby? maxlen: 14
+2930 	 and a little girl, yeah? 	 and a little girl, right? maxlen: 11
+2931 	 it was an accident. 	 it was an accident. maxlen: 5
+2932 	 do you know who that girl was, though? 	 do you know who that girl is? maxlen: 12
+2933 	 nah. 	 no. maxlen: 4
+2934 	 that was my fuckin' sister! 	 she was my sister! maxlen: 9
+2935 	 you sent a boy to do a man's job and he fucked up! 	 you're sending a boy to a man's job, and he's screwing up! maxlen: 26
+2936 	 do it! 	 do it! maxlen: 5
+2937 	 i-i'm sorry about your sister. 	 i'm sorry about your brother. maxlen: 9
+2938 	 you can put one in kirby's head, but you can't kill this pussyhole? 	 you can put a bullet in kirby's head, but you can't kill this cunt? maxlen: 26
+2939 	 jake, bruv, just... 	 my brother jake... my brother maxlen: 7
+2940 	 how the fuck do you think you got here? 	 how do you think you got here? maxlen: 11
+2941 	 how the fuck do you think i know where you live? 	 how do you think i know where you live? maxlen: 12
+2942 	 marcel, you set me up? 	 marcel, you set me up? maxlen: 12
+2943 	 marcel, fuckin' talk to me, bruv! 	 marcel, talk to me, brother! maxlen: 11
+2944 	 you set me up, bruv? 	 you set me up, brother? maxlen: 11
+2945 	 you fucking used me, bruv! 	 you used me, brother! maxlen: 8
+2946 	 i didn't tell you to kill that girl! 	 i didn't tell you to kill that girl! maxlen: 12
+2947 	 that's it. 	 that's it. maxlen: 7
+2948 	 my sister was only 00 and you fucking killed her! 	 my sister was 00 and you killed her! maxlen: 15
+2949 	 look at me! 	 look at me! maxlen: 4
+2950 	 look at me. 	 look at me. maxlen: 4
+2951 	 ok. 	 okay. maxlen: 3
+2952 	 i've only gone and lost my fuckin' key, ain't i? 	 i know i just got out, but i lost my key. maxlen: 15
+2953 	 their christian mothers were lazy perhaps 	 perhaps their christian mother was lazy. maxlen: 13
+2954 	 leaving it up to the school 	 ... leaving a stink. maxlen: 8
+2955 	 where the moral perspective is hazy 	 they don't have morale maxlen: 7
+2956 	 it's a bit difficult, though, innit? 	 it's a little difficult, though, maxlen: 9
+2957 	 what are you talking about, bruv? 	 what are you talking about, brother? maxlen: 10
+2958 	 my man here. 	 my guy's here maxlen: 5
+2959 	 yeah, it's karaoke, innit? 	 yeah, karaoke, right? maxlen: 10
+2960 	 well, i'll be here then, won't i? 	 i was gonna be there, wasn' maxlen: 10
+2961 	 yeah, i'll have to be. 	 yeah, i'll be there. maxlen: 10
+2962 	 listen, i gotta go, all right, babe? 	 listen, i gotta go, okay, baby? maxlen: 17
+2963 	 fuck! 	 fuck! maxlen: 5
+2964 	 what the fuckin' hell are you up to? 	 what are you up to? maxlen: 9
+2965 	 are you pluggin' drugs in my pub? 	 are you doing drugs in my bar? maxlen: 14
+2966 	 i had one in here the other night tellin' me he's not serving' up in my pub! 	 the other day, my place was always in and out of the bathroom... and telling me you didn't do drugs! maxlen: 34
+2967 	 what the fuck are you talkin' about? 	 what are you saying? maxlen: 8
+2968 	 aaron and that other idiot, ed. 	 aaron and the other idiot, ed. maxlen: 12
+2969 	 think i don't know what they're up to? 	 i don't know what they're doing maxlen: 10
+2970 	 it ain't on, pal! 	 not at my place, man! maxlen: 10
+2971 	 cool, bro. 	 all right, bro maxlen: 4
+2972 	 get the fuck out of my way! 	 get out of my way. maxlen: 9
+2973 	 what did you say about my mum, bruv? 	 what did you say about my mother, brother? maxlen: 12
+2974 	 what you say about my mum, bruv? 	 what did you say to my mother, brother? maxlen: 11
+2975 	 fucking come here and say that, bruv! 	 come here, tell me that, brother! maxlen: 11
+2976 	 i'll bell you at the next station, yeah? 	 i'll call you at the next stop. maxlen: 12
+2977 	 give me your number! 	 give me your number! maxlen: 5
+2978 	 fuckin' 00? 	 00, huh? maxlen: 4
+2979 	 fuckin' brassin' with a baby? 	 and the crying baby is with you, hu maxlen: 10
+2980 	 here you are. 00 notes. 	 here you go. 00. maxlen: 7
+2981 	 fuckin' disgusting! 	 you're disgusting! maxlen: 9
+2982 	 who the fuck are you? 	 who are you? maxlen: 7
+2983 	 you're one of them illegal immigrants, ain't ya? 	 you're one of those illegal migrants, aren't maxlen: 14
+2984 	 what's the baby's name? 	 what's the baby's name maxlen: 8
+2985 	 no name. 	 no name. maxlen: 8
+2986 	 what the fuck are you doin'? 	 what the hell are you doing? maxlen: 9
+2987 	 oh, god! 	 oh, my god! maxlen: 7
+2988 	 were my eyes open? 	 were my eyes open? maxlen: 10
+2989 	 paddington. 	 paddington. maxlen: 7
+2990 	 i'll take ya. 	 i'll take you. maxlen: 9
+2991 	 i've got the tickets, all right? 	 i got the tickets, okay? maxlen: 11
+2992 	 what the fuck! 	 what the fuck! maxlen: 7
+2993 	 give me your number! 	 give me your number! maxlen: 5
+2994 	 oi! 	 hey! maxlen: 3
+2995 	 just wait here! 	 wait here! maxlen: 5
+2996 	 what the fuck! 	 what the fuck! maxlen: 5
+2997 	 fucking madness! 	 crazy! maxlen: 8
+2998 	 oh, fuck! 	 fuck! maxlen: 7
+2999 	 fucking baby! 	 that baby! maxlen: 8
+3000 	 you got a ticket there, mate? 	 do you have a ticket, my friend? maxlen: 9
+3001 	 no problem, mate. 	 it's okay, man maxlen: 7
+3002 	 get those fucking bitches out of here! 	 get those bitches out of here! maxlen: 12
+3003 	 come here, you fucking... 	 come here, you fucking... fuck maxlen: 10
+3004 	 come on! 	 come on! maxlen: 4
+3005 	 go! 	 go! maxlen: 3
+3006 	 ed! 	 ed! maxlen: 3
+3007 	 what the fuck is that? 	 what the fuck? maxlen: 5
+3008 	 bruv, some woman left it on a train. 	 my brother, a woman left on the train. maxlen: 11
+3009 	 and you're bringin' it here to me? 	 so you brought him here to me? maxlen: 12
+3010 	 look, bruv, it's more complicated than that, yeah? 	 look, bro, it's more complicated than you think, ok maxlen: 15
+3011 	 where the fuck did you get that? 	 where did you get that? maxlen: 8
+3012 	 i just found it. 	 i found it somewhere. maxlen: 10
+3013 	 about 00 feds with sniffer dogs pop out of nowhere. 	 00 cops with foam came out of nowhere. maxlen: 16
+3014 	 that's the smartest thing you've done in your dickhead life! 	 that's the smartest thing you've done all your life! maxlen: 20
+3015 	 what you gonna do with this? 	 what are you gonna do with this baby? maxlen: 12
+3016 	 give it to the feds? 	 you're gonna give it to the maxlen: 9
+3017 	 am i gonna go back like i fuckin' changed my mind? 	 am i supposed to change my mind and come back? maxlen: 19
+3018 	 i'll look like a paedo. 	 i look like a pedophile. maxlen: 9
+3019 	 nah, if we do that, they're gonna put it in a home, innit? 	 no, they'll send me home if i do that, right? maxlen: 20
+3020 	 some woman's just abandoned her yoot on a train! 	 a woman leaves her own child on the train! maxlen: 13
+3021 	 and she obviously don't want it, man. 	 as you can see, he doesn't want it maxlen: 11
+3022 	 i'll have to change its fuckin' nappies now! 	 i'm gonna change your panties now! maxlen: 13
+3023 	 let me look after it for you, innit? 	 let me look after the gun for you, okay? maxlen: 15
+3024 	 you gonna help me find its mum? 	 will you help me find her mother? maxlen: 14
+3025 	 i've got better things to do with my time than run around like that. 	 i have more important things to do than deal with this shit. maxlen: 19
+3026 	 just give me the gun and i'll hide it somewhere for you, innit? 	 you give me the gun, i'll hide it somewhere, okay? maxlen: 19
+3027 	 give me the tings. 	 give me the relatives. maxlen: 9
+3028 	 what you puttin' it in there for, man? 	 why did you put it there, man? maxlen: 11
+3029 	 take it then! 	 take it! maxlen: 8
+3030 	 nah, when you're done fuckin' about, yeah, you call me, yeah? 	 no, call me when you're done with this stupid, okay? maxlen: 22
+3031 	 cos we've got fuckin' things to do, you prick, yeah? 	 'cause we got work to do, you faggot maxlen: 14
+3032 	 fuckin' daddy boy! 	 you daddy! maxlen: 7
+3033 	 get off! 	 let go! maxlen: 5
+3034 	 get off! 	 move! maxlen: 4
+3035 	 can ashley come? 	 can ashley come? maxlen: 8
+3036 	 yeah? 	 sir? maxlen: 5
+3037 	 'i've sorted it, man. 	 i got it, man. maxlen: 9
+3038 	 i'm a bit nervous to be honest, love. 	 frankly, i'm a little nervous, dear maxlen: 13
+3039 	 what you got to be nervous about? 	 why are you being nervous? maxlen: 8
+3040 	 we'll sort this out. 	 we're gonna figure this out. maxlen: 9
+3041 	 well, i was speaking to vince... 	 well, i was talking to vince... maxlen: 12
+3042 	 that's a kid whose mother doesn't want it, bruv. 	 this is a child his mother didn't want, brother maxlen: 12
+3043 	 what the fuck you doin', bruv? 	 what are you doing, brother? maxlen: 9
+3044 	 what the fuck is the matter with you, man? 	 what's your problem, man? maxlen: 10
+3045 	 what you actin' like a little bitch for? 	 why are you acting like a bitch? maxlen: 15
+3046 	 who the fuck are you, bruv, jeremy kyle? 	 who are you, my brother, jeremy kyle? maxlen: 20
+3047 	 you can't give someone's baby away! 	 you can't sell somebody's baby to some maxlen: 12
+3048 	 and to fucking vince and carol? 	 especially vince and carol. maxlen: 10
+3049 	 we were fuckin' sellin' crackwhores to him the other day! 	 the other day, we were selling junk whores to this man! maxlen: 19
+3050 	 nah, bruv, you ain't found her cos she don't wanna be found, man. 	 no, you didn't, because he doesn't want to be found, maxlen: 17
+3051 	 and they'll go and give this baby to some other vince and carol. 	 they'll give this boy to another vince and carol. maxlen: 17
+3052 	 get off me, bruv. 	 let me go, brother. maxlen: 7
+3053 	 i told you i'd sort it, man. 	 i told you i'd handle it, man. maxlen: 15
+3054 	 what am i gonna say to everybody? 	 what am i gonna tell people? maxlen: 15
+3055 	 yeah, he's all right. 	 yeah, yeah, he's maxlen: 9
+3056 	 i've got a little you can have, but don't tell anyone we were here! 	 yes, but don't tell anyone we're here! maxlen: 17
+3057 	 you're gonna have half of that and you give me the rest back. 	 just take half, give me the rest. maxlen: 13
+3058 	 i can't believe you sold a fucking baby! 	 i can't believe you sold a baby! maxlen: 15
+3059 	 you didn't want it back before, did you? 	 you didn't want it before, did you? maxlen: 11
+3060 	 if i go through all this stress, i lose my fucking money over it, everything, then you got to chat to someone proper, yeah? 	 if i'm gonna go through all this stress, i'm gonna lose the money, i'm gonna lose everything, so you need to talk to somebody straight, okay? maxlen: 48
+3061 	 nice lady. 	 a nice lady. maxlen: 5
+3062 	 i'm like, "how about fuck off?" yeah? 	 i'm like, "fuck you." maxlen: 17
+3063 	 what's goin' on there? 	 what's going on in there? maxlen: 8
+3064 	 you've been storing drugs in the pub, right? 	 you sell drugs in a bar, right? maxlen: 13
+3065 	 either you or your idiot bredren have got my fucking gun and i need it back. 	 either you or your stupid brother took my gun and i need that gun. maxlen: 25
+3066 	 you've got two hours to get me my gun back or i'm gonna burn down people's houses. 	 you got 0 hours to get my gun back, or i'll blow people's houses off. maxlen: 22
+3067 	 i'm gone. 	 i'm leaving. maxlen: 5
+3068 	 he's always spoiling things, isn't he, eh? 	 he always breaks things, doesn't he? maxlen: 11
+3069 	 what you doin' bringing that fuckin' whore in my pub with my missus upstairs? 	 when my wife's upstairs, why are you bringing this whore to my place? maxlen: 24
+3070 	 what's goin' on? 	 what's going on? maxlen: 7
+3071 	 she was turning tricks with some heavy fucking russians who got her banged up. 	 he was having trouble with a sturdy russian mafioso with everywhere. maxlen: 20
+3072 	 she thought they were gonna kill the baby. 	 he thought they were gonna kill the baby. maxlen: 11
+3073 	 so she fucking left it on the train. 	 so he left the baby on the train. maxlen: 11
+3074 	 now here's the money and i'll give you the rest of it when i get in touch with ed. 	 now, take the money and i'll give you the rest when i meet ed. maxlen: 27
+3075 	 it's not a fuckin' scam, vince, and you know it! 	 it's not a fake, vince, you know it! maxlen: 21
+3076 	 can't understand it without a cock in your mouth, can ya? 	 you can't tell without a dick in your mouth, can you? maxlen: 16
+3077 	 it's all right when it's your fuckin' cock in my mouth! 	 it's not a problem when i have your dick in my mouth maxlen: 14
+3078 	 no, she said your cock in her mouth. 	 no, he said your cock was in his mouth. maxlen: 17
+3079 	 i ain't giving them the fucking baby back! 	 i'm not giving them the baby! maxlen: 13
+3080 	 well, they ain't getting it either! 	 they can't! maxlen: 9
+3081 	 settle the fuck down, all right? 	 calm down, okay? maxlen: 9
+3082 	 right, now you, get the fuck upstairs and get the baby! 	 now get up and bring that baby! maxlen: 12
+3083 	 here! 	 here! maxlen: 3
+3084 	 it's the bucky, bruv! 	 my gun! maxlen: 5
+3085 	 just know that he died... getting you this. 	 just know that she died trying to give you this. maxlen: 14
+3086 	 they might not let you cos you ain't family. 	 they may not let you go because you have no family. maxlen: 14
+3087 	 what flowers do you reckon he'd have liked? 	 what flowers do you like, any suggestions? maxlen: 15
+3088 	 white roses are nice, innit? 	 white roses are good, aren't they maxlen: 11
+3089 	 fuck you then! 	 fuck you! maxlen: 7
+3090 	 fuck you! 	 fuck you! maxlen: 5
+3091 	 are you the owner of this vehicle? 	 are you the owner of this vehicle? maxlen: 12
+3092 	 but you lot stopped me for no reason. 	 but you stopped me for nothing. maxlen: 10
+3093 	 but not before we toast the new owner of the show, chester. 	 but before that, let's raise our glasses to the new owner, chester. maxlen: 23
+3094 	 to chester. 	 chester. maxlen: 7
+3095 	 i hope he will cherish these magnificent monsters as much as i have over these many years. 	 i hope he will shiver upon these magnificent monsters as i have for years. maxlen: 31
+3096 	 cheers. 	 cheers. maxlen: 4
+3097 	 i promise to uphold the standards of this extravaganza and do you proud. 	 i promise i'll raise the standards of this show and you'll be proud. maxlen: 30
+3098 	 safe travels to the land of make-believe. 	 have a nice trip to where dreams come true. maxlen: 15
+3099 	 good riddance. 	 thank god. maxlen: 7
+3100 	 i can't wait for the sour kraut to leave, so we can take over. 	 even if that big-faced german leaves, we'll take charge. maxlen: 19
+3101 	 marjorie, that's not... 	 marjorie, that's so shame... maxlen: 11
+3102 	 thank you, chester. 	 thank you, chester. maxlen: 10
+3103 	 and now, if you don't mind, it's time for the original family-- our troupe of monsters and curiosities-- to spend these last few moments alone together. 	 now, if you don't mind, let the main family, the community of monsters and bizarreities spend their last moments maxlen: 30
+3104 	 bye. 	 bye. maxlen: 5
+3105 	 we have another man to thank-- my manager, 	 there's someone else to thank. maxlen: 10
+3106 	 mr. richard spencer. 	 mr. richard spencer. maxlen: 8
+3107 	 he has transformed the course of all our lives. 	 our lives have completely changed their course. maxlen: 13
+3108 	 cheers! 	 cheers. maxlen: 4
+3109 	 mm! 	 mm! maxlen: 3
+3110 	 but first, tonight, we feast, and later, for entertainment, we will watch a movie from my own collection. 	 but tonight we'll have a nice dinner, and then we'll see a movie from my collection. maxlen: 34
+3111 	 not the sign of the cross again! 	 not the sign of the cross again. maxlen: 15
+3112 	 no. 	 no. maxlen: 4
+3113 	 we will enjoy freaks. 	 we'll watch freaks tonight. maxlen: 15
+3114 	 do you know that picture, richard? 	 do you know this movie, richard? maxlen: 11
+3115 	 i can't say that i do. 	 i can't say i know. maxlen: 8
+3116 	 oh, it's a wonderful picture. 	 it's a great movie. maxlen: 8
+3117 	 explain the plot to him, eve, paul. 	 tell me about it, eve, paul. maxlen: 11
+3118 	 ah. 	 ah. maxlen: 3
+3119 	 cleopatra, a "normal" trapeze artist, marries the sideshow midget. 	 cleopatra is a natural creation trapeze artist, and marries a dwarf who does small shows. maxlen: 34
+3120 	 but actually, she's trying to poison him for his inheritance. 	 but his real purpose is to poison him and put him in his legacy. maxlen: 15
+3121 	 she plays all the freaks for fools until, one day, she gets drunk and reveals her true intentions. 	 he moves all the freaks on his finger until one day he's too drunk and he's lost his true intentions. maxlen: 33
+3122 	 then the freaks turn on her. 	 then all freaks turn on him. maxlen: 11
+3123 	 they take their revenge out at night with knives and guns. 	 one night they take their revenge with knives and guns. maxlen: 16
+3124 	 eve, eve. 	 eve, eve. maxlen: 5
+3125 	 darling... don't spoil the ending for him. 	 darling... don't miss your taste. maxlen: 17
+3126 	 well, it sounds like a hit! 	 that sounds great! maxlen: 9
+3127 	 so many things to do before we head out west. 	 there's a lot to do before we head west. maxlen: 15
+3128 	 i couldn't. 	 i can't maxlen: 4
+3129 	 shut up and sit down. 	 shut up and sit down. maxlen: 8
+3130 	 you deserve this. 	 you deserve it. maxlen: 7
+3131 	 what's gotten into you? 	 what happened to you? maxlen: 8
+3132 	 come on, richard, open it. 	 come on, richard, pick up. maxlen: 9
+3133 	 i thought about you long and hard when i made this. 	 i thought you were tall when you did that. maxlen: 12
+3134 	 oh, thank goodness. 	 oh, thank god. maxlen: 9
+3135 	 well, we have had our share of patrons who felt lightheaded at the sight of our exhibits, but... we have never had anyone faint before. 	 we had some sneaky clients who saw our show, but... no one was ever loved. maxlen: 26
+3136 	 are you all right, young lady? 	 are you all right, ma'am? maxlen: 13
+3137 	 what happened to those security guards? 	 where are those security guards? maxlen: 8
+3138 	 that's good to know. 	 good to know. maxlen: 9
+3139 	 now it's your turn. 	 now it's your turn. maxlen: 7
+3140 	 jesus christ. 	 jesus christ. maxlen: 7
+3141 	 i don't even know who this is. 	 i don't even know that. maxlen: 9
+3142 	 i already told them everything... 	 i already told them everything... maxlen: 10
+3143 	 stanley. 	 stanley. maxlen: 4
+3144 	 elsa... 	 elsa... el maxlen: 4
+3145 	 come on... 	 come on... come on maxlen: 5
+3146 	 talk to them. 	 talk to them. maxlen: 5
+3147 	 hollywood! 	 hollywood! maxlen: 3
+3148 	 i'm afraid... that's all it is. 	 i'm afraid... that's all you maxlen: 12
+3149 	 just a dream. 	 just a dream. maxlen: 4
+3150 	 go ahead, spin him. 	 come on, flip it. maxlen: 10
+3151 	 aah! 	 aah! maxlen: 4
+3152 	 jesus... 	 god... god... maxlen: 4
+3153 	 no. 	 no. maxlen: 3
+3154 	 please. 	 please. maxlen: 5
+3155 	 my cousin works at the garden of allah. 	 my cousin works at garden of allah. maxlen: 14
+3156 	 but what you did you brought death into this place... and for that... you must pay. 	 but you brought death here... and you have to pay for it. maxlen: 19
+3157 	 take him down. 	 put it down. maxlen: 10
+3158 	 hurry, hurry. 	 come on, come on. maxlen: 8
+3159 	 elsa, come on, now... you and me must have a private conversation. 	 elsa, come on... we need to talk privately. maxlen: 16
+3160 	 we can come to some kind of understanding. 	 i believe we have something in common. maxlen: 15
+3161 	 so you think you can run? 	 you think you can run now? maxlen: 11
+3162 	 i'm telling the truth. 	 i'm right. maxlen: 8
+3163 	 she killed her. 	 he killed her. maxlen: 5
+3164 	 she's not who you think she is! 	 he's not who you think he is. maxlen: 10
+3165 	 and start running. 	 and start running. maxlen: 8
+3166 	 run! 	 run! maxlen: 3
+3167 	 run! 	 run! maxlen: 3
+3168 	 run! 	 run! maxlen: 3
+3169 	 just because you were raised without a father doesn't mean you get to romanticize him now that he's gone. 	 just because you grew up without a father, there's no need to romanticize the work right now because he's maxlen: 25
+3170 	 how did he die? 	 how did he die maxlen: 4
+3171 	 who killed him? 	 who killed him? maxlen: 5
+3172 	 we all did. 	 we all did. maxlen: 7
+3173 	 he broke our code. 	 he broke the rule. maxlen: 9
+3174 	 now, here. 	 now. maxlen: 3
+3175 	 come on. 	 come on. maxlen: 4
+3176 	 he was my father! 	 he was my father! maxlen: 8
+3177 	 he killed a freak! 	 he killed a freak! maxlen: 8
+3178 	 the most vulnerable among us. 	 the most fragile of us. maxlen: 11
+3179 	 well, you're gonna take her word for it? 	 you believe his word? maxlen: 11
+3180 	 that deceitful little slut? 	 this impostor whore? maxlen: 11
+3181 	 i saw my beloved ma petite in a jar with my own eyes. 	 i saw dear ma petite in a jar with my own eyes. maxlen: 25
+3182 	 i heard him confess with my own ears! 	 i heard him confess. maxlen: 16
+3183 	 and as for maggie, we'd have a lot more corpses on our hand if she hadn't come clean. 	 as for maggie, if she hadn't helped, we'd have more bodies on our hands. maxlen: 24
+3184 	 i don't forgive. 	 i won't forgive him. maxlen: 10
+3185 	 she can rot in hell, for all i care. 	 all i want is to rot in hell. maxlen: 16
+3186 	 seems to me like you need all the friends you can get right now. 	 you're gonna be friends with whoever it is you maxlen: 13
+3187 	 maggie is going to change your bandages. 	 maggie's gonna change your bandages. maxlen: 11
+3188 	 no! 	 no! maxlen: 3
+3189 	 i'll keep the dirty ones. 	 keep the dirty ones. maxlen: 7
+3190 	 now, your mother is not here to look after you, so it falls to me. 	 now that your mother isn't here, it's up to me to protect you maxlen: 19
+3191 	 i have seen you grow from a boy to a man, a man to a leader-- and we need you now. 	 i've seen you become a man and a man in your childhood-- and we need you. maxlen: 35
+3192 	 i have no hands! 	 i have no hands! maxlen: 7
+3193 	 i can't even take a piss by myself! 	 i can't even piss myself. maxlen: 11
+3194 	 i have found a old friend. 	 i got an old friend. maxlen: 10
+3195 	 he's coming to help you. 	 he'll come and help you. maxlen: 8
+3196 	 he's a true artist. 	 a real artist. maxlen: 7
+3197 	 but those wounds have to heal first. 	 but the wounds need to be healed first. maxlen: 12
+3198 	 maggie's going to help you. 	 maggie will help you. maxlen: 9
+3199 	 you let her. 	 let him. maxlen: 5
+3200 	 i'm sorry. 	 i'm so sorry. maxlen: 7
+3201 	 i hate hurting you. 	 i hate hurting you. maxlen: 13
+3202 	 oh, really? 	 really? maxlen: 5
+3203 	 i thought that was your whole gig-- to hurt people. 	 i thought that was your only talent- hurting people. maxlen: 20
+3204 	 i love you, jimmy. 	 i love you, jimmy. maxlen: 10
+3205 	 that part is real. 	 this part is real. maxlen: 5
+3206 	 it always was. 	 i always have. maxlen: 5
+3207 	 i want a clean start. 	 i want to start a new beginning. maxlen: 9
+3208 	 we can still go to new york, like we planned. 	 we can go to new york like we planned. maxlen: 16
+3209 	 why not? 	 why not? maxlen: 7
+3210 	 you're kidding, right? 	 you're kidding, right? maxlen: 10
+3211 	 you think, after everything you've done, you think we're just gonna ride off into the sunset? 	 after all you've done, do you think we're just going to sail into a new horizon? maxlen: 27
+3212 	 my hands... are in a goddamn jar, and that's all because of you. 	 my hands... are in a fucking jar, and you're the one responsible for all this. maxlen: 25
+3213 	 i am so sorry. 	 i'm so sorry. maxlen: 7
+3214 	 you're gonna bring ma petite back from the dead? 	 can you bring maite back from the dead? maxlen: 15
+3215 	 hmm? 	 huh? maxlen: 3
+3216 	 i've changed, jimmy. 	 i've changed, jimmy. maxlen: 9
+3217 	 ach! 	 ah! maxlen: 3
+3218 	 i knew you were stupid, but let's add blind to the list, huh? 	 i knew you were stupid, let's add blind to your list, shall we? maxlen: 25
+3219 	 find me someone who can focus a lamp! 	 get me someone to focus the lamp! maxlen: 14
+3220 	 i have to stick around here. 	 i can't leave this place. maxlen: 9
+3221 	 i'm gonna have correct lighting for the first time, you understand? 	 i have to set the right light for the first time, understand? maxlen: 23
+3222 	 now, try it again! 	 try again now! maxlen: 7
+3223 	 scheisse! 	 scheisse! maxlen: 7
+3224 	 elsa. 	 elsa. maxlen: 4
+3225 	 of course. 	 of course. maxlen: 5
+3226 	 she's watching us. 	 he's watching us. maxlen: 8
+3227 	 can we put her away? 	 can't we lift it? maxlen: 8
+3228 	 just this once? 	 just this once? maxlen: 7
+3229 	 please? 	 please? maxlen: 5
+3230 	 all right. 	 okay. maxlen: 4
+3231 	 yeah. 	 yeah. maxlen: 4
+3232 	 mm. 	 mm. maxlen: 3
+3233 	 oh. 	 oh. maxlen: 3
+3234 	 thank you, chester. 	 thank you, chester. maxlen: 10
+3235 	 you put me on the floor. 	 you put me down. maxlen: 7
+3236 	 like an old sock. 	 like an old sock. maxlen: 8
+3237 	 i'm sorry, marjorie. 	 i'm sorry, marjorie. maxlen: 11
+3238 	 i got a little... carried away, but i'm finally happy. 	 i got a little carried away, but i'm happy now. maxlen: 16
+3239 	 i've got them and my magic and you. 	 they have, i have magic, you are. maxlen: 14
+3240 	 maybe i should leave. 	 maybe i should go. maxlen: 10
+3241 	 we can work it out, marjorie. 	 we can manage, marjorie. maxlen: 14
+3242 	 the-the twins accept you. 	 the twins accepted you. maxlen: 12
+3243 	 they just don't want you watching us while we're, you know... 	 they just don't want you watching you do it. maxlen: 15
+3244 	 they're using you, chester. 	 they're using you, chester. maxlen: 11
+3245 	 you're the boss. 	 you're their boss now. maxlen: 8
+3246 	 no, they are not. 	 no, they don't. maxlen: 10
+3247 	 they love me. 	 they love me. maxlen: 7
+3248 	 you're a murderer. 	 you're a murderer. maxlen: 8
+3249 	 no, no. 	 no, no. maxlen: 5
+3250 	 no. 	 no. maxlen: 4
+3251 	 marjorie. 	 marjorie. maxlen: 7
+3252 	 i know you don't like to talk about it, so i don't bring it up much, but you... killed them. 	 i know you don't like to talk about it, so don't mention it, but you killed them. maxlen: 27
+3253 	 you killed alice and lucy. 	 and alice and lucy. maxlen: 13
+3254 	 that's impossible. 	 impossible. maxlen: 8
+3255 	 i'm a doll. 	 i'm just a puppet. maxlen: 10
+3256 	 hmm. 	 hmm. maxlen: 4
+3257 	 love destroys you, chester. 	 love destroys you, chester. maxlen: 11
+3258 	 you lose control. 	 you're losing control. maxlen: 7
+3259 	 well, i know... 	 i know... i maxlen: 4
+3260 	 i'm a monster. 	 i'm a monster. maxlen: 8
+3261 	 you don't need them. 	 you don't need them. maxlen: 8
+3262 	 you have me. 	 i'm in. maxlen: 5
+3263 	 i know. 	 i know. maxlen: 4
+3264 	 just please don't ever leave me, marjorie. 	 please don't leave me, marjorie. maxlen: 15
+3265 	 those twins? 	 the twins? maxlen: 8
+3266 	 they have to go. 	 they have to go. maxlen: 5
+3267 	 i know. 	 i know. maxlen: 4
+3268 	 they will. 	 they will. maxlen: 5
+3269 	 ethel looks so glamorous in this one with all her chorus girls. 	 ethel here looks great with the chorus girls. maxlen: 14
+3270 	 oh, that was from her barnum days. 	 oh, this is her barnum day. maxlen: 12
+3271 	 she really was a dame like no other. 	 she was a very unique woman. maxlen: 9
+3272 	 to ethel. 	 to ethel. maxlen: 7
+3273 	 to ethel. 	 to ethel. maxlen: 7
+3274 	 what are you saying? 	 so what do you say? maxlen: 9
+3275 	 didn't any one hear what that creep spencer said last night? 	 did anyone hear what spencer said last night? maxlen: 17
+3276 	 it finally makes sense. 	 now it's all settled. maxlen: 9
+3277 	 elsa killed ethel. 	 elsa killed ethel. maxlen: 12
+3278 	 the woods. 	 forest. maxlen: 3
+3279 	 the car crash. 	 car accident. maxlen: 5
+3280 	 it was all a cover-up. 	 it was all a setup. maxlen: 7
+3281 	 i believe it. 	 i believe that. maxlen: 7
+3282 	 she put a knife in my paul, that crazy, vindictive woman. 	 that crazy, vindictive woman threw a knife at my paul maxlen: 17
+3283 	 all elsa cares about is elsa. 	 all elsa cares about is elsa. maxlen: 11
+3284 	 the whole business never sat right with me. 	 i couldn't sit on my head anyway. maxlen: 15
+3285 	 i know ethel. 	 i know ethel. maxlen: 10
+3286 	 she wasn't a one to off herself. 	 he wasn't someone to kill maxlen: 8
+3287 	 she wasn't a coward. 	 he's not a maxlen: 5
+3288 	 she wouldn't have done that to her kid, and she wouldn't have done it to us. 	 he wouldn't do that to his own child, and he wouldn' maxlen: 17
+3289 	 and she would have bloody well left a note. 	 and he'd leave a straight note. maxlen: 11
+3290 	 we know what we do when people come after one of our own. 	 if someone comes after one of us, we'll know what to do. maxlen: 23
+3291 	 there's only one way to secure our future. 	 there's only one guarantee of our future. maxlen: 13
+3292 	 make sure elsa doesn't have one. 	 whether elsa lives or not. maxlen: 11
+3293 	 did you ever imagine that it would feel like that, dot? 	 did you ever imagine how you could feel, dot? maxlen: 19
+3294 	 and thank goodness you said something about marjorie. 	 thank god you told us about marjorie. maxlen: 17
+3295 	 to his credit, all he needed was that little nudge. 	 all he had to do was push him. maxlen: 12
+3296 	 i do seriously believe we're a good influence on him. 	 i think we've certainly made good contact with you. maxlen: 15
+3297 	 good evening girls. 	 good evening, girls. maxlen: 10
+3298 	 what are you doing here? 	 what are you doing here? maxlen: 8
+3299 	 i come hat in hand in friendship. 	 i'm here to extend the friendly x-tindol. maxlen: 14
+3300 	 i have some relevant information about your current... situation. 	 i have some information about your recent safety. maxlen: 16
+3301 	 we don't want to hear anything from you. 	 we don't want to hear anything from you. maxlen: 12
+3302 	 kindly leave. 	 leave nicely. maxlen: 8
+3303 	 oh, dot, i don't blame you. 	 oh, dot, i can't blame you. maxlen: 15
+3304 	 i behaved like an absolute jackass that last day, when all seemed lost. 	 i acted horrible the other day. maxlen: 13
+3305 	 but recent events have softened some of my coarser edges. 	 but the recent events made me soften my hard parts. maxlen: 16
+3306 	 mother died. 	 i lost my mom. maxlen: 7
+3307 	 it was sudden and... just horrible. 	 it was so sudden and... terrible. maxlen: 12
+3308 	 i'm very sorry, dandy. 	 she's very upset, dandy maxlen: 9
+3309 	 it's a big sorrow for anyone, losing their mother. 	 it's terrible for everyone to lose a mother. maxlen: 21
+3310 	 it was. 	 it was. maxlen: 5
+3311 	 it is. 	 yeah. maxlen: 3
+3312 	 and it made me realize that i need to reach out to the few that matter to me. 	 and it made me feel like i shouldn't let my loved ones go. maxlen: 22
+3313 	 i think you should know, we met a man. 	 but i think you should know we're seeing a man. maxlen: 20
+3314 	 truthfully, i'd already heard the news. 	 actually, i got your news. maxlen: 10
+3315 	 i can't tell you how sublime it would have been to have taken your hands in marriage. 	 you have no idea what a glorious situation it would be to marry you. maxlen: 25
+3316 	 if i had it all to do over again, believe me, i... 	 believe me if i had the chance to do everything... maxlen: 15
+3317 	 i come in friendship. 	 i came with friendly feelings. maxlen: 10
+3318 	 i'm well aware that i missed my chance. 	 i know i lost my chance. maxlen: 12
+3319 	 i'm not half the man you deserve. 	 i'm not half the man you deserve. maxlen: 13
+3320 	 but i asked myself, 	 but i asked myself. maxlen: 9
+3321 	 "dandy, what could you do to be of support to those beloved girls?" 	 "daddy, what do you have to do to support the girls you love so much?" maxlen: 22
+3322 	 and it occurred to me, the one thing i can offer is protection, so i hired a proper gumshoe, and gathered all the information i could on your new beau. 	 then it occurred to me that i could protect you, and i hired a proper man so he could gather information about your new friend. maxlen: 41
+3323 	 and it breaks my heart, but it appears your chester creb is an absolutely beastly sicko! 	 it broke my heart because your chester creb is a complete freak! maxlen: 23
+3324 	 we don't need to see that. 	 we don't need to look at these. maxlen: 10
+3325 	 what is wrong with you? 	 what is wrong with you? maxlen: 8
+3326 	 you are a troublemaker, and we don't trust you, not one single bit! 	 you're a pain in the ass, and we don't trust you as much as our sin. maxlen: 23
+3327 	 well, ta-ta, then. 	 ta-ta then. maxlen: 8
+3328 	 i've done what i can. 	 i did my best. maxlen: 10
+3329 	 mother always told me, never argue with a woman when she's angry. 	 my mother always said to argue with a woman when she was angry. maxlen: 16
+3330 	 who's there? 	 who is it? maxlen: 4
+3331 	 my boy. 	 son. maxlen: 4
+3332 	 here. 	 here. maxlen: 3
+3333 	 drink. 	 drink. maxlen: 5
+3334 	 what's that? 	 what is that? maxlen: 5
+3335 	 penicillin. 	 penicillin. maxlen: 7
+3336 	 i would hate to make you whole only to see you die of an infection. 	 i'd hate to see you die of an infection when we say we complete you. maxlen: 23
+3337 	 who the hell are you? 	 who are you? maxlen: 7
+3338 	 i am massimo dolcefino. 	 my name is massimo dolcefino. maxlen: 11
+3339 	 i have come to make you your new hands, hmm? 	 i came to make you your new hands. maxlen: 11
+3340 	 okay? 	 okay? maxlen: 4
+3341 	 massimo is an old friend of mine from before the war. 	 massimo is an old friend of mine from before the war. maxlen: 15
+3342 	 he's a master artisan. 	 he is the master of his art. maxlen: 8
+3343 	 no, thanks. 	 no, thank you. maxlen: 7
+3344 	 i seen those army guys who got their hands blown off by grenades. 	 i saw soldiers with grenades on their hands. maxlen: 14
+3345 	 they got those nifty hooks. 	 they put those cool hooks on their hands. maxlen: 14
+3346 	 can't jerk off for shit with them, but at least i can hold a cigarette all myself. 	 i can't get 00 but at least i can keep my cigarettes on my own. maxlen: 23
+3347 	 and it beats worrying about termites the rest of my life. 	 and i don't have to be afraid of the wooden dryers for the rest of my maxlen: 21
+3348 	 what massimo offers is more elegant than a pair of rusty hooks. 	 massimo offers you something more elegant than pancakes. maxlen: 21
+3349 	 and more convincing. 	 more convincing. maxlen: 7
+3350 	 look. 	 look. maxlen: 3
+3351 	 you see? 	 see? maxlen: 5
+3352 	 the other one, too. 	 so is the other one maxlen: 5
+3353 	 massimo saved my life. 	 massimo saved my life. maxlen: 10
+3354 	 your mother would have died in that drunk tank and you would have starved on the street. 	 your mother would die of booze and leave you hungry on the street. maxlen: 24
+3355 	 i would have married him if you hadn't been such a fool. 	 i could have married her if you weren't so stupid maxlen: 16
+3356 	 "my only sin..." 	 "my one sin..." maxlen: 9
+3357 	 si. 	 si. maxlen: 3
+3358 	 "...was loving you..." 	 he loved you... maxlen: 11
+3359 	 too much. 	 very much and very maxlen: 4
+3360 	 no! 	 no! maxlen: 4
+3361 	 they were members of the party. 	 they were members of an organization. maxlen: 10
+3362 	 and they had a leader-- a doctor by trade. 	 and the leaders were a doctor. maxlen: 15
+3363 	 _ 	 now get to the other one, don't rush this time. maxlen: 16
+3364 	 for two years, 	 two years, two years, two years maxlen: 8
+3365 	 massimo took care of me. 	 massimo took care of me. maxlen: 10
+3366 	 he taught me to walk. 	 she taught me to walk. maxlen: 9
+3367 	 and then to dance. 	 and dance. maxlen: 5
+3368 	 then hindenburg died. 	 then hindburg fell. maxlen: 8
+3369 	 nuremberg, the rhineland... 	 nuremberg, rhineland... maxlen: 11
+3370 	 it was time for us to get out while we still could. 	 we were supposed to escape while we still had the chance. maxlen: 14
+3371 	 we had a plan. 	 we had a plan. maxlen: 8
+3372 	 how could i look at my amore in the eyes knowing that i'd run away from those monsters? 	 how could i look into my love's eyes when i knew those monsters were free? maxlen: 21
+3373 	 they had to pay. 	 they had to pay. maxlen: 8
+3374 	 i hunted them down, one by one. 	 i hunted them down one by one. maxlen: 10
+3375 	 aah! 	 aah! maxlen: 4
+3376 	 finally, i-i found the leader. 	 finally, i reached the leader. maxlen: 10
+3377 	 uh, the monster-in-chief. 	 oh, the beasts. maxlen: 10
+3378 	 dr. hans grouper. 	 dr. hans grouper. maxlen: 7
+3379 	 i would make sure that he would not die quickly. 	 there should be no painless death. maxlen: 10
+3380 	 and i would not die quickly either, apparently. 	 obviously my death wouldn't be painless either. maxlen: 15
+3381 	 he took my attempt to kill him personally. 	 he took me too personal to want to kill him. maxlen: 11
+3382 	 very personally. 	 very personal. maxlen: 7
+3383 	 so he tortured me. 	 he tortured me. maxlen: 7
+3384 	 then he put me in a cell and he tortured me again, and again. 	 he put me in a cell and tortured me again, and again. maxlen: 19
+3385 	 how did you survive? 	 how did you survive? maxlen: 5
+3386 	 so i spent the rest of the war in austria. 	 i lived in austria until the end of the war. maxlen: 12
+3387 	 and, uh, i went to america in-in '00. 	 then i came to america- at 00. maxlen: 12
+3388 	 and i searched for miss mars for years. 	 and i called miss mars for years. maxlen: 13
+3389 	 but i did not hear back. 	 but i didn't get any answers maxlen: 9
+3390 	 well, if you loved her so much, and you knew where she was, why not just sweep her off her feet? 	 if you loved her so much, and you knew where she was, why didn't you just walk out on your feet maxlen: 26
+3391 	 my body survived the torture, but i... 	 my body survived the torture, but... my body maxlen: 11
+3392 	 i am like pinocchio. 	 i was like a pinocchio. maxlen: 9
+3393 	 i have no humanity left in me anymore. 	 i had no humanity left in me. maxlen: 17
+3394 	 but, uh... 	 but, uh... maxlen: 5
+3395 	 sweet irony. 	 beautiful irony. maxlen: 5
+3396 	 sweet irony. 	 beautiful irony. maxlen: 5
+3397 	 nowi know you've been together for a long time and change can be difficult for an established show. 	 i know you've been together a long time, and it might be hard to change for a sit-down show. maxlen: 26
+3398 	 and again-- this is not about ego, all right? 	 and i repeat- this has nothing to do with ego. maxlen: 17
+3399 	 this is about flow, so... 	 for this continuity... this continu maxlen: 7
+3400 	 he looks so normal. 	 he looks so normal. maxlen: 7
+3401 	 i thought we agreed that we wouldn't judge him until we had definitive proof. 	 i don't think we can judge him if we don't have absolute proof. maxlen: 20
+3402 	 what about the file? 	 what about the file? maxlen: 7
+3403 	 it said he murdered his wife. 	 it says he killed his wife. maxlen: 9
+3404 	 you're letting dandy's lies cloud your judgment. 	 you let dandy's lies cloud your judgement. maxlen: 22
+3405 	 dot and i have had a talk. 	 dot and i have something to say. maxlen: 15
+3406 	 we don't care to be your assistant any longer. 	 we don't want to be your assistant any maxlen: 10
+3407 	 why? 	 why? maxlen: 3
+3408 	 we just... don't wish to. 	 we just... don't want to. maxlen: 9
+3409 	 maybe you'll change your mind after you hear about my finale. 	 maybe when you hear my final, you'll change your mind maxlen: 14
+3410 	 two bodies for two heads. 	 two bodies, two heads. maxlen: 11
+3411 	 it'll be a sensation. 	 it's gonna be a maxlen: 7
+3412 	 a first in the history of magic. 	 a first in the history of magic. maxlen: 10
+3413 	 come on, girls... let's do a little rehearsal. 	 come on, girls... let's rehearse maxlen: 12
+3414 	 we are not getting into that box. 	 we're not going in that box. maxlen: 11
+3415 	 no, chester... we are not getting into that box. 	 no, chester... we're not going in that box. maxlen: 16
+3416 	 now, if you'll excuse us... 	 now excuse me... maxlen: 8
+3417 	 i'll do it. 	 i will. maxlen: 5
+3418 	 you... 	 you... you maxlen: 3
+3419 	 i can be your assistant. 	 i can be your assistant. maxlen: 7
+3420 	 right. 	 yeah. maxlen: 3
+3421 	 get in the box, lucy. 	 get in the box, lucy. maxlen: 9
+3422 	 my name's maggie. 	 my name is maggie maxlen: 5
+3423 	 oop! 	 oop! maxlen: 4
+3424 	 is this your magic act? 	 is this your magic show? maxlen: 9
+3425 	 it's a little pathetic. 	 it looks a little pathetic. maxlen: 9
+3426 	 shut up. 	 shut up. maxlen: 5
+3427 	 i didn't say anything. 	 i didn't say anything. maxlen: 9
+3428 	 what are you all looking at? 	 what are you looking at? maxlen: 9
+3429 	 backstage. 	 backstage. maxlen: 5
+3430 	 originally called the magic saw. 	 originally called the magical saw. maxlen: 12
+3431 	 tonight i will be presenting it to you with my own... dangerous variation. 	 tonight, you will watch a very dangerous version of me. maxlen: 20
+3432 	 manacles. 	 handcuffs. maxlen: 7
+3433 	 hey, i... 	 hey, i... maxlen: 5
+3434 	 i don't-i don't know this part. 	 i don't know this part. maxlen: 8
+3435 	 i went to a war for you. 	 i went to war for you. maxlen: 10
+3436 	 you should have died over there. 	 you should have died there. maxlen: 10
+3437 	 we loved each other. 	 we loved each other. maxlen: 9
+3438 	 then you had to come back with your metal plate and your head full of bees. 	 and you came back with a metal plate in your head and a buzzing bees in your head. maxlen: 26
+3439 	 chester, stop, i-i can't pull my my feet through! 	 chester, stop, i can't move my feet! maxlen: 15
+3440 	 stop... 	 stop! maxlen: 3
+3441 	 stop talking. 	 stop talking! maxlen: 5
+3442 	 you're distracting me. 	 you're distracting me. maxlen: 9
+3443 	 stop it, marjorie. 	 stop, marjorie. maxlen: 9
+3444 	 haven't you done enough to ruin my life? 	 haven't you ruined my life enough? maxlen: 13
+3445 	 you're nothing without me. 	 you're nothing without me. maxlen: 8
+3446 	 i'll show you. 	 i'll show you. maxlen: 9
+3447 	 every one of you. 	 all of you. maxlen: 5
+3448 	 chester! 	 chester! maxlen: 4
+3449 	 chester! 	 chester! maxlen: 4
+3450 	 chester, stop! 	 chester, stop! maxlen: 7
+3451 	 what the bloody hell? 	 what are you doing? maxlen: 7
+3452 	 relax, folks... it's just a magic show. 	 relax, people... it's just a magic show. maxlen: 13
+3453 	 it's a magic show. 	 magic show. maxlen: 7
+3454 	 i can put her back together. 	 i can call him back. maxlen: 10
+3455 	 i can put her... 	 again... over maxlen: 3
+3456 	 alakazam! 	 alakazam! maxlen: 7
+3457 	 abraca... 	 abraza abra maxlen: 5
+3458 	 abracadabra. 	 abracadabra. maxlen: 8
+3459 	 that'll pack 'em in, chester. 	 that's gonna be a lot of people, chester maxlen: 12
+3460 	 she made me do it. 	 he made me do this. maxlen: 8
+3461 	 she had it coming. 	 he deserved it. maxlen: 5
+3462 	 what do we do now? 	 what do we do now? maxlen: 8
+3463 	 steal her jewelry and bury the bitch. 	 steal their jewels and bury the bitch. maxlen: 15
+3464 	 why are you packing? 	 why are you packing? maxlen: 8
+3465 	 you screwed up again. 	 you ruined everything again. maxlen: 9
+3466 	 time to leave. 	 time to go. maxlen: 8
+3467 	 you confused me. 	 you confused me. maxlen: 8
+3468 	 you did this on purpose, to sabotage me. 	 you did it consciously to sabotage me. maxlen: 14
+3469 	 i was finally happy. 	 i finally found happiness. maxlen: 11
+3470 	 i'm leaving! 	 i'm leaving. maxlen: 5
+3471 	 not without me, you're not. 	 you can't leave without me. maxlen: 8
+3472 	 oh. 	 oh. maxlen: 3
+3473 	 i loved you. 	 i loved you. maxlen: 9
+3474 	 chester... 	 chester... chester... maxlen: 4
+3475 	 oh, god... 	 oh, god... maxlen: 7
+3476 	 marjorie? 	 marjorie? maxlen: 7
+3477 	 stay with me. 	 stay with me. maxlen: 5
+3478 	 marjorie. 	 marjorie. maxlen: 7
+3479 	 inhisdebutact as a juggler, please welcome your favorite lobster boy-- and my precious son-- 	 in the interest of elsa, dayton, ohio, 0000 there's your favorite child-lover-lover-lover-lover-lover-lover-lover-lover-boy, my favorite son-of-a-boy, your favorite son, and your maxlen: 62
+3480 	 jimmy darling! 	 jimmy darling! maxlen: 7
+3481 	 i'm not a performer like you, ma. 	 i'm not a stage artist like you, mom maxlen: 11
+3482 	 listen to your ma. 	 listen to your mother. maxlen: 7
+3483 	 you got a winning smile and a winsome way. 	 you have a very good smile and a wonderful weather. maxlen: 17
+3484 	 you got star quality, jimmy. 	 you're star quality, jimmy. maxlen: 11
+3485 	 now you get your ass out there and you show 'em why your ma is so proud of you. 	 now get your ass out there and show your mother why you're so proud of you. maxlen: 25
+3486 	 jimmy. 	 jimmy. maxlen: 4
+3487 	 maggie's dead. 	 maggie's dead maxlen: 5
+3488 	 you want the details? 	 you want the details? maxlen: 8
+3489 	 elsa's next. 	 elsa's next. maxlen: 7
+3490 	 tonight. 	 tonight. maxlen: 4
+3491 	 well... looks like... you get a shot at a normal life now. 	 looks like... you'll have a chance... in real life maxlen: 14
+3492 	 jimmy... 	 jimmy... jimmy... maxlen: 4
+3493 	 i'm happy for you. 	 good for you. maxlen: 9
+3494 	 how dare you come in here unannounced. 	 how dare you come in without warning! maxlen: 13
+3495 	 what do you want? 	 what do you want? maxlen: 8
+3496 	 you need to leave. 	 you have to go. maxlen: 5
+3497 	 they have been plotting their revenge all day in ethel's caravan. 	 they've been planning revenge all day on ethel's trailer maxlen: 17
+3498 	 they're gonna kill you. 	 they'll kill you. maxlen: 8
+3499 	 why should i believe you, huh? 	 why should i believe you, huh? maxlen: 12
+3500 	 my monsters love me. 	 my monsters love me. maxlen: 9
+3501 	 i'm like their mother. 	 i'm like their mother. maxlen: 9
+3502 	 ethel was more a mother to them than you ever were. 	 ethel was more like mothers than you. maxlen: 13
+3503 	 you murdered their true mother. 	 you killed their real mother. maxlen: 9
+3504 	 rantings of a desperate man. 	 the last of a desperate man's bullshit maxlen: 13
+3505 	 who's desperate now? 	 who's desperate now maxlen: 7
+3506 	 you saw what they did to him. 	 you saw what they did to him. maxlen: 9
+3507 	 but where will i go? 	 but where do i go? maxlen: 8
+3508 	 anywhere but here. 	 anywhere but here. maxlen: 9
+3509 	 you would save me. 	 you could have saved me. maxlen: 8
+3510 	 now we're even. 	 we just did. maxlen: 8
+3511 	 there you are. 	 there you are. maxlen: 8
+3512 	 how's jimmy doin'? 	 what's jimmy doing? maxlen: 8
+3513 	 he'd be here if he could. 	 he'd be here if he could. maxlen: 14
+3514 	 it's time. 	 it's time maxlen: 4
+3515 	 give me that. 	 give me that. maxlen: 7
+3516 	 ethel! 	 ethel! maxlen: 4
+3517 	 let's get our girl... some justice. 	 let's get some... justice. maxlen: 13
+3518 	 oh. 	 oh. maxlen: 3
+3519 	 thank you for coming. 	 thank you for coming. maxlen: 10
+3520 	 i never refuse a lady in distress. 	 i would never deny a woman in trouble. maxlen: 12
+3521 	 i'm not in distress. 	 i'm not in trouble. maxlen: 7
+3522 	 but i am in a rush. 	 but i'm in a hurry maxlen: 8
+3523 	 oh. 	 oh. maxlen: 3
+3524 	 i'd like to report a murder. 	 i want to report a murder. maxlen: 9
+3525 	 whose murder? 	 who was murdered? maxlen: 4
+3526 	 a young lady. 	 a young woman. maxlen: 5
+3527 	 set it down. 	 leave it here. maxlen: 8
+3528 	 slowly. 	 slowly. maxlen: 4
+3529 	 keep-keep your hands where i can see 'em. 	 put your hands where we can see them. maxlen: 12
+3530 	 i did it. 	 i did it. maxlen: 5
+3531 	 send me to the chair! 	 send me an ida. maxlen: 9
+3532 	 what are you doing here? 	 what are you doing here? maxlen: 8
+3533 	 i'm here to take inventory. 	 i came to count. maxlen: 7
+3534 	 i'm your new owner. 	 i'm the new owner. maxlen: 8
+3535 	 where's elsa? 	 where's elsa maxlen: 5
+3536 	 she's gone. 	 he's maxlen: 3
+3537 	 off to follow her dreams. 	 he went after his dreams. maxlen: 8
+3538 	 elsa sold us again. 	 elsa sold us again. maxlen: 10
+3539 	 for $00,000 in cash. 	 $00,000 in cash. maxlen: 7
+3540 	 a pittance. 	 nothing. maxlen: 5
+3541 	 everything here, including your contracts, belongs to me now. 	 everything here, including your contracts, is now mine. maxlen: 17
+3542 	 and i want to see what's mine. 	 and i want to see what's mine. maxlen: 12
+3543 	 has it always been a dream of yours, sir? 	 was this always your dream, sir? maxlen: 15
+3544 	 to be in show business? 	 to be in show business? maxlen: 7
+3545 	 a dream. 	 dream. maxlen: 3
+3546 	 yes. 	 yeah. maxlen: 4
+3547 	 and now it's come true. 	 and now it's come true. maxlen: 10
+3548 	 i'm thirsty. 	 i'm thirst maxlen: 5
+3549 	 fetch me a lemonade with a paper straw. 	 go get me a lemonade with a straw. maxlen: 14
+3550 	 right away, sir. 	 yes, sir. maxlen: 9
+3551 	 are you ready? 	 are ready? maxlen: 8
+3552 	 yes. 	 yeah. maxlen: 4
+3553 	 they're perfect. 	 they're perfect. maxlen: 7
+3554 	 i want to try them on now. 	 i want to try it now. maxlen: 8
+3555 	 yes. 	 sure. maxlen: 3
+3556 	 one more. 	 the other one maxlen: 3
+3557 	 you do it. 	 you take it. maxlen: 4
+3558 	 thank you. 	 thank you. maxlen: 8
+3559 	 but jesse james gets away and goes into hiding for two years. 	 but jesse james escaped and hid for two years. maxlen: 16
+3560 	 in the great plains, the united states military looks to defeat the armies of sitting bull and crazy horse and secure the gold in the black hills of south dakota. 	 in the greatness, the united states army was looking to defeat the armies of sitting bull and crazy horse and take the gold in the black hills of south dakotas. maxlen: 47
+3561 	 but after they're defeated at the battle of little bighorn, the u.s. government sees the extermination of the buffalo as a way of starving the lakota nation into submission. 	 after the defeat of the battle of little bighorn, the united states government destroyed the buffalo chose to starve the lakota people out of hunger and submission. maxlen: 44
+3562 	 hold the line! 	 hold the line! maxlen: 7
+3563 	 but despite winning small battles against the u.s. army, the struggles for the indians are only getting worse. 	 but despite their little battles against the united states army, the fighting of the indians was getting worse. maxlen: 27
+3564 	 lakota leaders sitting bull and crazy horse are running out of options. 	 the lakota leaders were running out of options for the bull and crazy horse. maxlen: 25
+3565 	 _ 	 you're a man with a strong heart. maxlen: 10
+3566 	 _ 	 but i'm tired. maxlen: 9
+3567 	 _ 	 we'll see you. maxlen: 7
+3568 	 the native americans pressed on despite the violence and the decimation of their tribes and their culture. 	 the americans didn't give up despite the destruction of their tribes and the violence they saw. maxlen: 25
+3569 	 this is just this moment of extreme opportunity to just go out there and strike it rich. 	 to go there in those times, it was to get the chance to be rich. maxlen: 24
+3570 	 and a lot of men and women were able to do that. 	 many women and men have tried their luck. maxlen: 13
+3571 	 as gold pours into the economy, the u.s. is the first country to pull itself out of the global depression. 	 the united states became the first country to save itself from global depression when it came to the economy. maxlen: 22
+3572 	 the solution is found in the west. 	 the solution was found in maxlen: 5
+3573 	 there were lots of cattle in texas on the border of mexico for a long time. 	 there's been lots of cattle in texas on the mexican border for a long time. maxlen: 20
+3574 	 but it wasn't until the railroads that they could be moved out to the plains and shipped from there to hungry people in the east. 	 but until the railroad was completed, they couldn't be carried out in the plains and taken to hungry people in the east maxlen: 27
+3575 	 cattle that would sell for ten dollars a head in texas are worth forty dollars a head on the east coast. 	 the cattle in texas for $00 were sold for $00 on the east coast for $00. maxlen: 24
+3576 	 cattle barons buy up huge tracts of grazing land stretching from kansas to california. 	 the cattle barons have taken up most of the nailing area from kansas to california. maxlen: 25
+3577 	 those land grabs presented unbelievable opportunities. 	 the landlords gave tremendous opportunities. maxlen: 15
+3578 	 we're talking about sometimes millions of acres, of these farms, and thousands and thousands of head of cattle. 	 we're talking about millions of acres, farms on them, thousands and thousands of major animals. maxlen: 29
+3579 	 and in the territory of new mexico, one cattle rustler will become one of the most notorious men in the west. 	 one of the cattle thieves in the new mexico district was going to turn into one of the men who'd been renowned for the west. maxlen: 32
+3580 	 his story begins 0,000 miles to the east. 	 his story started 0,000 miles east. maxlen: 9
+3581 	 billy never knew his father. 	 billy never knew his father. maxlen: 10
+3582 	 in the early 0000s, he and his mother move to new mexico. 	 in the early 0000s, he and his mother moved to new mexico. maxlen: 17
+3583 	 for years he wanders without direction. 	 for years he's been wandering aimlessly maxlen: 12
+3584 	 what'll you have? 	 what do you want? maxlen: 5
+3585 	 whiskey. 	 whiskey. maxlen: 4
+3586 	 leave the bottle. 	 leave the bottle. maxlen: 5
+3587 	 there were all kinds of cowboys. 	 there were different kinds of cowbo maxlen: 8
+3588 	 always sat in the corner. 	 always sitting on the corner. maxlen: 9
+3589 	 those are the ones you had to watch out for. 	 that's all you had to watch out for. maxlen: 11
+3590 	 to get by, billy turns to the one thing he can do best. 	 billy used what he did best to make it through. maxlen: 14
+3591 	 billy the kid was superb with a gun. 	 billy the kid was a very good weapon. maxlen: 12
+3592 	 he used every spare dollar he had to buy ammunition for practice. 	 he spent every dollar he ever made for practical purposes. maxlen: 16
+3593 	 and in those kinds of environment, the tough are the ones that survive. 	 in a place like this, only the strong survive. maxlen: 12
+3594 	 where are ya headed? 	 where are you going? maxlen: 8
+3595 	 into lincoln. 	 to lincoln. maxlen: 9
+3596 	 i'm just rounding up some strays. 	 just passing through here. maxlen: 7
+3597 	 those cattle you have belong to john tunstall. 	 these cattle belong to john tunstall. maxlen: 13
+3598 	 well, then john tunstall can come and take them back himself. 	 then john tunstall can come and get their cattle back. maxlen: 16
+3599 	 be in your best interest to let me get on my way. 	 you'd better let me go. maxlen: 14
+3600 	 that's not how this works. 	 i don't think so. maxlen: 8
+3601 	 doesn't look like you have much of a choice. 	 i don't think you have a choice maxlen: 9
+3602 	 young cattle thief billy the kid has just been captured by a local rancher he tried to steal from. 	 young cattle thief billy the kid caught by a farm owner he tried to steal his cattle. maxlen: 27
+3603 	 most men shoot cattle rustlers on the spot. 	 most people hit cattle thieves where they see them. maxlen: 16
+3604 	 you still haven't told me who you're workin' for. 	 you still haven't told me who you're maxlen: 11
+3605 	 i don't work for anyone. 	 i don't work for anyone. maxlen: 9
+3606 	 son, in lincoln county, everybody works for somebody. 	 everyone in lincoln county works for somebody, son. maxlen: 16
+3607 	 yeah... well... not me. 	 yeah, but i don't work. maxlen: 11
+3608 	 you strike me as a man used to gettin' what he wants. 	 you look like a man who's used to buying me what maxlen: 14
+3609 	 you got that right. 	 you're right. maxlen: 5
+3610 	 only thing about that is... so am i. 	 there's only one problem that i am. maxlen: 12
+3611 	 you got a lot of men. 	 you have many men. maxlen: 7
+3612 	 you got room for one more? 	 you got room for one more? maxlen: 10
+3613 	 when billy the kid came to lincoln, he needed a job. 	 when billy the kid came to lincoln, he needed work. maxlen: 17
+3614 	 john tunstall happened to need cowboys. 	 john tunstall needed cowboys. maxlen: 14
+3615 	 john henry tunstall has come to the west to make a fortune. 	 john tunstall came to the west to make a fortune. maxlen: 17
+3616 	 and he settles on lincoln county, where he can make a lot of money. 	 he moved into lincoln county where he could make money. maxlen: 13
+3617 	 but with his success, he's upset some very powerful men. 	 but the success pissed off some powerful men. maxlen: 12
+3618 	 lincoln was the wildest of the wild west. 	 lincoln was one of the wildest places in the wild west. maxlen: 17
+3619 	 "the house" controls everything from cattle prices, land holdings and government positions. 	 he had everything under ev's control, from the price of cattle, land and government officials. maxlen: 26
+3620 	 even the law is on their payroll. 	 even the lawmen pay them. maxlen: 15
+3621 	 in fact, a lot of people that lived in lincoln really looked at them as oppressors. 	 in fact, most of the people who lived in lincoln saw them as bully. maxlen: 22
+3622 	 and john henry tunstall arrives to kind of horn in on the monopoly that the house has had for a long time. 	 john tunstall came to town and stuck his nose in the beef with the ev's monopoly for a long time. maxlen: 32
+3623 	 there was no in between. 	 no one would have been neutral. maxlen: 9
+3624 	 so, once billy accepted that job with john henry tunstall, he was gonna be tunstall's man. 	 billy went to work with john henry tunstall and became tunstall's man. maxlen: 25
+3625 	 over the next few months, the young outlaw becomes tunstall's most trusted gunslinger. 	 in a few months, young outlaw became the most trusted gunman in tunstall. maxlen: 21
+3626 	 and for the first time, it feels like this orphan of the west has a home. 	 for the first time in your life, the younger orphan felt like home in the west. maxlen: 20
+3627 	 tunstall was a mentor to billy the kid. 	 tunstall was a mentor to billy the kid. maxlen: 16
+3628 	 put your plate over here, billy. 	 give me your plate, billy. maxlen: 8
+3629 	 thanks. 	 thank you. maxlen: 7
+3630 	 i'm starved. 	 i'm starving. maxlen: 8
+3631 	 it doesn't get any better than this, son. 	 everything's going great, kid. maxlen: 11
+3632 	 good to have you on board. 	 i'm glad you're here. maxlen: 11
+3633 	 thank you. 	 thank you. maxlen: 7
+3634 	 if you think about it, billy had been scraping by. 	 billy was always barely getting along. maxlen: 12
+3635 	 he was looked at by most people as riffraff. 	 he was seen by many people as a foot suit. maxlen: 12
+3636 	 for a young man of billy's age, that was incredible, that was life-changing. 	 for a young man billy's age, it was incredible and changing life. maxlen: 22
+3637 	 while billy the kid is now a part of the burgeoning cattle industry that's fueling america's growth... several hundred miles to tth, one man is doing everything he can to hold off western expansion. 	 while billy the kid is now part of the cattle industry which is fueling as america grows, a few hundred miles to stop expanding west. maxlen: 53
+3638 	 easy, boys. 	 take it easy, gu maxlen: 5
+3639 	 _ 	 i extend my left hand as a friendship suggestion. maxlen: 15
+3640 	 but the realit if he didn't do that, most of us wouldn't be here. 	 if he hadn't done that most of us wouldn't be here today. maxlen: 20
+3641 	 we would've died fighting instead of going to the reservation. 	 we would have died fighting instead of going to the reservation. maxlen: 14
+3642 	 when they put us on the reservations, reay kinda took the spirit out of a lot of people. 	 when they put us on the reservation, they actually took the human spirit. maxlen: 16
+3643 	 he trusts in me. 	 he trusts me. maxlen: 5
+3644 	 he speaks through me. 	 he's talking to me maxlen: 7
+3645 	 the lord, the savior. 	 god, messiah. maxlen: 8
+3646 	 it's a policy known as "assimilation." 	 this policy is known as "promotion." maxlen: 13
+3647 	 but i think they wanted us to change to protect themselves. 	 but i think they wanted to make us capable of protecting ourselves. maxlen: 23
+3648 	 they had a saying in the military... 	 there was a word used in the military. maxlen: 10
+3649 	 "kill the indian and save the man." 	 "kill the indian and protect the human." maxlen: 12
+3650 	 which is, basically, to take his culture away and you'll be a better person. 	 if you destroy the indians' cultures, you'll become a better man. maxlen: 22
+3651 	 they thought we were savages. 	 they thought we were savages. maxlen: 11
+3652 	 now the proud lakota warrior knows he needs to stand up for his people once again. 	 the proud lakota warrior knew he had to stand up again for his people. maxlen: 19
+3653 	 "my people are not happy here. 	 i'm not happy here." i'm maxlen: 10
+3654 	 i am not happy here." 	 "i'm not happy here." maxlen: 9
+3655 	 "we do not want to live here on this reservation." 	 "we don't want to live in space." maxlen: 13
+3656 	 life on the reservation is not what you're accustomed to. 	 you're not used to living in the settlement. maxlen: 11
+3657 	 give it time. 	 give me some time. maxlen: 5
+3658 	 i think you'll become quite fond of it. 	 i'm sure you will. maxlen: 9
+3659 	 but since pleading his case to u.s. authorities, the military now fears the lakota warrior could incite an indian uprising. 	 after putting his protests to the united states officials, the army began to fear that the lakota warrior started an indian uprising. maxlen: 36
+3660 	 the u.s. was incredibly scared about crazy horse. 	 the united states was so scared of crazy horse. maxlen: 14
+3661 	 there's rumors going around th cra horse wants to kill a visiting u.s. general. 	 it was said that crazy horse wanted to kill a general visiting him. maxlen: 23
+3662 	 and u.s. authorities are forever concerned about these rumors of indian outbreaks. 	 the united states officials were worried about a new riot. maxlen: 21
+3663 	 as fear of crazy horse's intention spreads, the lakota warrior decides to meet with reservation agents to clear his name. 	 as the fear of crazy horse plotting something spread, the lakota warrior went to meet with the authorities to clear his name. maxlen: 33
+3664 	 crazy horse thinks he's going to a meeting with some u.s. officials. 	 crazy horse thought he was meeting with the united states officials. maxlen: 19
+3665 	 he doesn't realize the magnitude of what's about to happen. 	 he didn't realize the importance of the situation maxlen: 11
+3666 	 they start to put him into a jail cell. 	 they wanted to put him in a prison cell. maxlen: 13
+3667 	 and he comes out with knives. 	 then he took off his knife. maxlen: 9
+3668 	 accounts here differ, but i think the most reliable interpretation is that the white u.s. sentry bayonets him, and he dies. 	 despite different views, i think the most reliable comment is that the white u.s. sentry bayonets him to death maxlen: 27
+3669 	 crazy horse is never killed in battle in that respect. 	 he couldn't be killed in the crazy maxlen: 11
+3670 	 his vision is correct. 	 his vision was right. maxlen: 8
+3671 	 he's taken completely unawares when he's, um, surprised by the sentry. 	 he was unexpectedly defeated by the sentry. maxlen: 13
+3672 	 on september 0, 0000, crazy horse, a man who fought his entire life to protect his people and won battle after battle against the united states army, is killed. 	 on september 0, 0000, the man who fought his whole life to protect his people and won war on the united states. maxlen: 32
+3673 	 crazy horse's death is hard to talk about because it's just so... fresh, even though it's been that many years. 	 it's hard to talk about the death of crazy horse, because even after so many years, the pain is so fresh. maxlen: 27
+3674 	 one of the things that's most fascinating about crazy horse and his legacy is simply the fact that of all the many native leaders across american history, he's one of the few people that most non-indians have heard about. 	 one of the most fascinating parts of crazy horse and his legacy is one of the few guys in the american history of talking about the indians. maxlen: 42
+3675 	 i think he's seen today as a symbol of courageous resistance to the u.s. government... and he is, in many respects. 	 nowadays, the courage of the united states government is considered a symbol of resistance and spoken of respectfully to himself. maxlen: 29
+3676 	 and i think that's one of the reasons that makes him so powerful. 	 i think that's what makes him so powerful. maxlen: 13
+3677 	 with crazy horse gone, the lakota people are in desperate need of leadership if they're going to save what's left of their culture. 	 with crazy horse's death, the lakota people waited for a leader who could save the rest of their hopeless culture. maxlen: 31
+3678 	 until the house repaid catron, he had a stake in their well-being. 	 until you paid evron, their prosperity was their business. maxlen: 25
+3679 	 this is for you. 	 this is for you. maxlen: 7
+3680 	 and what if he resists? 	 what if he resists? maxlen: 8
+3681 	 i don't care about the means. 	 i don't care how. maxlen: 9
+3682 	 just the results. 	 i'm just interested in the results. maxlen: 9
+3683 	 understood. 	 copy that. maxlen: 4
+3684 	 go check it out. 	 go check it out. maxlen: 7
+3685 	 you stay here. 	 you stay here. maxlen: 5
+3686 	 yeah. 	 okay. maxlen: 3
+3687 	 what's the rush, boys? 	 what's your hurry, gent maxlen: 8
+3688 	 we heard a shot. 	 we heard a shot. maxlen: 8
+3689 	 did you, now? 	 really? maxlen: 4
+3690 	 don't do anything stupid, son. 	 don't do anything stupid, son. maxlen: 11
+3691 	 this doesn't involve you. 	 this has nothing to do with you. maxlen: 11
+3692 	 i suggest you keep it that way. 	 it'll help him stay like this. maxlen: 9
+3693 	 this competition, this feuding between businesses, entrepreneurial interests is one thing. 	 there are always conflicting interests between these contestants. maxlen: 17
+3694 	 like so many conflicts in the west, it becomes personal. 	 but like many ideas in the west, it became personal. maxlen: 17
+3695 	 personal to the point where someone is murdered. 	 he took it personal the moment someone was murdered. maxlen: 11
+3696 	 and that person is john henry tunstall. 	 that person was john henry tunstall. maxlen: 12
+3697 	 he is murdered over a business dispute. 	 he was killed because of the conflict. maxlen: 10
+3698 	 that's as personal as it gets. 	 it was a personal matter now. maxlen: 9
+3699 	 john tunstall's death sets billy on a path to find his killers. 	 with john tunstall's death, billy is on his way to find his killers. maxlen: 22
+3700 	 and it will turn him from an unknown gunman into a legend of the west. 	 this road would lead him from an unknown armed cowboy to become the legend of the west. maxlen: 22
+3701 	 as the country continues to expand, men like billy the kid are realizing just how lawless the frontier is. 	 as the country continues to expand, men like billy the kid realize the border is not governed by law. maxlen: 25
+3702 	 but over 000 miles away from new mexico, one man is about to bring order to the west. 	 but over 000 miles beyond new mexico, a man was prepared to bring law into the west. maxlen: 25
+3703 	 in the plains of kansas where men take what they want... and every day is a struggle for survival, no one is tougher... than wyatt earp. 	 no one was more bragged than wyatt earp in the dooms of kansas where men took everything they wanted and every day was a struggle to survive. maxlen: 41
+3704 	 he was large by 00th century standards. 	 he was big by the 00th century standards. maxlen: 11
+3705 	 he used that size to be imposing. 	 he was so excited about his size. maxlen: 12
+3706 	 wyatt earp is one of thousands of americans who have flooded the west in hopes of striking it rich. 	 wyatt earp was one of thousands of americans pushing west in order to become rich. maxlen: 21
+3707 	 wyatt was bit by the incurable western disease. 	 wyatt was caught in the incurable western disease. maxlen: 14
+3708 	 and that was the need to always find the next frontier. 	 he always felt he had to push the next border. maxlen: 14
+3709 	 the frontier might be mining, it might be real estate, but it was the search itself, the adventure itself. 	 the border could be mining, real estate research, something to bring adventure. maxlen: 22
+3710 	 that's what really drove wyatt. 	 wyatt's life was driving like this. maxlen: 12
+3711 	 to get by, he's done nearly every job on the frontier. 	 he did all the work on the border just to get it. maxlen: 14
+3712 	 from laying tracks for the union pacific railroad... to hunting buffalo on the plains and even working as a bouncer at a brothel. 	 from laying tracks for the pacific railroads to hunting buffalo on the plains and even working as a bouncer at a brothel. maxlen: 36
+3713 	 to move cattle from wide-open plains to eastern cities, they must first be driven to railroad hubs that soon turn into bustling towns. 	 to move cattle from wide-open cities to eastern cities, they'd have to drive towards railroad hubs that soon turn into crow cities. maxlen: 36
+3714 	 a boomtown explodes on the scene. 	 so the rapid cities came out. maxlen: 9
+3715 	 you had that barren landscape and then suddenly you would have a hotel with 00 rooms. 	 a landscape of unintended soil suddenly becomes a hotel with 00 rooms. maxlen: 21
+3716 	 you have a lot of young men that would get to those towns and they're all fueled on whiskey, carrying guns. 	 the young men who managed to come to these cities were drinking whisky and carrying guns. maxlen: 27
+3717 	 so you've got young men drinking heavily and armed. 	 so there were lots of young men drinking well and armed. maxlen: 17
+3718 	 and this is, indeed, one of the reasons the west was wild. 	 that was one of the reasons the west was wild. maxlen: 14
+3719 	 wyatt sees that in dodge city the law is nonexistent and disputes are settled with violence. 	 wyatt saw that there's no law in dodge city and conflict solved by violence. maxlen: 26
+3720 	 it was a rough, tough life. 	 she had a hard life. maxlen: 7
+3721 	 and they'd either go back east or they'd turn bad. 	 they'd either go back east or they'd be worse. maxlen: 16
+3722 	 but wyatt earp feels he's destined for something more. 	 but wyatt earp felt there was much more in his fate. maxlen: 23
+3723 	 and it's in dodge city that he demonstrates a skill that will mark his place in history. 	 he was going to prove something important in dodge city. maxlen: 19
+3724 	 you cheated the wrong man. 	 you tricked the wrong guy. maxlen: 8
+3725 	 that's my money. 	 that's my money. maxlen: 7
+3726 	 the guy's a cheater, huh? 	 this guy's a cheat. maxlen: 9
+3727 	 easy there. 	 calm down. maxlen: 4
+3728 	 he's a cheat. 	 he cheated. maxlen: 5
+3729 	 easy there. 	 calm down. maxlen: 4
+3730 	 the guy cheated. 	 he cheated. maxlen: 7
+3731 	 put the gun away. 	 put the gun down. maxlen: 5
+3732 	 his gun, did you see it? 	 did you see your gun? maxlen: 8
+3733 	 everyone saw him reach for his gun. 	 everyone saw him reach for his gun. maxlen: 9
+3734 	 just hand it over. 	 give me that. maxlen: 5
+3735 	 i'll shoot you! 	 i'll shoot you! maxlen: 8
+3736 	 come on. 	 come on. maxlen: 4
+3737 	 the town of dodge is in desperate need of a lawman. 	 the city of dodge desperately needed a lawman. maxlen: 17
+3738 	 and wyatt earp is the perfect man for the job. 	 wyatt earp was perfect for this. maxlen: 14
+3739 	 it isn't long before wyatt earp is recruited to be deputy marshal of dodge city. 	 it didn't take long for wyatt earp to be the police chief of dodge city. maxlen: 27
+3740 	 there was no particular training for a lawman. 	 it wasn't supposed to be a special education to be a maxlen: 14
+3741 	 that's not how things work in this town. 	 that's not how it works in this town maxlen: 10
+3742 	 wyatt earp didn't ask questions. 	 wyatt earp didn't ask questions. maxlen: 13
+3743 	 "pistol-whip," that comes from him. 	 "kaggling with cabana" is a term from him. maxlen: 20
+3744 	 wyatt earp is quickly making a name for himself in dodge city. 	 wyatt earp became famous shortly in dodge city. maxlen: 21
+3745 	 and it's in his role as a lawman that he will soon become one of the most famous figures of the west. 	 his role as a lawman would become one of the most famous figures in the west. maxlen: 20
+3746 	 because cartoon chickens give my father nightmares. 	 because cartoon chickens give my dad nightmares. maxlen: 16
+3747 	 where've you been? 	 where were you? maxlen: 7
+3748 	 and that was irving berlin's white christmas, 	 and this was irving berlin's white christmas. maxlen: 17
+3749 	 the highest-grossing christmas song of all time. 	 it's the best christmas song ever sells all maxlen: 11
+3750 	 what? 	 what? maxlen: 3
+3751 	 actually, irving berlin wrote over 0,000 songs. 	 actually, irving berlin wrote over 0,000 songs. maxlen: 13
+3752 	 oh, why don't you just marry him? 	 then marry him. maxlen: 9
+3753 	 what's your problem? 	 what is wrong with you? maxlen: 8
+3754 	 i got no problem. 	 i have no problem. maxlen: 8
+3755 	 and you seem like the type that can write music. 	 you have the type to write. maxlen: 11
+3756 	 what's that supposed to mean? 	 what does that mean? maxlen: 9
+3757 	 what do you got goin' on this holiday season? 	 what are you doing this holiday season? maxlen: 12
+3758 	 oh, hey, babe. 	 hey, baby. maxlen: 10
+3759 	 where you goin'? 	 where are you going? maxlen: 8
+3760 	 oh, father melley called. 	 father melley called. maxlen: 9
+3761 	 i gotta guard the nativity scene down at the church. 	 i have to protect the nativity scene in the church. maxlen: 20
+3762 	 i have to make something for the bake sale. 	 i need to cook something for the food sales. maxlen: 13
+3763 	 you don't hear me complaining. 	 did you hear me complaining? maxlen: 12
+3764 	 what rhymes with "poinsettia"? 	 what rhymes with poinsettia? maxlen: 13
+3765 	 i lost it again! 	 i forgot again! maxlen: 7
+3766 	 you are impossible! 	 you're a very difficult man! maxlen: 8
+3767 	 i can't create in a hostile environment! 	 i can't produce anything in a hostile environment! maxlen: 12
+3768 	 well, i wouldn't be so hostile if you had one ounce of talent! 	 i wouldn't act hostile if you had two cents! maxlen: 19
+3769 	 you kick me again, i'm leaving. 	 you kick me again, i'm leaving. maxlen: 14
+3770 	 your calves are spindly. 	 your legs are crooked. maxlen: 9
+3771 	 what's up? 	 how's it going maxlen: 5
+3772 	 so i brought you some soup and your heavy jacket. 	 so i brought you some soup and your thick jacket. maxlen: 19
+3773 	 yeah, i'll just give her a call, see what she's doin'. 	 yeah, i'll call him. maxlen: 11
+3774 	 it's hopelessly generic! 	 horribly ordinary! maxlen: 8
+3775 	 it's pap! 	 terrible! maxlen: 4
+3776 	 course not, because we're not saying anything 	 of course not! maxlen: 8
+3777 	 yeah, and, you know, i'm 0/0th jewish. 	 yeah, and you know i'm a jew at eight. maxlen: 16
+3778 	 sweet. 	 good. maxlen: 3
+3779 	 i'm gonna grab a bagel and a schmear. 	 i'm gonna go get a bagel or something. maxlen: 13
+3780 	 i'm headin' back to the manger. 	 i'm going to the guarding business again. maxlen: 11
+3781 	 uh, a phone call to shanghai gardens. 	 i'm calling shangai garden. maxlen: 15
+3782 	 but whatever i decide, it gon' be good. 	 but whatever i decide will be fine! maxlen: 13
+3783 	 i only have 0 days to make cake. 	 i only have three days to make cake!" maxlen: 13
+3784 	 she doesn't actually sound like that, but whatever. 	 he doesn't sound like that, but whate maxlen: 11
+3785 	 thud. 	 boom! maxlen: 4
+3786 	 i was gonna make one, but i had to work late and i'm exhausted, 	 i was gonna make a cake, but i had to work late. maxlen: 21
+3787 	 so, thank ya... 	 and i'm done. maxlen: 9
+3788 	 hungarian bakery. 	 so thank you, hungarian bakery! maxlen: 12
+3789 	 says who? 	 says who? maxlen: 5
+3790 	 well, i know larry's wife isn't. 	 larry's wife won't bring it. maxlen: 11
+3791 	 she's makin' a volcano cake. 	 he makes a great cake! maxlen: 11
+3792 	 do you know what that is? 	 you know what he's doing? maxlen: 11
+3793 	 any chance you're gonna be in that village? 	 any chance you're in that town? maxlen: 14
+3794 	 that i actually thought you were gonna make this cake. 	 i really thought you were gonna make the cake! maxlen: 14
+3795 	 i'm not whitefish? 	 i'm not a square? maxlen: 9
+3796 	 oh, 'cause he'd never be with you, because you know what? 	 she would never be with you, you know why? maxlen: 15
+3797 	 he'd have to get his own pepsi! 	 because he'd have to take his own arm. maxlen: 11
+3798 	 stop it. 	 stop it! maxlen: 5
+3799 	 fantastic. 	 wonderful! maxlen: 5
+3800 	 guess i was just bein' naive. 	 i was so naive. maxlen: 9
+3801 	 what are you doin'? 	 what are you doing? maxlen: 7
+3802 	 looks like you started. 	 sounds like you started. maxlen: 8
+3803 	 like a food processor and big spoons! 	 kitchen robot, big scratches... maxlen: 12
+3804 	 let me think. 	 let me think. maxlen: 7
+3805 	 a nice, easy cake recipe. 	 nice, easy cake recipe. maxlen: 11
+3806 	 hey, how 'bout that, uh, chocolate crumbly thing? 	 how about that chocolate cereal? maxlen: 19
+3807 	 hey, well, at least i can match my pants and my shirt- 	 at least i'm wearing my pants proper shirt... you... maxlen: 20
+3808 	 a monkey could make it. 	 a monkey could do it. maxlen: 9
+3809 	 i love you. 	 i love you. maxlen: 7
+3810 	 i love you. 	 i love you. maxlen: 7
+3811 	 am i dreaming that we're giants? 	 i imagine we're giants? maxlen: 12
+3812 	 nope. 	 no. maxlen: 4
+3813 	 well, you shoulda put more baking powder in there! 	 you should have put more baking powder. maxlen: 14
+3814 	 you have no idea how much a pinch is! 	 you don't even know what a poke is! maxlen: 13
+3815 	 and nobody's gonna want to buy this stupid doll cake! 	 and nobody's gonna want to buy this stupid toy cake maxlen: 17
+3816 	 we'll bring the covered cake plate to the bake sale. 	 we'll take the cake to a closed plate. maxlen: 15
+3817 	 ok. 	 okay. maxlen: 3
+3818 	 my calves are smaller than ever. 	 my calves have never been this far. maxlen: 12
+3819 	 come here, you! 	 come here! maxlen: 4
+3820 	 and it's not? 	 it doesn't? maxlen: 9
+3821 	 after all that prep work? 	 after all the arrangements... after all maxlen: 8
+3822 	 anyway, try the punch. 	 anyway, try this. maxlen: 12
+3823 	 it's divine. 	 it's divine. maxlen: 9
+3824 	 oh, no problem. 	 it doesn't maxlen: 4
+3825 	 we don't do the traditional bake sale here. 	 we don't make traditional food sale. maxlen: 11
+3826 	 we do something much more fun. 	 we're doing something much more fun. maxlen: 11
+3827 	 all righty. 	 got it. maxlen: 4
+3828 	 great plan. 	 great plan! maxlen: 5
+3829 	 i didn't count on a cake walk. 	 i didn't count on the cake walk! maxlen: 12
+3830 	 i've never seen caramel do that. 	 i've never seen caramel do this. maxlen: 14
+3831 	 this is a chocolate frosted couch pillow! 	 this is a candy-covered chair! maxlen: 12
+3832 	 come on. 	 come, come on. maxlen: 7
+3833 	 hey, ling. 	 hey, ling. maxlen: 8
+3834 	 i'm having your mental problem. 	 i have your mental problem. maxlen: 13
+3835 	 well, whenever i... 	 well, when i... when... when maxlen: 8
+3836 	 elaine? 	 elaine? maxlen: 5
+3837 	 oh, never mind. 	 whatever. maxlen: 7
+3838 	 i see him moving in slow motion. 	 i see him, but he's a slow maxlen: 10
+3839 	 how long has this been going on? 	 how long has this been going on? maxlen: 9
+3840 	 what does this mean? 	 what does that mean? maxlen: 5
+3841 	 i think you're in love. 	 i think you're in love. maxlen: 9
+3842 	 well, how do i snap out of it? 	 how do i get rid of this maxlen: 7
+3843 	 i got myself together 	 i got myself together. maxlen: 9
+3844 	 yeah, now i'm ready to sing 	 i'm ready to sing now. maxlen: 9
+3845 	 i've been searching my soul tonight 	 i'm calling my soul tonight. maxlen: 10
+3846 	 i know there's so much more to life 	 i know there's so much more to life. maxlen: 14
+3847 	 thank you for seeing me. 	 thank you for seeing me. maxlen: 13
+3848 	 how may i help you? 	 how can i help you? maxlen: 7
+3849 	 my wife, cindy, passed away two years ago. 	 my wife cindy died two years ago. maxlen: 13
+3850 	 we'd been married three years. 	 we were married three years. maxlen: 8
+3851 	 she was hit by a car on our anniversary. 	 we got hit by a car on our anniversary. maxlen: 11
+3852 	 cindy and i dreamed of having children together. 	 cindy and i wanted to have kids. maxlen: 14
+3853 	 the first being she's dead. 	 for example, that he died. maxlen: 10
+3854 	 how would you go about...? 	 how will you do that? maxlen: 9
+3855 	 did she leave her eggs or embryos? 	 or did he leave the egg embryo? maxlen: 12
+3856 	 no. 	 no. maxlen: 4
+3857 	 did you hear me? 	 did you hear me? maxlen: 8
+3858 	 i did. 	 i heard. maxlen: 5
+3859 	 to clone your dead wife? 	 to clone your dead wife? maxlen: 13
+3860 	 scientists are already secretly trying this, mr. cage. 	 scientists are trying it out of hand, mr. cage. maxlen: 17
+3861 	 and i had prepared to covertly attempt it with cindy. 	 so i snuck into trying cindy. maxlen: 20
+3862 	 my sister-in-law has hired a lawyer to get an injunction. 	 my sister-in-law heard that and hired a lawyer to stop it. maxlen: 17
+3863 	 that's why i need a lawyer. 	 that's why i need a lawyer. maxlen: 11
+3864 	 she's going in today. 	 he's going to court today. maxlen: 8
+3865 	 yes, but mr. stoller, i must tell you i'm sure your wife was a very nice woman. 	 yes, mr. stoller, i must say that your wife was a wonderful person. maxlen: 29
+3866 	 but the idea of cloning? 	 but the cloning idea? maxlen: 8
+3867 	 please. 	 please. maxlen: 5
+3868 	 i have nowhere else to turn. 	 there's nowhere else i can apply. maxlen: 10
+3869 	 and your firm has opposed this lawyer before. 	 and your firm's met this lawyer before. maxlen: 14
+3870 	 who is it? 	 who is it? maxlen: 4
+3871 	 larry paul. 	 larry paul. maxlen: 5
+3872 	 i am told he's quite good. 	 i hear you're very successful. maxlen: 9
+3873 	 it was. 	 it was him. maxlen: 4
+3874 	 how can you date a guy online? 	 how can you have a virtual relationship? maxlen: 16
+3875 	 a relationship is communication. 	 a relationship means communication. maxlen: 8
+3876 	 what about "it"? 	 what about "o"? maxlen: 9
+3877 	 i know you don't like it but a woman gets control when her hand's on the dumbstick. 	 i know you don't, but if your hands aren't on that stupid stick, she can't maxlen: 26
+3878 	 it's all about control with you. 	 all you care about is control. maxlen: 9
+3879 	 i don't know. 	 i don't maxlen: 4
+3880 	 really? 	 really? maxlen: 4
+3881 	 and you came in here to talk about my computer date? 	 and you came here to talk about my virtual relationship? maxlen: 14
+3882 	 i came in here to borrow some products. 	 i came to borrow things. maxlen: 13
+3883 	 but just forget it. 	 but forget it. maxlen: 7
+3884 	 ally! 	 ally? maxlen: 4
+3885 	 a second, please? 	 can you take a look? maxlen: 9
+3886 	 and larry is opposing counsel. 	 the lawyer's on the other side, larry. maxlen: 11
+3887 	 he is? 	 yeah? maxlen: 4
+3888 	 i have a little conflict of interest there, don't you think? 	 there's a conflict of interest here for me, isn't there? maxlen: 17
+3889 	 your duty does lie with the client. 	 you're responsible for the client. maxlen: 12
+3890 	 yeah, but... 	 yeah, but... maxlen: 5
+3891 	 you didn't use a little inside information when you opposed him? 	 you didn't use inside little information during the defense against him? maxlen: 16
+3892 	 no, but i... 	 no, but i... maxlen: 7
+3893 	 then why can't i? 	 why shouldn't i? maxlen: 10
+3894 	 it's for the client. 	 just for the client. maxlen: 8
+3895 	 my case falls deeply short on merits. 	 i've already got a case of passion. maxlen: 12
+3896 	 i need something. 	 i need something. maxlen: 10
+3897 	 with larry, it's all about rhythm. 	 larry's weak spot is rhythm. maxlen: 11
+3898 	 he sucks me into this fast patter because he figures i won't spot what i'm about to step into. 	 he's talking to me too fast when i'm arguing, because he knows i can't maxlen: 24
+3899 	 okay. 	 okay. maxlen: 3
+3900 	 he's vulnerable without his rhythm. 	 he's vulnerable when he loses his maxlen: 11
+3901 	 okay. 	 okay. maxlen: 3
+3902 	 in your dreams with me, cindy margolis. 	 you're in your dreams with cindy margolis. maxlen: 21
+3903 	 michelle garris e-mailed me and asked for advice on breaking into tinseltown. 	 michelle garris e-mailed me and asked me a way to get into hollywood. maxlen: 26
+3904 	 we met in hollywood at... 	 we met in hollywood and... maxlen: 10
+3905 	 just do it. 	 do it! maxlen: 5
+3906 	 no, i won't be used! 	 i won't let myself use it. maxlen: 10
+3907 	 we can't deny our passions anymore. 	 we can't deny our passion any more. maxlen: 16
+3908 	 you want me, and i want you. 	 you want me, i want you. maxlen: 13
+3909 	 so let's just be honest. 	 let's be honest. maxlen: 7
+3910 	 you do my knee, and i'll give you hair. 	 you do my knee and i'll get my hair done. maxlen: 16
+3911 	 you're pinching my spinal cord. 	 you're breaking my spinal cord. maxlen: 9
+3912 	 don't like denial? 	 don't you like denial? maxlen: 14
+3913 	 let's be honest then. 	 then let's be honest. maxlen: 10
+3914 	 gotta go. 	 i'm leaving maxlen: 4
+3915 	 i went to l.a. and hardly ever thought about you. 	 i went to l.a., and i didn't even think of you. maxlen: 20
