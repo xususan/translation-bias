@@ -380,3 +380,815 @@ Evaluating BLEU
 355 	 you'll find out. </s>                       	 you'll find out. </s> maxlen: 8
 356 	 the total money will be divided equally between the <unk> but if all of you make it through the night, there will be a <unk> <unk> 	 the total money is equal to the <unk> but if all of you make it through the night, there will be a <unk> <unk> </s> maxlen: 30
 357 	 ain't enough money in the world to make me stay in that place. </s>             	 no money could save me the night. </s> maxlen: 14
+358 	 anybody else wanna join him? </s>                     	 anybody else wanna join him? </s> maxlen: 13
+359 	 not me. </s>                        	 i'm not. </s> maxlen: 8
+360 	 well, there's no way i'm riding all the way back to the city with <unk> boy. </s>          	 there's no way i'm going to the city with this <unk> kid. </s> maxlen: 15
+361 	 oh, i'm in. </s>                       	 i'm in. </s> maxlen: 6
+362 	 just get me the hell out of here. </s>                  	 get me out of here. </s> maxlen: 9
+363 	 your <unk> <unk> </s>                       	 your car's waiting. </s> maxlen: 8
+364 	 unlock him. </s>                        	 kill him. </s> maxlen: 8
+365 	 bye. </s>                         	 bye. </s> maxlen: 8
+366 	 you guys are idiots. </s>                      	 you're <unk> </s> maxlen: 8
+367 	 this is for some fucking <unk> party joke and you're all gonna be made fun of. </s>          	 this is for some fucking party <unk> <unk> </s> maxlen: 15
+368 	 you're all gonna look like a bunch of <unk> </s>                 	 a bunch of <unk> turned into something else. </s> maxlen: 14
+369 	 can't you just see this video playing at a party? </s>                	 can't you see it's a <unk> <unk> </s> maxlen: 14
+370 	 or we get famous. </s>                      	 or we get famous. </s> maxlen: 10
+371 	 there's a freaking human head in there! </s>                   	 there's a <unk> head. </s> maxlen: 11
+372 	 don't worry, it's not real. </s>                     	 don't worry, it's not real. </s> maxlen: 9
+373 	 sure as hell looks real to me. </s>                   	 seems pretty real to me. </s> maxlen: 10
+374 	 what we in the business like to call a <unk> <unk> </s>               	 it's what they call a <unk> job. </s> maxlen: 15
+375 	 pretty cool, huh? </s>                       	 pretty cool, huh? </s> maxlen: 10
+376 	 a little taste of what's waiting for you in there. </s>                	 a little taste of what's left inside for you. </s> maxlen: 15
+377 	 thanks to our <unk> special effects team. </s>                   	 thanks to <unk> private <unk> </s> maxlen: 11
+378 	 follow me, my friends. </s>                      	 follow me, guys. </s> maxlen: 9
+379 	 in the <unk> <unk> water, lazy <unk> wait for the next meal. </s>              	 they're just waiting for me to go into their <unk> <unk> <unk> </s> maxlen: 14
+380 	 the indian <unk> have long, pointed faces. </s>                   	 the indian <unk> have long, <unk> <unk> </s> maxlen: 14
+381 	 these <unk> are <unk> </s>                      	 that kind of <unk> </s> maxlen: 9
+382 	 boys. </s>                         	 guys. </s> maxlen: 6
+383 	 i see you're working hard as usual. </s>                   	 i see you're working hard as usual. </s> maxlen: 14
+384 	 are we ready? </s>                       	 ready? </s> maxlen: 8
+385 	 totally ready. </s>                        	 totally ready. </s> maxlen: 8
+386 	 totally and absolutely. </s>                       	 totally and <unk> </s> maxlen: 9
+387 	 let's keep it that way. </s>                     	 keep it that way. </s> maxlen: 9
+388 	 yes, ma'am. </s>                        	 yes, sir. </s> maxlen: 8
+389 	 hey. </s>                         	 hi. </s> maxlen: 6
+390 	 great job selling the fear out there, man. </s>                  	 it was great to see them go. </s> maxlen: 10
+391 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+392 	 i can't believe any of those kids stuck around for the show. </s>              	 i can't believe these kids are wearing <unk> </s> maxlen: 11
+393 	 you actually looked like you were terrified out there. </s>                 	 you really looked like <unk> <unk> </s> maxlen: 11
+394 	 well, that's because i am. </s>                     	 because you're <unk> </s> maxlen: 8
+395 	 i mean, first of all, just looking at that place totally <unk> me out. </s>            	 i mean, first of all, just looking at that place and it really <unk> me maxlen: 15
+396 	 did you know about that? </s>                     	 did you know that? </s> maxlen: 9
+397 	 about the dead homeless people? </s>                     	 the <unk> who died. </s> maxlen: 8
+398 	 sure. </s>                         	 of course. </s> maxlen: 8
+399 	 why didn't you say anything? </s>                     	 why don't you do something? </s> maxlen: 10
+400 	 that's kind of a lot of people for a coincidence. </s>                	 must be a big <unk> </s> maxlen: 10
+401 	 i mean, do you really think it's safe in there? </s>                	 do you really think it's safe in there? </s> maxlen: 11
+402 	 safe enough to get the show <unk> </s>                   	 <unk> safe enough for <unk> </s> maxlen: 11
+403 	 any more questions? </s>                       	 any more questions? </s> maxlen: 9
+404 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+405 	 how do you sleep at night? </s>                    	 how do you sleep at night? </s> maxlen: 9
+406 	 like a baby. </s>                       	 like babies. </s> maxlen: 8
+407 	 let's do this. </s>                       	 let's do this. </s> maxlen: 9
+408 	 okay. </s>                         	 okay. </s> maxlen: 6
+409 	 we are <unk> </s>                       	 <unk> </s> maxlen: 8
+410 	 all of you have <unk> of your own free will, to spend the night in this prison for the chance to win <unk> <unk> </s>  	 all of you have <unk> of your own free will, to spend the night in this prison for the chance to win <unk> </s> maxlen: 25
+411 	 pretty straight forward, right? </s>                      	 not <unk> enough? </s> maxlen: 10
+412 	 okay, then let's get this party started. </s>                   	 okay, then, let's have a party. </s> maxlen: 13
+413 	 you'll find everything you need in your base <unk> which is located in the <unk> office. </s>          	 we'll get everything we need from the <unk> that's <unk> <unk> </s> maxlen: 18
+414 	 where's that? </s>                        	 where? </s> maxlen: 6
+415 	 well, it's kind of complicated. </s>                     	 a little <unk> </s> maxlen: 8
+416 	 maybe one of you should write it down. </s>                  	 maybe one of you should read it. </s> maxlen: 11
+417 	 but you took away all of our <unk> so how are we supposed to write it down? </s>         	 but how are we supposed to spend it all on <unk> </s> maxlen: 14
+418 	 go straight down the hall, hang a right, another right, then a left. </s>             	 go straight down the <unk> take a right, another right, then a left. </s> maxlen: 18
+419 	 then straight on up the first flight of <unk> a left, a right, then one more left. </s>         	 you can go straight to the <unk> you can take the <unk> and another left. </s> maxlen: 18
+420 	 you want me to say it again? </s>                   	 do you want me to say it again? </s> maxlen: 10
+421 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+422 	 too bad. </s>                        	 too bad. </s> maxlen: 8
+423 	 when you get there, you'll find the key to release you from those <unk> </s>            	 there's a key to <unk> the <unk> </s> maxlen: 14
+424 	 is there anyone else inside? </s>                     	 is anyone in there? </s> maxlen: 10
+425 	 we'll just have to wait and see. </s>                   	 we'll just have to wait and see. </s> maxlen: 8
+426 	 i thought coming out of the closet was scary. </s>                 	 i thought <unk> <unk> was scary. </s> maxlen: 13
+427 	 have fun, <unk> </s>                       	 good luck, <unk> </s> maxlen: 9
+428 	 good luck. </s>                        	 good luck. </s> maxlen: 8
+429 	 where's she going? </s>                       	 where is he going? </s> maxlen: 8
+430 	 welcome to the <unk> </s>                      	 welcome to <unk> </s> maxlen: 9
+431 	 can you please not do that? </s>                    	 can you please not do that? </s> maxlen: 10
+432 	 i can't see a damn thing in here. </s>                  	 i can't see a damn thing in here. </s> maxlen: 11
+433 	 does anybody remember which way he said to go? </s>                 	 do you have a <unk> </s> maxlen: 11
+434 	 it's straight, a right, then a left. </s>                   	 go straight, then <unk> </s> maxlen: 11
+435 	 no, it's straight, two rights then a left. </s>                  	 no, it's straight, two <unk> then a <unk> </s> maxlen: 15
+436 	 too many <unk> </s>                       	 too many <unk> </s> maxlen: 11
+437 	 no, it's, <unk> straight down the hall, </s>                   	 no, <unk> straight down the <unk> </s> maxlen: 11
+438 	 <unk> a right, another right, a left. </s>                   	 <unk> a right, another right, a left. </s> maxlen: 14
+439 	 <unk> straight on up the first flight of <unk> </s>                 	 <unk> straight on up the <unk> </s> maxlen: 11
+440 	 "a left, a right, and one more <unk> </s>                  	 <unk> <unk> and <unk> </s> maxlen: 11
+441 	 what are you? </s>                       	 you're <unk> </s> maxlen: 8
+442 	 she's smart. </s>                        	 <unk> </s> maxlen: 6
+443 	 guys, we're gonna have a great show. </s>                   	 <unk> is gonna be a great show. </s> maxlen: 11
+444 	 careful. </s>                         	 <unk> </s> maxlen: 6
+445 	 careful. </s>                         	 <unk> </s> maxlen: 6
+446 	 jesus. </s>                         	 oh, god. </s> maxlen: 6
+447 	 what is this place? </s>                      	 what is this place? </s> maxlen: 9
+448 	 okay, and get ready. </s>                      	 okay, and get ready. </s> maxlen: 10
+449 	 that was fun. </s>                       	 that was fun. </s> maxlen: 6
+450 	 and speed them up. </s>                      	 let them rest a bit. </s> maxlen: 9
+451 	 yes, my queen. </s>                       	 okay, <unk> </s> maxlen: 8
+452 	 come on! </s>                        	 come on! </s> maxlen: 6
+453 	 now go! </s>                        	 now run! </s> maxlen: 8
+454 	 left turn. </s>                        	 left turn. </s> maxlen: 8
+455 	 why am i not seeing anything? </s>                    	 why don't you do something? </s> maxlen: 10
+456 	 shit, shit, shit, shit. </s>                      	 shit. </s> maxlen: 8
+457 	 well, i don't know. </s>                      	 i don't know. </s> maxlen: 6
+458 	 the <unk> going down, the backup should've kicked in by now. </s>               	 the power <unk> <unk> has already been <unk> </s> maxlen: 13
+459 	 shit! </s>                         	 shit! </s> maxlen: 8
+460 	 hurry! </s>                         	 hurry up! </s> maxlen: 8
+461 	 it's a weird <unk> huh? </s>                     	 <unk> right? </s> maxlen: 9
+462 	 careful! </s>                         	 be careful! </s> maxlen: 8
+463 	 left! </s>                         	 <unk> </s> maxlen: 6
+464 	 here we are. </s>                       	 here we are. </s> maxlen: 8
+465 	 we're here. </s>                        	 we're here. </s> maxlen: 6
+466 	 damn, it's cold in here. </s>                     	 it's freezing in here. </s> maxlen: 9
+467 	 look, key. </s>                        	 look, <unk> </s> maxlen: 8
+468 	 hell yeah. </s>                        	 yeah. </s> maxlen: 6
+469 	 okay. </s>                         	 okay. </s> maxlen: 6
+470 	 hey, guys, look. </s>                       	 guys, look. </s> maxlen: 8
+471 	 yeah, come on. </s>                       	 yeah, come on. </s> maxlen: 8
+472 	 cool. </s>                         	 great. </s> maxlen: 6
+473 	 all right, you. </s>                       	 all right, you. </s> maxlen: 8
+474 	 who's that? </s>                        	 who's that? </s> maxlen: 9
+475 	 i guess it's the <unk> </s>                     	 i think it's <unk> </s> maxlen: 8
+476 	 get this one. </s>                       	 take this. </s> maxlen: 8
+477 	 okay, yeah. </s>                        	 okay, yeah. </s> maxlen: 8
+478 	 hey, check this out. </s>                      	 look at this. </s> maxlen: 8
+479 	 what you got, man? </s>                      	 what's up, man? </s> maxlen: 9
+480 	 <unk> brave <unk> </s>                       	 <unk> brave <unk> </s> maxlen: 9
+481 	 <unk> to warden <unk> <unk> personal office. </s>                   	 welcome to <unk> <unk> <unk> <unk> </s> maxlen: 13
+482 	 "in the center of the room is a box. </s>                 	 there's a box in the middle of the <unk> </s> maxlen: 11
+483 	 "this <unk> piece will determine your own personal <unk> </s>                 	 "this <unk> <unk> is your personal <unk> </s> maxlen: 14
+484 	 "you cannot trade with any of the other <unk> </s>                 	 <unk> <unk> <unk> </s> maxlen: 10
+485 	 <unk> <unk> were a personal <unk> </s>                    	 <unk> his <unk> </s> maxlen: 9
+486 	 <unk> it's your turn to put your hand in the <unk> </s>               	 <unk> it's your turn to shake the <unk> </s> maxlen: 13
+487 	 shit. </s>                         	 shit. </s> maxlen: 6
+488 	 so, who wants to go first? </s>                    	 so, who wants to go first? </s> maxlen: 10
+489 	 me. </s>                         	 me. </s> maxlen: 6
+490 	 what the hell is going on? </s>                    	 what's going on? </s> maxlen: 8
+491 	 i don't know. </s>                       	 i don't know. </s> maxlen: 6
+492 	 what do you mean you don't know? </s>                   	 what do you mean, you don't know? </s> maxlen: 10
+493 	 i mean, i don't know. </s>                     	 i mean, i don't know. </s> maxlen: 8
+494 	 seriously? </s>                         	 really? </s> maxlen: 8
+495 	 you should have seen all of your faces. </s>                  	 <unk> <unk> </s> maxlen: 8
+496 	 not cool. </s>                        	 not cool. </s> maxlen: 9
+497 	 black king. </s>                        	 black <unk> </s> maxlen: 8
+498 	 black <unk> </s>                        	 black <unk> </s> maxlen: 8
+499 	 white <unk> </s>                        	 white <unk> </s> maxlen: 8
+500 	 white queen. </s>                        	 white <unk> </s> maxlen: 8
+501 	 hey, look. </s>                        	 look. </s> maxlen: 6
+502 	 holy shit! </s>                        	 damn <unk> </s> maxlen: 8
+503 	 okay, that is really fucking creepy. </s>                    	 that was really <unk> </s> maxlen: 11
+504 	 welcome, my little <unk> to the <unk> </s>                   	 welcome to our little <unk> <unk> </s> maxlen: 11
+505 	 now, for a little history of <unk> state prison. </s>                 	 now, let me tell you about <unk> state prison. </s> maxlen: 15
+506 	 in <unk> with the climbing <unk> during the <unk> the cold <unk> warden thought he could keep his fortune on track by <unk> certain <unk> <unk> 	 in <unk> with the <unk> of the crisis <unk> the <unk> director thought he could <unk> the <unk> by destroying some <unk> </s> maxlen: 23
+507 	 his <unk> </s>                        	 they're <unk> </s> maxlen: 8
+508 	 eventually the warden was <unk> but not before having executed <unk> <unk> </s>              	 until <unk> <unk> crimes are <unk> you are not <unk> </s> maxlen: 18
+509 	 the last person to be served a death sentence here was warden <unk> himself. </s>            	 the last person to be executed here was warden <unk> <unk> </s> maxlen: 19
+510 	 rumor has it that the warden still <unk> the <unk> </s>                	 according to my <unk> the <unk> still running around here. </s> maxlen: 14
+511 	 tonight, you will be asked to go face to face with the <unk> and the tortured souls that still <unk> the building you are now in. 	 i asked you to go into <unk> and <unk> <unk> this building tonight. </s> maxlen: 22
+512 	 task one. </s>                              	 first <unk> </s> maxlen: 8
+513 	 white queen. </s>                              	 white <unk> </s> maxlen: 8
+514 	 try not to die! </s>                            	 <unk> <unk> </s> maxlen: 8
+515 	 does anybody want to <unk> </s>                           	 anyone for a <unk> </s> maxlen: 10
+516 	 hell no! </s>                              	 absolutely not! </s> maxlen: 8
+517 	 okay. </s>                               	 okay. </s> maxlen: 6
+518 	 "the white queen will got to the prison <unk> to complete his <unk> </s>                   	 <unk> <unk> <unk> to carry out <unk> <unk> </s> maxlen: 15
+519 	 can you hear me? </s>                            	 can you hear me? </s> maxlen: 9
+520 	 yeah, where are you? </s>                            	 yeah, where are you? </s> maxlen: 8
+521 	 still in the first <unk> </s>                           	 still in the first <unk> </s> maxlen: 9
+522 	 nice job with the sound. </s>                           	 nice job with the sound. </s> maxlen: 10
+523 	 hey, thanks. </s>                              	 thank you. </s> maxlen: 6
+524 	 oh, shit. </s>                              	 shit! </s> maxlen: 8
+525 	 what? </s>                               	 what happened? </s> maxlen: 8
+526 	 they turned my <unk> off. </s>                           	 el <unk> <unk> </s> maxlen: 9
+527 	 i can't see a damn thing. </s>                          	 i can't see anything. </s> maxlen: 10
+528 	 okay, take it easy, <unk> </s>                           	 okay, take it easy, <unk> </s> maxlen: 10
+529 	 now, make a right and go straight. </s>                         	 now turn right and go straight. </s> maxlen: 13
+530 	 there's babies <unk> </s>                             	 <unk> <unk> </s> maxlen: 8
+531 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+532 	 i imagine they have the place wired for <unk> <unk> </s>                      	 i think i have <unk> everywhere. </s> maxlen: 11
+533 	 <unk> being more <unk> in <unk> into our <unk> fears than sight. </s>                    	 the sounds are much more <unk> for our <unk> <unk> </s> maxlen: 15
+534 	 is that right? </s>                             	 is that true? </s> maxlen: 9
+535 	 okay. </s>                               	 okay. </s> maxlen: 6
+536 	 god! </s>                               	 god! </s> maxlen: 6
+537 	 sounds like a real sweetie. </s>                           	 that sounds very nice. </s> maxlen: 10
+538 	 no, i'm good, man. </s>                            	 no, i'm fine, man. </s> maxlen: 10
+539 	 freaking <unk> </s>                              	 <unk> </s> maxlen: 8
+540 	 did you hear that? </s>                            	 did you hear that? </s> maxlen: 9
+541 	 what? </s>                               	 what? </s> maxlen: 6
+542 	 i don't know. </s>                             	 i don't know. </s> maxlen: 6
+543 	 it was a sound. </s>                            	 i heard a sound. </s> maxlen: 9
+544 	 i think someone's in the room with me. </s>                        	 i think there's someone in the room with me. </s> maxlen: 13
+545 	 they're using <unk> <unk> </s>                            	 <unk> <unk> </s> maxlen: 10
+546 	 seriously. </s>                               	 really. </s> maxlen: 6
+547 	 okay. </s>                               	 okay. </s> maxlen: 6
+548 	 oh, my... </s>                              	 <unk> </s> maxlen: 6
+549 	 nice set. </s>                              	 <unk> <unk> </s> maxlen: 8
+550 	 they want you to turn off your flash light. </s>                       	 they want a <unk> <unk> </s> maxlen: 10
+551 	 okay, now what? </s>                             	 now what? </s> maxlen: 8
+552 	 <unk> the bible to the marked <unk> </s>                         	 <unk> <unk> <unk> <unk> </s> maxlen: 10
+553 	 "where you'll find the lord's <unk> </s>                          	 <unk> <unk> <unk> there. </s> maxlen: 10
+554 	 <unk> been <unk> <unk> years ago, </s>                          	 <unk> been <unk> <unk> years ago. </s> maxlen: 17
+555 	 "this once holy place is a likely <unk> of <unk> <unk> </s>                     	 <unk> this is the <unk> of extraordinary <unk> </s> maxlen: 14
+556 	 oh, my. "in <unk> </s>                            	 <unk> <unk> <unk> </s> maxlen: 9
+557 	 no way. </s>                              	 no way. </s> maxlen: 8
+558 	 oh, hell no, man. </s>                            	 no, man. </s> maxlen: 8
+559 	 don't do that shit. </s>                            	 don't do that shit. </s> maxlen: 9
+560 	 i can't do that. </s>                            	 i can't do this. </s> maxlen: 8
+561 	 <unk> your task is <unk> </s>                           	 <unk> <unk> </s> maxlen: 8
+562 	 "if there is no sign of the <unk> </s>                        	 a sign from <unk> <unk> </s> maxlen: 11
+563 	 "you can return to base <unk> </s>                          	 we went camping in <unk> </s> maxlen: 9
+564 	 deep breath, <unk> </s>                             	 deep <unk> <unk> </s> maxlen: 10
+565 	 just do it. </s>                             	 do it. </s> maxlen: 8
+566 	 please forgive me, whoever i may be pissing off. </s>                       	 please forgive me, whoever i may be <unk> </s> maxlen: 13
+567 	 this wasn't my idea. </s>                            	 it wasn't my idea. </s> maxlen: 10
+568 	 okay. </s>                               	 okay. </s> maxlen: 6
+569 	 <unk> from us deliver </s>                            	 <unk> <unk> <unk> </s> maxlen: 9
+570 	 <unk> father who art in <unk> </s>                          	 <unk> <unk> </s> maxlen: 8
+571 	 "but <unk> into not us lead. </s>                          	 <unk> don't let them see us. </s> maxlen: 11
+572 	 "and us against <unk> </s>                            	 <unk> <unk> <unk> <unk> </s> maxlen: 10
+573 	 "who those forgive we as <unk> our us <unk> </s>                       	 like those in <unk> who owe <unk> our <unk> have <unk> </s> maxlen: 17
+574 	 "and bread daily our day this us <unk> </s>                        	 <unk> give us this day. </s> maxlen: 11
+575 	 <unk> in is it... </s>                            	 as in <unk> </s> maxlen: 9
+576 	 <unk> earth on done be will <unk> </s>                         	 as in <unk> </s> maxlen: 9
+577 	 <unk> in art who father <unk> </s>                          	 <unk> <unk> and <unk> <unk> </s> maxlen: 11
+578 	 please say i can leave now. </s>                          	 please say you can leave now. </s> maxlen: 10
+579 	 <unk> you head to the base <unk> </s>                         	 <unk> didn't leave before he went <unk> </s> maxlen: 11
+580 	 god, <unk> you have to blow out the <unk> </s>                       	 jesus, <unk> <unk> </s> maxlen: 10
+581 	 you're <unk> right? </s>                             	 you're kidding, right? </s> maxlen: 10
+582 	 and sit there for one minute. </s>                          	 sit there for a minute. </s> maxlen: 10
+583 	 the things i do for money. </s>                          	 the things i do for money. </s> maxlen: 10
+584 	 where'd he go? </s>                             	 where'd she go? </s> maxlen: 8
+585 	 it would be my <unk> that the production has cut off our <unk> to communicate with our <unk> friend... in order to create a more <unk> atmosphere. </s>     	 from what i understand, the job is to take care of this for a <unk> <unk> to make it look more <unk> </s> maxlen: 31
+586 	 whatever. </s>                               	 whatever. </s> maxlen: 8
+587 	 sure, like <unk> </s>                             	 <unk> he went to <unk> </s> maxlen: 9
+588 	 guys? </s>                               	 <unk> </s> maxlen: 6
+589 	 i think we got some really good stuff. </s>                        	 i think we got some really good stuff. </s> maxlen: 13
+590 	 guys? </s>                               	 <unk> </s> maxlen: 6
+591 	 guys? </s>                               	 <unk> </s> maxlen: 6
+592 	 guys! </s>                               	 <unk> </s> maxlen: 6
+593 	 do you see anyone? </s>                            	 did you see anyone? </s> maxlen: 9
+594 	 no. </s>                               	 no. </s> maxlen: 6
+595 	 come on, dude, it couldn't have been that bad. </s>                       	 come on, man, that <unk> not bad. </s> maxlen: 13
+596 	 totally not worth the money. </s>                           	 definitely not worth the money. </s> maxlen: 9
+597 	 but having done it, it was totally worth the money. </s>                      	 but if you do the mission, you will be able to maxlen: 11
+598 	 oh, thank god i'm finished. </s>                           	 thank god i'm finished. </s> maxlen: 9
+599 	 look at me, i'm still <unk> </s>                          	 look, i'm still <unk> </s> maxlen: 9
+600 	 i don't think i could handle doing it again. </s>                       	 i guess i can't do it again. </s> maxlen: 9
+601 	 they might ask you to do another one. </s>                        	 i'll get you a task force. </s> maxlen: 10
+602 	 don't joke. </s>                              	 no kidding. </s> maxlen: 8
+603 	 i swear you can feel some kind of twisted <unk> out there. </s>                    	 i swear you don't even know what a person is in there. </s> maxlen: 15
+604 	 it's like walking through heavy <unk> only it's ice cold. </s>                      	 it's like walking through heavy <unk> only it's cold. </s> maxlen: 18
+605 	 it was creepy. </s>                             	 <unk> </s> maxlen: 6
+606 	 is it me, or is it getting <unk> in here? </s>                      	 is it me, or is it getting <unk> in here? </s> maxlen: 18
+607 	 yeah, she's right. </s>                             	 yeah, she's right. </s> maxlen: 9
+608 	 i want to go next. </s>                           	 i want to make a <unk> </s> maxlen: 10
+609 	 what exactly do you mean, </s>                           	 what do you mean? </s> maxlen: 9
+610 	 "there are some cameras <unk> </s>                           	 <unk> <unk> <unk> </s> maxlen: 9
+611 	 what do you want me to say? </s>                         	 what do you want me to say? </s> maxlen: 9
+612 	 i'm sorry, but this is pretty complicated stuff. </s>                        	 i'm sorry, but this is way beyond <unk> </s> maxlen: 13
+613 	 we'll get <unk> to go down... and have a look and fix them. </s>                   	 <unk> <unk> <unk> <unk> </s> maxlen: 11
+614 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+615 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+616 	 yeah, i need you to go down and have a look at some cameras. </s>                  	 i need you to go down and get some <unk> </s> maxlen: 13
+617 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+618 	 boys. </s>                               	 gentlemen. </s> maxlen: 6
+619 	 too late. </s>                              	 too late. </s> maxlen: 8
+620 	 we need to talk. </s>                            	 we need to talk. </s> maxlen: 8
+621 	 i'm busy. </s>                              	 i'm busy. </s> maxlen: 6
+622 	 well, we talk now or i walk. </s>                         	 it's either <unk> or <unk> </s> maxlen: 11
+623 	 it's important to me too, taylor. </s>                          	 it's important to me, too, <unk> </s> maxlen: 11
+624 	 what do you mean? </s>                            	 what do you mean? </s> maxlen: 9
+625 	 well, i've been doing a little research. </s>                         	 i'm doing a little research. </s> maxlen: 10
+626 	 and by <unk> what you actually mean... is you've been fucking one of the local girls. </s>                	 and by <unk> you mean girls in the <unk> </s> maxlen: 14
+627 	 am i right? </s>                             	 am i right? </s> maxlen: 8
+628 	 loose lips sink <unk> taylor. </s>                           	 <unk> <unk> wide <unk> </s> maxlen: 11
+629 	 okay, this prison didn't just have a men's <unk> all right? </s>                     	 okay, the prison is for men only. </s> maxlen: 13
+630 	 it had a women's <unk> too, all right? </s>                        	 there's a women's <unk> </s> maxlen: 11
+631 	 and the twisted fucking warden would <unk> around it, <unk> answering to no one. </s>                  	 and the crazy fucking warden would <unk> around it, and he wouldn't answer to anyone. </s> maxlen: 22
+632 	 he beat them, he raped them, made them have his children, then he <unk> them to death. </s>               	 he raped them, raped them, then got pregnant, then he <unk> </s> maxlen: 17
+633 	 people say he even fed some of them their own babies. </s>                     	 <unk> is <unk> <unk> </s> maxlen: 11
+634 	 what's your point? </s>                             	 what's that supposed to mean? </s> maxlen: 10
+635 	 my point? </s>                              	 what do i mean? </s> maxlen: 10
+636 	 my point is that the real story would have made the show a <unk> </s>                  	 this is the real story <unk> <unk> </s> maxlen: 13
+637 	 everybody would've been talking about us. </s>                          	 anyone could be talking about us. </s> maxlen: 10
+638 	 the story you <unk> out is nothing compared to the real one. </s>                    	 this <unk> story is nothing but <unk> <unk> </s> maxlen: 15
+639 	 i agree. </s>                              	 me too. </s> maxlen: 8
+640 	 so why didn't we use it? </s>                          	 and why would he do that? </s> maxlen: 10
+641 	 because the town said they'd sue us if we did. </s>                      	 because the town is gonna sue us if we do this. </s> maxlen: 15
+642 	 right. </s>                               	 okay. </s> maxlen: 6
+643 	 are we done here? </s>                            	 are we done here? </s> maxlen: 10
+644 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+645 	 oh, yeah? </s>                              	 yeah? </s> maxlen: 8
+646 	 what's that? </s>                              	 what is it? </s> maxlen: 8
+647 	 anyway, i'm gonna go take a nap. </s>                         	 anyway, i'm kind of hungry. </s> maxlen: 10
+648 	 they on? </s>                              	 <unk> </s> maxlen: 8
+649 	 yep, they're on. </s>                             	 yes, they are. </s> maxlen: 8
+650 	 sweet. </s>                               	 good. </s> maxlen: 6
+651 	 <unk> what was that? </s>                            	 <unk> what is that? </s> maxlen: 9
+652 	 just a little something to get me through the night. </s>                      	 just a little something to help me remember the night. </s> maxlen: 14
+653 	 do you want? </s>                             	 you want some? </s> maxlen: 8
+654 	 just get your hairy butt back here, okay? </s>                        	 get your <unk> ass back here, okay? </s> maxlen: 14
+655 	 aye, aye, captain. </s>                             	 aye, aye, captain. </s> maxlen: 9
+656 	 hello? </s>                               	 hello? </s> maxlen: 6
+657 	 you scared the shit out of me. </s>                         	 <unk> <unk> </s> maxlen: 8
+658 	 i've got some good stuff. </s>                           	 i've got some good stuff. </s> maxlen: 11
+659 	 suit yourself. </s>                              	 suit yourself. </s> maxlen: 8
+660 	 we are totally ready to go. </s>                          	 we're totally ready to go. </s> maxlen: 9
+661 	 i would have to say my biggest fear would be being buried alive. </s>                   	 i would say my biggest fear is being kept alive. </s> maxlen: 14
+662 	 where do i go next? </s>                           	 where are we going now? </s> maxlen: 9
+663 	 "this will lead you to freedom <unk> </s>                         	 <unk> i'm not going to turn you into freedom. </s> maxlen: 11
+664 	 all right, </s>                              	 okay, </s> maxlen: 6
+665 	 i'm at the end of freedom row. </s>                         	 freedom must be <unk> </s> maxlen: 9
+666 	 what do i do next? </s>                           	 what am i doing now? </s> maxlen: 9
+667 	 tell him to go right again. </s>                          	 tell him to go right again. </s> maxlen: 11
+668 	 go straight on and then right. </s>                          	 go ahead and take a right. </s> maxlen: 11
+669 	 oh, shit! </s>                              	 damn <unk> </s> maxlen: 8
+670 	 what? </s>                               	 what? </s> maxlen: 6
+671 	 blood. </s>                               	 <unk> </s> maxlen: 6
+672 	 it's not real blood. </s>                            	 it's not real blood. </s> maxlen: 9
+673 	 no shit, <unk> </s>                             	 no <unk> <unk> </s> maxlen: 9
+674 	 i love that girl. </s>                            	 i like this girl. </s> maxlen: 9
+675 	 oh, man, please tell me i get to go up and not down. </s>                   	 please tell me the <unk> came up, not down. </s> maxlen: 15
+676 	 sorry. </s>                               	 i'm sorry. </s> maxlen: 6
+677 	 <unk> <unk> </s>                              	 80 <unk> </s> maxlen: 9
+678 	 who do i look like, a <unk> </s>                         	 what am i, a <unk> </s> maxlen: 10
+679 	 you should see a metal <unk> once you've gone a flight down. </s>                    	 when you come down, you're going to see a door full of <unk> </s> maxlen: 14
+680 	 it <unk> </s>                              	 he <unk> </s> maxlen: 8
+681 	 damn. </s>                               	 shit! </s> maxlen: 8
+682 	 <unk> to <unk> <unk> cell number five. </s>                         	 welcome to <unk> <unk> number five. </s> maxlen: 15
+683 	 "for the violent and <unk> <unk> </s>                          	 <unk> <unk> and <unk> <unk> </s> maxlen: 11
+684 	 shit. </s>                               	 shit. </s> maxlen: 6
+685 	 look, just tell me what i need to do... so i can get the hell out of here. </s>              	 just tell me what i need to do... so i can get the hell out of here. </s> maxlen: 18
+686 	 no! </s>                               	 no! </s> maxlen: 6
+687 	 thanks. </s>                               	 thank you. </s> maxlen: 6
+688 	 you guys ever get tired of <unk> each other? </s>                       	 stop <unk> each other? </s> maxlen: 11
+689 	 the things i do. </s>                            	 look at this <unk> </s> maxlen: 10
+690 	 it says, "if an <unk> failed in his suicide <unk> </s>                      	 it says, <unk> a prisoner commit suicide. </s> maxlen: 15
+691 	 "you are to now <unk> the torture of a <unk> </s>                      	 you are to be <unk> as soon as he <unk> </s> maxlen: 15
+692 	 okay, so where is it? </s>                           	 okay, where's <unk> </s> maxlen: 9
+693 	 under your feet. </s>                             	 under the <unk> </s> maxlen: 8
+694 	 i mean, this thing is, like, full of shit in here. </s>                     	 this place is practically <unk> </s> maxlen: 13
+695 	 money, money, money. </s>                             	 remember the money. </s> maxlen: 8
+696 	 that's a pretty harsh <unk> </s>                           	 that's a pretty tough <unk> </s> maxlen: 11
+697 	 <unk> in the <unk> you are to <unk> further <unk> </s>                      	 <unk> <unk> what are you going to do? </s> maxlen: 11
+698 	 okay. </s>                               	 okay. </s> maxlen: 6
+699 	 hello? </s>                               	 hello? </s> maxlen: 6
+700 	 hello? </s>                               	 hello? </s> maxlen: 6
+701 	 hey, no offense, but i really hope you're not my <unk> </s>                     	 no offense, but i hope you're not my <unk> </s> maxlen: 14
+702 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+703 	 what? </s>                               	 what? </s> maxlen: 6
+704 	 take a look at this. </s>                           	 check this out. </s> maxlen: 9
+705 	 what? </s>                               	 what? </s> maxlen: 6
+706 	 that <unk> </s>                              	 <unk> </s> maxlen: 6
+707 	 you're fired. </s>                              	 <unk> </s> maxlen: 6
+708 	 why? </s>                               	 why? </s> maxlen: 6
+709 	 you go behind my back and you hire some extra to be in the <unk> when i specifically told you not to, and you wanna know why you're <unk> </s>   	 you went behind my back and you were asked specifically to bring you some <unk> <unk> and you still want to tell me why you were <unk> </s> maxlen: 28
+710 	 that's not my guy. </s>                            	 that's not our guy. </s> maxlen: 10
+711 	 where'd he go? </s>                             	 where did he go? </s> maxlen: 8
+712 	 who the fuck was that? </s>                           	 who the fuck is that? </s> maxlen: 11
+713 	 i don't know. </s>                             	 i don't know. </s> maxlen: 6
+714 	 don't look at me. </s>                            	 don't look at me. </s> maxlen: 8
+715 	 look, <unk> you've got to get that guy out of there, all right? </s>                   	 look, <unk> we got to get this guy out of there, okay? </s> maxlen: 17
+716 	 i mean, this is gonna screw up the show. </s>                       	 he's gonna suck my <unk> </s> maxlen: 9
+717 	 damn. </s>                               	 shit! </s> maxlen: 8
+718 	 this is gonna kill us. </s>                           	 <unk> </s> maxlen: 6
+719 	 you're sure this isn't just you screwing around? </s>                        	 you put this there? </s> maxlen: 11
+720 	 <unk> honor. </s>                              	 <unk> no. </s> maxlen: 8
+721 	 it's so obvious. </s>                             	 it's obvious. </s> maxlen: 8
+722 	 what is so <unk> </s>                            	 what's so <unk> </s> maxlen: 9
+723 	 come closer. </s>                              	 <unk> </s> maxlen: 6
+724 	 remember when i asked you... why you were having snow rig cameras in the control <unk> </s>                	 why did they send you a camera in the control room? </s> maxlen: 15
+725 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+726 	 the network wanted some guys in there... to shoot some <unk> </s>                     	 camera <unk> <unk> <unk> <unk> </s> maxlen: 11
+727 	 fuck me! </s>                              	 holy shit. </s> maxlen: 8
+728 	 fuck me! </s>                              	 holy shit. </s> maxlen: 8
+729 	 you're right. </s>                              	 you're right. </s> maxlen: 6
+730 	 it's kind of <unk> isn't it? </s>                          	 <unk> right? </s> maxlen: 9
+731 	 it's total genius. </s>                             	 absolutely <unk> </s> maxlen: 8
+732 	 what are you two talking about? </s>                          	 what are you two talking about? </s> maxlen: 10
+733 	 we're part of the game. </s>                           	 we're part of the game. </s> maxlen: 11
+734 	 you mean to tell me that the network is throwing some <unk> into the game just to see how freaked out we get? </s>         	 you mean to tell me how the company <unk> would like to record something from the <unk> </s> maxlen: 22
+735 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+736 	 so what do we do now? </s>                          	 so what do we do now? </s> maxlen: 10
+737 	 go on with the show. </s>                           	 keep <unk> </s> maxlen: 9
+738 	 as planned. </s>                              	 like <unk> </s> maxlen: 8
+739 	 task three. </s>                              	 task three. </s> maxlen: 8
+740 	 black king and white <unk> </s>                           	 black <unk> and white <unk> </s> maxlen: 11
+741 	 task four. </s>                              	 mission four. </s> maxlen: 8
+742 	 black <unk> and white queen. </s>                           	 black <unk> and white <unk> </s> maxlen: 11
+743 	 told you you might have to do another <unk> </s>                       	 i told you it was <unk> </s> maxlen: 10
+744 	 <unk> </s>                               	 very <unk> </s> maxlen: 8
+745 	 okay, black king and white knight are to turn right and make their way to the gas chamber. </s>              	 okay, black <unk> and white horse go right to the gas chamber. </s> maxlen: 19
+746 	 white queen and black <unk> are to go straight and head to the prison kitchen. </s>                 	 white <unk> and black <unk> are to go straight and head to the prison <unk> </s> maxlen: 21
+747 	 okay, <unk> </s>                              	 okay, later. </s> maxlen: 8
+748 	 good luck. </s>                              	 good luck. </s> maxlen: 8
+749 	 <unk> and knight go left and then right. </s>                        	 <unk> and horse go left then right. </s> maxlen: 15
+750 	 <unk> and the queen go to the end of the hall </s>                     	 <unk> and the horse go to the end of the hall. </s> maxlen: 14
+751 	 "and take the <unk> <unk> </s>                           	 "and take the <unk> <unk> </s> maxlen: 10
+752 	 <unk> pick up. </s>                             	 <unk> come in. </s> maxlen: 9
+753 	 i need to talk to you. </s>                          	 i need to talk to you. </s> maxlen: 9
+754 	 <unk> are you there? </s>                            	 <unk> are you there? </s> maxlen: 9
+755 	 can you hear me? </s>                            	 can you hear me? </s> maxlen: 9
+756 	 come on, pick up. </s>                            	 come on, pick up. </s> maxlen: 9
+757 	 we're in. </s>                              	 <unk> </s> maxlen: 6
+758 	 <unk> to the gathering room. </s>                           	 welcome to the <unk> room. </s> maxlen: 10
+759 	 you should see a light switch at the rear wall. </s>                      	 it should be a light from the <unk> so turn it on. </s> maxlen: 14
+760 	 <unk> king and white knight are to enter the gas <unk> </s>                     	 <unk> <unk> and white horse go to the gas room. </s> maxlen: 15
+761 	 again, nice set, <unk> </s>                            	 nice <unk> <unk> </s> maxlen: 10
+762 	 can't take credit for that, it's the real deal. </s>                       	 that was the real place to get the best of it. </s> maxlen: 17
+763 	 only thing the legal department could clear. </s>                         	 the only place i can go to law school. </s> maxlen: 11
+764 	 cool, right? </s>                              	 beautiful, isn't it? </s> maxlen: 9
+765 	 well, it's scary all right. </s>                           	 pretty <unk> </s> maxlen: 8
+766 	 christ! </s>                               	 oh, god. </s> maxlen: 6
+767 	 what's that smell? </s>                             	 what's that smell? </s> maxlen: 10
+768 	 it is a well <unk> <unk> that execution <unk> <unk> have the smell of death in them. </s>               	 a <unk> <unk> usually <unk> the smell of death itself. </s> maxlen: 18
+769 	 of course the smell isn't actually death. </s>                         	 of course the smell isn't actually death. </s> maxlen: 13
+770 	 when a human knows his or her life is about to come to an end, it will tend to reach an <unk> <unk> that will cause it to <unk> highly <unk> <unk> 	 when a human knows his or her life is about to come to an end, it will <unk> her <unk> which will <unk> <unk> <unk> </s> maxlen: 30
+771 	 in this particular case, we're <unk> a combination of human <unk> and the smells of the gas used to kill said human. </s>          	 in this case, we're <unk> a <unk> of human <unk> and the <unk> that killed him. </s> maxlen: 22
+772 	 now for the fun part, boys and girls. </s>                        	 now is the fun time, ladies and gentlemen. </s> maxlen: 11
+773 	 black king gets to sit down in the gas chair. </s>                      	 black <unk> sitting on the chair. </s> maxlen: 10
+774 	 black king? </s>                              	 black <unk> </s> maxlen: 9
+775 	 that would be me. </s>                            	 that would be me. </s> maxlen: 9
+776 	 and <unk> further instructions. </s>                            	 wait for further instructions. </s> maxlen: 10
+777 	 "there you'll find some meat and a <unk> </s>                        	 <unk> some meat and a <unk> <unk> </s> maxlen: 14
+778 	 "this is to be cooked and <unk> </s>                         	 <unk> this <unk> </s> maxlen: 10
+779 	 oh, man! </s>                              	 oh, man! </s> maxlen: 6
+780 	 <unk> were always suspicious that meat <unk> </s>                         	 <unk> was always <unk> by <unk> <unk> </s> maxlen: 14
+781 	 <unk> not <unk> pig or <unk> </s>                          	 and since <unk> is no lamb and no other <unk> </s> maxlen: 15
+782 	 "but something else. </s>                             	 <unk> <unk> </s> maxlen: 8
+783 	 <unk> sweet and nothing like anyone had ever <unk> <unk> </s>                      	 before the <unk> i never thought <unk> was a nice meat. </s> maxlen: 17
+784 	 so, we're talking human <unk> right? </s>                          	 you like <unk> right? </s> maxlen: 11
+785 	 you in? </s>                              	 are you in there? </s> maxlen: 8
+786 	 yes. </s>                               	 yeah. </s> maxlen: 6
+787 	 guess what you get to do now? </s>                         	 guess what you're gonna do now? </s> maxlen: 11
+788 	 i give up. </s>                             	 i give up. </s> maxlen: 8
+789 	 you get to <unk> <unk> in. </s>                          	 <unk> <unk> </s> maxlen: 8
+790 	 i'm <unk> here, but <unk> should fully <unk> the fear the victims felt when they were about to be <unk> </s>            	 i can show you from here to the <unk> <unk> the <unk> gas <unk> were entirely <unk> </s> maxlen: 21
+791 	 you're good at that. </s>                            	 you're good at that. </s> maxlen: 9
+792 	 let's just say, some of my <unk> have been on the <unk> side. </s>                   	 let's just say some of the girls have been acting weird. </s> maxlen: 14
+793 	 is that okay with you? </s>                           	 you okay? </s> maxlen: 8
+794 	 okay. </s>                               	 okay. </s> maxlen: 6
+795 	 "your task is to shut off the master <unk> </s>                       	 "your mission is the gas <unk> </s> maxlen: 11
+796 	 <unk> the gas <unk> your <unk> </s>                          	 we gotta find the <unk> <unk> and <unk> the gas. </s> maxlen: 13
+797 	 you need to follow the <unk> </s>                          	 we have to get rid of <unk> </s> maxlen: 9
+798 	 makes sense. </s>                              	 makes sense. </s> maxlen: 6
+799 	 taking <unk> </s>                              	 wanna <unk> </s> maxlen: 9
+800 	 i will bet 100 on her throwing up. </s>                        	 <unk> </s> maxlen: 9
+801 	 done. </s>                               	 okay. </s> maxlen: 6
+802 	 it's weird. </s>                              	 weird. </s> maxlen: 6
+803 	 i can't do this. </s>                            	 i can't do this. </s> maxlen: 8
+804 	 i can't. </s>                              	 i can't. </s> maxlen: 6
+805 	 it's my worst nightmare. </s>                            	 this is <unk> worst nightmare. </s> maxlen: 11
+806 	 come on, sweetie, that's the show. </s>                          	 come on, sweetie, it's just <unk> </s> maxlen: 11
+807 	 "no more college <unk> </s>                            	 <unk> <unk> <unk> </s> maxlen: 10
+808 	 look, remember what he said? </s>                           	 remember what you said? </s> maxlen: 9
+809 	 "if the team <unk> there'll be a <unk> <unk> </s>                       	 "if the team gets <unk> the money goes <unk> </s> maxlen: 13
+810 	 do it for the team, girlfriend. </s>                          	 do it for the team, girl. </s> maxlen: 10
+811 	 you gonna <unk> </s>                             	 are you a <unk> </s> maxlen: 8
+812 	 thank you. </s>                              	 thank you. </s> maxlen: 6
+813 	 okay, <unk> i'm at the bottom of the stairs. </s>                       	 okay, <unk> <unk> <unk> </s> maxlen: 10
+814 	 shit! </s>                               	 shit! </s> maxlen: 6
+815 	 do you hear me? </s>                            	 can you hear me? </s> maxlen: 9
+816 	 he's back. </s>                              	 he's back. </s> maxlen: 8
+817 	 this really <unk> </s>                             	 it really <unk> </s> maxlen: 9
+818 	 let me out. </s>                             	 let me out. </s> maxlen: 8
+819 	 hey, come on. </s>                             	 come on. </s> maxlen: 8
+820 	 hey, let me out, man. </s>                           	 let me out, man. </s> maxlen: 9
+821 	 my god! </s>                              	 god! </s> maxlen: 6
+822 	 who is that man standing there? </s>                          	 who is that man standing there? </s> maxlen: 11
+823 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+824 	 so <unk> </s>                              	 <unk> </s> maxlen: 6
+825 	 let me out. </s>                             	 let me out. </s> maxlen: 8
+826 	 i don't know, <unk> this guy is actually starting to <unk> me out. </s>                   	 i don't know, <unk> this guy is starting to freak me out. </s> maxlen: 14
+827 	 hey, stop playing. </s>                             	 stop playing games. </s> maxlen: 9
+828 	 let me out. </s>                             	 let me out. </s> maxlen: 8
+829 	 so, what's up? </s>                             	 how's it going? </s> maxlen: 8
+830 	 i need to talk with you. </s>                          	 we need to talk to you. </s> maxlen: 9
+831 	 outside? </s>                               	 outside? </s> maxlen: 8
+832 	 sure. </s>                               	 yeah. </s> maxlen: 6
+833 	 big news. </s>                              	 big news. </s> maxlen: 9
+834 	 i think the company's playing us. </s>                          	 i think the company's playing us. </s> maxlen: 10
+835 	 what? </s>                               	 what? </s> maxlen: 6
+836 	 who's there? </s>                              	 who's there? </s> maxlen: 9
+837 	 who are you? </s>                             	 who are you? </s> maxlen: 8
+838 	 show me the chamber. </s>                            	 show me the room. </s> maxlen: 9
+839 	 shall we cover <unk> and <unk> </s>                          	 what are we gonna do about <unk> and <unk> </s> maxlen: 11
+840 	 where are they? </s>                             	 where are they? </s> maxlen: 6
+841 	 i don't know, but just give me one second. </s>                       	 i don't know, just give me a second. </s> maxlen: 13
+842 	 there. </s>                               	 there. </s> maxlen: 6
+843 	 there's that guy again, see? </s>                           	 there's that guy again, see? </s> maxlen: 11
+844 	 wow. </s>                               	 wow! </s> maxlen: 8
+845 	 who the hell is that? </s>                           	 who's that? </s> maxlen: 9
+846 	 okay, how'd he get there so <unk> </s>                         	 okay, how did he get here so <unk> </s> maxlen: 15
+847 	 that's the guy from the <unk> right? </s>                         	 that's the guy from the <unk> right? </s> maxlen: 11
+848 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+849 	 yeah, it... it looks like him. </s>                          	 yeah, it looks like him. </s> maxlen: 9
+850 	 cool. </s>                               	 nice. </s> maxlen: 6
+851 	 no, not cool. </s>                             	 no, not cool. </s> maxlen: 11
+852 	 he either walks through <unk> or there are more than one of them. </s>                   	 this guy's either <unk> <unk> or there's more than one man. </s> maxlen: 21
+853 	 we all seen the <unk> right? </s>                          	 we all love <unk> don't we? </s> maxlen: 11
+854 	 do you mind if we <unk> </s>                          	 mind if i sit down? </s> maxlen: 11
+855 	 please? </s>                               	 please? </s> maxlen: 6
+856 	 guys? </s>                               	 <unk> </s> maxlen: 6
+857 	 guys? </s>                               	 <unk> </s> maxlen: 6
+858 	 fake blood <unk> fake <unk> </s>                           	 fake <unk> fake <unk> </s> maxlen: 10
+859 	 nicely done. </s>                              	 nice <unk> </s> maxlen: 8
+860 	 in fact, maybe even oscar <unk> </s>                          	 maybe even <unk> </s> maxlen: 10
+861 	 no. </s>                               	 no. </s> maxlen: 6
+862 	 no, that's not right. </s>                            	 no, that's not true. </s> maxlen: 10
+863 	 this is way, way off <unk> </s>                          	 it's <unk> <unk> </s> maxlen: 11
+864 	 it looked real to me. </s>                           	 sounds real to me. </s> maxlen: 10
+865 	 <unk> they are playing us. </s>                           	 <unk> will take care of us. </s> maxlen: 9
+866 	 trust me. </s>                              	 trust me. </s> maxlen: 8
+867 	 what? </s>                               	 what? </s> maxlen: 6
+868 	 look. </s>                               	 look. </s> maxlen: 6
+869 	 they <unk> the picture. </s>                            	 i took his picture. </s> maxlen: 8
+870 	 what? </s>                               	 what? </s> maxlen: 6
+871 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+872 	 costume. </s>                               	 <unk> </s> maxlen: 6
+873 	 easy. </s>                               	 easy. </s> maxlen: 6
+874 	 hold on. </s>                              	 wait. </s> maxlen: 6
+875 	 no. </s>                               	 no. </s> maxlen: 6
+876 	 no. </s>                               	 no. </s> maxlen: 6
+877 	 he's a real ghost. </s>                            	 he's a real <unk> </s> maxlen: 10
+878 	 can't get any more off than that. </s>                         	 more <unk> </s> maxlen: 9
+879 	 he goes any further with him, he's gonna take him off my <unk> </s>                   	 more <unk> will be out of sight. </s> maxlen: 14
+880 	 what? </s>                               	 what? </s> maxlen: 6
+881 	 look, it's a huge prison. </s>                           	 this place is <unk> </s> maxlen: 10
+882 	 i mean, i couldn't put my cameras everywhere. </s>                        	 you can't put cameras everywhere. </s> maxlen: 11
+883 	 show me the hole. </s>                            	 show me the <unk> </s> maxlen: 8
+884 	 show me the chamber. </s>                            	 show me the room. </s> maxlen: 9
+885 	 <unk> somebody's gotta go in there and see if they're okay. </s>                     	 one of us should go over there and see if he's okay. </s> maxlen: 15
+886 	 i can tell you, they don't look okay. </s>                        	 i can tell you're not feeling well. </s> maxlen: 9
+887 	 she's <unk> <unk> <unk> </s>                            	 he's <unk> </s> maxlen: 8
+888 	 where is <unk> then? </s>                            	 where is <unk> then? </s> maxlen: 10
+889 	 i don't know. </s>                             	 i don't know. </s> maxlen: 6
+890 	 probably off his face somewhere. </s>                           	 he's probably hiding somewhere. </s> maxlen: 10
+891 	 i'm gonna call the office. </s>                           	 i'll call the office. </s> maxlen: 8
+892 	 yeah, you too. </s>                             	 yeah, you too. </s> maxlen: 9
+893 	 good night. </s>                              	 good night. </s> maxlen: 8
+894 	 they say they've got no idea what's going on here. </s>                      	 they don't know what's going on. </s> maxlen: 11
+895 	 still feels wrong. </s>                             	 i feel you're getting worse. </s> maxlen: 9
+896 	 okay, i'll go and prove it to you. </s>                        	 okay, i'll go and show you. </s> maxlen: 13
+897 	 no <unk> </s>                              	 it's okay. </s> maxlen: 8
+898 	 anyone coming? </s>                              	 anyone coming? </s> maxlen: 9
+899 	 yeah, i'll go. </s>                             	 i'm coming. </s> maxlen: 8
+900 	 i'll grab a camera and get some cool <unk> </s>                       	 i'll get a <unk> maybe a nice <unk> </s> maxlen: 13
+901 	 thank you. </s>                              	 thank you. </s> maxlen: 8
+902 	 you must be nice to them. </s>                          	 i was nice to them. </s> maxlen: 9
+903 	 easy <unk> lemon <unk> </s>                            	 <unk> <unk> </s> maxlen: 8
+904 	 <unk> <unk> lemon <unk> </s>                            	 <unk> <unk> </s> maxlen: 8
+905 	 hey, you know what? </s>                            	 you know what? </s> maxlen: 8
+906 	 you're actually kind of <unk> </s>                           	 really <unk> </s> maxlen: 8
+907 	 yeah, so funny, pretty boy. </s>                           	 you're so <unk> kid. </s> maxlen: 9
+908 	 i want to do my <unk> </s>                          	 i want to do the <unk> </s> maxlen: 10
+909 	 kill the <unk> </s>                             	 close your eyes. </s> maxlen: 8
+910 	 come on. </s>                              	 come on. </s> maxlen: 6
+911 	 <unk> what do you wanna do? </s>                          	 <unk> what do you want to do? </s> maxlen: 10
+912 	 hold the game. </s>                             	 stop the game. </s> maxlen: 8
+913 	 wow, this place is kind of <unk> right? </s>                        	 wow, this place is <unk> right? </s> maxlen: 15
+914 	 it gets a bit weird. </s>                           	 a little <unk> </s> maxlen: 8
+915 	 where'd he go? </s>                             	 where did he go? </s> maxlen: 8
+916 	 i don't know. </s>                             	 i don't know. </s> maxlen: 6
+917 	 i didn't see him. </s>                            	 i didn't see him. </s> maxlen: 8
+918 	 he went right past here. </s>                           	 he went down this way. </s> maxlen: 10
+919 	 dead end. </s>                              	 dead end. </s> maxlen: 8
+920 	 what was that? </s>                             	 what was that? </s> maxlen: 9
+921 	 yeah, what was that? </s>                            	 yeah, what was that? </s> maxlen: 9
+922 	 shit. </s>                               	 shit. </s> maxlen: 6
+923 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+924 	 put angel on screen. </s>                            	 <unk> get the <unk> </s> maxlen: 9
+925 	 we need to get those kids out of there. </s>                       	 we need to get them out of there. </s> maxlen: 9
+926 	 can you hear me? </s>                            	 can you hear me? </s> maxlen: 9
+927 	 listen up. </s>                              	 listen to me. </s> maxlen: 8
+928 	 there's been a slight change of plans. </s>                         	 there's been a change of plans. </s> maxlen: 10
+929 	 we're gonna need to stop the show. </s>                         	 i have to get rid of <unk> </s> maxlen: 9
+930 	 what? </s>                               	 what? </s> maxlen: 6
+931 	 why? </s>                               	 why? </s> maxlen: 6
+932 	 i'm gonna be honest with you. </s>                          	 i'll be honest with you. </s> maxlen: 10
+933 	 there is somebody in there with you. </s>                         	 there's someone else with you. </s> maxlen: 13
+934 	 who? </s>                               	 who? </s> maxlen: 6
+935 	 we're not sure. </s>                             	 we're not sure. </s> maxlen: 8
+936 	 but i need you to get yourself out of there as fast as possible, understood? </s>                 	 i need you to get out of there as fast as possible, okay? </s> maxlen: 17
+937 	 you're playing me? </s>                             	 are you playing with me? </s> maxlen: 10
+938 	 you're trying to freak me out. </s>                          	 you're trying to trick me. </s> maxlen: 9
+939 	 open the door. </s>                             	 open the door. </s> maxlen: 8
+940 	 i want to win and i want my money. </s>                       	 <unk> i want my money. </s> maxlen: 10
+941 	 so open the door! </s>                            	 open the door! </s> maxlen: 9
+942 	 who opened the door? </s>                            	 who locked the door? </s> maxlen: 9
+943 	 sorry, you're not serious, are you? </s>                          	 sorry, you're not serious, are you? </s> maxlen: 11
+944 	 idiot. </s>                               	 <unk> </s> maxlen: 8
+945 	 you're task is to <unk> and locate the clearly marked cell seven. </s>                    	 your job is to find out and locate the <unk> with the <unk> </s> maxlen: 18
+946 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+947 	 in this <unk> warden <unk> received a near fatal stab wound from an <unk> </s>                  	 these <unk> are <unk> <unk> by an <unk> <unk> </s> maxlen: 18
+948 	 you'll find a key in that <unk> and this key can release both your <unk> colleagues from the hole and the gas chamber. </s>         	 if i can find a key in that <unk> this key and the gas <unk> can release your friend. </s> maxlen: 26
+949 	 cool. </s>                               	 great. </s> maxlen: 6
+950 	 is that all you got for me? </s>                         	 is that all? </s> maxlen: 10
+951 	 <unk> money i've ever made. </s>                           	 <unk> money i've ever made. </s> maxlen: 11
+952 	 what am i afraid of? </s>                           	 what am i talking about? </s> maxlen: 9
+953 	 nothing. </s>                               	 nothing. </s> maxlen: 9
+954 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+955 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+956 	 help! </s>                               	 help! </s> maxlen: 6
+957 	 great, now she's gone off my <unk> </s>                         	 good, now he's out of sight. </s> maxlen: 13
+958 	 hello? </s>                               	 hello? </s> maxlen: 6
+959 	 who's there? </s>                              	 who's there? </s> maxlen: 9
+960 	 hello? </s>                               	 hello? </s> maxlen: 6
+961 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+962 	 angel. </s>                               	 <unk> </s> maxlen: 6
+963 	 put me down. </s>                             	 get me down. </s> maxlen: 9
+964 	 who are you? </s>                             	 who are you? </s> maxlen: 8
+965 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+966 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+967 	 what... </s>                               	 what... </s> maxlen: 6
+968 	 this isn't right. </s>                             	 this isn't real. </s> maxlen: 9
+969 	 put me down. </s>                             	 get me down. </s> maxlen: 9
+970 	 hold on. </s>                              	 wait. </s> maxlen: 6
+971 	 it's you. </s>                              	 it's you. </s> maxlen: 8
+972 	 no! </s>                               	 no! </s> maxlen: 6
+973 	 <unk> are you okay? </s>                            	 <unk> are you okay? </s> maxlen: 9
+974 	 he killed my brother. </s>                            	 he killed my brother. </s> maxlen: 8
+975 	 he's gonna kill me. </s>                            	 he's gonna kill me. </s> maxlen: 9
+976 	 he killed my brother. </s>                            	 he killed my brother. </s> maxlen: 8
+977 	 new <unk> school of <unk> </s>                           	 new york, <unk> <unk> </s> maxlen: 10
+978 	 not bad for a straight guy, right? </s>                         	 not bad for a guy like me, huh? </s> maxlen: 17
+979 	 <unk> you there? </s>                             	 <unk> are you there? </s> maxlen: 9
+980 	 yeah, just about. </s>                             	 yeah. </s> maxlen: 6
+981 	 how in the hell did you <unk> all of this? </s>                      	 how did you <unk> this? </s> maxlen: 10
+982 	 with great <unk> </s>                             	 pretty <unk> </s> maxlen: 8
+983 	 it's gonna make a great show. </s>                          	 it's gonna be a great show. </s> maxlen: 10
+984 	 i will deal with you later. </s>                          	 i'll deal with you later. </s> maxlen: 9
+985 	 i'm gonna <unk> some of my shit first, okay? </s>                       	 well, first of all, you take the shit <unk> </s> maxlen: 10
+986 	 you really are an asshole. </s>                           	 you're such a <unk> </s> maxlen: 9
+987 	 you said you wanted a great show, didn't you? </s>                       	 you said you wanted a great show, didn't you? </s> maxlen: 14
+988 	 well, you got it. </s>                            	 you got what you wanted. </s> maxlen: 8
+989 	 yeah. </s>                               	 yeah. </s> maxlen: 6
+990 	 you go wrap <unk> i'll get <unk> and <unk> </s>                       	 <unk> <unk> <unk> i get <unk> and <unk> </s> maxlen: 15
+991 	 okay, <unk> that's a <unk> </s>                           	 all right, enough with the <unk> </s> maxlen: 10
+992 	 hey, guys, you all go get cleaned up and change. </s>                      	 people go to <unk> <unk> </s> maxlen: 11
+993 	 let's get ready for the wrap party and some champagne. </s>                      	 prepare to be <unk> and <unk> </s> maxlen: 10
+994 	 great acting work. </s>                             	 perfect <unk> </s> maxlen: 8
+995 	 <unk> over. </s>                              	 <unk> over. </s> maxlen: 8
+996 	 <unk> </s>                               	 <unk> </s> maxlen: 6
+997 	 good job, <unk> </s>                             	 good luck, <unk> </s> maxlen: 9
+998 	 okay, <unk> </s>                              	 okay, <unk> </s> maxlen: 8
+999 	 that's a <unk> buddy. </s>                            	 it's over, man. </s> maxlen: 9
+1000 	 you okay? </s>                              	 you okay? </s> maxlen: 8
+1001 	 quit <unk> around, snow. </s>                            	 stop <unk> <unk> </s> maxlen: 9
+1002 	 hey, you got anything to say? </s>                          	 are you gonna say anything? </s> maxlen: 10
+1003 	 we have to get them out of there. </s>                        	 we need to get them out of there. </s> maxlen: 9
+1004 	 we have to get them out of there. </s>                        	 we need to get them out of there. </s> maxlen: 9
+1005 	 get that out of my face! </s>                          	 get it off me! </s> maxlen: 9
+1006 	 <unk> to new <unk> <unk> </s>                           	 new <unk> <unk> <unk> <unk> </s> maxlen: 11
+1007 	 roger that, <unk> </s>                             	 copy that, <unk> </s> maxlen: 8
+1008 	 i spy with my little eye something beginning with <unk> </s>                      	 i'm making little <unk> <unk> with <unk> </s> maxlen: 14
+1009 	 if you can't get it, you do a <unk> </s>                       	 <unk> as a <unk> </s> maxlen: 10
+1010 	 <unk> </s>                               	 <unk> </s> maxlen: 8
+1011 	 london control, the package was supposed to be in cia custody 19 minutes ago. </s>                  	 london <unk> was supposed to be in cia custody 19 minutes ago. </s> maxlen: 17
+1012 	 our aircraft is waiting. </s>                            	 our <unk> <unk> </s> maxlen: 9
+1013 	 good job our <unk> not in a hurry. </s>                        	 it's a good thing i didn't get <unk> </s> maxlen: 13
+1014 	 traffic tower says they'll be moving within eight minutes. </s>                       	 <unk> says they're moving in eight minutes. </s> maxlen: 15
+1015 	 the home office <unk> are <unk> </s>                          	 <unk> <unk> <unk> </s> maxlen: 11
+1016 	 we're going to have to be a little bit more <unk> with our <unk> </s>                  	 we're gonna have to be a little bit more creative about our relationship. </s> maxlen: 14
+1017 	 where the bloody hell is <unk> </s>                          	 where the fuck is <unk> </s> maxlen: 9
+1018 	 where's the air cover <unk> </s>                           	 where's the <unk> <unk> </s> maxlen: 10
+1019 	 you can <unk> but you'll need to issue an executive <unk> </s>                     	 you can break the rules, but you need a special order. </s> maxlen: 15
+1020 	 something's got to be done. </s>                           	 you should eat something. </s> maxlen: 9
+1021 	 director general. </s>                              	 general <unk> </s> maxlen: 8
+1022 	 i know you don't like hearing this from a <unk> but <unk> is coming. </s>                  	 i know you don't like hearing this from a <unk> but <unk> is coming. </s> maxlen: 18
+1023 	 you do know that lift is for <unk> <unk> </s>                       	 do you know that <unk> for emergency <unk> </s> maxlen: 17
+1024 	 escort two, what's your <unk> </s>                       	 <unk> two, what's your <unk> </s> maxlen: 11
+1025 	 you got <unk> in your pants, <unk> </s>                     	 you know what, <unk> </s> maxlen: 9
+1026 	 you know, you would be a lot less <unk> if you'd just let yourself be my london girlfriend. </s>          	 you would be less <unk> if you just kept being my <unk> </s> maxlen: 17
+1027 	 the <unk> not gonna be open much longer. </s>                    	 that position won't be open much longer. </s> maxlen: 13
+1028 	 i spy with my little eye something beginning with... </s>                   	 the little <unk> <unk> with the <unk> <unk> </s> maxlen: 15
+1029 	 <unk> travelling at speed. </s>                        	 the <unk> are running in speed. </s> maxlen: 10
+1030 	 put them up. </s>                         	 <unk> get them. </s> maxlen: 9
+1031 	 <unk> nearest police <unk> </s>                        	 <unk> closest police <unk> </s> maxlen: 11
+1032 	 <unk> everything we've got, now. </s>                       	 <unk> everything we've got, now. </s> maxlen: 11
+1033 	 code one! </s>                          	 code <unk> </s> maxlen: 8
+1034 	 attack in <unk> </s>                         	 we're under attack. </s> maxlen: 8
+1035 	 oh, my good god. </s>                        	 oh, god. </s> maxlen: 6
+1036 	 <unk> for christ's sake, don't. </s>                       	 <unk> for god's sake, don't. </s> maxlen: 10
+1037 	 get out, now! </s>                         	 <unk> now! </s> maxlen: 8
+1038 	 <unk> force is <unk> </s>                        	 <unk> force is <unk> </s> maxlen: 11
+1039 	 open the van or everyone dies. </s>                      	 open the door or everyone dies. </s> maxlen: 11
+1040 	 open the van now! </s>                        	 open the <unk> now! </s> maxlen: 9
+1041 	 <unk> </s>                           	 <unk> </s> maxlen: 6
+1042 	 the americans will <unk> us. </s>                       	 americans love us. </s> maxlen: 10
+1043 	 your <unk> harry. </s>                         	 your <unk> harry. </s> maxlen: 9
+1044 	 say again, <unk> </s>                         	 say again, <unk> </s> maxlen: 10
+1045 	 lay down your weapons and release <unk> </s>                     	 lay down your weapons and release the <unk> </s> maxlen: 13
+1046 	 what the bloody hell are you doing, harry? </s>                    	 what the fuck are you doing, <unk> </s> maxlen: 11
+1047 	 open the <unk> </s>                         	 open the <unk> </s> maxlen: 8
+1048 	 open the <unk> </s>                         	 open the <unk> </s> maxlen: 8
+1049 	 go, go, go! </s>                         	 go, go, go! </s> maxlen: 9
+1050 	 control, prisoner <unk> </s>                         	 command <unk> <unk> <unk> </s> maxlen: 10
+1051 	 heading <unk> </s>                          	 heading north. </s> maxlen: 8
+1052 	 no, no, no! </s>                         	 no, no! </s> maxlen: 8
+1053 	 <unk> </s>                           	 <unk> </s> maxlen: 6
+1054 	 control, lead two <unk> on foot. </s>                      	 command <unk> called agent 2 <unk> </s> maxlen: 14
+1055 	 any more <unk> </s>                         	 any more <unk> </s> maxlen: 10
+1056 	 follow her. </s>                          	 follow her. </s> maxlen: 9
+1057 	 nearest armed <unk> eight minutes away. </s>                      	 nearest armed <unk> eight minutes away. </s> maxlen: 14
+1058 	 <unk> 20 miles out. </s>                        	 <unk> 20 miles out. </s> maxlen: 11
+1059 	 <unk> </s>                           	 <unk> </s> maxlen: 6
+1060 	 in place. </s>                          	 in place. </s> maxlen: 6
+1061 	 other side of that tunnel and the last <unk> </s>                   	 other side of the <unk> <unk> </s> maxlen: 11
+1062 	 there's nowhere for them to go. </s>                      	 they have nowhere to go. </s> maxlen: 9
+1063 	 <unk> is seven minutes away. </s>                       	 <unk> seven minutes away. </s> maxlen: 10
+1064 	 go. </s>                           	 go. </s> maxlen: 6
+1065 	 lead two, report. </s>                         	 lead two, report. </s> maxlen: 10
+1066 	 ed, wait. </s>                          	 <unk> wait. </s> maxlen: 8
+1067 	 lead two, report. </s>                         	 lead two, report. </s> maxlen: 10
+1068 	 i repeat, the cia <unk> officer has been shot. </s>                   	 i repeat, the cia <unk> officer has been shot. </s> maxlen: 13
+1069 	 lead two, do you have eyes on <unk> </s>                    	 agent 2, do you see the <unk> </s> maxlen: 11
+1070 	 control, i hear a vehicle. </s>                       	 i heard a vehicle in command <unk> </s> maxlen: 13
+1071 	 they've knocked everything out. </s>                        	 i can explain everything. </s> maxlen: 9
+1072 	 it's over. </s>                          	 it's over. </s> maxlen: 6
+1073 	 the <unk> can confirm that the american terrorist leader <unk> <unk> has escaped from <unk> custody in one of the most serious <unk> in the <unk> history. </s> 	 in <unk> the american terrorist leader <unk> <unk> <unk> has escaped from <unk> <unk> one of the most serious <unk> in <unk> <unk> </s> maxlen: 27
+1074 	 it's understood that the secure <unk> <unk> <unk> came under armed attack en route to <unk> <unk> </s>           	 <unk> security <unk> <unk> <unk> was attacked. </s> maxlen: 22
+1075 	 you say it's not war but murder because it happens on western streets. </s>               	 you say it's not war but murder because it's western <unk> </s> maxlen: 17
+1076 	 because you didn't ask for it in new york, in <unk> in london. </s>               	 because in new york, <unk> used to do that in london. </s> maxlen: 14
+1077 	 but the children of <unk> they didn't ask for it either. </s>                 	 but <unk> kids didn't want them. </s> maxlen: 11
+1078 	 when they're <unk> by <unk> they call it murder, too. </s>                  	 <unk> air <unk> they call it murder. </s> maxlen: 17
+1079 	 <unk> presents a new kind of threat. </s>                     	 <unk> a new kind of threat. </s> maxlen: 13
+1080 	 so far, he hasn't <unk> <unk> </s>                      	 so far, our target has been <unk> </s> maxlen: 13
+1081 	 our <unk> show a <unk> chance of attack within 48 hours. </s>                 	 our <unk> show a <unk> attack within 48 hours. </s> maxlen: 19
+1082 	 the more pressure he's put <unk> the smaller that window <unk> </s>                 	 the more pressure he <unk> the more likely he <unk> </s> maxlen: 17
+1083 	 i can't tell you while the <unk> </s>                     	 when the tape <unk> you can't do it. </s> maxlen: 11
+1084 	 the secretary of state flies in tomorrow. </s>                     	 the foreign minister is coming tomorrow. </s> maxlen: 10
+1085 	 we serve the british people, not washington. </s>                     	 we serve british <unk> not <unk> </s> maxlen: 14
+1086 	 if that's no longer true, then we're already finished. </s>                   	 if that's not true anymore, then we're already dead. </s> maxlen: 14
+1087 	 the americans feel we're no longer fit for purpose. </s>                   	 the americans think we serve <unk> now. </s> maxlen: 13
+1088 	 we need a <unk> </s>                        	 we need a <unk> </s> maxlen: 10
+1089 	 i'm to be <unk> in the morning. </s>                     	 i'm being <unk> in the morning. </s> maxlen: 9
+1090 	 you heard nothing about <unk> <unk> </s>                      	 you heard nothing about <unk> <unk> </s> maxlen: 14
+1091 	 i don't think so. </s>                        	 i don't think so. </s> maxlen: 6
+1092 	 harry, if you're out, what happens to me? </s>                    	 harry, what about me when you're gone? </s> maxlen: 13
+1093 	 you get out, too. </s>                        	 you're <unk> </s> maxlen: 9
+1094 	 no one else knows you're inside <unk> network. </s>                    	 no one else knows you're <unk> <unk> </s> maxlen: 13
+1095 	 just walk away. </s>                         	 just walk away. </s> maxlen: 9
+1096 	 will <unk> </s>                          	 will <unk> </s> maxlen: 8
+1097 	 go. </s>                           	 <unk> </s> maxlen: 6
+1098 	 so, how is life after <unk> </s>                      	 how's life after <unk> </s> maxlen: 10
+1099 	 you're not from the moscow <unk> </s>                      	 you're not <unk> <unk> </s> maxlen: 10
+1100 	 you're needed back in london. </s>                       	 you need london now. </s> maxlen: 10
+1101 	 anyone you need to say goodbye to? </s>                     	 anyone you need to say goodbye to? </s> maxlen: 13
+1102 	 thank you. </s>                          	 thank you. </s> maxlen: 8
+1103 	 we know about <unk> connection to your family, so we understand this may not be easy for you. </s>          	 <unk> we know about your relationship with your family, so we understand this may not be easy for you. </s> maxlen: 23
+1104 	 it'd be fine, even if he was dead. </s>                    	 even if he's dead, it's okay. </s> maxlen: 11
+1105 	 <unk> too bloody <unk> to kill himself. </s>                     	 <unk> old enough to know himself. </s> maxlen: 11
+1106 	 he was certainly acting like someone who was about to. </s>                  	 he <unk> to kill himself. </s> maxlen: 11
+1107 	 he went to visit this woman's grave. </s>                     	 he went to check on this woman. </s> maxlen: 10
+1108 	 love of his life. </s>                        	 the love of his life. </s> maxlen: 8
+1109 	 <unk> team has noticed changes in his <unk> since her death. </s>                 	 <unk> team has noticed changes in <unk> since her death. </s> maxlen: 18
+1110 	 he's become emotionally <unk> cold, been drinking <unk> </s>                    	 he's become emotionally <unk> cold, been drinking <unk> </s> maxlen: 18
+1111 	 the water would have been below nine degrees. </s>                    	 the water would be under 9 <unk> </s> maxlen: 11
+1112 	 he'd have developed <unk> before reaching the bank. </s>                    	 when i get to the bank, i get <unk> </s> maxlen: 10
+1113 	 this is a picture before he walked into shot, and this is a picture after you say that he <unk> </s>        	 this is a picture before <unk> and this is the picture you said you were gonna get married later. </s> maxlen: 21
+1114 	 before he <unk> harry made three <unk> phone calls. </s>                   	 before <unk> harry made three <unk> phone calls. </s> maxlen: 17
+1115 	 your <unk> emergency <unk> </s>                        	 your <unk> emergency <unk> </s> maxlen: 11
+1116 	 why call you? </s>                         	 why should i listen to you? </s> maxlen: 9
+1117 	 i have no idea. </s>                        	 i have no idea. </s> maxlen: 9
+1118 	 last time i spoke to him was the night he <unk> me from <unk> three years ago. </s>           	 last time i spoke to him was the night he <unk> me from <unk> three years ago. </s> maxlen: 19
+1119 	 well, he wants to chat now. </s>                      	 well, he wants to talk right now. </s> maxlen: 11
+1120 	 that makes you useful. </s>                        	 that makes you useful. </s> maxlen: 13
+1121 	 will you help us find him? </s>                      	 can you help me find her? </s> maxlen: 11
+1122 	 no, thanks. </s>                          	 no, thank you. </s> maxlen: 9
+1123 	 you and harry ever talk much about <unk> </s>                    	 you and harry ever talk much about <unk> </s> maxlen: 15
+1124 	 the night your father died? </s>                       	 the night your father died. </s> maxlen: 9
+1125 	 if there's something else, <unk> i have a right to know. </s>                 	 if there's anything else, i have a right to know. </s> maxlen: 15
+1126 	 oh, i don't think it's up to me... </s>                    	 that's for me to decide. </s> maxlen: 11
+1127 	 if you're not going to actually murder him, i think you've made your point. </s>              	 if you really love him, i think he'll tell you what he wants. </s> maxlen: 15
+1128 	 find harry and you can ask him about berlin yourself. </s>                  	 you <unk> the <unk> so you could tell him about the <unk> yourself. </s> maxlen: 15
+1129 	 who are you? </s>                         	 who are you? </s> maxlen: 8
+1130 	 although i doubt i'll take that title to the grave. </s>                  	 i thought we were going to get out of this <unk> maxlen: 11
+1131 	 until recently, head of <unk> for her <unk> security service. </s>                  	 last time we <unk> you were on a plane to <unk> for security service. </s> maxlen: 15
+1132 	 funny, but who are you really? </s>                      	 <unk> but who are you really? </s> maxlen: 11
+1133 	 someone who knows what these two words mean to you. </s>                  	 someone who knows these two <unk> for you. </s> maxlen: 15
+1134 	 <unk> <unk> </s>                          	 <unk> <unk> </s> maxlen: 8
+1135 	 go. </s>                           	 go. </s> maxlen: 6
+1136 	 how did you find me? </s>                       	 how did you find me? </s> maxlen: 9
+1137 	 so what do you want? </s>                       	 what do you want? </s> maxlen: 9
+1138 	 i know it was someone on my side. </s>                    	 i know it was someone on my team. </s> maxlen: 11
+1139 	 they never told me who they were. </s>                     	 you never told me who they were. </s> maxlen: 11
+1140 	 of course they didn't, but you must have had a contact. </s>                 	 of course i will, but i need a <unk> </s> maxlen: 13
+1141 	 a phone number, that's all. </s>                       	 a phone call, that's all. </s> maxlen: 11
+1142 	 a phone number will do <unk> </s>                      	 a phone number will help. </s> maxlen: 11
+1143 	 and in return, i'll give you what you want. </s>                   	 <unk> i'll give you what you want. </s> maxlen: 13
+1144 	 there is no way you could get that. </s>                    	 <unk> </s> maxlen: 6
+1145 	 she said she was a human rights lawyer. </s>                    	 he said he was a human rights lawyer. </s> maxlen: 13
+1146 	 helped two of my brothers after they were <unk> by your government. </s>                	 the government helped two of my brothers after they were <unk> </s> maxlen: 19
+1147 	 but after i was <unk> she became too curious. </s>                   	 but after i was <unk> she became too <unk> </s> maxlen: 18
+1148 	 i don't know this woman. </s>                       	 i don't know this woman. </s> maxlen: 9
+1149 	 if she's a <unk> she's not one of ours. </s>                   	 if she's a <unk> she's not one of us. </s> maxlen: 13
+1150 	 just so i'm clear again, tell me she's nothing to you. </s>                 	 then tell me again that it's not worth anything to you. </s> maxlen: 19
+1151 	 you keep her alive, she's your guarantee that i'll keep my word. </s>                	 you keep her alive, she's your <unk> that i keep my word. </s> maxlen: 17
+1152 	 i don't need <unk> </s>                        	 i don't need <unk> </s> maxlen: 10
+1153 	 get her to a hospital now, or the <unk> off! </s>                  	 take him to a hospital now or the <unk> off. </s> maxlen: 15
+1154 	 what she needs is mercy. </s>                       	 what she needs is <unk> </s> maxlen: 10
+1155 	 no! </s>                           	 no! </s> maxlen: 6
+1156 	 she has a daughter. </s>                        	 she has a daughter. </s> maxlen: 9
+1157 	 and still, you sent her after me? </s>                     	 and you sent him after me? </s> maxlen: 15
+1158 	 you put her in danger and then you refuse to spare her the pain? </s>              	 you put her in danger, and now you're <unk> her into <unk> </s> maxlen: 22
+1159 	 what sort of a man are you? </s>                     	 what the fuck are you doing? </s> maxlen: 10
+1160 	 spare her family from the video. </s>                      	 tell his parents about the <unk> </s> maxlen: 9
+1161 	 <unk> </s>                           	 <unk> </s> maxlen: 6
+1162 	 you've got a deal. </s>                        	 i have a <unk> </s> maxlen: 9
+1163 	 the <unk> understands there has been no <unk> in the hunt for escaped terrorist <unk> <unk> </s>            	 according to our <unk> there has been no <unk> in <unk> terrorist <unk> </s> maxlen: 19
+1164 	 the national threat level has been raised to <unk> <unk> an attack is <unk> </s>              	 the national threat level has been <unk> <unk> an attack is <unk> </s> maxlen: 21
+1165 	 in business news, the <unk> 100 fell again this morning and <unk> continued to slide against the <unk> the <unk> and other major trading <unk> </s>   	 in <unk> <unk> <unk> fell again this morning and <unk> continued to <unk> <unk> and other money <unk> </s> maxlen: 31
+1166 	 we have fresh intel on harry. </s>                      	 there's a new information about harry. </s> maxlen: 13
+1167 	 he bought a <unk> phone that we tracked to the <unk> coast. </s>                	 <unk> <unk> a <unk> line from <unk> to <unk> </s> maxlen: 17
+1168 	 <unk> this is <unk> </s>                        	 <unk> this is <unk> </s> maxlen: 11
+1169 	 we found traces of explosive there, too. </s>                     	 we also found <unk> marks there. </s> maxlen: 11
