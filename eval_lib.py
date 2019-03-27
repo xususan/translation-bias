@@ -18,7 +18,9 @@ def rebatch_for_eval(pad_idx, batch):
 def log_likelihood(model, batch, pad_idx):
     """Calculates the log likelihood of a batch, given the model.
     """
-    memory = model.encode(batch) # [40 x 7 x 512] = [batch x srclen x dim]
+    src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+    src_context, src_context_mask = batch.src_context, batch.src_context_mask
+    memory = model.encode(src, src_mask, src_context, src_context_mask) # [40 x 7 x 512] = [batch x srclen x dim]
     total_prob = torch.zeros(batch.trg_y.size(0))
     for i in range(0, batch.trg_y.size(1)): # trg_len
         y_prev = batch.trg[:, :i + 1]
@@ -35,7 +37,7 @@ def log_likelihood(model, batch, pad_idx):
 
 def greedy_decode(model, batch, max_len, start_symbol):
     src = batch.src, src_mask = batch.src_mask # This is just wrong lol
-    memory = model.encode(src, src_mask)
+    memory = model.encode(src, src_mask, src_context, src_context_mask)
     ys = torch.ones(1, 1).fill_(start_symbol).type_as(src.data)
     total_prob = 0.0
     for i in range(max_len-1):
@@ -55,7 +57,8 @@ def beam_decode(model, src, src_mask, src_context, pad_idx, max_len, start_symbo
     """Beam decoder.
     """
     batch = Batch(src.unsqueeze(0), src_context=src_context.unsqueeze(0), pad=pad_idx)
-    memory = model.encode(batch)
+    src, src_mask, src_context, src_context_mask = batch.src, batch.src_mask, batch.src_context, batch.src_context_mask
+    memory = model.encode(src, src_mask, src_context, src_context_mask)
     ys = torch.ones(1,1).fill_(start_symbol).type_as(src.data)
     hypotheses = [(ys, 0.0)]
     for i in range(max_len):
@@ -87,12 +90,14 @@ def eval_bleu(pad_idx, eval_iter, model, max_len, start_symbol, end_symbol, rev_
   n_written = 0
   for old_batch in eval_iter:
     batch = rebatch(pad_idx, old_batch)
+    src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
+    src_context, src_context_mask = batch.src_context, batch.src_context_mask
     for i in range(batch.src.size(0)): # batch_size
-      max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.3) + 5
+      max_len_for_observation = round(sum(batch.src[i] != pad_idx).item() * 1.1) + 1
       hypothesis = beam_decode(model, batch.src[i], batch.src_mask[i], batch.src_context[i],
        pad_idx, max_len_for_observation, start_symbol, end_symbol, k=5)[1:] # cut off SOS, EOS
       targets = batch.trg_y[i, :-1] # Doesn't have SOS. Cut off EOS
-      if bpemb_en:
+      if bpemb_en is not None:
         trg_str = bpemb_en.decode(rev_tokenize_trg(targets)).replace("<pad>", "")
         hypothesis_decoded = bpemb_en.decode(rev_tokenize_trg(hypothesis))
       else:
@@ -155,6 +160,12 @@ def load(path, tr_voc, en_voc, use_context, share_embeddings, pretrained_embeddi
       model = make_context_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
     else:
       model = make_model(tr_voc, en_voc, N=6, share_embeddings=share_embeddings, pretrained_embeddings=pretrained_embeddings)
-    model.load_state_dict(torch.load(path, map_location='cpu'))
+    try:
+      model.load_state_dict(torch.load(path, map_location='cpu'))
+    except:
+      # saved with multigpu module
+      model_par =nn.DataParallel(model)
+      model_par.load_state_dict(torch.load(path, map_location='cpu'))
+      model = model_par.module
     model.eval()
     return model

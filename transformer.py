@@ -18,21 +18,19 @@ class EncoderDecoder(nn.Module):
         self.tgt_embed = tgt_embed
         self.generator = generator
         
-    def forward(self, batch):
+    def forward(self, src, src_mask, src_context, src_context_mask, tgt, tgt_mask):
         "Take in and process masked src and target sequences."
-        src, tgt, src_mask, tgt_mask = batch.src, batch.trg, batch.src_mask, batch.trg_mask
-        src_context, src_context_mask = batch.src_context, batch.src_context_mask
-        encoder_output = self.encode(batch)
+        encoder_output = self.encode(src, src_mask, src_context, src_context_mask)
         return self.decode(encoder_output, src_mask,
                             tgt, tgt_mask)
     
-    def encode(self, batch):
+    def encode(self, src, src_mask, src_context, src_context_mask):
         if self.encoder.use_context:
             return self.encoder(
-                self.src_embed(batch.src), batch.src_mask, 
-                self.src_embed(batch.src_context), batch.src_context_mask)
+                self.src_embed(src), src_mask, 
+                self.src_embed(src_context), src_context_mask)
         else:
-            return self.encoder(self.src_embed(batch.src), batch.src_mask)
+            return self.encoder(self.src_embed(src), src_mask)
     
     def decode(self, memory, src_mask, tgt, tgt_mask):
         embedded = self.tgt_embed(tgt)

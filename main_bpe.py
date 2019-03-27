@@ -70,16 +70,18 @@ if args.pretrainedembed:
 
 
 criterion = LabelSmoothing(size=len(EN.vocab), padding_idx=pad_idx, smoothing=0.1)
-
+multi_gpu = False
 if torch.cuda.device_count() > 0:
   device = torch.device('cuda', 0)
   print('GPUs available:', torch.cuda.device_count())
   if torch.cuda.device_count() > 1:
     print("Using DataParallel")
+    multi_gpu = True
     model = nn.DataParallel(model)
     criterion = nn.DataParallel(criterion)
     model.to(device)
     criterion.to(device)
+    device_ids = list(range(torch.cuda.device_count()))
   else:
     model.cuda()
     criterion.cuda()
@@ -97,29 +99,44 @@ print('Iterators built.')
 
 print('Training model...')
 model_parameters = filter(lambda p: p.requires_grad, model.parameters())
-model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+
+if torch.cuda.device_count() > 1:
+  d_model = model.module.src_embed[0].d_model
+else:
+  d_model = model.src_embed[0].d_model
+model_opt = NoamOpt(d_model, 1, 2000,
           torch.optim.Adam(model_parameters, lr=0, betas=(0.9, 0.98), eps=1e-9))
+
+
 
 for epoch in range(args.startingepoch + 1, args.startingepoch + args.epochs + 1):
     print("Epoch %d / %d" % (epoch, args.epochs))
     model.train()
     gen = model.module.generator if torch.cuda.device_count() > 1 else model.generator
     start_of_epoch = time.time()
+
     training_loss = run_epoch((rebatch(pad_idx, b) for b in train_iter), 
               model, 
               SimpleLossCompute(gen, criterion, 
-                                opt=model_opt))
+                                opt=model_opt,
+                                multi_gpu=multi_gpu),
+              multi_gpu=multi_gpu)
     epoch_time = time.time() - start_of_epoch
     print("Training loss: %f, elapsed time: %f" % (training_loss.data.item(), epoch_time))
     model.eval()
     loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter), 
                       model, 
                       SimpleLossCompute(gen, criterion, 
-                      opt=None))
+                      opt=None,
+                      multi_gpu=multi_gpu),
+                      multi_gpu=multi_gpu)
     print("Validation loss: %f" % loss.data.item())
     if epoch % args.save == 0: 
       # Export model
       output_path = "models/%s%s_%s_%d.pt" % (month, day, args.out, epoch)
-      torch.save(model.state_dict(), output_path)
+      if multi_gpu:
+        torch.save(model.module.state_dict(), output_path)
+      else:
+        torch.save(model.state_dict(), output_path)
       print("Saved model to %s." %  output_path)
 
