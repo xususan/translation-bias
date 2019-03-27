@@ -1,0 +1,1358 @@
+Command line arguments: {Namespace(batch=512, bpe=True, context=True, eval='all', path='0326_context_2m_balanced_second_70.pt', pretrainedembed=False, train='train_2m_balanced.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m_balanced.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using new version of vocab. BPE is true.
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9720, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0326_context_2m_balanced_second_70.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 22 / 40 = 0.550000
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 18 / 40 = 0.450000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 24 / 40 = 0.600000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 16 / 40 = 0.400000
+Evaluating BLEU
+0 	 michael was sharing his bed for the first time in years. 	 michael was sharing his bed for the first time in years later maxlen: 12
+1 	 unfortunately, it was with his younger brother, buster. 	 unfortunately, the person he shared his bed was his brother, buster, b maxlen: 19
+2 	 buster. 	 buster buster maxlen: 4
+3 	 buster. 	 buster buster maxlen: 4
+4 	 hey-hey. 	 hey-hey-he maxlen: 7
+5 	 i don't think us sleeping together is working out. 	 i don't think it's appropriate for us both to sleep together. maxlen: 17
+6 	 yeah, i miss mom. 	 yeah, i miss my mom. miss mommy maxlen: 11
+7 	 i can tell. 	 i'll tell you maxlen: 5
+8 	 i'm supposed to write 000 words on the morality of war... whether a preemptive strike is ever justified. 	 i'm supposed to write an essay that has at least 000 words about the morality of war... and an anticipation of a conflict... with the least maxlen: 33
+9 	 i'm not sure if my ethics teacher would love if i cheated on my essay. 	 i'm not sure that our vice teacher would like me cheating when i'm doing my cheating on my maxlen: 24
+10 	 well, you just passed my ethics test. 	 well, then you passed my ethics test. maxlen: 15
+11 	 [narrator] in fact, george michael had developed a hopeless crush... on his ethics teacher, a woman named beth baerly. 	 in fact, gorgeousichael had struck her hopelessly, upset with her teacher who had hopelessly hoped she had a crush maxlen: 32
+12 	 even minor crimes are punishable... by brutally chopping off the offender's hand. 	 even the smallest crimes committed... can be severely severely cut off by the hands of those maxlen: 20
+13 	 no ring. 	 she doesn't maxlen: 4
+14 	 try to remember everything she says about me, all right? 	 try to remember everything she says about me, okay? maxlen: 16
+15 	 okay. 	 ok ok ok maxlen: 3
+16 	 michael. 	 michael michael michael maxlen: 3
+17 	 i need you to do something about my son. 	 i need you to do something about my son. my son maxlen: 12
+18 	 did you and dad adopt a child? 	 and you adopted my father? maxlen: 14
+19 	 the s.e.c. was onto us. 	 the s.d.k. was watching us on us. maxlen: 17
+20 	 your father thought it would make us look charitable. 	 your father thought it would make us look a better charity. maxlen: 16
+21 	 he must have forged my signature. 	 he must have imitated my signature on my signature maxlen: 11
+22 	 well, maybe i'll get a son who will... finish his cottage cheese.! 	 'maybe i'll have a son who... finish his cheese cheese a year ago! maxlen: 26
+23 	 you've got to get me out of this. 	 you've got to get me out of maxlen: 9
+24 	 i'll call social services, but you must take buster back. 	 i'll call social services, but you need to get buster back. maxlen: 21
+25 	 but i'm not taking care of him either. 	 but i can't look at her either maxlen: 9
+26 	 i don't have the milk of mother's kindness in me anymore. 	 i don't have a mother's kindness and milk anymore me maxlen: 16
+27 	 hello. 	 hello hello maxlen: 4
+28 	 { gob] michael. 	 michael michael michael maxlen: 3
+29 	 i've got a couple of girls here. 	 two girls over here, two girls maxlen: 7
+30 	 a couple of fun girls... 	 a couple of fun girls... fun girls maxlen: 8
+31 	 come on, michael. 	 come on, michael michael michael come on maxlen: 8
+32 	 so we had a little disagreement. 	 we had a little disagreements had a little maxlen: 10
+33 	 i'm offering you an olive branch here. 	 i'm giving you an olive olive olive maxlen: 12
+34 	 yeah-yeah. 	 yes- yes- yes maxlen: 8
+35 	 besides, when was the last time you slept with someone? 	 by the way, when was the last time you slept with someone? maxlen: 15
+36 	 [narrator] meanwhile, lindsay was helping george michael with his homework. 	 by the way, lindsay was helping george michael with her homework at his home. maxlen: 21
+37 	 well, i don't know why i'm telling you this. 	 why am i telling you this? maxlen: 13
+38 	 i guess there's just some things you can't really say to your dad. 	 i guess it's because there's some things you can't maxlen: 16
+39 	 [narrator] lindsay believed that george michael wanted to fix up his father... so he could fill the role ofhis mother. 	 lindsay thought george michael wanted to set her father up with her father to help her handle her motherhood. maxlen: 32
+40 	 there's nothing wrong with that. 	 there's nothing wrong with that wrong with maxlen: 9
+41 	 although, i must say i'm a little hurt that you haven't considered me. 	 but i still have to tell you that i'm a little hurt because you don't think i'm thinking about me maxlen: 27
+42 	 aunts can fill that role. 	 and aun halls can perform this task function as maxlen: 11
+43 	 teachers can fill that role. 	 and teachers can handle this assignment as well as the maxlen: 11
+44 	 and, someday, you're gonna find the right woman to fill that role. 	 sure, one day, you'll find the right woman to carry out this task. maxlen: 22
+45 	 but until then, i'll be right across the hall. 	 but until i find the corridor, i'll be right across the hall. maxlen: 20
+46 	 [narrator] lindsay had never been more proud of anything she had said in her entire life. 	 lindsay had never been so proud of anything she's said her whole life about anything that she maxlen: 22
+47 	 [narrator] meanwhile, gob was waiting for michael to show up. 	 meanwhile, gob was waiting for michael to come. maxlen: 17
+48 	 this is shannon, the girl i've been telling you all about. 	 this is shannon, the girl i've been telling you all about maxlen: 17
+49 	 girl, indeed... young girl. 	 she's really, really... the young maxlen: 9
+50 	 your date, nazh... 	 your date, nazh... maxlen: 10
+51 	 galia. 	 it's gal maxlen: 4
+52 	 and so she's your date. 	 and here's your date on your date. maxlen: 12
+53 	 oh... { laughs] "nagarma," you've got a mustache. 	 "nagarma," you have a mustache. maxlen: 14
+54 	 i mean, you've got a milk mustache. 	 i mean, there's milk on the must must maxlen: 11
+55 	 yeah. 	 yes yes maxlen: 4
+56 	 [narrator] but gob mistook michael's basic human decency for romantic interest... and felt a competitive urge to step in. 	 but gob michael's kindly indifference was misleadly mistaken the emotional interest that got him wrong, and he got the impression that he was maxlen: 35
+57 	 because, you know, it's beyond adorable... and e-exotic. 	 because, you know, love is beyond and exotic... and exotic and exotic. maxlen: 23
+58 	 i find you very attractive. 	 i find you very attractive. maxlen: 10
+59 	 { nazhgalia, michael, shannon] really? 	 [ nazhgalia, michael, shannon] really? maxlen: 17
+60 	 [narrator] and george sr. was about to get a surprise visitor. 	 and george sr. was about to come a surprise surprise visit. maxlen: 19
+61 	 i've studied all your teachings, and i've purchased every tape. 	 i've read all your teachings and got all your tapes. maxlen: 20
+62 	 and i watch 'em over and over. 	 and i watched them all all again and again and maxlen: 11
+63 	 [narrator] george sr. had recently marketed a line of self-help tapes... touting his newly discovered spirituality. 	 george sr. offered himself a series of tapes of his tapes of a number of tapes of his tapes... to earn money from his new spirituality... that he had recently discovered maxlen: 39
+64 	 i've also lost four pounds on your low-carb bluth banana jail bars. { giggles] 	 i've also lost two kilos ate your banana bluth family bars on bluth. maxlen: 24
+65 	 i've come to learn at your feet. 	 i've come to find out where maxlen: 8
+66 	 that's a good place to start. 	 it's a nice place to start here. maxlen: 11
+67 	 [narrator] and michael, free ofhis double date, met lindsay at parent-teacher night. 	 and michael got rid of the two girls he was on a date and met lindsay on the night of parents and parents- teacher-teacher night. maxlen: 36
+68 	 hey, linds, is it my imagination... or does this rape room have the same floor plan as our kitchen? 	 hey, linds, is it my imagination... or does this lureen room have the same floor plan as our kitchen with the kitchen? maxlen: 36
+69 	 well, i think she's perfect for you. 	 i think you're someone very suitable for you maxlen: 10
+70 	 you'd think that would turn him off to the entire concept. 	 i used to think that would help her get the concept of motherhood out of her mind. maxlen: 19
+71 	 besides, i'm not gonna rush out and marry somebody just because you think my son would like it. 	 besides, i can't rush and marry someone just because my son doesn't want me to do this kind of thing and maxlen: 26
+72 	 i'm ms. baerly, the ethics teacher. 	 i'm miss baerly, the ethics teacher maxlen: 12
+73 	 my goal is to teach your children about the preciousness oflife... that can be lost by the mindless pulling of a trigger. 	 my goal is to help my students understand the importance of life that life can be lost by the unmindedness of a thoughtless tet maxlen: 29
+74 	 [narrator] and so michael got to know his son's ethics teacher. 	 and michael began to get to know his son's ethics teacher maxlen: 14
+75 	 i guess that's the "rrrr" of it. 	 that's the "rrrr" part of the "r maxlen: 15
+76 	 you know, so frustrating. 	 you know, it's very annoying. maxlen: 11
+77 	 i mean, they just threw this class at me after mr. daniels had a stroke. 	 i mean, they gave me this class after mr. daniels had a stroke from that class, and they gave me this maxlen: 26
+78 	 thought you were joking. 	 i thought you were joking joking j maxlen: 9
+79 	 no, i was just laughing 'cause you were laughing. 	 no, i was just laughing because you were laughing. maxlen: 16
+80 	 "rrrr!" - { laughs] "rrrr!" 	 "rrr!" maxlen: 17
+81 	 but, you know, l-l... 	 but, you know, it's just, maxlen: 10
+82 	 and i think i'm an ethical person. 	 and i guess i'm a moral person i guess maxlen: 13
+83 	 right. 	 yes yes maxlen: 4
+84 	 here's an ethical question. 	 it's a moral question for you. maxlen: 11
+85 	 can-can a parent take a teacher out for a drink? 	 can a parent-teacher be invited to have a drink? maxlen: 15
+86 	 or... 	 or... or... maxlen: 4
+87 	 yeah, she died. 	 yes, he's dead maxlen: 7
+88 	 well, it's the mr. daniels stroke thing... 	 i think that mr. daniels having a stroke from that whole mr. daniels having... paral maxlen: 22
+89 	 let's go get that drink. 	 let's go for a drink to go for a drink to maxlen: 13
+90 	 yeah, it could only help. 	 yeah, maybe it'll help maxlen: 9
+91 	 [narrator] george sr. was dealing with his own admirer. 	 george sr. was messing with his own fan. maxlen: 14
+92 	 oh, i've already told you so many of my sins. 	 i've already told you so many of my sins have i maxlen: 14
+93 	 maybe you could tell me some of yours. 	 maybe you could tell me some of your sins. maxlen: 13
+94 	 uh, well, there are legal implications to that. 	 well, there are legal hallucinations showing my sins. maxlen: 17
+95 	 but, uh, back to your sins. 	 but let us return to your sins. maxlen: 13
+96 	 uh, do that one about the, uh... { takes deep breath] ladies' shower... in your college dorm again. 	 tell one about this thing about... tell me about one of the things that happened in college bedroom again maxlen: 21
+97 	 [narrator] and michael was on his way to what would be his second date... 	 and what's going on with michael's second date today... with miss bayerly... with his maxlen: 22
+98 	 michael, the little korean is here, and i don't know what to do with him. 	 michael, this little korean has come, and i don't know what to do with him. maxlen: 20
+99 	 at least, i think it's a him. 	 at least, i think it's him, i maxlen: 11
+100 	 you've got to strip them down to next to nothing before you can even tell. 	 you're gonna have to strip her down to your pants to say maxlen: 16
+101 	 yeah, mom. 	 yes, mother mother mother mother maxlen: 7
+102 	 they will take him back. 	 they take her back. they take maxlen: 7
+103 	 shoes on, mister.! 	 don't take off your shoes, little sir.!!! maxlen: 15
+104 	 shoes on.! 	 don't take your shoes off! maxlen: 9
+105 	 he's out of control. 	 he's out of maxlen: 5
+106 	 who's that? 	 who is it? maxlen: 4
+107 	 this is "annyong," who your father and i have adopted. 	 this is "annyong," your father and i have adopted your son. maxlen: 20
+108 	 what, i'm gone for a couple days and you find a new son? 	 what, i'm going away for a few days and you find a new son? maxlen: 24
+109 	 [narrator] lucille could see that her son was concerned, even jealous. 	 she realized that lucille buster was concerned, maybe even feeling jealous, perhaps jealous. maxlen: 24
+110 	 and she knew how it felt to be overlooked. 	 and she knew how it felt to dress from invisibility that was coming from maxlen: 16
+111 	 annyong is your brother now. 	 annyong is now your brother's your maxlen: 10
+112 	 call it off. 	 cancel it. maxlen: 8
+113 	 i'm keeping him. 	 staying staying maxlen: 4
+114 	 look, i gotta call you back. 	 listen, i'll call you back at sonar. maxlen: 14
+115 	 sweet ride. 	 beautiful drive was a beauty maxlen: 5
+116 	 are you making dinner reservations? 	 are you making dinner reservation? maxlen: 13
+117 	 a "little korean" dropped off. 	 "a little korean" made it up a " maxlen: 10
+118 	 [narrator] and after their date... 	 and after their dates... maxlen: 8
+119 	 michael took a step he hadn't taken in years. 	 michael took a step that he hadn't taken maxlen: 11
+120 	 okay, do you think this is a good idea? 	 well, do you think this is a good idea? maxlen: 15
+121 	 i think it's a great idea. 	 i think it's a great idea idea maxlen: 9
+122 	 mmm. 	 mmm mm maxlen: 3
+123 	 such a good idea. 	 that's a very good idea maxlen: 7
+124 	 but how are we going to sneak in without waking everyone up? 	 but how are we going to sneak inside before everyone wakes everyone maxlen: 15
+125 	 this may not have been my best idea. 	 this may not be my best idea so far. maxlen: 15
+126 	 i'm sorry, michael. 	 i'm sorry, michael michael maxlen: 8
+127 	 i'm sorry too, michael, but it looks like we're even. 	 i'm sorry too, michael, but apparently we're almost even now we're maxlen: 20
+128 	 you took something i liked. 	 you took someone i loved, from me. maxlen: 14
+129 	 i took something you liked. 	 so i took someone you love someone you love. maxlen: 15
+130 	 i... { beeps]..."nashbagerlajam." 	 i was like... "nashbagerellajam'..." maxlen: 16
+131 	 listen, i know that you've been trying to get even with me about marta. 	 listen, i know you're trying to get back at me for the marta incident, and i know maxlen: 22
+132 	 i was lying when i said i wasn't gonna to sleep with her, so... 	 i was lying to you when i said i wasn't going to try to get her to bed, so maxlen: 24
+133 	 she'd have to agree to it. 	 she's gonna have to accept maxlen: 8
+134 	 i don't anticipate a problem with that. 	 i don't think there'll be any problems with that maxlen: 13
+135 	 right. 	 right correct right maxlen: 3
+136 	 i just slept with one. 	 i slept with someone new and someone new maxlen: 9
+137 	 again, didn't like nazhgalia. 	 again, i didn't like nazhgalia. maxlen: 22
+138 	 really, and good luck getting rid of her. 	 well, lucky for me, i got rid of him. maxlen: 14
+139 	 not a problem. 	 it's ok maxlen: 4
+140 	 oh, so romantic. 	 so romantic so romantic maxlen: 4
+141 	 who's "n. bahn-ahden?" 	 who's "n. bahn-been"? maxlen: 14
+142 	 hey, george michael. 	 hi, george michael michael michael michael maxlen: 8
+143 	 i wanted to talk to you about something before, but i didn't know if it was real. 	 i wanted to talk to you about something, but first i didn't know it was real. maxlen: 26
+144 	 but now, uh... your ethics teacher... 	 but now, now... your ethics teacher... maxlen: 12
+145 	 yeah, i just made this for her. 	 yeah, i did it for him. maxlen: 11
+146 	 oh. 	 oh. oh maxlen: 3
+147 	 she loves saddam hussein. 	 he likes saddam hussein. maxlen: 10
+148 	 i'm sure she is interested in him... as a subject, you know. 	 but, you know, at work, i'm sure you're interested in him, you know, maxlen: 22
+149 	 i'm sure she doesn't love saddam. 	 i'm sure you don't love saddam. maxlen: 13
+150 	 you know, i just wanted to make her something special to show that i care. 	 you know, i just wanted to do something special to show her that i care about her. maxlen: 26
+151 	 about the class? 	 about his class? maxlen: 7
+152 	 you mean, you love her like... 	 i mean, he loved her saddamor- maxlen: 12
+153 	 hi, george michael. 	 hi, george michael michael michael michael maxlen: 8
+154 	 i'm gonna go home and think about it. 	 i should go home and think about it. maxlen: 12
+155 	 i'm gonna go home, think about it. 	 i'll go home and think about it. maxlen: 13
+156 	 dad, what was she doing here? 	 dad, what was she doing here? maxlen: 9
+157 	 [narrator] michael knew he had an ethical responsibility to tell his son the truth. 	 michael knew that he had a moral obligation to tell his son the truth. maxlen: 25
+158 	 yes. 	 yes yes maxlen: 4
+159 	 your uncle gob slept with her. 	 uncle gob slept with him. maxlen: 11
+160 	 well, why would he do that? 	 well, why would he do that? maxlen: 10
+161 	 why would gob sleep with my ethics teacher? 	 why did he sleep with my ethics teacher? maxlen: 13
+162 	 you and i know that, but gob he just... 	 you and i know that, but gob new... new... new... maxlen: 15
+163 	 he's not that exact of a target shooter, and he just kind of sprays it everywhere. 	 he's not one of the good shooters targeting his target, and he almost shoots everywhere. maxlen: 24
+164 	 you know, but listen, did-did you really think that-that... that you had a... 	 you know, but listen, did you really think... that she was... really? maxlen: 21
+165 	 i mean, she's kinda old for you, don't you think? 	 i mean, she's old for you, don't you think she's old? maxlen: 21
+166 	 we don't even know how old she is. 	 we don't even know how old she was. maxlen: 11
+167 	 no one does. 	 nobody kn nobody maxlen: 5
+168 	 she was chaperoning the diversity dance... and i thought maybe as a joke, i'd go up to her and be, like... 	 she was having a little girl dance with the different dances, and i thought maybe i could go up to her and, you know, do the thing with maxlen: 33
+169 	 "well, hey, do you want to dance?" 	 "hey, you want to dance?" maxlen: 12
+170 	 and she'd be, like, "ah, what the heck?" right? 	 and that's what i thought you were gonna think, "what's gonna happen?" okay? maxlen: 25
+171 	 i did it differently in the mirror, but... 	 i did it differ different in front of the mirror, maxlen: 11
+172 	 but, you know, like, we'd be joke dancing or something. 	 but, you know, like, when we were all joking or dancing and doing something else or doing something else. maxlen: 29
+173 	 i didn't think it through. 	 i didn't think so in detail i didn' maxlen: 11
+174 	 don't you think you should be taking somebody your own age? 	 don't you think you should date someone your own age? maxlen: 15
+175 	 like your cousin. 	 like your cousin your cousin maxlen: 5
+176 	 i defaced a rare book to get that picture of saddam hussein in a bathing suit. 	 i took out a tough book to find a picture of saddam misery in the bathroom suite. maxlen: 29
+177 	 "what would saddam do?" 	 "what did saddam do?" maxlen: 10
+178 	 yeah. 	 yes yes maxlen: 4
+179 	 yeah, you know something? 	 yeah, you know something? maxlen: 12
+180 	 okay, that is our exact outdoor fire pit. 	 okay, that's the same way our fire escape's in maxlen: 15
+181 	 [narrator] at prison, george sr. was preparing for an evening with his most devoted fan. 	 in prison, george sr. was getting ready for the evening he was spending with his most loyal fan in himself in prison. maxlen: 27
+182 	 while cindi lightballoon was making preparations ofher own. 	 while cindi lightballoon was doing her own preparations for his own maxlen: 16
+183 	 how we doin'? 	 how we doing? maxlen: 7
+184 	 [man] we have video. 	 we've got a video video on our maxlen: 9
+185 	 [narrator] so george michael, still angry at gob... sought out the family expert on making trouble. 	 and george michael was still angry at gob... while he was still looking for the family expert to cause trouble while he went looking for him to find maxlen: 31
+186 	 i know he was dating that girl shannon. 	 i know you've been out with shannon maxlen: 11
+187 	 the cheerleader? 	 that cheerspon girl? maxlen: 11
+188 	 yeah, she's probably gonna take him to that stupid diversity dance. 	 yeah, probably take him to one of those silly different dance dances one of his maxlen: 19
+189 	 i wish i had someone shocking to take. 	 i wish i could bring someone to surprise everyone. maxlen: 20
+190 	 you know, i actually called mr. daniels and asked him... but he got all out of breath and dropped the phone. 	 you know, i actually called mr. daniels and asked him... but he got breathless and he dropped the phone from his hand and he just dropped the phone down. maxlen: 38
+191 	 i never heard back. 	 i haven't heard back no news again maxlen: 9
+192 	 you know, may-maybe we should go together. 	 you know, maybe we should both go together. maxlen: 17
+193 	 right, i mean, it's a bad example... 	 right, i mean, it was a bad example... maxlen: 15
+194 	 hello. 	 hello hello hel maxlen: 5
+195 	 my mom bought him. 	 my mother took her. maxlen: 7
+196 	 she's making me register him for school. 	 he's got me pretending he's got me school maxlen: 13
+197 	 he's my new little brother. 	 my new little brother my new little sister maxlen: 8
+198 	 so we're related. 	 so we're related relatives maxlen: 7
+199 	 [narrator] and michael went to discuss the george michael situation with ms. baerly. 	 and michael went to discuss george michael's condition with ms. michael and mrs. bearly maxlen: 20
+200 	 i'm sorry. 	 sorry sorry sorry sorry maxlen: 8
+201 	 hi. 	 hi hi maxlen: 4
+202 	 don't worry. 	 don't worry not wor maxlen: 7
+203 	 you mean, you're interested in him. 	 i mean, you're interested in her. maxlen: 10
+204 	 this is what i want to talk to you about, though. 	 that's what i'd like to talk to you about maxlen: 13
+205 	 but i've enjoyed my time with you. 	 but i loved spending time with you. maxlen: 14
+206 	 you ever wanna talk ethics... 	 if you want to talk about morality... maxlen: 11
+207 	 you see, george michael made this poster for you. 	 you see, george michael made this poster for you. maxlen: 16
+208 	 you know, he-he kind of, uh, is in love with you, so... 	 you know, she's kind of in love with you, so... so... maxlen: 17
+209 	 he knows we're going out. 	 he knows we know we're maxlen: 8
+210 	 i told him that you slept with my brother. 	 i told him that you slept with my brother, told maxlen: 12
+211 	 that may be the most unethical thing i've ever heard. 	 this could be the most irritating thing i've ever heard in my life could be the most un maxlen: 22
+212 	 well, you've only been doing this half a semester. 	 well, you've only been a half a sem half a sem maxlen: 14
+213 	 look, it was a preemptive strike. 	 look, this was a preemptive movement. maxlen: 11
+214 	 my brother would've tried to sleep with you. 	 my brother was gonna try to sleep with you. maxlen: 11
+215 	 well, i want you to leave right now and not come back. 	 then i want to leave you right this moment and i won't come back to you. maxlen: 25
+216 	 i understand. 	 i understand understand i understand understand understand maxlen: 7
+217 	 starting right now. 	 starting right now starting right now starting maxlen: 7
+218 	 [narrator] george sr. went on a walk with cindi. 	 she went out for a walk with george sr. cindi. maxlen: 15
+219 	 george. 	 george george george maxlen: 3
+220 	 and she was getting to him. 	 and she's getting to know him maxlen: 8
+221 	 you can feel safe to fully reveal yourself to me. 	 you can totally leave me in here, totally, tot maxlen: 13
+222 	 { sighs] it's weighing heavy on my soul. 	 it's weighing my maxlen: 7
+223 	 you, uh... 	 you, you, maxlen: 4
+224 	 he's pinching the camera. 	 the camera's popping the camera maxlen: 8
+225 	 so, it's off with mother now. 	 so this is your dinner, away with mom now. maxlen: 31
+226 	 [narrator] in fact, lucille was just giving annyong and maeby a ride. 	 actually, lucille was taking annyong and maeby somewhere. maxlen: 22
+227 	 you're trying to steal from the wrong man. 	 you're trying to steal from the wrong guy maxlen: 11
+228 	 watch your back, my little immigrant friend! 	 watch your back, my immigration little brother! maxlen: 13
+229 	 [narrator] and the spring diversity dance was in full swing. 	 and different spice dances in the last tempo were in maxlen: 13
+230 	 whoa, sorry. 	 wow, i'm sorry sorry sor maxlen: 11
+231 	 so you're not letting him in because he doesn't share your perfectly shaped nose... your round eye-shaped eyes, your strong square jaw. 	 i mean, you're not letting her in because she doesn't have your perfectly shaped nose, your round eyes... strong square jaw because she doesn't have your maxlen: 39
+232 	 you wanna dance? 	 want to dance? maxlen: 8
+233 	 all right! 	 all right! maxlen: 4
+234 	 [narrator] and gob sought out shannon... 	 gob finally found the shannon he was looking for... maxlen: 13
+235 	 who had found out he had cheated on her with nazhgalia. 	 she found out gobun had been cheating on her with nazhgalia maxlen: 17
+236 	 shannon, where are you? 	 shannon, where are you? maxlen: 8
+237 	 shannon! 	 shannon! maxlen: 4
+238 	 oh, hey, lisa. 	 hi, lisa lisa  maxlen: 8
+239 	 shannon! 	 shannon! maxlen: 4
+240 	 excuse me. 	 sorry sorry sorry sor maxlen: 7
+241 	 look, i blew it, okay? 	 listen, i messed up, okay? maxlen: 13
+242 	 beth.! 	 beth!! maxlen: 5
+243 	 um, i blew it okay? 	 i ruined our relationship, okay? maxlen: 17
+244 	 i had to see you. 	 i had to see you! maxlen: 11
+245 	 l-i've been giving this a lot of thought, and-and... 	 i've been thinking about this for a long time, and-and maxlen: 15
+246 	 oh, that's... that's your definition of the right thing. 	 that's... that's your definition of the right thing maxlen: 13
+247 	 george michael! 	 george michael george michael maxlen: 4
+248 	 uncle gob? 	 uncle gob? maxlen: 7
+249 	 george michael. 	 george michael michael michael maxlen: 4
+250 	 what are you doing at a high school dance? 	 what are you doing in a high school dance? maxlen: 13
+251 	 i'm just here with my girl. 	 i'm only here with my girlfriend here maxlen: 10
+252 	 yeah, my ethics teacher. 	 yeah, with my vice teacher. maxlen: 12
+253 	 hey, george michael. 	 hey, george michael michael michael maxlen: 7
+254 	 you slept with my ethics teacher. 	 you slept with my moral teacher. maxlen: 12
+255 	 i'm really touched that you'd stick up for me after i've been so horrible to you. 	 i was really moved by you trying to protect me after i treated you so badly, you were so bad that made me feel very maxlen: 27
+256 	 [narrator] in fact, gob mistook the civics teacher... for the ethics teacher michael was dating. 	 in fact, gob messed with michael's ethics teacher... class teacher, uh, head of citizenship teacher maxlen: 26
+257 	 man, he... has a type. 	 man, she kind of... understands she does. maxlen: 13
+258 	 gob, mrs. whitehead was the civics teacher. 	 gob, mrs. whitehead was the schoolteacher teacher. maxlen: 16
+259 	 two strikes. 	 second act. maxlen: 8
+260 	 l-i've been seeing ms. baerly, and i should never have brought gob into it. 	 i was seeing ms. baerly, and i should never have brought gob into this mess with this business. maxlen: 29
+261 	 but that day you told me you liked her, i didn't know what else to do. 	 but the day you told me you liked her, i didn't know what else to do next. maxlen: 24
+262 	 i never wanted to hurt you. 	 i never meant to hurt you. maxlen: 12
+263 	 i didn't know you were that serious. 	 i didn't know you two were serious. maxlen: 14
+264 	 well, you know, i'm open to it. 	 well, you know, i'm open to that. maxlen: 13
+265 	 we're open to it. 	 we're open to that. maxlen: 8
+266 	 wow! 	 wow! maxlen: 7
+267 	 no, no, no, no. 	 no, no, no, no, no, maxlen: 10
+268 	 i'm just saying someday, you know. 	 just one day, you know just one day, you know maxlen: 12
+269 	 i'm not really into kids. 	 i'm not good with kids and maxlen: 8
+270 	 the lady said no, man. 	 lady said no to me, man. maxlen: 12
+271 	 look, michael, i hope you find what you're looking for. 	 listen, michael, i hope you find what you're looking for. maxlen: 15
+272 	 i mean we had some laughs about some very sad things, but... 	 i mean we were laughing about some sad things, but... maxlen: 19
+273 	 i don't think we have a future. 	 i don't think you and i will have a future together. maxlen: 16
+274 	 and, jeremy, i will take that cupcake. 	 and, jeremy, i'm getting that cake. maxlen: 15
+275 	 hey, uh, you wanna dance? 	 hey, you want to dance? maxlen: 10
+276 	 i can't believe that would have worked. 	 i can't believe this is working. maxlen: 12
+277 	 on the next arrested development. 	 the next one is on develop shopment at the maln maxlen: 14
+278 	 buster's competition heats up. 	 buster's pull-out's gonna piss maxlen: 13
+279 	 whoa, whoa, whoa, whoa.! 	 whoa, whoa, whoa, whoa maxlen: 11
+280 	 we are not allowed to have candles in here. 	 it's not allowed to have candles maxlen: 9
+281 	 mom would freak. 	 my mother goes crazy mad at my maxlen: 8
+282 	 oh, no, it's fine. 	 no, it's okay, maxlen: 8
+283 	 i'll light a candle of my own. 	 i'm lighting my own candles, too, maxlen: 12
+284 	 that's exactly what i'll do. 	 yeah, that's exactly what i'm gonna maxlen: 13
+285 	 you okay? 	 you okay? maxlen: 8
+286 	 i'm so sorry. 	 i'm so sorry so maxlen: 7
+287 	 no, that's all right. 	 no, it's okay, maxlen: 8
+288 	 really, it is. 	 i really really maxlen: 3
+289 	 you want me to help you out with this? 	 you want me to help you carry these? maxlen: 13
+290 	 no problem. 	 it's ok maxlen: 4
+291 	 here, let me just help you out here. 	 right here, let me help you. maxlen: 12
+292 	 these, too? 	 these too? maxlen: 5
+293 	 okay, here, let me get that for you. 	 okay, i'll move here for you. maxlen: 14
+294 	 yeah. 	 yes yes maxlen: 4
+295 	 come on, boy! 	 come on, boy! maxlen: 7
+296 	 connie. 	 connie connie maxlen: 4
+297 	 bob. 	 bob bob bob maxlen: 3
+298 	 what you're proposing, connie, is, to say the very least, extreme. 	 what you're suggesting, connie, something really, really extreme maxlen: 15
+299 	 very extreme. 	 very, very, maxlen: 4
+300 	 come on! 	 come on! maxlen: 4
+301 	 come on! 	 come on! maxlen: 4
+302 	 okay! 	 all right! maxlen: 3
+303 	 okay! 	 all right! maxlen: 3
+304 	 come on! 	 come on! maxlen: 4
+305 	 come on! 	 come on! maxlen: 4
+306 	 move, move, move! 	 go, go, go, go, go, go maxlen: 11
+307 	 what are you doing? 	 what are you doing? maxlen: 7
+308 	 get off me. 	 stay away from stay maxlen: 4
+309 	 i don't wanna die. 	 i don't want to die maxlen: 7
+310 	 we all gotta go sometime, huh? 	 we're all going one day, right? maxlen: 14
+311 	 four months ago, each of you little piggies attended auditions to be on a never-before-seen reality tv game show. 	 four months ago, each of you had an interview, to get into a tv show that's never been made before. maxlen: 33
+312 	 and guess what? 	 and guess what? maxlen: 9
+313 	 you won. 	 you win win win win maxlen: 5
+314 	 i think, in life, some people are meant to be on tv, and i'm one of them. 	 i guess some people came life on tv, and i'm one of them. maxlen: 22
+315 	 my favorite color is yellow, like the sun. 	 my favorite color is yellow, just like the sun. maxlen: 15
+316 	 hi, i'm randall, and i'm totally off-the-hook gay and proud of it. 	 hi, i'm randall, and i'm totally gay, and i'm proud of maxlen: 24
+317 	 you're a cutie, aren't you? 	 you're cute, aren't maxlen: 10
+318 	 i wanna lead our country. 	 i want to rule our country our country. maxlen: 10
+319 	 next question. 	 next question next question maxlen: 4
+320 	 my name is angel, on loan from england. 	 my name is angel, from england, i'm from england, maxlen: 14
+321 	 me, too. 	 me neither am i maxlen: 4
+322 	 he's my brother stanton/parole officer. 	 that's my brother stanton; my parole officer officer, my par maxlen: 16
+323 	 hello. 	 hello hello hel maxlen: 5
+324 	 when stanton and i were two, our mother dropped him on his head. 	 when stanton and i were two years old, our mother hit him in the head with her maxlen: 19
+325 	 and he doesn't know. 	 he doesn't know maxlen: 5
+326 	 well, but i do. 	 but i know i do. maxlen: 7
+327 	 dixon, 0'0", 000 pounds. 	 dixon's six inches, 00 pounds, 00 maxlen: 13
+328 	 you know, people used to say i look like will smith. 	 people say i look like will smith. maxlen: 17
+329 	 now they say barack obama. 	 they look like barack obama these days. maxlen: 16
+330 	 to win $00,000 each, all you have to do is spend one night in a prison. 	 each one of you will make $00,000, all you have to do is spend one night in this prison one night a night at a prison. when maxlen: 29
+331 	 that abandoned prison. 	 this abandoned prison in this abandoned prison in maxlen: 8
+332 	 whoa. 	 wow! maxlen: 7
+333 	 holy shit! 	 fucking fuck maxlen: 5
+334 	 cool. 	 super super super maxlen: 3
+335 	 how come i've never heard of this show? 	 how come i never heard this show? maxlen: 13
+336 	 like, how do we know this is not some sort of frat house prank? 	 how do we know this is a prank? maxlen: 19
+337 	 right. 	 right correct right maxlen: 3
+338 	 this is actually our third show, but we won't be on-air until the fall. 	 it's actually our third show, but we're not going to publish it until the fall maxlen: 21
+339 	 and as for knowing if this is anything more than a college prank, you'll just have to play for the money to find out. 	 you're gonna have to play and make the money to figure out whether it's a prank or not. maxlen: 27
+340 	 you'll be asked to perform a series of tasks. 	 you'll be asked to perform a series of task as maxlen: 12
+341 	 tasks that will test your nerves, your courage and your sanity. 	 duty will force your boundaries, your courage and your courage to think about. maxlen: 27
+342 	 sounds like fun, right? 	 sounds like fun, doesn't it? maxlen: 12
+343 	 what kind of task are we talking about, dawg? 	 what kind of mission are they, man? maxlen: 10
+344 	 make your decision now. 	 now make your decision now for a decision. maxlen: 9
+345 	 i'm in. 	 i'm in. maxlen: 5
+346 	 where do i sign? 	 where do i sign? maxlen: 9
+347 	 i can't have no girl do this while i take off. 	 i didn't even have a girlfriend who'd take that when i maxlen: 16
+348 	 i have to look after my baby sister. 	 i have to take care of my little brother. maxlen: 10
+349 	 i'm in. 	 i'm in. maxlen: 5
+350 	 you guys are insane. 	 you guys are crazy guys are cra maxlen: 10
+351 	 do any of you know the history of that prison? 	 do you know the history of this prison? maxlen: 13
+352 	 some really fucked up shit went down in there. 	 some people died there and some died maxlen: 10
+353 	 like what? 	 like what? maxlen: 4
+354 	 stick around. 	 wander around around. around the maxlen: 7
+355 	 you'll find out. 	 you'll find out. maxlen: 9
+356 	 the total money will be divided equally between the survivors, but if all of you make it through the night, there will be a substantial bonus. 	 the money will be divided equally between the survivors, but if you all make the night, there will be a rich prize for you. maxlen: 36
+357 	 ain't enough money in the world to make me stay in that place. 	 no money could make me stay the night here for the night. maxlen: 13
+358 	 anybody else wanna join him? 	 anyone else want to join him? maxlen: 10
+359 	 not me. 	 i'm not me maxlen: 5
+360 	 well, there's no way i'm riding all the way back to the city with urine boy. 	 there's no way i'm going to the city with this maxlen: 14
+361 	 oh, i'm in. 	 i'm in maxlen: 4
+362 	 just get me the hell out of here. 	 get me out of here, get maxlen: 7
+363 	 your chariot awaits. 	 your car's waiting for your car maxlen: 8
+364 	 unlock him. 	 untie him maxlen: 4
+365 	 bye. 	 bye bye by maxlen: 5
+366 	 you guys are idiots. 	 you guys are foolish fool maxlen: 9
+367 	 this is for some fucking frat party joke and you're all gonna be made fun of. 	 it's a fucking party joke, they're all gonna mess with you guys maxlen: 22
+368 	 you're all gonna look like a bunch of losers. 	 you don't look like nothing but a bunch of fucking bunch of ass maxlen: 19
+369 	 can't you just see this video playing at a party? 	 can't you see this is a party on this recording this tape. maxlen: 15
+370 	 or we get famous. 	 or we'll be famous we'll maxlen: 9
+371 	 there's a freaking human head in there! 	 there's a human head in there! maxlen: 9
+372 	 don't worry, it's not real. 	 don't worry, it's not maxlen: 10
+373 	 sure as hell looks real to me. 	 it seemed pretty real to me, maxlen: 8
+374 	 what we in the business like to call a "special effect". 	 that's why they call our "spe special effects" business. maxlen: 19
+375 	 pretty cool, huh? 	 lovely, isn't it maxlen: 8
+376 	 a little taste of what's waiting for you in there. 	 a small mark of what's waiting for you inside. maxlen: 17
+377 	 thanks to our award-winning special effects team. 	 thank our special special special award- special special special special special special special maxlen: 15
+378 	 follow me, my friends. 	 follow me, friends, follow me. maxlen: 9
+379 	 in the warm, swampy water, lazy crocodiles wait for the next meal. 	 in hot swamp water, lazy croc crocodiles are waiting for their prey. maxlen: 22
+380 	 the indian crocodiles have long, pointed faces. 	 the crocodators are long and will be a long-l maxlen: 14
+381 	 these crocodiles are called... 	 this kind of crocodiles... maxlen: 8
+382 	 boys. 	 kids kids kids maxlen: 3
+383 	 i see you're working hard as usual. 	 i see you're working hard as usual as ever. maxlen: 16
+384 	 are we ready? 	 ready? maxlen: 7
+385 	 totally ready. 	 we're all ready maxlen: 5
+386 	 totally and absolutely. 	 and totally and totally and maxlen: 7
+387 	 let's keep it that way. 	 keep going like this keep maxlen: 5
+388 	 yes, ma'am. 	 yes, sir, sir sir, sir maxlen: 9
+389 	 hey. 	 hi hi maxlen: 4
+390 	 great job selling the fear out there, man. 	 it was great job to scare them. maxlen: 11
+391 	 yeah. 	 yes yes maxlen: 4
+392 	 i can't believe any of those kids stuck around for the show. 	 i can't believe these kids are gonna be on the show maxlen: 14
+393 	 you actually looked like you were terrified out there. 	 you really looked like you were really out of your fucking maxlen: 13
+394 	 well, that's because i am. 	 because i was because i was. maxlen: 7
+395 	 i mean, first of all, just looking at that place totally creeps me out. 	 i mean, first of all, this place really looks at it makes me feel maxlen: 17
+396 	 did you know about that? 	 did you know that? maxlen: 10
+397 	 about the dead homeless people? 	 dead homeless people? maxlen: 7
+398 	 sure. 	 of course of course maxlen: 4
+399 	 why didn't you say anything? 	 why didn't you say anything? maxlen: 10
+400 	 that's kind of a lot of people for a coincidence. 	 it's a big coinc big coincidence? maxlen: 12
+401 	 i mean, do you really think it's safe in there? 	 do you really think it's really safe there maxlen: 10
+402 	 safe enough to get the show insured. 	 safe enough for the show to get insured. maxlen: 14
+403 	 any more questions? 	 any other questions? maxlen: 7
+404 	 yeah. 	 yes yes maxlen: 4
+405 	 how do you sleep at night? 	 how do you sleep at night? maxlen: 9
+406 	 like a baby. 	 like baby babies baby maxlen: 5
+407 	 let's do this. 	 let's get this straight let's get this maxlen: 11
+408 	 okay. 	 ok ok ok maxlen: 3
+409 	 we are filming. 	 we're recording records. maxlen: 8
+410 	 all of you have chosen, of your own free will, to spend the night in this prison for the chance to win $00,000 each. 	 each of you have been chosen by your own free will, spent the night in jail, one to make $00,000 a head of a man making $00,000 a $00,000 maxlen: 32
+411 	 pretty straight forward, right? 	 it's clear enough, isn' maxlen: 9
+412 	 okay, then let's get this party started. 	 okay, so let's get the party started. maxlen: 13
+413 	 you'll find everything you need in your base camp, which is located in the warden's office. 	 you'll find everything you need in your base camp, it's chief's office. maxlen: 27
+414 	 where's that? 	 where? maxlen: 3
+415 	 well, it's kind of complicated. 	 it's a maxlen: 4
+416 	 maybe one of you should write it down. 	 maybe one of you better write it down. maxlen: 11
+417 	 but you took away all of our possessions, so how are we supposed to write it down? 	 but you took all of our top, how can we write? maxlen: 20
+418 	 go straight down the hall, hang a right, another right, then a left. 	 go down the corridor down the corridor, right, right again, then to the left, then to the maxlen: 25
+419 	 then straight on up the first flight of stairs, a left, a right, then one more left. 	 straight down the stairs, left, right, and another left, and another left. maxlen: 24
+420 	 you want me to say it again? 	 do you want me to repeat? maxlen: 11
+421 	 yeah. 	 yes yes maxlen: 4
+422 	 too bad. 	 too bad too bad maxlen: 4
+423 	 when you get there, you'll find the key to release you from those shackles. 	 you'll find a key to get you off your chains there and find a key to maxlen: 19
+424 	 is there anyone else inside? 	 is anyone inside? maxlen: 11
+425 	 we'll just have to wait and see. 	 we'll just have to wait and see what maxlen: 10
+426 	 i thought coming out of the closet was scary. 	 i thought going out of the basement was terrible, too. maxlen: 19
+427 	 have fun, inmates. 	 have fun, inmates. maxlen: 13
+428 	 good luck. 	 good luck good maxlen: 4
+429 	 where's she going? 	 where's he going? maxlen: 7
+430 	 welcome to the task. 	 welcome to the task force welcome welcome maxlen: 10
+431 	 can you please not do that? 	 can you not do that? maxlen: 10
+432 	 i can't see a damn thing in here. 	 i can't see a damn thing in here maxlen: 11
+433 	 does anybody remember which way he said to go? 	 anybody remember where we're going? maxlen: 13
+434 	 it's straight, a right, then a left. 	 go straight, right, then left. maxlen: 12
+435 	 no, it's straight, two rights then a left. 	 no, it's straight, two rights, then a left, then maxlen: 16
+436 	 too many "straights". 	 there were so many, many, many maxlen: 8
+437 	 no, it's, "go straight down the hall, 	 no, go straight down the hall, straight down the hall maxlen: 12
+438 	 "hang a right, another right, a left. 	 "go back, do right again, and to the left. maxlen: 15
+439 	 "then straight on up the first flight of stairs, 	 "then straight to the stairs, then straight up, then maxlen: 13
+440 	 "a left, a right, and one more left". 	 "sola, right, and left again." maxlen: 14
+441 	 what are you? 	 what are you? maxlen: 5
+442 	 she's smart. 	 smart smart smart maxlen: 3
+443 	 guys, we're gonna have a great show. 	 illet, it's gonna be a great maxlen: 11
+444 	 careful. 	 careful care care maxlen: 4
+445 	 careful. 	 careful care care maxlen: 4
+446 	 jesus. 	 god god god god maxlen: 4
+447 	 what is this place? 	 what is this place? maxlen: 7
+448 	 okay, and get ready. 	 and get ready. maxlen: 7
+449 	 that was fun. 	 it was fun fun fun maxlen: 5
+450 	 and speed them up. 	 let's speed them up a little maxlen: 8
+451 	 yes, my queen. 	 okay, my queen my queen maxlen: 7
+452 	 come on! 	 come on! maxlen: 4
+453 	 now go! 	 now run! maxlen: 4
+454 	 left turn. 	 left turn left. left maxlen: 5
+455 	 why am i not seeing anything? 	 why can't i see anything? maxlen: 9
+456 	 shit, shit, shit, shit. 	 fuck shit sh maxlen: 5
+457 	 well, i don't know. 	 i don't maxlen: 4
+458 	 the power's going down, the backup should've kicked in by now. 	 the power's going down, the generator should've already kicked in. maxlen: 19
+459 	 shit! 	 god damn it! maxlen: 5
+460 	 hurry! 	 hurry! maxlen: 5
+461 	 it's a weird glitch, huh? 	 strange, isn't it? maxlen: 9
+462 	 careful! 	 be careful! maxlen: 5
+463 	 left! 	 left! maxlen: 4
+464 	 here we are. 	 here we are. maxlen: 9
+465 	 we're here. 	 we're here maxlen: 4
+466 	 damn, it's cold in here. 	 it's freezing here free maxlen: 7
+467 	 look, key. 	 look, the key key key key maxlen: 7
+468 	 hell yeah. 	 yes yes maxlen: 4
+469 	 okay. 	 ok ok ok maxlen: 3
+470 	 hey, guys, look. 	 hey guys, maxlen: 5
+471 	 yeah, come on. 	 yeah, come on, come on maxlen: 8
+472 	 cool. 	 great great great great maxlen: 4
+473 	 all right, you. 	 all right, you. maxlen: 7
+474 	 who's that? 	 who's that? maxlen: 5
+475 	 i guess it's the warden. 	 i think the manager's the maxlen: 7
+476 	 get this one. 	 take this. take maxlen: 4
+477 	 okay, yeah. 	 okay, yes yes maxlen: 7
+478 	 hey, check this out. 	 look at this. maxlen: 8
+479 	 what you got, man? 	 what, man? maxlen: 7
+480 	 "greetings, brave contestants. 	 " hello, the brave contestants of maxlen: 10
+481 	 "welcome to warden clem harvis' personal office. 	 "w welcome to warden clem harvis's office. maxlen: 22
+482 	 "in the center of the room is a box. 	 "there's a box in the middle of that room maxlen: 12
+483 	 "this chess piece will determine your own personal symbol. 	 these chess pieces will determine your own personal role. maxlen: 22
+484 	 "you cannot trade with any of the other contestants. 	 "you cannot change your stones with other other contestants. maxlen: 14
+485 	 "razor blades were a personal favorite". 	 "the razor was his favorite." maxlen: 13
+486 	 "now, it's your turn to put your hand in the box". 	 "now it's your turn to put your hand in the box." maxlen: 17
+487 	 shit. 	 fuck shit sh maxlen: 5
+488 	 so, who wants to go first? 	 well, who wants to go first? maxlen: 9
+489 	 me. 	 me ben me maxlen: 3
+490 	 what the hell is going on? 	 what's going on? maxlen: 7
+491 	 i don't know. 	 i don't maxlen: 4
+492 	 what do you mean you don't know? 	 what do you mean you don't know maxlen: 9
+493 	 i mean, i don't know. 	 you mean i don't know maxlen: 7
+494 	 seriously? 	 really? maxlen: 5
+495 	 you should have seen all of your faces. 	 you should have seen your faces. maxlen: 13
+496 	 not cool. 	 that's not very maxlen: 5
+497 	 black king. 	 black witness black black maxlen: 4
+498 	 black rook. 	 black heart castle black maxlen: 4
+499 	 white knight. 	 white horse white horse maxlen: 4
+500 	 white queen. 	 the white queen white maxlen: 4
+501 	 hey, look. 	 look at this look maxlen: 4
+502 	 holy shit! 	 fucking fuck maxlen: 5
+503 	 okay, that is really fucking creepy. 	 that was really, really fucking crazy. maxlen: 11
+504 	 welcome, my little piggies, to the task. 	 my little piglets, welcome to the task force. maxlen: 17
+505 	 now, for a little history of pennyville state prison. 	 now, let me tell you about the pennyville state prison state prison in state maxlen: 17
+506 	 in 0000, with the climbing budgets during the depression, the cold blooded warden thought he could keep his fortune on track by eliminating certain overhead costs. 	 in the crisis in 0000, when the cost was increased, the ruthless warden thought to up his fortune by destroying some charges. maxlen: 32
+507 	 his inmates! 	 they were prisoners! maxlen: 8
+508 	 eventually the warden was exposed, but not before having executed 00 inmates! 	 00 prisoners had already been executed until the warden's crimes were revealed. maxlen: 23
+509 	 the last person to be served a death sentence here was warden harvis himself. 	 the last person to be sentenced here for the last time here was warden harvis himself, head of warden har maxlen: 24
+510 	 rumor has it that the warden still roams the halls. 	 rumor has it that the warden was still walking the hallways in the hall maxlen: 17
+511 	 tonight, you will be asked to go face to face with the warden, and the tortured souls that still inhabit the building you are now in. 	 tonight, you will be asked to face the warden and the tortured souls who were tortured under this building and maxlen: 26
+512 	 task one. 	 mission first. maxlen: 8
+513 	 white queen. 	 white queen white queen white maxlen: 5
+514 	 try not to die! 	 try not to die! maxlen: 7
+515 	 does anybody want to trade? 	 does anyone want to change? maxlen: 8
+516 	 hell no! 	 hell no! maxlen: 7
+517 	 okay. 	 ok ok ok maxlen: 3
+518 	 "the white queen will got to the prison chapel to complete his task. 	 "the white queen must go to the church of the prison to complete his mission maxlen: 16
+519 	 can you hear me? 	 can you hear me? maxlen: 8
+520 	 yeah, where are you? 	 yeah, where are you? maxlen: 8
+521 	 still in the first hallway. 	 i'm still on the first corridor maxlen: 10
+522 	 nice job with the sound. 	 he's got a great job maxlen: 7
+523 	 hey, thanks. 	 thank than than than than than maxlen: 7
+524 	 oh, shit. 	 god damn it! maxlen: 5
+525 	 what? 	 what happened? maxlen: 4
+526 	 they turned my torch off. 	 they turned my flashlights off. maxlen: 9
+527 	 i can't see a damn thing. 	 i can't see anything i can see maxlen: 9
+528 	 okay, take it easy, randall. 	 okay, calm down, randall, rand maxlen: 11
+529 	 now, make a right and go straight. 	 now turn right and go straight. maxlen: 10
+530 	 there's babies hanging! 	 their babies hanged up! maxlen: 8
+531 	 children's... 	 children... children... maxlen: 4
+532 	 i imagine they have the place wired for audio input. 	 i guess they've got it all covered by speaker speaker speaker speaker maxlen: 15
+533 	 audio being more profound in tapping into our primal fears than sight. 	 the voices are more effective than the video to trigger our fears to trigger our fears. maxlen: 19
+534 	 is that right? 	 is that true? maxlen: 5
+535 	 okay. 	 ok ok ok maxlen: 3
+536 	 god! 	 jesus christ! maxlen: 4
+537 	 sounds like a real sweetie. 	 that sounds really nice. maxlen: 9
+538 	 no, i'm good, man. 	 no, no, i'm all right, man, man maxlen: 13
+539 	 freaking stoner. 	 he's crazy fucking maxlen: 8
+540 	 did you hear that? 	 did you hear that? maxlen: 8
+541 	 what? 	 what? maxlen: 4
+542 	 i don't know. 	 i don't maxlen: 4
+543 	 it was a sound. 	 i got a sound came maxlen: 5
+544 	 i think someone's in the room with me. 	 i think someone's in the room with me in the room maxlen: 13
+545 	 they're using speakers, randall. 	 they're sounding loud on speaker speaker speaker phone, randall maxlen: 15
+546 	 seriously. 	 i really really maxlen: 3
+547 	 okay. 	 ok ok ok maxlen: 3
+548 	 oh, my... 	 fuck.... maxlen: 4
+549 	 nice set. 	 it's nice maxlen: 5
+550 	 they want you to turn off your flash light. 	 they want you to turn off the flashlight. maxlen: 12
+551 	 okay, now what? 	 okay now? maxlen: 5
+552 	 "open the bible to the marked page... 	 print page from the bible... maxlen: 14
+553 	 "where you'll find the lord's prayer. 	 "you'll find the grace of god there for you there maxlen: 13
+554 	 "having been desecrated 00 years ago, 	 "it was disrespectful to this place 00 years ago, 00 years ago maxlen: 17
+555 	 "this once holy place is a likely hotspot of paranormal activity". 	 "now, this is the room of the extraordinary supernatur maxlen: 16
+556 	 oh, my. "in reverse". 	 wham... "team opposite reverse". maxlen: 10
+557 	 no way. 	 not possible not possible maxlen: 4
+558 	 oh, hell no, man. 	 no, man no man no man maxlen: 7
+559 	 don't do that shit. 	 don't do this shit maxlen: 7
+560 	 i can't do that. 	 i can't do maxlen: 5
+561 	 "once your task is completed... 	 "when you complete your mission... maxlen: 10
+562 	 "if there is no sign of the warden, 	 "if there's no sign from the principal, maxlen: 14
+563 	 "you can return to base camp". 	 "you can go back to camp". maxlen: 10
+564 	 deep breath, randall. 	 a deep breath, randall, deep breath maxlen: 11
+565 	 just do it. 	 just do it. do maxlen: 5
+566 	 please forgive me, whoever i may be pissing off. 	 i apologize who i'm bothering right now who maxlen: 14
+567 	 this wasn't my idea. 	 it wasn't my idea that maxlen: 8
+568 	 okay. 	 ok ok ok maxlen: 3
+569 	 "evil from us deliver 	 " protect us from evil... maxlen: 11
+570 	 "our father who art in heaven... 	 "our father in the sky... maxlen: 10
+571 	 "but temptation into not us lead. 	 "don't let the evil lead us. maxlen: 15
+572 	 "and us against trespass... 	 "and those who overstep us... maxlen: 13
+573 	 "who those forgive we as trespasses our us forgive. 	 "for forgive us our debts, as we forgive those who owe us our debts, forgive maxlen: 24
+574 	 "and bread daily our day this us give. 	 "give us our daily bread today today today. maxlen: 15
+575 	 "heaven in is it... 	 "as in heaven as it is in heaven maxlen: 9
+576 	 "as earth on done be will thy, 	 "as well as in the sky, as maxlen: 9
+577 	 "heaven in art who father our". 	 "it is yours for thy kingdom and rule." maxlen: 15
+578 	 please say i can leave now. 	 please tell me i can leave now please tell me i can leave maxlen: 15
+579 	 "before you head to the base camp"... 	 "be before you head for camp on your way..." maxlen: 12
+580 	 god, randall, you have to blow out the candle. 	 jesus, randall, you need to put out the candle. maxlen: 17
+581 	 you're joking, right? 	 you're kidding, right? maxlen: 11
+582 	 and sit there for one minute. 	 sit down there for a minute a maxlen: 7
+583 	 the things i do for money. 	 look at the money they made for money maxlen: 8
+584 	 where'd he go? 	 where she disappeared where she disappe maxlen: 7
+585 	 it would be my estimation that the production has cut off our ability... to communicate with our homosexual friend... in order to create a more terrifying atmosphere. 	 i understand that the people who did this were cut off for a little while just to give our connection to our gay friend to give this a more terrifying air. maxlen: 44
+586 	 whatever. 	 whatever, whatever maxlen: 7
+587 	 sure, like clockwork. 	 definitely, clicks and gone. maxlen: 11
+588 	 guys? 	 guys? maxlen: 3
+589 	 i think we got some really good stuff. 	 i think we've done something really cool, we maxlen: 11
+590 	 guys? 	 guys? maxlen: 3
+591 	 guys? 	 guys? maxlen: 3
+592 	 guys! 	 guys? maxlen: 3
+593 	 do you see anyone? 	 did you see anyone? maxlen: 8
+594 	 no. 	 no no no no maxlen: 4
+595 	 come on, dude, it couldn't have been that bad. 	 come on, dude, it's not that bad. maxlen: 14
+596 	 totally not worth the money. 	 it's definitely not worth money maxlen: 9
+597 	 but having done it, it was totally worth the money. 	 but it was worth the money to complete the mission. maxlen: 11
+598 	 oh, thank god i'm finished. 	 thank god i'm done for god maxlen: 9
+599 	 look at me, i'm still shaking. 	 look, i'm still shaking, maxlen: 9
+600 	 i don't think i could handle doing it again. 	 guess i can't do it again maxlen: 9
+601 	 they might ask you to do another one. 	 they might be able to assign you again to maxlen: 10
+602 	 don't joke. 	 don't joke maxlen: 5
+603 	 i swear you can feel some kind of twisted vibe out there. 	 i swear you don't even know how that person feels there, i maxlen: 17
+604 	 it's like walking through heavy fog, only it's ice cold. 	 it's like you're walking in a busy fog, only cold as ice cold maxlen: 20
+605 	 it was creepy. 	 it was creepy cree maxlen: 7
+606 	 is it me, or is it getting colder in here? 	 is it me, or is it getting colder here? maxlen: 19
+607 	 yeah, she's right. 	 yeah, he's right, that maxlen: 9
+608 	 i want to go next. 	 i want to go to the next next one. next maxlen: 11
+609 	 what exactly do you mean, 	 what do you mean? maxlen: 9
+610 	 "there are some cameras down"? 	 "some cameras don't work"? maxlen: 13
+611 	 what do you want me to say? 	 what do you expect me to say? maxlen: 10
+612 	 i'm sorry, but this is pretty complicated stuff. 	 i'm sorry, but these devices are very complicated maxlen: 13
+613 	 we'll get scelzi to go down... and have a look and fix them. 	 let's get scelzi downstelz and have a look, and you'll be maxlen: 21
+614 	 scelzi. 	 scelzi scel maxlen: 5
+615 	 yeah. 	 yes yes maxlen: 4
+616 	 yeah, i need you to go down and have a look at some cameras. 	 you need to come down and look at some cameras. maxlen: 14
+617 	 yeah. 	 yes yes maxlen: 4
+618 	 boys. 	 gentle gent maxlen: 3
+619 	 too late. 	 too late too late maxlen: 4
+620 	 we need to talk. 	 we need to talk, talk to maxlen: 7
+621 	 i'm busy. 	 i'm busy maxlen: 5
+622 	 well, we talk now or i walk. 	 either we talk or i go talk or i go maxlen: 10
+623 	 it's important to me too, taylor. 	 it's important to me too, too maxlen: 9
+624 	 what do you mean? 	 what do you mean? maxlen: 9
+625 	 well, i've been doing a little research. 	 i've had a little research i' maxlen: 9
+626 	 and by "research," what you actually mean... is you've been fucking one of the local girls. 	 you mean the town girls you slept with? maxlen: 22
+627 	 am i right? 	 am i right? maxlen: 8
+628 	 loose lips sink ships, taylor. 	 big lips, large hips, taylor. maxlen: 16
+629 	 okay, this prison didn't just have a men's wing, all right? 	 okay, prison wasn't just for men? maxlen: 12
+630 	 it had a women's wing, too, all right? 	 do women have an episode? maxlen: 9
+631 	 and the twisted fucking warden would roam around it, naked, answering to no one. 	 and that fucking crazy fucking freak manager was walking around the women's department with naked, not answering anybody maxlen: 30
+632 	 he beat them, he raped them, made them have his children, then he starved them to death. 	 he beat them, raped them, knocked them up, and starved them to death starve. maxlen: 24
+633 	 people say he even fed some of them their own babies. 	 they say some people feed their own babies. maxlen: 13
+634 	 what's your point? 	 what does that mean? maxlen: 8
+635 	 my point? 	 what do i mean? maxlen: 9
+636 	 my point is that the real story would have made the show a hit! 	 this true story's gonna make the show interest! maxlen: 13
+637 	 everybody would've been talking about us. 	 anybody could be talking about us, maxlen: 9
+638 	 the story you cranked out is nothing compared to the real one. 	 this story you're making up is nothing compared to the facts of the facts of the maxlen: 20
+639 	 i agree. 	 i think so too. maxlen: 5
+640 	 so why didn't we use it? 	 so why don't we use this? maxlen: 11
+641 	 because the town said they'd sue us if we did. 	 because if we do this, the town's gonna sue us maxlen: 15
+642 	 right. 	 ok ok ok maxlen: 3
+643 	 are we done here? 	 are we done here? maxlen: 9
+644 	 yeah. 	 yes yes maxlen: 4
+645 	 oh, yeah? 	 yeah? maxlen: 4
+646 	 what's that? 	 what is it? maxlen: 7
+647 	 anyway, i'm gonna go take a nap. 	 anyway, i'm gonna get some sleep. maxlen: 14
+648 	 they on? 	 are they working? maxlen: 7
+649 	 yep, they're on. 	 yeah, they work. maxlen: 9
+650 	 sweet. 	 beautiful beautiful beautiful maxlen: 3
+651 	 scelzi, what was that? 	 scelzi, what is that? maxlen: 10
+652 	 just a little something to get me through the night. 	 it's just a little something that makes me take off the night maxlen: 14
+653 	 do you want? 	 want some? maxlen: 8
+654 	 just get your hairy butt back here, okay? 	 get your hairy ass here right now, okay? maxlen: 15
+655 	 aye, aye, captain. 	 aye aye captain maxlen: 5
+656 	 hello? 	 hello? maxlen: 5
+657 	 you scared the shit out of me. 	 you scared the shit out scared me maxlen: 10
+658 	 i've got some good stuff. 	 i've got a great stuff i got maxlen: 10
+659 	 suit yourself. 	 well, suit yourself whate maxlen: 7
+660 	 we are totally ready to go. 	 we're totally ready to start maxlen: 8
+661 	 i would have to say my biggest fear would be being buried alive. 	 i would say my greatest fear is being buried alive and buried alive. maxlen: 17
+662 	 where do i go next? 	 where am i going now? maxlen: 8
+663 	 "this will lead you to freedom row". 	 "this will lead you to your freedom here." maxlen: 12
+664 	 all right, 	 ok, ok maxlen: 3
+665 	 i'm at the end of freedom row. 	 i'm at the end of freedom place maxlen: 9
+666 	 what do i do next? 	 what am i doing now? maxlen: 8
+667 	 tell him to go right again. 	 tell him to go right again. maxlen: 11
+668 	 go straight on and then right. 	 go right and turn right. maxlen: 9
+669 	 oh, shit! 	 fucking fuck maxlen: 5
+670 	 what? 	 what? maxlen: 3
+671 	 blood. 	 blood blood blood maxlen: 3
+672 	 it's not real blood. 	 it's not real maxlen: 5
+673 	 no shit, sherlock. 	 there's no cursing, it's sherlock maxlen: 12
+674 	 i love that girl. 	 i love this girl. maxlen: 7
+675 	 oh, man, please tell me i get to go up and not down. 	 please tell me the stairs aren't down the stairs, upstairs, maxlen: 20
+676 	 sorry. 	 sorry sorry sor maxlen: 5
+677 	 eighty paces? 	 00 steps? maxlen: 5
+678 	 who do i look like, a pirate? 	 what am i, a pirate or a pir maxlen: 10
+679 	 you should see a metal door... once you've gone a flight down. 	 as soon as you get down, you'll see a door with a finger maxlen: 17
+680 	 it says... 	 she's saying... maxlen: 5
+681 	 damn. 	 god damn it! maxlen: 5
+682 	 "welcome to solitary confinement, cell number five. 	 "welcome to punishment cell number five, cell number five. maxlen: 17
+683 	 "for the violent and frequently insane, 	 "for the violent and madness and madness, maxlen: 15
+684 	 shit. 	 fuck shit sh maxlen: 5
+685 	 look, just tell me what i need to do... so i can get the hell out of here. 	 just tell me what i have to do... get the hell out of this hell right now! maxlen: 24
+686 	 no! 	 no! maxlen: 4
+687 	 thanks. 	 thank than than than than than maxlen: 7
+688 	 you guys ever get tired of complimenting each other? 	 aren't you tired of complimenting each other? maxlen: 16
+689 	 the things i do. 	 look at me now, look at me maxlen: 8
+690 	 it says, "if an inmate failed in his suicide attempt, 	 it says, " if a prisoner can't commit suicide but he can' maxlen: 17
+691 	 "you are to now re-enact the torture of a prisoner". 	 "you will now live the punishment given to a prisoner." maxlen: 16
+692 	 okay, so where is it? 	 okay, where's the maxlen: 7
+693 	 under your feet. 	 under your feet under your maxlen: 5
+694 	 i mean, this thing is, like, full of shit in here. 	 this place is full of shit up to its shit maxlen: 12
+695 	 money, money, money. 	 remember the money, remember the money maxlen: 7
+696 	 that's a pretty harsh task. 	 this is a very difficult mission. maxlen: 8
+697 	 "once in the hole, you are to await further instructions". 	 "what are you gonna do when you're in the middle maxlen: 14
+698 	 okay. 	 ok ok ok maxlen: 3
+699 	 hello? 	 hello? maxlen: 4
+700 	 hello? 	 hello? maxlen: 4
+701 	 hey, no offense, but i really hope you're not my task. 	 no offense, but i hope you're not my mission. maxlen: 17
+702 	 connie. 	 connie connie maxlen: 4
+703 	 what? 	 what? maxlen: 3
+704 	 take a look at this. 	 look at this. maxlen: 9
+705 	 what? 	 what? maxlen: 3
+706 	 that isn't... 	 oh no... no maxlen: 4
+707 	 you're fired. 	 you've been fired, you maxlen: 7
+708 	 why? 	 why? maxlen: 3
+709 	 you go behind my back and you hire some extra to be in the show... when i specifically told you not to, and you wanna know why you're fired? 	 you went behind my back, and i specifically told you... that you added something to the show, and you still ask why you were fired? maxlen: 43
+710 	 that's not my guy. 	 that's not our man he' maxlen: 8
+711 	 where'd he go? 	 where did he go? maxlen: 5
+712 	 who the fuck was that? 	 who the hell is this? maxlen: 9
+713 	 i don't know. 	 i don't maxlen: 4
+714 	 don't look at me. 	 don't look at me. maxlen: 7
+715 	 look, connie, you've got to get that guy out of there, all right? 	 look, connie, you have to get that guy out, okay? maxlen: 21
+716 	 i mean, this is gonna screw up the show. 	 it's gonna ruin maxlen: 7
+717 	 damn. 	 god damn it! maxlen: 5
+718 	 this is gonna kill us. 	 we'll ruins ours maxlen: 7
+719 	 you're sure this isn't just you screwing around? 	 so you didn't bring this? maxlen: 13
+720 	 scout's honor. 	 with the cut, no no with the maxlen: 8
+721 	 it's so obvious. 	 it's very maxlen: 4
+722 	 what is so obvious? 	 what's open? maxlen: 7
+723 	 come closer. 	 come closer and closer maxlen: 4
+724 	 remember when i asked you... why you were having snow rig cameras in the control booth? 	 i asked you why you were having a camera in the control room? maxlen: 20
+725 	 yeah. 	 yes yes maxlen: 4
+726 	 the network wanted some guys in there... to shoot some behind-the-scenes... 	 the foot behind the camera... what they're trying to record... maxlen: 14
+727 	 fuck me! 	 holy crap! maxlen: 7
+728 	 fuck me! 	 holy crap! maxlen: 7
+729 	 you're right. 	 you're right right maxlen: 5
+730 	 it's kind of genius, isn't it? 	 genius, isn't it maxlen: 8
+731 	 it's total genius. 	 it's perfectly brill maxlen: 7
+732 	 what are you two talking about? 	 what are you two talking about? maxlen: 13
+733 	 we're part of the game. 	 we're part of the game too. maxlen: 10
+734 	 you mean to tell me that the network is throwing some twists into the game just to see how freaked out we get? 	 so the company wants to record how you scared us by putting a show on the show? maxlen: 26
+735 	 bingo! 	 bingo! maxlen: 5
+736 	 so what do we do now? 	 so what do we do now? maxlen: 10
+737 	 go on with the show. 	 we're going to continue our show show show maxlen: 10
+738 	 as planned. 	 as planned as planned as maxlen: 5
+739 	 task three. 	 three off three three maxlen: 4
+740 	 black king and white knight. 	 black king and white knight. maxlen: 8
+741 	 task four. 	 four mission four four maxlen: 4
+742 	 black rook and white queen. 	 black castle and white queen castle and black maxlen: 8
+743 	 told you you might have to do another task. 	 i told you that you might be on another mission again maxlen: 11
+744 	 smartass. 	 she's a know maxlen: 5
+745 	 okay, black king and white knight are to turn right and make their way to the gas chamber. 	 okay, black king and white knight turn right and head to the gas chamber. maxlen: 20
+746 	 white queen and black rook are to go straight and head to the prison kitchen. 	 the white queen and black horse go straight, and they go to the prison kitchen. maxlen: 22
+747 	 okay, laters. 	 okay, later, maxlen: 5
+748 	 good luck. 	 good luck. maxlen: 8
+749 	 "king and knight go left and then right. 	 "con and knight to the left and turn right after the right. maxlen: 15
+750 	 "rook and the queen go to the end of the hall 	 "go all the way to the end of the lore and the horse maxlen: 15
+751 	 "and take the stairwell down". 	 and go down the ladder. maxlen: 13
+752 	 scelzi, pick up. 	 scelzi, come in. maxlen: 9
+753 	 i need to talk to you. 	 i need to talk to you. talk to maxlen: 9
+754 	 scelzi, are you there? 	 scelzi, are you there? maxlen: 11
+755 	 can you hear me? 	 can you hear me? maxlen: 8
+756 	 come on, pick up. 	 come on, open up. maxlen: 9
+757 	 we're in. 	 we're inside. maxlen: 10
+758 	 "welcome to the gathering room. 	 "w welcome to the lounging room welcome to maxlen: 13
+759 	 you should see a light switch at the rear wall. 	 there must be a light behind the wall behind you behind you, open it up. maxlen: 17
+760 	 "black king and white knight are to enter the gas chamber". 	 "black king and white knight are entering the gas chamber." maxlen: 15
+761 	 again, nice set, connie. 	 it's nice set, connie maxlen: 9
+762 	 can't take credit for that, it's the real deal. 	 she deserved what was best there, it became a whole real place, maxlen: 15
+763 	 only thing the legal department could clear. 	 the only place he's ever cleaned up maxlen: 10
+764 	 cool, right? 	 isn't it beautiful? maxlen: 7
+765 	 well, it's scary all right. 	 it's pretty scary sp maxlen: 8
+766 	 christ! 	 god god god god maxlen: 4
+767 	 what's that smell? 	 what's that smell? maxlen: 9
+768 	 it is a well documented fact... that execution chambers frequently have the smell of death in them. 	 they often have the smell of death, usually the smell of their own in the scent of a document maxlen: 23
+769 	 of course the smell isn't actually death. 	 of course the smell isn't actually death maxlen: 11
+770 	 when a human knows his or her life is about to come to an end, it will tend to reach an anxiety level... that will cause it to emit highly noxious odors. 	 if someone knows it's coming to their last moments of a human life, it'd be the last in a state of recent concern that caused her a lot of smell- maxlen: 39
+771 	 in this particular case, we're smelling a combination of human smells... and the smells of the gas used to kill said human. 	 in this case, the smell of people we're breathing at the moment is the smell of the gas and the gas that maxlen: 29
+772 	 now for the fun part, boys and girls. 	 now for fun time, ladies and gentle maxlen: 10
+773 	 black king gets to sit down in the gas chair. 	 the black witness sitting in the chair stand in the maxlen: 10
+774 	 black king? 	 black king? maxlen: 5
+775 	 that would be me. 	 that would be me that would be me maxlen: 8
+776 	 and await further instructions. 	 wait for further further instructions for further instructions. maxlen: 11
+777 	 "there you'll find some meat and a pan. 	 "there you'll find some meat and a roof there. maxlen: 16
+778 	 "this is to be cooked and eaten". 	 "you'll cook this meat and eat this meat maxlen: 11
+779 	 oh, man! 	 man man man! maxlen: 4
+780 	 "inmates were always suspicious that meat supplied... 	 the prisoners always eat the cow, pigs... pigs... maxlen: 17
+781 	 "was not cow, pig or lamb, 	 "or that there's no lamb and another meat... maxlen: 15
+782 	 "but something else. 	 " suspects it had come. maxlen: 12
+783 	 "something sweet and nothing like anyone had ever tasted before". 	 "they thought they'd never tasted before, that's a nice treat maxlen: 19
+784 	 so, we're talking human flesh, right? 	 human flesh, right? maxlen: 15
+785 	 you in? 	 are you in? maxlen: 11
+786 	 yes. 	 yes yes maxlen: 4
+787 	 guess what you get to do now? 	 guess what now? maxlen: 11
+788 	 i give up. 	 i'd give in giving up maxlen: 7
+789 	 you get to strap toni in. 	 you're gonna tie toni up toni maxlen: 11
+790 	 i'm paraphrasing here, but toni should fully comprehend... the fear the victims felt when they were about to be gassed. 	 i'm transferring you from here, the toni should fully experience the fear of the prisoners just before they are given gass toni maxlen: 29
+791 	 you're good at that. 	 you're good at this. maxlen: 9
+792 	 let's just say, some of my girlfriends have been on the kinky side. 	 let's just say some of my girlfriends have some weird strange desires maxlen: 19
+793 	 is that okay with you? 	 you okay? maxlen: 8
+794 	 okay. 	 ok ok ok maxlen: 3
+795 	 "your task is to shut off the master valve 	 "your mission's gas team team team team team maxlen: 12
+796 	 "before the gas terminates your teammate". 	 "find the main van before it kills and cut the gas." maxlen: 16
+797 	 you need to follow the pipes. 	 you need to watch the pipes. maxlen: 10
+798 	 makes sense. 	 makes sense reasonable maxlen: 4
+799 	 taking bets? 	 you bet? maxlen: 9
+800 	 i will bet 000 on her throwing up. 	 $000 says you're gonna thro maxlen: 8
+801 	 done. 	 ok ok ok maxlen: 3
+802 	 it's weird. 	 weird funny we maxlen: 5
+803 	 i can't do this. 	 i can't do maxlen: 5
+804 	 i can't. 	 i can't maxlen: 4
+805 	 it's my worst nightmare. 	 this is my worst nightmare i've ever had maxlen: 12
+806 	 come on, sweetie, that's the show. 	 come on, sweetie, it's just show show maxlen: 12
+807 	 "no more college debt". 	 no more don't kid joke no more. " maxlen: 12
+808 	 look, remember what he said? 	 remember what you said? maxlen: 8
+809 	 "if the team wins, there'll be a substantial bonus". 	 "if the team wins, they're gonna pay extra money if they maxlen: 16
+810 	 do it for the team, girlfriend. 	 do it for the team, girlfriend maxlen: 8
+811 	 you gonna hurl? 	 are you gonna throw up? maxlen: 8
+812 	 thank you. 	 thank than than than than than maxlen: 7
+813 	 okay, angel, i'm at the bottom of the stairs. 	 okay, angel, i'm at the bottom of the stairs. maxlen: 16
+814 	 shit! 	 fuck! fuck maxlen: 5
+815 	 do you hear me? 	 can you hear me? maxlen: 8
+816 	 he's back. 	 he came back back maxlen: 4
+817 	 this really stinks. 	 it smells really bad smell maxlen: 8
+818 	 let me out. 	 let me out of my maxlen: 5
+819 	 hey, come on. 	 come on come on come maxlen: 5
+820 	 hey, let me out, man. 	 let me out, man, let maxlen: 7
+821 	 my god! 	 jesus christ! maxlen: 4
+822 	 who is that man standing there? 	 who's that guy standing there? maxlen: 8
+823 	 topless. 	 it's a maxlen: 4
+824 	 so manly. 	 it's mus maxlen: 4
+825 	 let me out. 	 let me out of my maxlen: 5
+826 	 i don't know, con. this guy is actually starting to creep me out. 	 i don't know, con, this guy is starting to cree me maxlen: 16
+827 	 hey, stop playing. 	 stop playing games, stop playing games maxlen: 7
+828 	 let me out. 	 let me out of maxlen: 4
+829 	 so, what's up? 	 how's it going maxlen: 5
+830 	 i need to talk with you. 	 we need to talk to you. we need to maxlen: 10
+831 	 outside? 	 outside? maxlen: 5
+832 	 sure. 	 yes yes maxlen: 4
+833 	 big news. 	 i've got big news big news maxlen: 8
+834 	 i think the company's playing us. 	 i think the company is playing us. maxlen: 11
+835 	 what? 	 what? maxlen: 3
+836 	 who's there? 	 who's there? maxlen: 5
+837 	 who are you? 	 who are you? maxlen: 5
+838 	 show me the chamber. 	 show the gas chamber. maxlen: 8
+839 	 shall we cover rook and queen? 	 and what do we do about the castle treasure? maxlen: 11
+840 	 where are they? 	 where are they? maxlen: 5
+841 	 i don't know, but just give me one second. 	 i don't know, give me a few seconds maxlen: 11
+842 	 there. 	 there there there maxlen: 3
+843 	 there's that guy again, see? 	 did you see that guy again? maxlen: 10
+844 	 wow. 	 wow! maxlen: 7
+845 	 who the hell is that? 	 who's that? maxlen: 5
+846 	 okay, how'd he get there so quick? 	 okay, how could he get here so fast? maxlen: 12
+847 	 that's the guy from the painting, right? 	 isn't that the guy in the picture? maxlen: 11
+848 	 yeah. 	 yes yes maxlen: 4
+849 	 yeah, it... it looks like him. 	 yeah, it looks like him. maxlen: 9
+850 	 cool. 	 nice n maxlen: 3
+851 	 no, not cool. 	 no, it's not very nice at maxlen: 10
+852 	 he either walks through walls, or there are more than one of them. 	 this guy either walks through walls, or more than this guy's got more than one of these maxlen: 21
+853 	 we all seen the prestige, right? 	 we all watched "prigtij," didn't we? maxlen: 19
+854 	 do you mind if we pass? 	 do you mind if we pass? maxlen: 13
+855 	 please? 	 please? maxlen: 5
+856 	 guys? 	 guys? maxlen: 3
+857 	 guys? 	 guys? maxlen: 3
+858 	 fake blood pack, fake shiv. 	 fake blood, fake blood, fake maxlen: 10
+859 	 nicely done. 	 they've made beautiful maxlen: 5
+860 	 in fact, maybe even oscar worthy. 	 maybe even oscar'll even maxlen: 7
+861 	 no. 	 no no no no maxlen: 4
+862 	 no, that's not right. 	 no, that's not true, that maxlen: 9
+863 	 this is way, way off script. 	 it's totally out of scen maxlen: 8
+864 	 it looked real to me. 	 sounds real to me feel real real maxlen: 7
+865 	 connie, they are playing us. 	 connie, they're playing us. maxlen: 11
+866 	 trust me. 	 trust me trust trust maxlen: 4
+867 	 what? 	 what? maxlen: 3
+868 	 look. 	 look at you look at maxlen: 5
+869 	 they copied the picture. 	 they copied a copy of his picture. maxlen: 9
+870 	 what? 	 what? maxlen: 3
+871 	 casting. 	 acting acting acting maxlen: 3
+872 	 costume. 	 it's maxlen: 3
+873 	 easy. 	 easy easy easy maxlen: 3
+874 	 hold on. 	 stop stop stop stop maxlen: 4
+875 	 no. 	 no no no no maxlen: 4
+876 	 no. 	 no no no no maxlen: 4
+877 	 he's a real ghost. 	 she's a real ghost ghost ghost maxlen: 8
+878 	 can't get any more off than that. 	 i can't take it any more maxlen: 8
+879 	 he goes any further with him, he's gonna take him off my grid. 	 if it's any further forward, it'll be out of my maxlen: 15
+880 	 what? 	 what? maxlen: 3
+881 	 look, it's a huge prison. 	 it's a very big prison jail maxlen: 9
+882 	 i mean, i couldn't put my cameras everywhere. 	 i can't put a camera everywhere maxlen: 9
+883 	 show me the hole. 	 show me the pit. maxlen: 5
+884 	 show me the chamber. 	 show the gas chamber. maxlen: 8
+885 	 taylor, somebody's gotta go in there and see if they're okay. 	 taylor, someone's got to go in there and see if they're okay or maxlen: 19
+886 	 i can tell you, they don't look okay. 	 i can tell they don't look good. maxlen: 14
+887 	 she's acting, acting, acting. 	 he's pretend maxlen: 5
+888 	 where is scelzi then? 	 then where is scelzi then? maxlen: 9
+889 	 i don't know. 	 i don't maxlen: 4
+890 	 probably off his face somewhere. 	 he's probably hiding somewhere somewhere maxlen: 10
+891 	 i'm gonna call the office. 	 i'll call the office. call maxlen: 8
+892 	 yeah, you too. 	 okay, you and you. you maxlen: 8
+893 	 good night. 	 good night. maxlen: 8
+894 	 they say they've got no idea what's going on here. 	 they don't know what's going on and maxlen: 11
+895 	 still feels wrong. 	 i feel like it's getting worse and maxlen: 10
+896 	 okay, i'll go and prove it to you. 	 okay, i'll go and prove you. maxlen: 19
+897 	 no problemo. 	 it's ok maxlen: 4
+898 	 anyone coming? 	 anyone? maxlen: 5
+899 	 yeah, i'll go. 	 i'm coming. maxlen: 5
+900 	 i'll grab a camera and get some cool footage. 	 let me get my camera, maybe i'll get some good maxlen: 14
+901 	 thank you. 	 thank than thank you than than maxlen: 8
+902 	 you must be nice to them. 	 you have to be nice to them. maxlen: 10
+903 	 easy peasy lemon squeezy! 	 you're gonna fuck-up! maxlen: 12
+904 	 "easy peasy lemon squeezy". 	 "you're going to be a dip-dip maxlen: 13
+905 	 hey, you know what? 	 you know what? maxlen: 7
+906 	 you're actually kind of photogenic. 	 you're really photogenic. maxlen: 9
+907 	 yeah, so funny, pretty boy. 	 you're funny funny fun maxlen: 8
+908 	 i want to do my task. 	 now i want to do my duty my duty maxlen: 9
+909 	 kill the air-con. 	 turn off the air condition air. maxlen: 7
+910 	 come on. 	 come on come come maxlen: 4
+911 	 connie, what do you wanna do? 	 connie, what do you want to do? maxlen: 11
+912 	 hold the game. 	 stop the game game maxlen: 4
+913 	 wow, this place is kind of spooky, right? 	 wow, this place is like a ghost, right? maxlen: 17
+914 	 it gets a bit weird. 	 he's getting a little weird. maxlen: 9
+915 	 where'd he go? 	 where did he go? maxlen: 5
+916 	 i don't know. 	 i don't maxlen: 4
+917 	 i didn't see him. 	 i didn't see him. maxlen: 7
+918 	 he went right past here. 	 he's headed this way over this maxlen: 8
+919 	 dead end. 	 this won't come out here maxlen: 7
+920 	 what was that? 	 what was that? maxlen: 7
+921 	 yeah, what was that? 	 yeah, what was that? maxlen: 9
+922 	 shit. 	 fuck shit sh maxlen: 5
+923 	 taylor? 	 taylor? maxlen: 3
+924 	 put angel on screen. 	 put angel on screen. maxlen: 9
+925 	 we need to get those kids out of there. 	 we've got to get them out of maxlen: 9
+926 	 can you hear me? 	 can you hear me? maxlen: 8
+927 	 listen up. 	 listen to me listen to maxlen: 5
+928 	 there's been a slight change of plans. 	 there's been some changes in the maxlen: 8
+929 	 we're gonna need to stop the show. 	 we have to stop the show, stop the show maxlen: 10
+930 	 what? 	 what? maxlen: 3
+931 	 why? 	 why? maxlen: 3
+932 	 i'm gonna be honest with you. 	 i'll be honest with you. maxlen: 11
+933 	 there is somebody in there with you. 	 there's someone else with you guys. maxlen: 12
+934 	 who? 	 who? maxlen: 3
+935 	 we're not sure. 	 we're not sure maxlen: 5
+936 	 but i need you to get yourself out of there as fast as possible, understood? 	 i want you to get out as fast as possible, okay? maxlen: 17
+937 	 you're playing me? 	 are you playing games with me? maxlen: 11
+938 	 you're trying to freak me out. 	 you're trying to freak me out me maxlen: 10
+939 	 open the door. 	 open the door open the maxlen: 5
+940 	 i want to win and i want my money. 	 i want to earn my money and take my money maxlen: 10
+941 	 so open the door! 	 open that door! maxlen: 8
+942 	 who opened the door? 	 who opened the door? maxlen: 7
+943 	 sorry, you're not serious, are you? 	 sorry, you're not serious, are you? maxlen: 14
+944 	 idiot. 	 idiot idiot id maxlen: 5
+945 	 you're task is to memorize and locate the clearly marked cell seven. 	 your mission is to memorize and locate and locate the seven cells that are marked in your maxlen: 20
+946 	 lucky! 	 lucky lucky maxlen: 4
+947 	 in this cell, warden harvis received a near fatal stab wound from an inmate. 	 in this cell, warden harvis was wounded deadly injured by a prisoner in a deadly maxlen: 22
+948 	 you'll find a key in that cell, and this key can release both your inmate colleagues from the hole and the gas chamber. 	 you'll find a key in that cell, and this key will release both your friend from both the gase room and the gas room and your friend maxlen: 31
+949 	 cool. 	 great great great great maxlen: 4
+950 	 is that all you got for me? 	 is that all? maxlen: 9
+951 	 easiest money i've ever made. 	 it was the easiest money i've ever made in my maxlen: 13
+952 	 what am i afraid of? 	 afraid of what? maxlen: 8
+953 	 nothing. 	 nothing about nothing at nothing at nothing maxlen: 7
+954 	 angel! 	 angel angel angel maxlen: 3
+955 	 stanton? 	 stanton? maxlen: 4
+956 	 help! 	 help! maxlen: 7
+957 	 great, now she's gone off my grid. 	 well, now i'm out of sight. maxlen: 12
+958 	 hello? 	 hello? maxlen: 5
+959 	 who's there? 	 who's there? maxlen: 5
+960 	 hello? 	 hello? maxlen: 5
+961 	 angel? 	 angel? maxlen: 3
+962 	 angel. 	 angel angel angel maxlen: 3
+963 	 put me down. 	 just let me downst maxlen: 5
+964 	 who are you? 	 who are you? maxlen: 5
+965 	 angel? 	 angel? maxlen: 3
+966 	 angel! 	 angel angel angel maxlen: 3
+967 	 what... 	 what... what maxlen: 3
+968 	 this isn't right. 	 that's not real maxlen: 5
+969 	 put me down. 	 let me downstairs maxlen: 5
+970 	 hold on. 	 wait wait wait wait maxlen: 4
+971 	 it's you. 	 it's you. maxlen: 5
+972 	 no! 	 no! maxlen: 4
+973 	 angel, are you okay? 	 angel, are you okay? maxlen: 8
+974 	 he killed my brother. 	 he killed my brother killed my brother maxlen: 7
+975 	 he's gonna kill me. 	 he's gonna kill me maxlen: 7
+976 	 he killed my brother. 	 he killed my brother killed my brother maxlen: 7
+977 	 new jersey school of acting. 	 new jersey school of new jersey school maxlen: 7
+978 	 not bad for a straight guy, right? 	 not bad for someone like me, is it? maxlen: 14
+979 	 connie, you there? 	 connie, are you there? maxlen: 10
+980 	 yeah, just about. 	 yes yes maxlen: 4
+981 	 how in the hell did you organize all of this? 	 how did you organize this? maxlen: 9
+982 	 with great difficulty. 	 we've been in a tough maxlen: 8
+983 	 it's gonna make a great show. 	 it's gonna be a great maxlen: 8
+984 	 i will deal with you later. 	 i'll see you later. maxlen: 11
+985 	 i'm gonna de-rig some of my shit first, okay? 	 first of all, what the fuck am i gonna maxlen: 12
+986 	 you really are an asshole. 	 you're such an asshole maxlen: 8
+987 	 you said you wanted a great show, didn't you? 	 you said you wanted a great show, didn't you? maxlen: 16
+988 	 well, you got it. 	 you got your wish. maxlen: 9
+989 	 yeah. 	 yes yes maxlen: 4
+990 	 you go wrap toni, i'll get dixon and stanton. 	 solve toni, i'll take dixon and stanton and stanton and stanton. maxlen: 22
+991 	 okay, snow, that's a wrap. 	 okay, snow, we're cutting it up now maxlen: 12
+992 	 hey, guys, you all go get cleaned up and change. 	 people get cleaned up right now and change your clothes. maxlen: 14
+993 	 let's get ready for the wrap party and some champagne. 	 get ready for buddies and champagne and bum champag maxlen: 14
+994 	 great acting work. 	 excellent acting perfect act maxlen: 4
+995 	 show's over. 	 show show's over maxlen: 5
+996 	 toni? 	 toni? maxlen: 4
+997 	 good job, dixon. 	 good job, dixon. maxlen: 12
+998 	 okay, dixon. 	 okay, dixon, dixon maxlen: 8
+999 	 that's a wrap, buddy. 	 it's over, man, it' maxlen: 9
+1000 	 you okay? 	 you okay? maxlen: 8
+1001 	 quit dicking around, snow. 	 stop playing, snowow. maxlen: 9
+1002 	 hey, you got anything to say? 	 are you going to say anything? maxlen: 10
+1003 	 we have to get them out of there. 	 we've got to get them out of maxlen: 9
+1004 	 we have to get them out of there. 	 we've got to get them out of maxlen: 9
+1005 	 get that out of my face! 	 get it out of my face! maxlen: 10
+1006 	 divert to new coordinates, 0-0-0-0-0-0-0. 	 form new coordinates at new coordinates: 0-0-0-0-0-0-0-0 maxlen: 16
+1007 	 roger that, atc. 	 roger, copy, copy, attract arc maxlen: 8
+1008 	 i spy with my little eye something beginning with r. 	 i'm spying with my little eye- started with y. maxlen: 16
+1009 	 if you can't get it, you do a forfeit. 	 if you can't understand, you'll lose as maxlen: 12
+1010 	 rain? 	 rain? maxlen: 4
+1011 	 london control, the package was supposed to be in cia custody 00 minutes ago. 	 london, the package should have been in cia cust custody 00 minutes ago 00 minutes ago maxlen: 19
+1012 	 our aircraft is waiting. 	 our air vehicle is waiting for our air vehicle maxlen: 9
+1013 	 good job our guest's not in a hurry. 	 it's a good thing our guest's not in a hur maxlen: 14
+1014 	 traffic tower says they'll be moving within eight minutes. 	 the traffic tower says they'll be moving in 0 minutes. maxlen: 16
+1015 	 the home office cupboards are bare. 	 homeland department's lockers have been compromised. maxlen: 16
+1016 	 we're going to have to be a little bit more imaginative with our funding. 	 we're gonna have to be a little more creative about our funding in our maxlen: 17
+1017 	 where the bloody hell is oliver? 	 where the hell is oliver? maxlen: 7
+1018 	 where's the air cover feed? 	 where's the air protection of the air maxlen: 9
+1019 	 you can overrule, but you'll need to issue an executive countermand. 	 you can break the rules, but you need a special order. for maxlen: 14
+1020 	 something's got to be done. 	 something must be done something must be maxlen: 7
+1021 	 director general. 	 i'm a general maxlen: 5
+1022 	 i know you don't like hearing this from a politician, but reform is coming. 	 i know you don't like hearing this from a politician, but reform is coming. maxlen: 21
+1023 	 you do know that lift is for emergencies only? 	 you know that elevator's just for emergencies? maxlen: 21
+1024 	 escort two, what's your status? 	 escort two, what's your status? maxlen: 9
+1025 	 you got ants in your pants, juney? 	 are you uneasy, juney? maxlen: 10
+1026 	 you know, you would be a lot less uptight if you'd just let yourself be my london girlfriend. 	 you don't have to be less nervous if you just keep being my london valent maxlen: 19
+1027 	 the position's not gonna be open much longer. 	 that position won't stay open for a long time maxlen: 11
+1028 	 i spy with my little eye something beginning with... 	 i spy with my little eye something starting with that letter... maxlen: 17
+1029 	 bikes, travelling at speed. 	 the engines, they're running at the final speed maxlen: 11
+1030 	 put them up. 	 screen them up screening them. maxlen: 7
+1031 	 calum, nearest police units? 	 calum, nearest police units? maxlen: 10
+1032 	 scramble everything we've got, now. 	 let's try everything we have, come on, let's maxlen: 14
+1033 	 code one! 	 code 0! 0 maxlen: 4
+1034 	 attack in progress! 	 the attack is on! maxlen: 5
+1035 	 oh, my good god. 	 god god god god maxlen: 4
+1036 	 june, for christ's sake, don't. 	 june, for god's sake, don' maxlen: 11
+1037 	 get out, now! 	 get out, now! maxlen: 8
+1038 	 lethal force is authorised. 	 they were allowed to use mortal force lethal maxlen: 11
+1039 	 open the van or everyone dies. 	 open the van or everyone dies! maxlen: 12
+1040 	 open the van now! 	 open the van now! maxlen: 9
+1041 	 pearce. 	 pearce pearce pear maxlen: 5
+1042 	 the americans will crucify us. 	 the americans will crucify us. maxlen: 12
+1043 	 your operation, harry. 	 it's your operation, harry harry harry maxlen: 9
+1044 	 say again, control? 	 say again, command post? maxlen: 10
+1045 	 lay down your weapons and release qasim. 	 lower your weapons and release qasasim. maxlen: 19
+1046 	 what the bloody hell are you doing, harry? 	 what the fuck are you doing, harry? maxlen: 12
+1047 	 open the gates! 	 open the doors! maxlen: 7
+1048 	 open the gates! 	 open the doors! maxlen: 7
+1049 	 go, go, go! 	 come on, come on, come on, come on maxlen: 11
+1050 	 control, prisoner escaped! 	 command, the prisoner escaped! maxlen: 10
+1051 	 heading north! 	 head north! maxlen: 7
+1052 	 no, no, no! 	 no, no! maxlen: 8
+1053 	 keaton! 	 keaton ke maxlen: 4
+1054 	 control, lead two pursuing on foot. 	 central command, agent 0 is being chased down as a five-and- maxlen: 16
+1055 	 any more feeds? 	 any more footage? maxlen: 7
+1056 	 follow her. 	 follow the girl follow the maxlen: 5
+1057 	 nearest armed unit's eight minutes away. 	 the nearest armed unit is about five minutes away. maxlen: 11
+1058 	 helicopter's 00 miles out. 	 and the helicopter 00 miles and 00 miles and 00 maxlen: 10
+1059 	 roadblocks? 	 barriers? maxlen: 5
+1060 	 in place. 	 he's maxlen: 3
+1061 	 other side of that tunnel and the last junction. 	 it's the other side of the tunnel, last round maxlen: 12
+1062 	 there's nowhere for them to go. 	 they have nowhere to go. maxlen: 7
+1063 	 sco00 is seven minutes away. 	 sco00 is five minutes away. maxlen: 11
+1064 	 go. 	 walk walk walk walk maxlen: 4
+1065 	 lead two, report. 	 agent 0, report in reporting in in with maxlen: 8
+1066 	 ed, wait. 	 ed, wait, ed, wait maxlen: 7
+1067 	 lead two, report. 	 agent 0, report in reporting in in with maxlen: 8
+1068 	 i repeat, the cia liaison officer has been shot. 	 i repeat, the cia lia lia lia lia l maxlen: 16
+1069 	 lead two, do you have eyes on qasim? 	 agent 0, do you see qasim? maxlen: 15
+1070 	 control, i hear a vehicle. 	 central command, i heard a car voice in a car voice. maxlen: 13
+1071 	 they've knocked everything out. 	 they shut everything down everything they shut maxlen: 7
+1072 	 it's over. 	 it's over maxlen: 4
+1073 	 the bbc can confirm that the american terrorist leader adem qasim has escaped from mi0 custody in one of the most serious failures in the organisation's history. 	 the bbc can confirm that the u.s. terrorist american terrorist leader, adam qasim, is one of the most serious mistakes in the history of the maxlen: 36
+1074 	 it's understood that the secure convoy transporting qasim came under armed attack en route to raf northolt. 	 apparently, the security convoy transporting qasim seems to have been attacked at the northolt route route route route route route route of northolt. maxlen: 33
+1075 	 you say it's not war but murder because it happens on western streets. 	 that's because it's on the west west streets, you call it maxlen: 16
+1076 	 because you didn't ask for it in new york, in washington, in london. 	 because in new york, washington, you didn't want that in london in london you didn't want maxlen: 22
+1077 	 but the children of pakistan, they didn't ask for it either. 	 but the children of pakistan also didn't want neither maxlen: 11
+1078 	 when they're bombed by drones, they call it murder, too. 	 when they were hit with drone planes, they call it murder. maxlen: 21
+1079 	 qasim presents a new kind of threat. 	 qasim offers a new kind of threat. maxlen: 13
+1080 	 so far, he hasn't targeted civilians. 	 so far, he hasn't targeted civil maxlen: 11
+1081 	 our models show a 00% chance of attack within 00 hours. 	 our models show the possibility of an attack within 00 hours of 00 hours is 00% 00% 00% chance of maxlen: 20
+1082 	 the more pressure he's put under, the smaller that window becomes. 	 the more pressure she gets, the smaller the window her window will get. maxlen: 17
+1083 	 i can't tell you while the tape's... 	 i can't say that under the tape tape... maxlen: 13
+1084 	 the secretary of state flies in tomorrow. 	 the secretary of state is coming tomorrow maxlen: 9
+1085 	 we serve the british people, not washington. 	 we serve the british people, not washington. maxlen: 20
+1086 	 if that's no longer true, then we're already finished. 	 if that isn't true anymore, we're already maxlen: 14
+1087 	 the americans feel we're no longer fit for purpose. 	 the americans think we no longer serve our purpose. maxlen: 15
+1088 	 we need a scalp. 	 we need a handicap. maxlen: 10
+1089 	 i'm to be decommissioned in the morning. 	 i'll be taken off duty in the maxlen: 9
+1090 	 you heard nothing about qasim's escape? 	 haven't you heard anything about qasim's escape? maxlen: 17
+1091 	 i don't think so. 	 i don't think i don maxlen: 7
+1092 	 harry, if you're out, what happens to me? 	 harry, what's gonna happen to me maxlen: 11
+1093 	 you get out, too. 	 you're out and you' maxlen: 7
+1094 	 no one else knows you're inside qasim's network. 	 no one else knows he was in qasim's net. maxlen: 15
+1095 	 just walk away. 	 just walk just walk away. just maxlen: 7
+1096 	 will holloway? 	 will holloway? maxlen: 7
+1097 	 go. 	 hit it with the maxlen: 4
+1098 	 so, how is life after mi0? 	 how's life after mi0? maxlen: 9
+1099 	 you're not from the moscow section. 	 you're not part of the moscow section maxlen: 9
+1100 	 you're needed back in london. 	 you need london needs you back in london. you maxlen: 10
+1101 	 anyone you need to say goodbye to? 	 is there anyone you should say goodbye to? maxlen: 12
+1102 	 thank you. 	 thank than thank you than than maxlen: 8
+1103 	 we know about harry's connection to your family, so we understand this may not be easy for you. 	 we know about harry's contact with your family, so we understand that this might not be easy for you. maxlen: 32
+1104 	 it'd be fine, even if he was dead. 	 even if he's dead, it' maxlen: 9
+1105 	 harry's too bloody arrogant to kill himself. 	 harry's too arrogant to kill himself harry himself maxlen: 12
+1106 	 he was certainly acting like someone who was about to. 	 she was just pretending she was going to kill herself right maxlen: 12
+1107 	 he went to visit this woman's grave. 	 he went to this woman's grave maxlen: 8
+1108 	 love of his life. 	 the love of the love maxlen: 5
+1109 	 harry's team has noticed changes in his behaviour since her death. 	 harry's team has noticed a change in harry's attitude at harry's since the woman died maxlen: 23
+1110 	 he's become emotionally distant, cold, been drinking heavily. 	 emotionally distant, cold, started drinking high amounts of alcohol, which was maxlen: 17
+1111 	 the water would have been below nine degrees. 	 the water would be below 0 below 0 degrees below maxlen: 10
+1112 	 he'd have developed hypothermia before reaching the bank. 	 he'd have had hypothermia before he reached the bank maxlen: 14
+1113 	 this is a picture before he walked into shot, and this is a picture after you say that he jumped. 	 this is the picture before you entered this square, and this is the picture you said it was taken after you jum maxlen: 23
+1114 	 before he disappeared, harry made three encrypted phone calls. 	 before she went missing, harry made five encrypted cell phone calls. maxlen: 16
+1115 	 your ex-service emergency voicemail. 	 it's your old emergency text box your ex- maxlen: 11
+1116 	 why call you? 	 why did she call you? maxlen: 8
+1117 	 i have no idea. 	 i have no idea what i have maxlen: 7
+1118 	 last time i spoke to him was the night he decommissioned me from mi0 three years ago. 	 last i talked to him was the last time he got me off the mi0 position three years maxlen: 20
+1119 	 well, he wants to chat now. 	 he wants to talk right now though, though, maxlen: 10
+1120 	 that makes you useful. 	 that makes you useful for yourself and that makes you maxlen: 11
+1121 	 will you help us find him? 	 can you help us find him? maxlen: 11
+1122 	 no, thanks. 	 no, thank you thank no maxlen: 8
+1123 	 you and harry ever talk much about berlin? 	 and harry, do you talk much about berlin? maxlen: 15
+1124 	 the night your father died? 	 the night your father died? maxlen: 8
+1125 	 if there's something else, mace, i have a right to know. 	 if there's anything else, mace, i've got a right to maxlen: 17
+1126 	 oh, i don't think it's up to me... 	 i don't think i can make that my decision... maxlen: 15
+1127 	 if you're not going to actually murder him, i think you've made your point. 	 if you're not really gonna kill her, i think you told her what you wanted to tell maxlen: 21
+1128 	 find harry and you can ask him about berlin yourself. 	 find harry so you can ask him yourself about berlin yourself. maxlen: 19
+1129 	 who are you? 	 who are you? maxlen: 5
+1130 	 although i doubt i'll take that title to the grave. 	 i thought i was going to take that title to the grave's grave grave maxlen: 16
+1131 	 until recently, head of counter-terrorism for her majesty's security service. 	 lately, her majesty's president of anti-terror-terror terrorist for her maxlen: 21
+1132 	 funny, but who are you really? 	 funny, but who are you really? maxlen: 12
+1133 	 someone who knows what these two words mean to you. 	 someone who knows the value of those two words for you. maxlen: 15
+1134 	 asma shishani. 	 asma shishani was asma maxlen: 9
+1135 	 go. 	 go. go maxlen: 3
+1136 	 how did you find me? 	 how did you find me? maxlen: 7
+1137 	 so what do you want? 	 what do you want? maxlen: 9
+1138 	 i know it was someone on my side. 	 i know someone did it on my side, i know it maxlen: 12
+1139 	 they never told me who they were. 	 they never told me who they were, they never maxlen: 10
+1140 	 of course they didn't, but you must have had a contact. 	 of course they didn't say anything, but you must have a contact maxlen: 15
+1141 	 a phone number, that's all. 	 one phone number, that's all. maxlen: 10
+1142 	 a phone number will do nicely. 	 and the phone number would also work the phone maxlen: 9
+1143 	 and in return, i'll give you what you want. 	 in return, i give you what you want in return. maxlen: 13
+1144 	 there is no way you could get that. 	 impossible. maxlen: 9
+1145 	 she said she was a human rights lawyer. 	 he said he was a human rights lawyer who said maxlen: 10
+1146 	 helped two of my brothers after they were imprisoned by your government. 	 he helped them after your government put my two brothers in jail for my two brothers. maxlen: 20
+1147 	 but after i was freed, she became too curious. 	 but the girl became too curious after i was released. maxlen: 15
+1148 	 i don't know this woman. 	 i don't know this woman. maxlen: 10
+1149 	 if she's a spy, she's not one of ours. 	 if he's an agent, he's not one maxlen: 12
+1150 	 just so i'm clear again, tell me she's nothing to you. 	 say again it's not a problem and it's not worth anything to you. maxlen: 20
+1151 	 you keep her alive, she's your guarantee that i'll keep my word. 	 keep her alive, i guarantee i will keep her my promise, this woman. maxlen: 20
+1152 	 i don't need guarantees. 	 i don't need a guarantee i don' maxlen: 11
+1153 	 get her to a hospital now, or the deal's off! 	 get her to a hospital now or the deal's off! maxlen: 14
+1154 	 what she needs is mercy. 	 what she needs is mercy, mercy what maxlen: 10
+1155 	 no! 	 no! maxlen: 4
+1156 	 she has a daughter. 	 she's got a maxlen: 5
+1157 	 and still, you sent her after me? 	 and you sent him after me? maxlen: 14
+1158 	 you put her in danger and then you refuse to spare her the pain? 	 you put her in danger and now you refuse to save her from pain? maxlen: 22
+1159 	 what sort of a man are you? 	 how the fuck are you? maxlen: 8
+1160 	 spare her family from the video. 	 don't send the video to her parents. maxlen: 10
+1161 	 harry... 	 harry... harry maxlen: 3
+1162 	 you've got a deal. 	 you've got a deal. maxlen: 7
+1163 	 the bbc understands there has been no breakthrough in the hunt for escaped terrorist adem qasim. 	 the bbc says there's no progress on the capture of the fugitive and illegal terrorist adem qasim. maxlen: 26
+1164 	 the national threat level has been raised to critical, indicating an attack is imminent. 	 the national threat level is critical, so eli has an attack in his ear. maxlen: 22
+1165 	 in business news, the ftse 000 fell again this morning and sterling continued to slide against the dollar, the euro and other major trading currencies. 	 in the news, the ftse 000 fell again this morning, and sterlin continued to delete, bills, euros, and other money units of money and maxlen: 36
+1166 	 we have fresh intel on harry. 	 there's a new intel on harry about maxlen: 9
+1167 	 he bought a pay-as-you-go phone that we tracked to the kent coast. 	 turns out he got a confidential mistake we tracked down to kent coast coast. maxlen: 23
+1168 	 holloway, this is classified. 	 holloway, this is confident top secret information maxlen: 11
+1169 	 we found traces of explosive there, too. 	 we also found traces of explosive trace there maxlen: 11
+1170 	 you've known him longer than any of us. 	 you've known him longer than any of us all of us. maxlen: 14
+1171 	 do you think it's at all possible qasim might have got to harry somehow? 	 do you think it's possible that qasim somehow brought harry in somehow? maxlen: 23
+1172 	 turned him? 	 pull her up? maxlen: 7
+1173 	 i don't know. 	 i don't maxlen: 4
+1174 	 regardless, find harry, we find qasim. 	 anyway, you find harry, we find qasasim. maxlen: 20
+1175 	 anything for holloway? 	 anything for holloway? maxlen: 11
+1176 	 there you are. 	 please come in ple maxlen: 5
+1177 	 tomorrow, 00 pm. 	 tomorrow, 00 tomorrow maxlen: 8
+1178 	 park in short stay one, row a, bay one. 	 park 'em 0 , "a," k put 'em 0 on maxlen: 14
+1179 	 then, keep your eyes open. 	 then, open your eyes four open. maxlen: 9
+1180 	 i hope you'll come alone. 	 i hope you come alone. maxlen: 9
+1181 	 for protection only. 	 just for protection only for maxlen: 5
+1182 	 if you can't bring in one loopy cold war relic without shooting him, we really are in trouble. 	 if you can't bring a crazy cold war mood without shooting a shot, we're seriously in maxlen: 24
+1183 	 no promises. 	 i won't promise i maxlen: 7
+1184 	 it says not to yet. 	 it says not yet, it says maxlen: 7
+1185 	 we play this harry's way until we've got eyes on him. 	 until we see him we're playing this game through harry's. maxlen: 16
+1186 	 roger that. 	 roger understood understood understood maxlen: 4
+1187 	 doors opening. 	 the doors are opening. doors opening maxlen: 7
+1188 	 go. 	 hit it with the maxlen: 4
+1189 	 level zero. 	 ground floor ground floor maxlen: 4
+1190 	 doors opening. 	 the doors are opening. doors opening maxlen: 7
+1191 	 open sightlines, multiple exits. 	 open visibility, multiple open visions, multiple maxlen: 10
+1192 	 say again, holloway. 	 repeat, holloway again, h maxlen: 9
+1193 	 they're harry's requirements for running a meet. 	 things harry needs to set up a meeting. harry needs. things for a meeting maxlen: 16
+1194 	 yes, mr holloway, your uncle said he'd meet you at the coffee shop. 	 yes, mr holloway, your uncle said he'd meet you at the coffee shop with you. maxlen: 26
+1195 	 he left his mobile at home. 	 she left her cell phone at home on her maxlen: 9
+1196 	 guy in the car park, get rid of him. 	 the guy in the parking lot, get rid of him maxlen: 11
+1197 	 he might as well be wearing an mi0 t-shirt. 	 what if he wore his shirt on a mi0 t- maxlen: 14
+1198 	 listen to me. 	 listen to me listen listen to me maxlen: 7
+1199 	 stop underestimating harry. 	 stop underestimating harry harry. maxlen: 12
+1200 	 don't think he won't put your people in danger. 	 don't think he won't put your men in jeopard maxlen: 15
+1201 	 we wait for him to make his... 	 wait for him to signal... maxlen: 11
+1202 	 what is it, alpha one? 	 what is it, alpha one? 0? maxlen: 9
+1203 	 holloway? 	 holloway? maxlen: 5
+1204 	 holloway, where are you going? 	 holloway, where are you going? maxlen: 12
+1205 	 wait. 	 wait wait wait wait maxlen: 4
+1206 	 no, we're not set up there. 	 no, we ain't got no order maxlen: 10
+1207 	 stand down. 	 hold still. maxlen: 8
+1208 	 holloway, stand down! 	 holloway, don't move! maxlen: 12
+1209 	 terminal 0b. 	 terminal 0b 0b 0b maxlen: 7
+1210 	 doors closing. 	 the doors are closing. doors closing. maxlen: 8
+1211 	 he's booked me on a flight. 	 he's got me on a flight maxlen: 8
+1212 	 pa000 to glasgow. 	 pa000 is flight 000 to glasowgow maxlen: 11
+1213 	 i'm going to glasgow. 	 i'm going to glazowgowgow maxlen: 12
+1214 	 call the glasgow office. 	 call the glasgow office for the glas maxlen: 11
+1215 	 get me the airport police ops command. 	 get me the airport police. maxlen: 11
+1216 	 priority code sigma nine. 	 priority code sigma nine. maxlen: 10
+1217 	 police request a clearer path to the terminal. 	 the police want a clear route to the terminal. maxlen: 13
+1218 	 and get us cleared by heathrow security. 	 and arrange our permits for heathrow security. maxlen: 17
+1219 	 all remaining passengers for flight pa000 to glasgow... 	 all passengers for flight pa000 at glasgowgow... maxlen: 14
+1220 	 holloway, do not go airside. 	 holloway, don't go to the air part maxlen: 12
+1221 	 what am i doing here, harry? 	 what am i doing here, harry? maxlen: 10
+1222 	 i need to find someone outside the service that i can trust. 	 i had to find someone outside the service that i can trust outside the service. maxlen: 19
+1223 	 it's a short list when you take off the drunk, the mad and the dead. 	 it's a short list when you go off, drunk, dead, and dead, and maxlen: 20
+1224 	 it's quite telling, the fact that the closest thing i have to a friend is someone who thinks i ruined his life. 	 to be frank, the only person i can say friend friends is someone who thinks i ruined the life i ruined her life maxlen: 27
+1225 	 qasim's escape was sanctioned by someone at the very top of the service. 	 qasim's escape was arranged by someone at the top of the service. maxlen: 22
+1226 	 by one of the people who asked you to track me down. 	 by one of those people who want you to follow me around maxlen: 12
+1227 	 that's why i had to disappear. 	 that's why i needed to get lost and maxlen: 10
+1228 	 you had qasim. 	 qasim was holding his hands with maxlen: 8
+1229 	 he's our only connection to the traitor. 	 he's our only connection to the traine maxlen: 10
+1230 	 once he's in the system, he'll be silenced. 	 once she's in the system, she'll be maxlen: 12
+1231 	 he's planning an attack. 	 he's planning an attack planning an maxlen: 8
+1232 	 someone wants to destroy the service itself. 	 someone's trying to destroy themselves the service trying to maxlen: 11
+1233 	 you've lost it. 	 you're fucked up you' maxlen: 9
+1234 	 ruth's death... 	 ruth's death... maxlen: 8
+1235 	 don't! 	 don't maxlen: 3
+1236 	 look at it yourself, that's all i'm asking. 	 look for yourself, that's all i ask for maxlen: 12
+1237 	 what do you expect, harry? 	 what are you waiting for, harry? maxlen: 10
+1238 	 mi0 was all i had and you took it from me, for nothing. 	 mi0 was my everything, and you took her away from me, for nothing. maxlen: 25
+1239 	 hate me all you like, but i think you believe in the service. 	 hate me as much as you like me, but i think you believe in the service as you do. maxlen: 24
+1240 	 what happened in berlin? 	 what happened in berlin? maxlen: 8
+1241 	 so that's how they got to you? 	 is that how they cheated you? maxlen: 10
+1242 	 this may not pan out as you'd hoped. 	 this may not end up as you hoped it might not end maxlen: 13
+1243 	 i'm afraid i had to tip them off that there's something in the lining of your jacket. 	 i'm afraid i have to tell them there's something on the lining of your coat maxlen: 22
+1244 	 nothing there of course, but they'll have to check. 	 there's nothing there, of course, but they'll have to check maxlen: 16
+1245 	 i'm going to send you a number. 	 i'll send you a number. maxlen: 11
+1246 	 call me in 00 hours, please. 	 call me in 00 hours, please, please, maxlen: 12
+1247 	 i am security services. 	 i'm security services i'm maxlen: 8
+1248 	 hands behind your back! 	 hands behind your back! maxlen: 8
+1249 	 so you just let him walk away. 	 you just let her walk out like that? maxlen: 12
+1250 	 calm down, francis. 	 calm down, francis calm maxlen: 7
+1251 	 we wouldn't want you to have a stroke. 	 we don't want you to have a heart maxlen: 10
+1252 	 not a fatal one, anyway. 	 oh, deadly fat mortal? maxlen: 9
+1253 	 mi0 is looking like a complete liability right now and i'm just about the last friend left in government it has. 	 mi0 is looking like a complete liability right now, and i'm the last friend of mi0's government in government maxlen: 27
+1254 	 so you should really be nice to me. 	 i mean, you have to be really nice to me right maxlen: 13
+1255 	 in other words, he's lost the plot? 	 in other words, he's crazy? maxlen: 14
+1256 	 that wouldn't contradict his last three psych evaluations. 	 that won't contradict his last three psychological evaluations maxlen: 13
+1257 	 he refused to attend them. 	 he refused to agree. ref ref maxlen: 7
+1258 	 well, he hasn't stopped being harry pearce. 	 he hasn't stopped being harry pearce. maxlen: 12
+1259 	 even completely gaga, i'd still take him over... 	 no matter how crazy he is, i'll still catch him... maxlen: 16
+1260 	 well, this chap, for example. 	 like, like, like maxlen: 5
+1261 	 asked me to help him disappear. 	 he asked me to help him get lost and help maxlen: 10
+1262 	 it didn't occur to you to agree and then turn him over to us? 	 didn't it occur to you to agree and bring her to us? maxlen: 21
+1263 	 just because your life hasn't been worth a damn since harry booted you, don't think we can't very easily make it even less satisfactory. 	 just 'cause harry threw you out of your job doesn't mean that we can't put your life in a fucking fucking more fucked- maxlen: 37
+1264 	 since we're all threatening each other, you three should be under no illusions that you're not teetering on the edge. 	 since we've been threatening each other, you three haven't been hanging in the blood that you haven't been hanging off the cliffs or maxlen: 34
+1265 	 your whole organisation is looking pretty bloody disposable right now. 	 your entire organization right now seems to be disposed of all of your organization maxlen: 15
+1266 	 find qasim. 	 find qasim. maxlen: 9
+1267 	 fully loaded. 	 completely full full full maxlen: 4
+1268 	 they are ready, brother. 	 they're ready, brother, they maxlen: 8
+1269 	 qasim's escape. 	 qasim's escape qasim' maxlen: 10
+1270 	 what really happened? 	 what really happened? maxlen: 8
+1271 	 who are you? 	 who are you? maxlen: 5
+1272 	 i've seen that name in a case study. 	 i've seen that name working on a case in a maxlen: 12
+1273 	 i thought they decommissioned you. 	 i thought they were taking you off duty? maxlen: 15
+1274 	 they did. 	 they took what maxlen: 3
+1275 	 now, what really happened? 	 now, what really happened? maxlen: 10
+1276 	 the escape may have been set up by someone in the service. 	 the abduction could have been arranged by someone in the service could have maxlen: 14
+1277 	 do you know anything about that? 	 do you know anything about that? maxlen: 11
+1278 	 what are you looking for? 	 what are you looking for? maxlen: 7
+1279 	 i only gave up six weeks ago. 	 i only quit two weeks ago two weeks ago maxlen: 10
+1280 	 there must be one here. 	 there's got to be one around here maxlen: 9
+1281 	 just tell me, why did you apply? 	 tell me, why did you apply? maxlen: 10
+1282 	 i didn't apply. 	 i didn't apply maxlen: 5
+1283 	 when i was 00, i went out with a guy who did money transfers. 	 when i was 00 years old, i was hanging out with a kid who made money transf transfers maxlen: 22
+1284 	 k section were interested in some of the people using it, so they approached me. 	 k section was interested in some people using it, so they got to me. maxlen: 20
+1285 	 so you started as an agent? 	 you started as an agent? maxlen: 11
+1286 	 and when i was done, they asked me to train as an officer. 	 and when i was done, they asked me to train as an officer as an officer. maxlen: 21
+1287 	 my family laughed when i told them that. 	 my parents came back to me when i told them and told maxlen: 12
+1288 	 and if someone you worked for had helped qasim to escape, that would matter, right? 	 and if someone you worked for helped qasim get away, that would be a problem, wouldn't it? maxlen: 29
+1289 	 okay. 	 all right all right all maxlen: 5
+1290 	 something did feel wrong that day. 	 something felt wrong that day was the day something felt wrong. maxlen: 12
+1291 	 rob vass, my team leader, he was in the lead car with me. 	 robass, my team leader, was in the car in the lead car with me in the maxlen: 19
+1292 	 he told me not to open the weapons compartment. 	 he told me not to open the weapons compartment gun compart maxlen: 14
+1293 	 he ordered me not to pursue. 	 he gave me orders not to chase after me maxlen: 9
+1294 	 where does he live? 	 where does he live? maxlen: 5
+1295 	 loaded. 	 it's maxlen: 3
+1296 	 w00 account prefix. 	 w00 reck lead on w00 maxlen: 8
+1297 	 panama city. 	 panama city city city maxlen: 5
+1298 	 service slush fund. 	 well, it's not a brib maxlen: 9
+1299 	 june, what the hell are... 	 june, what are you here... maxlen: 9
+1300 	 who are you? 	 who are you? maxlen: 5
+1301 	 you told me not to pursue qasim. 	 you told me not to pursue qasim maxlen: 14
+1302 	 that's what you said to me when i went for my weapon. 	 you told me not to chase my gun when you told me not to fire my maxlen: 16
+1303 	 we swore an oath, rob. 	 we made a vows, rob rob rob maxlen: 9
+1304 	 i'm not saying anything until we get to thames house. 	 i'm not saying anything until we get to thames house. maxlen: 15
+1305 	 we're not going to thames house. 	 we're not going to thames house. maxlen: 11
+1306 	 will, what have you found? 	 will, what have you found? maxlen: 8
+1307 	 qasim's escort was deliberately weakened. 	 qasim's bodyguards were deliberately weakened from maxlen: 15
+1308 	 the team leader was in on it. 	 team leader was in on the team team team team maxlen: 10
+1309 	 he's just the errand boy. 	 he's just a sho maxlen: 7
+1310 	 find out who gave the order. 	 find out who gave the order who gave the command maxlen: 10
+1311 	 the americans think mi0 is a weak link and i think somebody here agrees with them. 	 the americans think mi0 is a weak link, and i think someone inside might agree with them. maxlen: 24
+1312 	 qasim escapes, we're disgraced. 	 qasim escaped, we lost sight. maxlen: 14
+1313 	 the cia quietly take over. 	 the cia's got the whole thing maxlen: 9
+1314 	 he was... 	 ... fire... maxlen: 3
+1315 	 he was going to fire. 	 he was going to shoot maxlen: 5
+1316 	 we could... 	 pul... pul... pul maxlen: 5
+1317 	 he's dead, he's dead. 	 dead, dead, dead maxlen: 5
+1318 	 he's dead. 	 dead dead dead maxlen: 3
+1319 	 listen. 	 listen listen listen listen maxlen: 4
+1320 	 you have to go home. 	 you should go home. you should go maxlen: 8
+1321 	 june! 	 june! maxlen: 4
+1322 	 i'll deal with this, but you have to go, now. 	 i'll handle this, but you need to go, right now. maxlen: 17
+1323 	 i've never heard a piece murdered with such glee. 	 i didn't hear a piece murdered with a song like that and i heard maxlen: 16
+1324 	 who's warrender batting his eyelashes at? 	 who's warrender smashing? maxlen: 14
+1325 	 landon miller. 	 it's amazon maxlen: 5
+1326 	 agency hawk. 	 an agency staff agent as an agent maxlen: 7
+1327 	 he's trying to secure their continued support, hopefully without handing over the keys to the kingdom. 	 she's still trying to secure her continued support, hoping that she doesn't give the keys to the kingdom, maxlen: 25
+1328 	 every time i see you, francis, you seem to be buried another inch or two deeper in the recesses of some swivel-eyed wonk from langley or the pentagon. 	 every time i see you, francis, you look like you've been buried another inch or another inch or two inches or two inches or two inches or more in some secret cows of some kind of a d maxlen: 48
+1329 	 you don't have to tell me. 	 you don't have to tell me maxlen: 8
+1330 	 i just think, in times like these, we all need to remember which flag flies over our heads. 	 i think at times like these, we need to remember who's waving the flag on our hand. maxlen: 24
+1331 	 francis. 	 francis francis francis maxlen: 3
+1332 	 i'm trying to help and he practically accuses me of moonlighting for the cia. 	 i'm trying to help him, but he's accusing me of officially committing a job for the maxlen: 23
+1333 	 tonight, your generals, your politicians, your spies, met for a celebration. 	 tonight, your generals, your politicians, your spies, your spies have come together to celebrate a celebration. maxlen: 26
+1334 	 tonight, we struck back at the heart of their power. 	 tonight, we will strike at the heart of their power's maxlen: 14
