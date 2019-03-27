@@ -1,0 +1,369 @@
+Command line arguments: {Namespace(batch=512, bpe=False, context=False, eval='all', path='0325_debiased_both_350.pt', pretrainedembed=True, train='train_2m.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using non-BPE vocab.
+Building vocab...
+making validation iterator
+done
+TR vocab size: 10002, EN vocab size: 10004
+Done building vocab
+Loading model...
+WARNING: share_embeddings is False
+Model loaded from 0325_debiased_both_350.pt
+Loading EN debiased vectors from .. data/embeddings/vectors.w2v.debiased.txt
+Loading TR debiased vectors from .. data/embeddings/vectors_tr.w2v.debiased.txt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 21 / 40 = 0.525000
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 19 / 40 = 0.475000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 39 / 40 = 0.975000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 1 / 40 = 0.025000
+Evaluating BLEU
+0 	 michael was sharing his bed for the first time in years. </s>               	 michael was <unk> for the first time in years. </s> maxlen: 14
+1 	 unfortunately, it was with his younger brother, <unk> </s>                  	 unfortunately, the person who <unk> the <unk> was <unk> with the male <unk> </s> maxlen: 14
+2 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+3 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+4 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+5 	 i don't think us sleeping together is working out. </s>                 	 i don't think you and i are meant for each other. </s> maxlen: 13
+6 	 yeah, i miss mom. </s>                      	 yeah, i miss mom. </s> maxlen: 9
+7 	 i can tell. </s>                       	 i'll tell him. </s> maxlen: 8
+8 	 i'm supposed to write 200 words on the <unk> of <unk> whether a <unk> strike is ever <unk> </s>        	 we need at least 200 <unk> of <unk> based on moral <unk> and <unk> <unk> of war. </s> maxlen: 28
+9 	 i'm not sure if my <unk> teacher would love if i cheated on my <unk> </s>           	 i'm not sure if my <unk> teacher would like to <unk> </s> maxlen: 17
+10 	 well, you just passed my <unk> test. </s>                   	 so you're my <unk> <unk> </s> maxlen: 11
+11 	 <unk> in fact, george michael had developed a <unk> <unk> on his <unk> teacher, a woman named <unk> <unk> </s>       	 <unk> <unk> <unk> <unk> <unk> <unk> </s> maxlen: 13
+12 	 even minor crimes are <unk> by <unk> <unk> off the <unk> hand. </s>              	 even small crimes are <unk> by <unk> <unk> </s> maxlen: 15
+13 	 no ring. </s>                        	 no ring. </s> maxlen: 8
+14 	 try to remember everything she says about me, all right? </s>                	 try to remember everything she says about me, okay? </s> maxlen: 17
+15 	 okay. </s>                         	 okay. </s> maxlen: 6
+16 	 michael. </s>                         	 michael. </s> maxlen: 6
+17 	 i need you to do something about my son. </s>                 	 you need to do something about <unk> </s> maxlen: 13
+18 	 did you and dad adopt a child? </s>                   	 you and dad adopted you? </s> maxlen: 13
+19 	 the <unk> was onto us. </s>                     	 the <unk> is watching us. </s> maxlen: 9
+20 	 your father thought it would make us look <unk> </s>                 	 your father thought it would make us look <unk> </s> maxlen: 14
+21 	 he must have <unk> my signature. </s>                    	 he must have <unk> my <unk> </s> maxlen: 11
+22 	 well, maybe i'll get a son who will... finish his <unk> <unk> </s>              	 <unk> years ago, i was married to a <unk> <unk> </s> maxlen: 18
+23 	 you've got to get me out of this. </s>                  	 get me out of this. </s> maxlen: 9
+24 	 i'll call social <unk> but you must take <unk> back. </s>                	 you can call social <unk> but you need to get <unk> back. </s> maxlen: 14
+25 	 but i'm not taking care of him either. </s>                  	 but i didn't believe her, either. </s> maxlen: 10
+26 	 i don't have the milk of mother's kindness in me anymore. </s>               	 i don't have a mother's <unk> any more. </s> maxlen: 17
+27 	 hello. </s>                         	 hello. </s> maxlen: 6
+28 	 <unk> <unk> michael. </s>                       	 michael. </s> maxlen: 6
+29 	 i've got a couple of girls here. </s>                   	 i've got two girls here. </s> maxlen: 10
+30 	 a couple of fun <unk> </s>                     	 a couple of fun <unk> </s> maxlen: 10
+31 	 come on, michael. </s>                       	 come on, michael. </s> maxlen: 9
+32 	 so we had a little <unk> </s>                    	 a little <unk> <unk> </s> maxlen: 10
+33 	 i'm offering you an olive branch here. </s>                   	 i told you to stay here, <unk> </s> maxlen: 11
+34 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+35 	 besides, when was the last time you slept with someone? </s>                	 by the way, when was the last time you slept with someone? </s> maxlen: 15
+36 	 <unk> meanwhile, <unk> was helping george michael with his homework. </s>                	 meanwhile, <unk> george <unk> was murdered. </s> maxlen: 13
+37 	 well, i don't know why i'm telling you this. </s>                 	 why would i tell you that? </s> maxlen: 10
+38 	 i guess there's just some things you can't really say to your dad. </s>             	 i guess there's just some things you can't really say to your dad. </s> maxlen: 15
+39 	 <unk> <unk> believed that george michael wanted to fix up his father... so he could fill the role <unk> mother. </s>      	 <unk> <unk> believed that george <unk> wanted to <unk> <unk> <unk> to give him his <unk> <unk> </s> maxlen: 23
+40 	 there's nothing wrong with that. </s>                     	 there's nothing wrong with that. </s> maxlen: 11
+41 	 although, i must say i'm a little hurt that you haven't considered me. </s>             	 however, i must express some <unk> to you for this. </s> maxlen: 21
+42 	 <unk> can fill that <unk> </s>                     	 <unk> can fill that <unk> </s> maxlen: 13
+43 	 teachers can fill that <unk> </s>                     	 <unk> can fill that <unk> </s> maxlen: 13
+44 	 and, someday, you're gonna find the right woman to fill that <unk> </s>              	 <unk> one day, you're gonna find the right woman to carry out this mission. </s> maxlen: 19
+45 	 but until then, i'll be right across the hall. </s>                 	 but until then, i'll be right across the hall. </s> maxlen: 15
+46 	 <unk> <unk> had never been more proud of anything she had said in her entire life. </s>          	 <unk> had never been more proud of <unk> in his entire life. </s> maxlen: 18
+47 	 <unk> meanwhile, <unk> was waiting for michael to show up. </s>                	 those <unk> were waiting for <unk> to come. </s> maxlen: 13
+48 	 this is <unk> the girl i've been telling you all about. </s>               	 this is <unk> the girl i told you about. </s> maxlen: 13
+49 	 girl, <unk> young girl. </s>                      	 girl, <unk> young girl. </s> maxlen: 10
+50 	 your date, <unk> </s>                       	 <unk> <unk> </s> maxlen: 8
+51 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+52 	 and so she's your date. </s>                     	 and here's your <unk> </s> maxlen: 10
+53 	 oh... <unk> <unk> <unk> you've got a <unk> </s>                  	 i have <unk> <unk> </s> maxlen: 9
+54 	 i mean, you've got a milk <unk> </s>                   	 i mean, there's milk on the <unk> </s> maxlen: 11
+55 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+56 	 <unk> but <unk> <unk> <unk> basic human <unk> for romantic <unk> and felt a <unk> urge to step in. </s>       	 but <unk> <unk> <unk> <unk> emotional <unk> <unk> for <unk> <unk> and <unk> </s> maxlen: 26
+57 	 because, you know, it's beyond <unk> and <unk> </s>                  	 because, you know, <unk> <unk> and <unk> </s> maxlen: 14
+58 	 i find you very attractive. </s>                     	 i find you very attractive. </s> maxlen: 10
+59 	 <unk> <unk> michael, <unk> really? </s>                     	 <unk> <unk> michael, really? </s> maxlen: 13
+60 	 <unk> and george <unk> was about to get a surprise <unk> </s>               	 and george <unk> was about to come by a surprise visit. </s> maxlen: 15
+61 	 i've studied all your <unk> and i've <unk> every tape. </s>                	 i took all the <unk> and all the <unk> </s> maxlen: 14
+62 	 and i watch 'em over and over. </s>                   	 and i watch it all over and over. </s> maxlen: 11
+63 	 <unk> george <unk> had recently <unk> a line of <unk> <unk> <unk> his <unk> discovered <unk> </s>          	 <unk> george <unk> had recently <unk> a series of <unk> <unk> <unk> his <unk> <unk> to make money for them. </s> maxlen: 31
+64 	 i've also lost four pounds on your <unk> <unk> banana jail bars. <unk> <unk> </s>            	 i also lost two pounds on your <unk> <unk> <unk> <unk> </s> maxlen: 19
+65 	 i've come to learn at your feet. </s>                   	 i came to learn at your position. </s> maxlen: 9
+66 	 that's a good place to start. </s>                    	 this is a good place to start. </s> maxlen: 13
+67 	 <unk> and michael, free <unk> double date, met <unk> at <unk> night. </s>              	 and michael, after i mentioned two girls on the <unk> i met <unk> at <unk> </s> maxlen: 21
+68 	 hey, <unk> is it my <unk> or does this rape room have the same floor plan as our <unk> </s>       	 hey, <unk> is it my imagination. </s> maxlen: 27
+69 	 well, i think she's perfect for you. </s>                   	 i think she's perfect for you. </s> maxlen: 11
+70 	 you'd think that would turn him off to the entire <unk> </s>               	 i used to think that was what was going on inside <unk> mind. </s> maxlen: 14
+71 	 besides, i'm not gonna rush out and marry somebody just because you think my son would like it. </s>        	 besides, i'm not gonna bring in a job just to make sure my son gets it. </s> maxlen: 21
+72 	 i'm ms. <unk> the <unk> teacher. </s>                    	 i'm mrs. <unk> <unk> </s> maxlen: 11
+73 	 my goal is to teach your children about the <unk> <unk> that can be lost by the <unk> pulling of a trigger. </s>    	 in <unk> <unk> there is no <unk> in the <unk> <unk> of life that can be <unk> </s> maxlen: 21
+74 	 <unk> and so michael got to know his son's <unk> teacher. </s>               	 and michael began his son's moral <unk> </s> maxlen: 14
+75 	 i guess that's the <unk> of it. </s>                   	 that's the beauty of it. </s> maxlen: 13
+76 	 you know, so <unk> </s>                      	 you know, very <unk> </s> maxlen: 10
+77 	 i mean, they just threw this class at me after mr. <unk> had a stroke. </s>           	 i mean, they gave me this class after mr. <unk> had a stroke. </s> maxlen: 19
+78 	 thought you were joking. </s>                      	 i thought you were kidding. </s> maxlen: 9
+79 	 no, i was just laughing 'cause you were laughing. </s>                 	 no, i'm just worried about you getting married. </s> maxlen: 13
+80 	 <unk> - <unk> <unk> <unk> </s>                     	 <unk> - <unk> </s> maxlen: 9
+81 	 but, you know, <unk> </s>                      	 but, you know, <unk> </s> maxlen: 10
+82 	 and i think i'm an <unk> person. </s>                   	 and i think it's a moral <unk> </s> maxlen: 11
+83 	 right. </s>                         	 yeah. </s> maxlen: 6
+84 	 here's an <unk> question. </s>                      	 here's an <unk> question. </s> maxlen: 11
+85 	 <unk> a parent take a teacher out for a drink? </s>                	 can a parent invite a couple of <unk> </s> maxlen: 17
+86 	 or... </s>                         	 <unk> </s> maxlen: 6
+87 	 yeah, she died. </s>                       	 yeah, he's dead. </s> maxlen: 8
+88 	 well, it's the mr. <unk> stroke thing... </s>                   	 <unk> that mr. <unk> is a <unk> <unk> </s> maxlen: 15
+89 	 let's go get that drink. </s>                     	 let's go get that drink. </s> maxlen: 11
+90 	 yeah, it could only help. </s>                     	 yeah, maybe it'll help. </s> maxlen: 10
+91 	 <unk> george <unk> was dealing with his own <unk> </s>                 	 george <unk> <unk> his own <unk> </s> maxlen: 11
+92 	 oh, i've already told you so many of my sins. </s>                	 i've already told you so many <unk> </s> maxlen: 11
+93 	 maybe you could tell me some of yours. </s>                  	 maybe you could teach me some <unk> </s> maxlen: 14
+94 	 uh, well, there are legal <unk> to that. </s>                  	 well, there are signs of <unk> </s> maxlen: 13
+95 	 but, uh, back to your sins. </s>                    	 but back to your <unk> </s> maxlen: 10
+96 	 uh, do that one about the, uh... <unk> takes deep <unk> ladies' <unk> in your college <unk> again. </s>        	 tell me one of those <unk> ones about what happened in the <unk> </s> maxlen: 19
+97 	 <unk> and michael was on his way to what would be his second <unk> </s>            	 and michael was <unk> with mrs. <unk> the second <unk> today. </s> maxlen: 19
+98 	 michael, the little korean is here, and i don't know what to do with him. </s>           	 michael, the little <unk> is here, and i don't know what to do with it. </s> maxlen: 18
+99 	 at least, i think it's a him. </s>                   	 at least, i think it is. </s> maxlen: 10
+100 	 you've got to strip them down to next to nothing before you can even tell. </s>           	 you have to wait until you hear something for certain. </s> maxlen: 18
+101 	 yeah, mom. </s>                        	 yes, mother. </s> maxlen: 8
+102 	 they will take him back. </s>                     	 we gotta get him back. </s> maxlen: 9
+103 	 shoes on, <unk> </s>                       	 shoes on, <unk> </s> maxlen: 10
+104 	 shoes <unk> </s>                        	 take off your shoes. </s> maxlen: 8
+105 	 he's out of control. </s>                      	 he's out of control. </s> maxlen: 8
+106 	 who's that? </s>                        	 who is it? </s> maxlen: 8
+107 	 this is <unk> who your father and i have <unk> </s>                	 in this <unk> your father and i were <unk> </s> maxlen: 14
+108 	 what, i'm gone for a couple days and you find a new son? </s>             	 what, i'm gone for a few days and you find a new son? </s> maxlen: 21
+109 	 <unk> <unk> could see that her son was concerned, even jealous. </s>               	 <unk> <unk> <unk> even <unk> <unk> </s> maxlen: 15
+110 	 and she knew how it felt to be <unk> </s>                 	 and <unk> knew what it felt like to be <unk> </s> maxlen: 15
+111 	 <unk> is your brother now. </s>                     	 <unk> is your brother now. </s> maxlen: 10
+112 	 call it off. </s>                       	 <unk> </s> maxlen: 8
+113 	 i'm keeping him. </s>                       	 <unk> </s> maxlen: 6
+114 	 look, i gotta call you back. </s>                    	 listen, i got to call you back. </s> maxlen: 11
+115 	 sweet ride. </s>                        	 nice <unk> </s> maxlen: 8
+116 	 are you making dinner <unk> </s>                     	 are you making dinner <unk> </s> maxlen: 11
+117 	 a <unk> <unk> dropped off. </s>                     	 a <unk> <unk> </s> maxlen: 10
+118 	 <unk> and after their <unk> </s>                     	 and <unk> <unk> </s> maxlen: 9
+119 	 michael took a step he hadn't taken in years. </s>                 	 michael took a step he hadn't taken in years. </s> maxlen: 13
+120 	 okay, do you think this is a good idea? </s>                 	 well, do you think that's a good idea? </s> maxlen: 15
+121 	 i think it's a great idea. </s>                    	 i think that's a great idea. </s> maxlen: 10
+122 	 mmm. </s>                         	 <unk> </s> maxlen: 6
+123 	 such a good idea. </s>                      	 that's a great idea. </s> maxlen: 10
+124 	 but how are we going to sneak in without waking everyone up? </s>              	 but how do we get in without killing everyone? </s> maxlen: 13
+125 	 this may not have been my best idea. </s>                  	 this may not have been my best idea. </s> maxlen: 17
+126 	 i'm sorry, michael. </s>                       	 i'm sorry, michael. </s> maxlen: 8
+127 	 i'm sorry too, michael, but it looks like we're even. </s>                	 i'm sorry, michael, but it looks like we're <unk> now. </s> maxlen: 17
+128 	 you took something i <unk> </s>                     	 you took something i <unk> </s> maxlen: 11
+129 	 i took something you <unk> </s>                     	 i took something you <unk> </s> maxlen: 13
+130 	 i... <unk> <unk> </s>                       	 i'm <unk> <unk> </s> maxlen: 9
+131 	 listen, i know that you've been trying to get even with me about <unk> </s>            	 listen, i know that you've been trying to get even with me about <unk> </s> maxlen: 17
+132 	 i was lying when i said i wasn't gonna to sleep with her, so... </s>            	 i was lying when i said i wasn't going to sleep with her, so... </s> maxlen: 17
+133 	 she'd have to agree to it. </s>                    	 he has to agree to it. </s> maxlen: 10
+134 	 i don't <unk> a problem with that. </s>                   	 i don't think you'll have a problem with that. </s> maxlen: 13
+135 	 right. </s>                         	 right. </s> maxlen: 6
+136 	 i just slept with one. </s>                     	 i met someone new. </s> maxlen: 9
+137 	 again, didn't like <unk> </s>                      	 again, <unk> <unk> </s> maxlen: 10
+138 	 really, and good luck getting rid of her. </s>                  	 seriously, i got lucky and i got rid of him. </s> maxlen: 13
+139 	 not a problem. </s>                       	 it's okay. </s> maxlen: 8
+140 	 oh, so romantic. </s>                       	 very <unk> </s> maxlen: 8
+141 	 who's <unk> <unk> </s>                       	 who's <unk> <unk> </s> maxlen: 10
+142 	 hey, george michael. </s>                       	 hey, george michael. </s> maxlen: 9
+143 	 i wanted to talk to you about something before, but i didn't know if it was real. </s>         	 i wanted to talk to you about something, but i didn't know if it was real. </s> maxlen: 21
+144 	 but now, uh... your <unk> <unk> </s>                    	 but now, <unk> </s> maxlen: 10
+145 	 yeah, i just made this for her. </s>                   	 yeah, i did it for him. </s> maxlen: 11
+146 	 oh. </s>                         	 oh. </s> maxlen: 6
+147 	 she loves <unk> <unk> </s>                      	 <unk> loves <unk> </s> maxlen: 9
+148 	 i'm sure she is interested in him... as a <unk> you know. </s>              	 but, you know, i'm sure you'll be interested in her. </s> maxlen: 17
+149 	 i'm sure she doesn't love <unk> </s>                    	 i'm sure you'll find what you want. </s> maxlen: 9
+150 	 you know, i just wanted to make her something special to show that i care. </s>           	 you know, i just wanted to make her something special to show that i cared about her. </s> maxlen: 22
+151 	 about the class? </s>                       	 about <unk> </s> maxlen: 9
+152 	 you mean, you love her like... </s>                    	 i mean, we're gonna use it to his advantage. </s> maxlen: 11
+153 	 hi, george michael. </s>                       	 hey, george michael. </s> maxlen: 9
+154 	 i'm gonna go home and think about it. </s>                  	 i'm gonna go home and think about it. </s> maxlen: 11
+155 	 i'm gonna go home, think about it. </s>                   	 i'm gonna go home and change. </s> maxlen: 11
+156 	 dad, what was she doing here? </s>                    	 daddy, what are you doing here? </s> maxlen: 10
+157 	 <unk> michael knew he had an <unk> responsibility to tell his son the truth. </s>            	 michael knew that he had an <unk> responsibility to tell his son the truth. </s> maxlen: 18
+158 	 yes. </s>                         	 yeah. </s> maxlen: 6
+159 	 your uncle <unk> slept with her. </s>                    	 your uncle <unk> took care of him. </s> maxlen: 10
+160 	 well, why would he do that? </s>                    	 well, why would he do that? </s> maxlen: 10
+161 	 why would <unk> sleep with my <unk> <unk> </s>                  	 why are you wearing my moral <unk> </s> maxlen: 11
+162 	 you and i know that, but <unk> he just... </s>                 	 you and i know that, but <unk> <unk> </s> maxlen: 15
+163 	 he's not that exact of a target <unk> and he just kind of <unk> it everywhere. </s>          	 <unk> <unk> is no good <unk> and he can shoot anywhere. </s> maxlen: 21
+164 	 you know, but listen, <unk> you really think <unk> that you had a... </s>             	 you know, but listen, do you really think that <unk> </s> maxlen: 18
+165 	 i mean, she's kinda old for you, don't you think? </s>                	 i mean, she's kind of old for you, don't you think? </s> maxlen: 18
+166 	 we don't even know how old she is. </s>                  	 we don't even know how old she is. </s> maxlen: 13
+167 	 no one does. </s>                       	 nobody knows. </s> maxlen: 8
+168 	 she was <unk> the <unk> <unk> and i thought maybe as a joke, i'd go up to her and be, like... </s>     	 she was <unk> young girls from different <unk> and i was hoping that <unk> would come over to her and try to... </s> maxlen: 27
+169 	 "well, hey, do you want to <unk> </s>                   	 <unk> would you like to dance? </s> maxlen: 11
+170 	 and she'd be, like, <unk> what the <unk> right? </s>                 	 and he was like, "well, what about <unk> </s> maxlen: 23
+171 	 i did it <unk> in the <unk> but... </s>                  	 i did it <unk> in the <unk> but... </s> maxlen: 11
+172 	 but, you know, like, we'd be joke dancing or something. </s>                	 but, you know, like, <unk> dancing or something. </s> maxlen: 22
+173 	 i didn't think it through. </s>                     	 i didn't think it through. </s> maxlen: 9
+174 	 don't you think you should be taking somebody your own <unk> </s>               	 don't you think you should be dating someone your own <unk> </s> maxlen: 14
+175 	 like your cousin. </s>                       	 like <unk> </s> maxlen: 8
+176 	 i <unk> a rare book to get that picture of <unk> <unk> in a <unk> suit. </s>          	 i <unk> a very difficult book to get a picture of <unk> <unk> in <unk> </s> maxlen: 22
+177 	 "what would <unk> <unk> </s>                      	 <unk> what are you <unk> </s> maxlen: 9
+178 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+179 	 yeah, you know something? </s>                      	 yeah, you know something? </s> maxlen: 11
+180 	 okay, that is our exact <unk> fire <unk> </s>                  	 okay, so <unk> can start our fire <unk> </s> maxlen: 14
+181 	 <unk> at prison, george <unk> was preparing for an evening with his most devoted fan. </s>           	 <unk> at the end of the evening with george <unk> his most loyal <unk> </s> maxlen: 19
+182 	 while <unk> <unk> was making <unk> <unk> own. </s>                  	 <unk> <unk> is a victim of his own <unk> </s> maxlen: 13
+183 	 how we doin'? </s>                       	 how are we doing? </s> maxlen: 8
+184 	 <unk> we have video. </s>                      	 we have a video. </s> maxlen: 10
+185 	 <unk> so george michael, still angry at <unk> sought out the family expert on making trouble. </s>          	 and george michael, still working on his family expert on <unk> <unk> </s> maxlen: 25
+186 	 i know he was dating that girl <unk> </s>                  	 i know you were dating <unk> </s> maxlen: 9
+187 	 the <unk> </s>                        	 the <unk> </s> maxlen: 10
+188 	 yeah, she's probably gonna take him to that stupid <unk> dance. </s>               	 yeah, he's probably gonna take her to one of those stupid <unk> </s> maxlen: 17
+189 	 i wish i had someone <unk> to take. </s>                  	 i wish i had someone to love too. </s> maxlen: 14
+190 	 you know, i actually called mr. <unk> and asked him... but he got all out of breath and dropped the phone. </s>     	 you know, i actually called mr. <unk> and asked him, but he got all out of breath and dropped the phone. </s> maxlen: 26
+191 	 i never heard back. </s>                      	 i never heard back. </s> maxlen: 9
+192 	 you know, <unk> we should go together. </s>                   	 you know, maybe we should go together. </s> maxlen: 14
+193 	 right, i mean, it's a bad <unk> </s>                   	 right, i mean, it's a bad <unk> </s> maxlen: 13
+194 	 hello. </s>                         	 hi. </s> maxlen: 6
+195 	 my mom bought him. </s>                      	 mom bought it. </s> maxlen: 9
+196 	 she's making me register him for school. </s>                   	 she's gonna teach me how to go to school. </s> maxlen: 11
+197 	 he's my new little brother. </s>                     	 my new little brother. </s> maxlen: 10
+198 	 so we're <unk> </s>                       	 i mean <unk> </s> maxlen: 8
+199 	 <unk> and michael went to discuss the george michael situation with ms. <unk> </s>             	 and michael went to discuss the situation with mrs. <unk> mrs. <unk> </s> maxlen: 18
+200 	 i'm sorry. </s>                        	 i'm sorry. </s> maxlen: 8
+201 	 hi. </s>                         	 hi. </s> maxlen: 6
+202 	 don't worry. </s>                        	 don't worry. </s> maxlen: 6
+203 	 you mean, you're interested in him. </s>                    	 i mean, you're into him. </s> maxlen: 10
+204 	 this is what i want to talk to you about, though. </s>               	 that's what i want to talk to you about. </s> maxlen: 14
+205 	 but i've enjoyed my time with you. </s>                   	 but i liked spending time with you. </s> maxlen: 13
+206 	 you ever wanna talk <unk> </s>                     	 you want to talk about <unk> </s> maxlen: 10
+207 	 you see, george michael made this <unk> for you. </s>                 	 you see, george michael made you this <unk> </s> maxlen: 15
+208 	 you know, <unk> kind of, uh, is in love with you, so... </s>              	 you know, she's kind of in love with you, so... </s> maxlen: 15
+209 	 he knows we're going out. </s>                     	 <unk> knows. </s> maxlen: 8
+210 	 i told him that you slept with my brother. </s>                 	 i told him that you slept with my brother. </s> maxlen: 10
+211 	 that may be the most <unk> thing i've ever heard. </s>                	 that may be the most <unk> thing i've ever heard. </s> maxlen: 18
+212 	 well, you've only been doing this half a <unk> </s>                 	 well, it's just a half a <unk> <unk> </s> maxlen: 13
+213 	 look, it was a <unk> strike. </s>                    	 look, it's a <unk> <unk> </s> maxlen: 11
+214 	 my brother would've tried to sleep with you. </s>                  	 my brother was trying to sleep with you. </s> maxlen: 10
+215 	 well, i want you to leave right now and not come back. </s>              	 so, i want you to leave right now and not come back. </s> maxlen: 18
+216 	 i understand. </s>                        	 i see. </s> maxlen: 6
+217 	 starting right now. </s>                       	 starting now. </s> maxlen: 9
+218 	 <unk> george <unk> went on a walk with <unk> </s>                 	 george <unk> went on a walk with <unk> </s> maxlen: 15
+219 	 george. </s>                         	 george. </s> maxlen: 6
+220 	 and she was getting to him. </s>                    	 and he started <unk> her. </s> maxlen: 10
+221 	 you can feel safe to fully reveal yourself to me. </s>                	 you can feel safe for me here. </s> maxlen: 13
+222 	 <unk> <unk> it's <unk> heavy on my soul. </s>                  	 <unk> <unk> </s> maxlen: 9
+223 	 you, uh... </s>                        	 <unk> </s> maxlen: 6
+224 	 he's <unk> the camera. </s>                      	 turn the camera off! </s> maxlen: 8
+225 	 so, it's off with mother now. </s>                    	 i was going to ask <unk> to the dance tonight, so it's away with my mom now. </s> maxlen: 21
+226 	 <unk> in fact, <unk> was just giving <unk> and <unk> a ride. </s>              	 in fact, <unk> was <unk> and <unk> wouldn't have gone anywhere. </s> maxlen: 15
+227 	 you're trying to steal from the wrong man. </s>                  	 you're trying to steal from the wrong guy. </s> maxlen: 10
+228 	 watch your back, my little <unk> friend! </s>                   	 watch your back, my little <unk> </s> maxlen: 13
+229 	 <unk> and the spring <unk> dance was in full <unk> </s>                	 and a different spring break is <unk> </s> maxlen: 13
+230 	 whoa, sorry. </s>                        	 wow, i'm sorry. </s> maxlen: 9
+231 	 so you're not letting him in because he doesn't share your perfectly <unk> <unk> your round <unk> eyes, your strong square <unk> </s>    	 so you're not letting him in because he doesn't have <unk> <unk> <unk> that looks great like you. </s> maxlen: 30
+232 	 you wanna dance? </s>                       	 you wanna dance? </s> maxlen: 10
+233 	 all right! </s>                        	 <unk> </s> maxlen: 6
+234 	 <unk> and <unk> sought out <unk> </s>                    	 he finally found the <unk> he was looking for. </s> maxlen: 11
+235 	 who had found out he had cheated on her with <unk> </s>               	 <unk> <unk> him with <unk> </s> maxlen: 13
+236 	 <unk> where are you? </s>                      	 <unk> where are you? </s> maxlen: 8
+237 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+238 	 oh, hey, lisa. </s>                       	 hey, <unk> </s> maxlen: 8
+239 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+240 	 excuse me. </s>                        	 excuse me. </s> maxlen: 6
+241 	 look, i blew it, okay? </s>                     	 listen, <unk> okay? </s> maxlen: 10
+242 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+243 	 um, i blew it okay? </s>                     	 i screwed up, okay? </s> maxlen: 11
+244 	 i had to see you. </s>                     	 i had to see you. </s> maxlen: 9
+245 	 <unk> been giving this a lot of thought, <unk> </s>                 	 you can't blame <unk> for that. </s> maxlen: 11
+246 	 oh, that's... that's your definition of the right thing. </s>                 	 that's... that's your <unk> </s> maxlen: 13
+247 	 george <unk> </s>                        	 george <unk> </s> maxlen: 8
+248 	 uncle <unk> </s>                        	 <unk> <unk> </s> maxlen: 8
+249 	 george michael. </s>                        	 george michael. </s> maxlen: 8
+250 	 what are you doing at a high school dance? </s>                 	 what are you doing in a high school dance? </s> maxlen: 13
+251 	 i'm just here with my girl. </s>                    	 there's only <unk> of us here. </s> maxlen: 10
+252 	 yeah, my <unk> teacher. </s>                      	 yes, my <unk> <unk> </s> maxlen: 10
+253 	 hey, george michael. </s>                       	 hey, george michael. </s> maxlen: 9
+254 	 you slept with my <unk> teacher. </s>                    	 you're an <unk> <unk> </s> maxlen: 10
+255 	 i'm really touched that you'd stick up for me after i've been so horrible to you. </s>          	 after what i've done to you so bad, it really <unk> me for you to work for me. </s> maxlen: 21
+256 	 <unk> in fact, <unk> <unk> the <unk> <unk> for the <unk> teacher michael was <unk> </s>           	 in fact, the <unk> <unk> for <unk> <unk> was <unk> </s> maxlen: 18
+257 	 man, he... has a type. </s>                     	 my man, <unk> <unk> </s> maxlen: 9
+258 	 <unk> mrs. <unk> was the <unk> teacher. </s>                   	 <unk> miss <unk> <unk> <unk> </s> maxlen: 13
+259 	 two <unk> </s>                        	 second <unk> </s> maxlen: 8
+260 	 <unk> been seeing ms. <unk> and i should never have brought <unk> into it. </s>            	 i never met mrs. <unk> and <unk> </s> maxlen: 18
+261 	 but that day you told me you liked her, i didn't know what else to do. </s>          	 but the day you told me you liked him, i didn't know what else to do. </s> maxlen: 18
+262 	 i never wanted to hurt you. </s>                    	 i never wanted to hurt you. </s> maxlen: 10
+263 	 i didn't know you were that serious. </s>                   	 i didn't know you two were serious. </s> maxlen: 10
+264 	 well, you know, i'm open to it. </s>                   	 well, you know, i don't believe it. </s> maxlen: 10
+265 	 we're open to it. </s>                      	 we're used to it. </s> maxlen: 9
+266 	 wow! </s>                         	 wow! </s> maxlen: 8
+267 	 no, no, no, no. </s>                      	 no, no, no, no. </s> maxlen: 10
+268 	 i'm just saying someday, you know. </s>                    	 just one day, you know. </s> maxlen: 11
+269 	 i'm not really into kids. </s>                     	 i'm not good with kids. </s> maxlen: 10
+270 	 the lady said no, man. </s>                     	 the lady said no, man. </s> maxlen: 10
+271 	 look, michael, i hope you find what you're looking for. </s>                	 listen, michael, i hope you find what you're looking for. </s> maxlen: 11
+272 	 i mean we had some laughs about some very sad things, but... </s>              	 i mean, we're working on some sad things, but... </s> maxlen: 15
+273 	 i don't think we have a future. </s>                   	 i don't think we have a future. </s> maxlen: 11
+274 	 and, <unk> i will take that <unk> </s>                   	 and, <unk> i'm taking this <unk> </s> maxlen: 11
+275 	 hey, uh, you wanna dance? </s>                     	 hey, you wanna dance? </s> maxlen: 11
+276 	 i can't believe that would have worked. </s>                   	 i can't believe this is working. </s> maxlen: 10
+277 	 on the next arrested <unk> </s>                     	 next stop, <unk> </s> maxlen: 10
+278 	 <unk> competition <unk> up. </s>                      	 <unk> <unk> <unk> </s> maxlen: 9
+279 	 whoa, whoa, whoa, <unk> </s>                      	 whoa, whoa, whoa, <unk> </s> maxlen: 10
+280 	 we are not allowed to have <unk> in here. </s>                 	 no <unk> here. </s> maxlen: 10
+281 	 mom would freak. </s>                       	 mom would go crazy. </s> maxlen: 9
+282 	 oh, no, it's fine. </s>                      	 no, it's okay. </s> maxlen: 9
+283 	 i'll light a candle of my own. </s>                   	 and i got my own <unk> </s> maxlen: 11
+284 	 that's exactly what i'll do. </s>                     	 that's exactly what i'm gonna do. </s> maxlen: 13
+285 	 you okay? </s>                        	 you okay? </s> maxlen: 8
+286 	 i'm so sorry. </s>                       	 i'm so sorry. </s> maxlen: 8
+287 	 no, that's all right. </s>                      	 no, it's okay. </s> maxlen: 9
+288 	 really, it is. </s>                       	 really. </s> maxlen: 6
+289 	 you want me to help you out with this? </s>                 	 do you want me to help you remember these? </s> maxlen: 13
+290 	 no problem. </s>                        	 it's okay. </s> maxlen: 8
+291 	 here, let me just help you out here. </s>                  	 here, let me help you. </s> maxlen: 11
+292 	 these, too? </s>                        	 <unk> </s> maxlen: 8
+293 	 okay, here, let me get that for you. </s>                  	 okay, here, let me get that for you. </s> maxlen: 11
+294 	 yeah. </s>                         	 yeah. </s> maxlen: 6
+295 	 come on, boy! </s>                       	 come on, boy! </s> maxlen: 8
+296 	 <unk> </s>                         	 <unk> </s> maxlen: 6
+297 	 bob. </s>                         	 bob. </s> maxlen: 6
+298 	 what you're <unk> <unk> is, to say the very least, <unk> </s>               	 what you're <unk> <unk> is <unk> </s> maxlen: 14
+299 	 very <unk> </s>                        	 very <unk> </s> maxlen: 8
+300 	 come on! </s>                        	 come on! </s> maxlen: 6
+301 	 come on! </s>                        	 come on! </s> maxlen: 6
+302 	 okay! </s>                         	 okay! </s> maxlen: 6
+303 	 okay! </s>                         	 okay! </s> maxlen: 6
+304 	 come on! </s>                        	 come on! </s> maxlen: 6
+305 	 come on! </s>                        	 come on! </s> maxlen: 6
+306 	 move, move, move! </s>                       	 go, go, go! </s> maxlen: 9
+307 	 what are you doing? </s>                      	 what are you doing? </s> maxlen: 8
+308 	 get off me. </s>                       	 stay away. </s> maxlen: 8
+309 	 i don't wanna die. </s>                      	 i don't want to die. </s> maxlen: 8
+310 	 we all gotta go <unk> huh? </s>                    	 we all gotta go <unk> huh? </s> maxlen: 13
+311 	 four months ago, each of you little <unk> <unk> <unk> to be on a <unk> reality tv game show. </s>       	 four months ago, each of you little <unk> <unk> <unk> to be on a <unk> tv show. </s> maxlen: 27
+312 	 and guess what? </s>                       	 and guess what? </s> maxlen: 11
+313 	 you won. </s>                        	 <unk> </s> maxlen: 6
+314 	 i think, in life, some people are meant to be on tv, and i'm one of them. </s>         	 i think some people are meant to be on tv, and i'm one of them. </s> maxlen: 19
+315 	 my favorite color is <unk> like the sun. </s>                  	 my favorite color is <unk> like the sun. </s> maxlen: 14
+316 	 hi, i'm <unk> and i'm totally <unk> gay and proud of it. </s>              	 hi, i'm <unk> and i'm totally <unk> and proud of it. </s> maxlen: 19
+317 	 you're a <unk> aren't you? </s>                     	 <unk> isn't it? </s> maxlen: 11
+318 	 i wanna lead our country. </s>                     	 i want <unk> <unk> </s> maxlen: 9
+319 	 next question. </s>                        	 next question. </s> maxlen: 8
+320 	 my name is <unk> on loan from england. </s>                  	 my name is <unk> <unk> </s> maxlen: 10
+321 	 me, too. </s>                        	 me too. </s> maxlen: 6
+322 	 he's my brother <unk> officer. </s>                     	 he's my brother, <unk> <unk> </s> maxlen: 14
+323 	 hello. </s>                         	 hi. </s> maxlen: 6
+324 	 when <unk> and i were two, our mother dropped him on his head. </s>             	 <unk> and i hit him in the head with both hands. </s> maxlen: 17
+325 	 and he doesn't know. </s>                      	 he's <unk> </s> maxlen: 8
+326 	 well, but i do. </s>                      	 but i do. </s> maxlen: 9
+327 	 <unk> <unk> 200 pounds. </s>                      	 <unk> <unk> 90 <unk> </s> maxlen: 11
+328 	 you know, people used to say i look like will smith. </s>               	 people say will <unk> <unk> </s> maxlen: 11
+329 	 now they say <unk> <unk> </s>                     	 i don't use <unk> these days. </s> maxlen: 11
+330 	 to win <unk> <unk> all you have to do is spend one night in a prison. </s>          	 if each of you <unk> <unk> all you have to do is spend one night in jail. </s> maxlen: 22
+331 	 that abandoned prison. </s>                       	 that abandoned prison. </s> maxlen: 10
+332 	 whoa. </s>                         	 wow! </s> maxlen: 8
+333 	 holy shit! </s>                        	 damn <unk> </s> maxlen: 8
+334 	 cool. </s>                         	 cool. </s> maxlen: 6
+335 	 how come i've never heard of this show? </s>                  	 how come i've never heard of this <unk> </s> maxlen: 14
+336 	 like, how do we know this is not some sort of <unk> house <unk> </s>            	 how do we know this is not a <unk> <unk> </s> maxlen: 15
+337 	 right. </s>                         	 right. </s> maxlen: 6
+338 	 this is actually our third show, but we won't be <unk> until the fall. </s>            	 it's actually our third date, but we can't wait till <unk> </s> maxlen: 15
+339 	 and as for knowing if this is anything more than a college <unk> you'll just have to play for the money to find out. </s>  	 we're gonna have to play the money to find out if this <unk> a <unk> or not. </s> maxlen: 22
+340 	 you'll be asked to perform a series of <unk> </s>                 	 you <unk> a series of <unk> <unk> </s> maxlen: 13
+341 	 <unk> that will test your <unk> your courage and your <unk> </s>               	 <unk> your <unk> is <unk> <unk> and <unk> </s> maxlen: 14
+342 	 sounds like fun, right? </s>                      	 sounds like fun, right? </s> maxlen: 11
+343 	 what kind of task are we talking about, <unk> </s>                 	 what kind of <unk> are these, man? </s> maxlen: 11
+344 	 make your decision now. </s>                      	 give me the <unk> now. </s> maxlen: 9
