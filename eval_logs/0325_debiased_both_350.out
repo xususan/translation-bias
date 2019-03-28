@@ -1,0 +1,20 @@
+Command line arguments: {Namespace(batch=512, bpe=False, context=False, eval='all', path='0325_debiased_both_350.pt', pretrainedembed=True, train='train_2m.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using non-BPE vocab.
+Building vocab...
+making validation iterator
+done
+TR vocab size: 10002, EN vocab size: 10004
+Done building vocab
+Loading model...
+WARNING: share_embeddings is False
+Model loaded from 0325_debiased_both_350.pt
+Loading EN debiased vectors from .. data/embeddings/vectors.w2v.debiased.txt
+Traceback (most recent call last):
+  File "eval.py", line 169, in <module>
+    embeds_en = load_glove_embeddings(debiased_vectors_path, EN.vocab.stoi)
+  File "/vol/translation-bias/transformer.py", line 313, in load_glove_embeddings
+    with open(path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/embeddings/vectors.w2v.debiased.txt'

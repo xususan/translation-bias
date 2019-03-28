@@ -1,0 +1,6 @@
+Command line arguments: {Namespace(batch=512, bpe=True, context=True, eval='all', path='0327_context_2m_balanced_fixed_4gpu_30.pt', pretrainedembed=False, train='train_2m_coref_fixed.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m_coref_fixed.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using new version of vocab. BPE is true.
+reading in tabular dataset
