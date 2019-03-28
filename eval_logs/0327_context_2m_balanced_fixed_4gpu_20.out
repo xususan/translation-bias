@@ -1,0 +1,390 @@
+Command line arguments: {Namespace(batch=512, bpe=True, context=True, eval='all', path='0327_context_2m_balanced_fixed_4gpu_20.pt', pretrainedembed=False, train='train_2m_balanced_fixed.csv', val='val_10k.csv', vocab=10000)}
+Set training path to train_2m_balanced_fixed.csv
+Set validation path (for BLEU) to val_10k.csv
+Model trained after march 1. USING NEW VERSION OF VOCAB
+Using new version of vocab. BPE is true.
+reading in tabular dataset
+finished
+Building vocab...
+making validation iterator
+done
+TR vocab size: 9722, EN vocab size: 10004
+Done building vocab
+Loading model...
+Model loaded from 0327_context_2m_balanced_fixed_4gpu_20.pt
+Evaluating discriminative dataset: data/pro_stereotype.tsv 
+Correct: 23 / 40 = 0.575000
+Evaluating discriminative dataset: data/anti_stereotype.tsv 
+Correct: 17 / 40 = 0.425000
+Evaluating discriminative dataset: data/male_subject.tsv 
+Correct: 37 / 40 = 0.925000
+Evaluating discriminative dataset: data/female_subject.tsv 
+Correct: 3 / 40 = 0.075000
+Evaluating BLEU
+0 	 michael was sharing his bed for the first time in years. 	 michael was sharing his bed for the first time in years. maxlen: 12
+1 	 unfortunately, it was with his younger brother, buster. 	 unfortunately, his brother, buster, whom he shared his bed. maxlen: 19
+2 	 buster. 	 buster. maxlen: 4
+3 	 buster. 	 buster. maxlen: 4
+4 	 hey-hey. 	 hey-hey. maxlen: 7
+5 	 i don't think us sleeping together is working out. 	 i don't think it's appropriate for us to sleep together. maxlen: 17
+6 	 yeah, i miss mom. 	 yeah, i miss my mom. maxlen: 11
+7 	 i can tell. 	 i will. maxlen: 5
+8 	 i'm supposed to write 000 words on the morality of war... whether a preemptive strike is ever justified. 	 i have to write an essay of at least 000 words... about the morality of war and the possibility of a conflict. maxlen: 33
+9 	 i'm not sure if my ethics teacher would love if i cheated on my essay. 	 i'm not sure our moral teacher would like me to cheat while writing a trial. maxlen: 24
+10 	 well, you just passed my ethics test. 	 so, you passed my moral test. maxlen: 15
+11 	 [narrator] in fact, george michael had developed a hopeless crush... on his ethics teacher, a woman named beth baerly. 	 as a matter of fact, he burned the sister, desperately, desperate for her teacher, bethbaerly. maxlen: 32
+12 	 even minor crimes are punishable... by brutally chopping off the offender's hand. 	 even the hands of men who commit small crimes can be blown to shreds. maxlen: 20
+13 	 no ring. 	 no ring no ring maxlen: 4
+14 	 try to remember everything she says about me, all right? 	 try to remember everything she said about me, okay? maxlen: 16
+15 	 okay. 	 okay. maxlen: 3
+16 	 michael. 	 michael. maxlen: 3
+17 	 i need you to do something about my son. 	 i need you to do something about my son. maxlen: 12
+18 	 did you and dad adopt a child? 	 and you adopted my father? maxlen: 14
+19 	 the s.e.c. was onto us. 	 it was right on us. maxlen: 17
+20 	 your father thought it would make us look charitable. 	 your father thought it would make us look better. maxlen: 16
+21 	 he must have forged my signature. 	 he must have imitated my signature. maxlen: 11
+22 	 well, maybe i'll get a son who will... finish his cottage cheese.! 	 "maybe a year ago, i'll have a son who finished sinking cheese! maxlen: 26
+23 	 you've got to get me out of this. 	 you must save me from this. maxlen: 9
+24 	 i'll call social services, but you must take buster back. 	 i'll call social services, but you have to get buster back. maxlen: 21
+25 	 but i'm not taking care of him either. 	 but i can't look at him either maxlen: 9
+26 	 i don't have the milk of mother's kindness in me anymore. 	 i don't have a mother's compassion and milk anymore maxlen: 16
+27 	 hello. 	 hello. maxlen: 4
+28 	 { gob] michael. 	 michael. maxlen: 3
+29 	 i've got a couple of girls here. 	 there are two girls here. maxlen: 7
+30 	 a couple of fun girls... 	 a couple of fun girls... maxlen: 8
+31 	 come on, michael. 	 come on, michael. maxlen: 8
+32 	 so we had a little disagreement. 	 we had a little disagreement. maxlen: 10
+33 	 i'm offering you an olive branch here. 	 i give you olive branch here. maxlen: 12
+34 	 yeah-yeah. 	 yes. maxlen: 8
+35 	 besides, when was the last time you slept with someone? 	 by the way, when did you sleep with anyone? maxlen: 15
+36 	 [narrator] meanwhile, lindsay was helping george michael with his homework. 	 meanwhile, lindsay was giving george michael her homework. maxlen: 21
+37 	 well, i don't know why i'm telling you this. 	 why i'm telling you this. maxlen: 13
+38 	 i guess there's just some things you can't really say to your dad. 	 i guess it's because there are things that people can't tell maxlen: 16
+39 	 [narrator] lindsay believed that george michael wanted to fix up his father... so he could fill the role ofhis mother. 	 lindsay thought george michael wanted to arrange his teacher to set up his father... so he could be his mother. maxlen: 32
+40 	 there's nothing wrong with that. 	 there's nothing wrong with that. maxlen: 9
+41 	 although, i must say i'm a little hurt that you haven't considered me. 	 however, i must explain to you that i've been a little broken since you didn't think of me for this. maxlen: 27
+42 	 aunts can fill that role. 	 the stills can do this mission. maxlen: 11
+43 	 teachers can fill that role. 	 teachers can do that. maxlen: 11
+44 	 and, someday, you're gonna find the right woman to fill that role. 	 surely, someday, you'll find the right woman to fulfill this mission. maxlen: 22
+45 	 but until then, i'll be right across the hall. 	 but until i do, i'll be right across the hall. maxlen: 20
+46 	 [narrator] lindsay had never been more proud of anything she had said in her entire life. 	 lindsay was never so proud of what she said her whole life. maxlen: 22
+47 	 [narrator] meanwhile, gob was waiting for michael to show up. 	 meanwhile, gob was waiting for michael to come. maxlen: 17
+48 	 this is shannon, the girl i've been telling you all about. 	 this is shannon, the girl i keep telling you. maxlen: 17
+49 	 girl, indeed... young girl. 	 she's really... young girl. maxlen: 9
+50 	 your date, nazh... 	 your date, nazh... maxlen: 10
+51 	 galia. 	 galia. maxlen: 4
+52 	 and so she's your date. 	 and here's your date. maxlen: 12
+53 	 oh... { laughs] "nagarma," you've got a mustache. 	 you have a moustache. maxlen: 14
+54 	 i mean, you've got a milk mustache. 	 i mean, there's milk on top of the maxlen: 11
+55 	 yeah. 	 yeah. maxlen: 4
+56 	 [narrator] but gob mistook michael's basic human decency for romantic interest... and felt a competitive urge to step in. 	 but gob misunderstood the sentimental interest in michael's kindness... and felt he was competition to interfere. maxlen: 35
+57 	 because, you know, it's beyond adorable... and e-exotic. 	 because, you know, beyond affection... and exotic. maxlen: 23
+58 	 i find you very attractive. 	 i find you very attractive. maxlen: 10
+59 	 { nazhgalia, michael, shannon] really? 	 _ maxlen: 17
+60 	 [narrator] and george sr. was about to get a surprise visitor. 	 and george sr was about to visit a surprise visit. maxlen: 19
+61 	 i've studied all your teachings, and i've purchased every tape. 	 i read all your teachings and got all your tapes. maxlen: 20
+62 	 and i watch 'em over and over. 	 and i watched them all again. maxlen: 11
+63 	 [narrator] george sr. had recently marketed a line of self-help tapes... touting his newly discovered spirituality. 	 george s.r. recently released a series of suggestions... to make money from the spiritual spirit... to make money from the soul he'd discovered. maxlen: 39
+64 	 i've also lost four pounds on your low-carb bluth banana jail bars. { giggles] 	 i also lost two kilos of your banana bluth jail bar. maxlen: 24
+65 	 i've come to learn at your feet. 	 i came to find out where you were maxlen: 8
+66 	 that's a good place to start. 	 this is a nice place to start. maxlen: 11
+67 	 [narrator] and michael, free ofhis double date, met lindsay at parent-teacher night. 	 and michael met lindsay at the parent-teacher night after she got rid of the two girls she was dating. maxlen: 36
+68 	 hey, linds, is it my imagination... or does this rape room have the same floor plan as our kitchen? 	 hey, linds, is this my imagination... or does this place have the same plan as our kitchen floor? maxlen: 36
+69 	 well, i think she's perfect for you. 	 i think she's really good for you. maxlen: 10
+70 	 you'd think that would turn him off to the entire concept. 	 i'd think it would make him think of his motherhood. maxlen: 19
+71 	 besides, i'm not gonna rush out and marry somebody just because you think my son would like it. 	 besides, i can't rush into a job like this just because my son wants me to, and i can't marry maxlen: 26
+72 	 i'm ms. baerly, the ethics teacher. 	 this is mrs. baerly, the moral teacher. maxlen: 12
+73 	 my goal is to teach your children about the preciousness oflife... that can be lost by the mindless pulling of a trigger. 	 my goal is to make my students understand the importance of life... that can be destroyed without a reckless trigger. maxlen: 29
+74 	 [narrator] and so michael got to know his son's ethics teacher. 	 and michael got to know his son's moral teacher. maxlen: 14
+75 	 i guess that's the "rrrr" of it. 	 that's the "rrrr." maxlen: 15
+76 	 you know, so frustrating. 	 you know, so annoying. maxlen: 11
+77 	 i mean, they just threw this class at me after mr. daniels had a stroke. 	 i mean, after mr. daniels had a stroke, they gave me this class. maxlen: 26
+78 	 thought you were joking. 	 i thought you were kidding. maxlen: 9
+79 	 no, i was just laughing 'cause you were laughing. 	 no, i was just laughing because you laughed. maxlen: 16
+80 	 "rrrr!" - { laughs] "rrrr!" 	 "rrrr!" - "rrrrr!"! maxlen: 17
+81 	 but, you know, l-l... 	 but, you know, maxlen: 10
+82 	 and i think i'm an ethical person. 	 and i think i'm moral. maxlen: 13
+83 	 right. 	 yeah. maxlen: 4
+84 	 here's an ethical question. 	 a question for you. maxlen: 11
+85 	 can-can a parent take a teacher out for a drink? 	 could a parent-teacher invite a drink? maxlen: 15
+86 	 or... 	 or... or... maxlen: 4
+87 	 yeah, she died. 	 yeah, he's dead maxlen: 7
+88 	 well, it's the mr. daniels stroke thing... 	 i think it's because of this mr. daniels disaster... maxlen: 22
+89 	 let's go get that drink. 	 let's go have a drink. maxlen: 13
+90 	 yeah, it could only help. 	 yeah, maybe it'll help maxlen: 9
+91 	 [narrator] george sr. was dealing with his own admirer. 	 george is dealing with his own fan. maxlen: 14
+92 	 oh, i've already told you so many of my sins. 	 i've already told you many sins. maxlen: 14
+93 	 maybe you could tell me some of yours. 	 maybe you'll tell me some of your sins. maxlen: 13
+94 	 uh, well, there are legal implications to that. 	 well, there are legal shows showing my sins. maxlen: 17
+95 	 but, uh, back to your sins. 	 but, back to your sins. maxlen: 13
+96 	 uh, do that one about the, uh... { takes deep breath] ladies' shower... in your college dorm again. 	 tell me one of the things about this... one of the things that happened in the university dormitory maxlen: 21
+97 	 [narrator] and michael was on his way to what would be his second date... 	 and what's going on with michael today's second date on his date with mrs. bayerly maxlen: 22
+98 	 michael, the little korean is here, and i don't know what to do with him. 	 michael, that little korean is here, and i don't know what to do with him. maxlen: 20
+99 	 at least, i think it's a him. 	 at least, i think it's him. maxlen: 11
+100 	 you've got to strip them down to next to nothing before you can even tell. 	 you have to rob her to freeze to say something definite. maxlen: 16
+101 	 yeah, mom. 	 yes, mother. maxlen: 7
+102 	 they will take him back. 	 they'll take her back. maxlen: 7
+103 	 shoes on, mister.! 	 don't take your shoes off, little man! maxlen: 15
+104 	 shoes on.! 	 don't take your shoes off! maxlen: 9
+105 	 he's out of control. 	 it's out of maxlen: 5
+106 	 who's that? 	 who is it? maxlen: 4
+107 	 this is "annyong," who your father and i have adopted. 	 it's "annong," your father and i adopted it. maxlen: 20
+108 	 what, i'm gone for a couple days and you find a new son? 	 what, i'm leaving for a few days and you and a new son? maxlen: 24
+109 	 [narrator] lucille could see that her son was concerned, even jealous. 	 lucille buster noticed he was worried, even jealous. maxlen: 24
+110 	 and she knew how it felt to be overlooked. 	 and he figured out what it feels like to be ignored. maxlen: 16
+111 	 annyong is your brother now. 	 annyong is your brother's your sister maxlen: 10
+112 	 call it off. 	 cancel. maxlen: 8
+113 	 i'm keeping him. 	 he stays. maxlen: 4
+114 	 look, i gotta call you back. 	 listen, i'll call you back. maxlen: 14
+115 	 sweet ride. 	 good ride. maxlen: 5
+116 	 are you making dinner reservations? 	 are you making reservations for dinner? maxlen: 13
+117 	 a "little korean" dropped off. 	 he made a "fak korean." maxlen: 10
+118 	 [narrator] and after their date... 	 and after the dates... maxlen: 8
+119 	 michael took a step he hadn't taken in years. 	 michael took a step he hadn't thrown maxlen: 11
+120 	 okay, do you think this is a good idea? 	 well, do you think that's a good idea? maxlen: 15
+121 	 i think it's a great idea. 	 i think it's a great idea. maxlen: 9
+122 	 mmm. 	 mm. maxlen: 3
+123 	 such a good idea. 	 that's a good idea. maxlen: 7
+124 	 but how are we going to sneak in without waking everyone up? 	 but how do we sneak in without waking everyone up? maxlen: 15
+125 	 this may not have been my best idea. 	 this may not be my best idea yet. maxlen: 15
+126 	 i'm sorry, michael. 	 i'm sorry, michael. maxlen: 8
+127 	 i'm sorry too, michael, but it looks like we're even. 	 i'm sorry, michael, but it looks like we're even now. maxlen: 20
+128 	 you took something i liked. 	 you took someone i loved. maxlen: 14
+129 	 i took something you liked. 	 i took someone you love. maxlen: 15
+130 	 i... { beeps]..."nashbagerlajam." 	 i'm "nashbagerlajam" maxlen: 16
+131 	 listen, i know that you've been trying to get even with me about marta. 	 listen, i know you're trying to get revenge on the whole marta thing. maxlen: 22
+132 	 i was lying when i said i wasn't gonna to sleep with her, so... 	 i was lying to you, so... maxlen: 24
+133 	 she'd have to agree to it. 	 he has to accept it. maxlen: 8
+134 	 i don't anticipate a problem with that. 	 i don't think there's any problem with that. maxlen: 13
+135 	 right. 	 right. maxlen: 3
+136 	 i just slept with one. 	 i slept with someone new. maxlen: 9
+137 	 again, didn't like nazhgalia. 	 again, i didn't like nazhgalia. maxlen: 22
+138 	 really, and good luck getting rid of her. 	 i'm really lucky i got rid of him. maxlen: 14
+139 	 not a problem. 	 no problem. maxlen: 4
+140 	 oh, so romantic. 	 very romantic. maxlen: 4
+141 	 who's "n. bahn-ahden?" 	 who's "n. bahn-nahden"? maxlen: 14
+142 	 hey, george michael. 	 hey, george michael. maxlen: 8
+143 	 i wanted to talk to you about something before, but i didn't know if it was real. 	 i wanted to talk to you about something, but i must say i didn't know it was real first. maxlen: 26
+144 	 but now, uh... your ethics teacher... 	 but now... your moral teacher... maxlen: 12
+145 	 yeah, i just made this for her. 	 yeah, i did it for her. maxlen: 11
+146 	 oh. 	 oh. maxlen: 3
+147 	 she loves saddam hussein. 	 he loves saddam hussein. maxlen: 10
+148 	 i'm sure she is interested in him... as a subject, you know. 	 but, you know, i'm pretty sure you're interested in him. maxlen: 22
+149 	 i'm sure she doesn't love saddam. 	 i'm sure you don't like sadam. maxlen: 13
+150 	 you know, i just wanted to make her something special to show that i care. 	 you know, i wanted to do something special to her to show her that i care about her. maxlen: 26
+151 	 about the class? 	 about his class? maxlen: 7
+152 	 you mean, you love her like... 	 i mean, she loved him... maxlen: 12
+153 	 hi, george michael. 	 hey, george michael. maxlen: 8
+154 	 i'm gonna go home and think about it. 	 i'll go home and think about it. maxlen: 12
+155 	 i'm gonna go home, think about it. 	 i'll go home and think about it. maxlen: 13
+156 	 dad, what was she doing here? 	 dad, what was he doing here? maxlen: 9
+157 	 [narrator] michael knew he had an ethical responsibility to tell his son the truth. 	 michael knew he had a moral responsibility to tell his son the truth. maxlen: 25
+158 	 yes. 	 yeah. maxlen: 4
+159 	 your uncle gob slept with her. 	 your uncle gob slept with him. maxlen: 11
+160 	 well, why would he do that? 	 well, why did he do that? maxlen: 10
+161 	 why would gob sleep with my ethics teacher? 	 why did she sleep with my moral teacher? maxlen: 13
+162 	 you and i know that, but gob he just... 	 you and i know that, but gob new... maxlen: 15
+163 	 he's not that exact of a target shooter, and he just kind of sprays it everywhere. 	 he's not one of the good snipers targeting his target, and he's almost everywhere. maxlen: 24
+164 	 you know, but listen, did-did you really think that-that... that you had a... 	 you know, but listen, did you really think that he was...? maxlen: 21
+165 	 i mean, she's kinda old for you, don't you think? 	 i mean, she's old for you, don't you think she's old? maxlen: 21
+166 	 we don't even know how old she is. 	 we don't even know how old she is. maxlen: 11
+167 	 no one does. 	 nobody knows. maxlen: 5
+168 	 she was chaperoning the diversity dance... and i thought maybe as a joke, i'd go up to her and be, like... 	 she was accompanying young girls in different dances... and i was kind of a joke, so i thought i'd go and do something... maxlen: 33
+169 	 "well, hey, do you want to dance?" 	 "hi, do you wanna dance?" maxlen: 12
+170 	 and she'd be, like, "ah, what the heck?" right? 	 and she's like, i thought, "what's gonna happen?" okay? maxlen: 25
+171 	 i did it differently in the mirror, but... 	 i did it differently across the mirror, but... maxlen: 11
+172 	 but, you know, like, we'd be joke dancing or something. 	 but, you know, it's, uh, we're dancing with a joke or something. maxlen: 29
+173 	 i didn't think it through. 	 i didn't think so detailed. maxlen: 11
+174 	 don't you think you should be taking somebody your own age? 	 don't you think you should go out with someone your own age? maxlen: 15
+175 	 like your cousin. 	 like your cousin. maxlen: 5
+176 	 i defaced a rare book to get that picture of saddam hussein in a bathing suit. 	 i've proven a difficult book that was found in the bath suite of saddamas disappointment. maxlen: 29
+177 	 "what would saddam do?" 	 "what would my mistad?" maxlen: 10
+178 	 yeah. 	 yeah. maxlen: 4
+179 	 yeah, you know something? 	 yeah, you know something? maxlen: 12
+180 	 okay, that is our exact outdoor fire pit. 	 okay, here's the same fire escape. maxlen: 15
+181 	 [narrator] at prison, george sr. was preparing for an evening with his most devoted fan. 	 in jail, george sr was preparing for my evening with his most loyal fan. maxlen: 27
+182 	 while cindi lightballoon was making preparations ofher own. 	 when cindi lightballoon makes his own preparations. maxlen: 16
+183 	 how we doin'? 	 how are we doing? maxlen: 7
+184 	 [man] we have video. 	 we have a video. maxlen: 9
+185 	 [narrator] so george michael, still angry at gob... sought out the family expert on making trouble. 	 and when george michael was still angry with gob, he went looking for the family expert on making trouble. maxlen: 31
+186 	 i know he was dating that girl shannon. 	 i know you're dating shannon. maxlen: 11
+187 	 the cheerleader? 	 that cheerleader? maxlen: 11
+188 	 yeah, she's probably gonna take him to that stupid diversity dance. 	 yeah, he's probably gonna take her to one of those stupid different maxlen: 19
+189 	 i wish i had someone shocking to take. 	 i wish i could bring someone to surprise everyone. maxlen: 20
+190 	 you know, i actually called mr. daniels and asked him... but he got all out of breath and dropped the phone. 	 you know, i actually called mr daniels, and i asked him... but he was breathing, and he dropped the phone. maxlen: 38
+191 	 i never heard back. 	 i didn't hear back. maxlen: 9
+192 	 you know, may-maybe we should go together. 	 you know, maybe i should go together. maxlen: 17
+193 	 right, i mean, it's a bad example... 	 right, i mean, it was a bad example... maxlen: 15
+194 	 hello. 	 hello. maxlen: 5
+195 	 my mom bought him. 	 my mother took him. maxlen: 7
+196 	 she's making me register him for school. 	 he's got me registered to do school. maxlen: 13
+197 	 he's my new little brother. 	 my new little brother. maxlen: 8
+198 	 so we're related. 	 so we're relatives. maxlen: 7
+199 	 [narrator] and michael went to discuss the george michael situation with ms. baerly. 	 and michael went to discuss the situation with miss bearly and george michael. maxlen: 20
+200 	 i'm sorry. 	 i'm sorry. maxlen: 8
+201 	 hi. 	 hi. maxlen: 4
+202 	 don't worry. 	 don't worry. maxlen: 7
+203 	 you mean, you're interested in him. 	 i mean, you're interested in her. maxlen: 10
+204 	 this is what i want to talk to you about, though. 	 i want to talk to you about that. maxlen: 13
+205 	 but i've enjoyed my time with you. 	 but i liked spending time with you. maxlen: 14
+206 	 you ever wanna talk ethics... 	 if you want to talk about morality... maxlen: 11
+207 	 you see, george michael made this poster for you. 	 see, george michael made you this poster. maxlen: 16
+208 	 you know, he-he kind of, uh, is in love with you, so... 	 you know, she's like, she's in love with you, so maxlen: 17
+209 	 he knows we're going out. 	 he knows we're out. maxlen: 8
+210 	 i told him that you slept with my brother. 	 i told her you slept with my brother. maxlen: 12
+211 	 that may be the most unethical thing i've ever heard. 	 this could be the most immoral thing i've ever heard. maxlen: 22
+212 	 well, you've only been doing this half a semester. 	 well, you're just a half a semester, you' maxlen: 14
+213 	 look, it was a preemptive strike. 	 look, it was a hunch. maxlen: 11
+214 	 my brother would've tried to sleep with you. 	 my brother was gonna try to sleep with you. maxlen: 11
+215 	 well, i want you to leave right now and not come back. 	 so, i want to leave you right now, and i'm not going back to you. maxlen: 25
+216 	 i understand. 	 i see. maxlen: 7
+217 	 starting right now. 	 from now on. maxlen: 7
+218 	 [narrator] george sr. went on a walk with cindi. 	 she went for a walk with george scrandi. maxlen: 15
+219 	 george. 	 george. maxlen: 3
+220 	 and she was getting to him. 	 and she's getting to know him maxlen: 8
+221 	 you can feel safe to fully reveal yourself to me. 	 you can spill your heart out here completely. maxlen: 13
+222 	 { sighs] it's weighing heavy on my soul. 	 it weights on my soul. maxlen: 7
+223 	 you, uh... 	 you... maxlen: 4
+224 	 he's pinching the camera. 	 he's picking up the camera maxlen: 8
+225 	 so, it's off with mother now. 	 i'm taking grandmother to the dance, which means your dinner's away with mom now. maxlen: 31
+226 	 [narrator] in fact, lucille was just giving annyong and maeby a ride. 	 actually, lucille was taking annyong and maeby somewhere. maxlen: 22
+227 	 you're trying to steal from the wrong man. 	 you're trying to steal from the wrong guy maxlen: 11
+228 	 watch your back, my little immigrant friend! 	 watch your back, my immigration little brother! maxlen: 13
+229 	 [narrator] and the spring diversity dance was in full swing. 	 and the different spring dances were at the last tempo. maxlen: 13
+230 	 whoa, sorry. 	 wow, i'm sorry. maxlen: 11
+231 	 so you're not letting him in because he doesn't share your perfectly shaped nose... your round eye-shaped eyes, your strong square jaw. 	 i mean, you're not letting him in because he doesn't have strong square jaws... with his perfectly flawed nose, like you. maxlen: 39
+232 	 you wanna dance? 	 do you want to dance? maxlen: 8
+233 	 all right! 	 all right! maxlen: 4
+234 	 [narrator] and gob sought out shannon... 	 he finally found the shannon he was looking for... maxlen: 13
+235 	 who had found out he had cheated on her with nazhgalia. 	 gobun found out he was cheating on her with nazhgalia. maxlen: 17
+236 	 shannon, where are you? 	 shannon, where are you? maxlen: 8
+237 	 shannon! 	 shannon! maxlen: 4
+238 	 oh, hey, lisa. 	 hey, lisa. maxlen: 8
+239 	 shannon! 	 shannon! maxlen: 4
+240 	 excuse me. 	 excuse me. maxlen: 7
+241 	 look, i blew it, okay? 	 listen, i screwed up, okay? maxlen: 13
+242 	 beth.! 	 beth! maxlen: 5
+243 	 um, i blew it okay? 	 i ruined our relationship, okay? maxlen: 17
+244 	 i had to see you. 	 i had to see you. maxlen: 11
+245 	 l-i've been giving this a lot of thought, and-and... 	 i've been thinking about it for a long time, and-and maxlen: 15
+246 	 oh, that's... that's your definition of the right thing. 	 that's... that's your right thing. maxlen: 13
+247 	 george michael! 	 george michael! maxlen: 4
+248 	 uncle gob? 	 uncle gob? maxlen: 7
+249 	 george michael. 	 george michael. maxlen: 4
+250 	 what are you doing at a high school dance? 	 what are you doing in a high school dance? maxlen: 13
+251 	 i'm just here with my girl. 	 i'm just here with my girlfriend. maxlen: 10
+252 	 yeah, my ethics teacher. 	 yeah, with my moral teacher. maxlen: 12
+253 	 hey, george michael. 	 hey, george michael. maxlen: 7
+254 	 you slept with my ethics teacher. 	 you slept with my moral teacher. maxlen: 12
+255 	 i'm really touched that you'd stick up for me after i've been so horrible to you. 	 after you've been so bad to you, you've been really worried about protecting me. maxlen: 27
+256 	 [narrator] in fact, gob mistook the civics teacher... for the ethics teacher michael was dating. 	 actually, gob mistook michael's morality teacher for citizen's citizenship. maxlen: 26
+257 	 man, he... has a type. 	 man, the type... he understood. maxlen: 13
+258 	 gob, mrs. whitehead was the civics teacher. 	 gob, mrs. whitehead was a teacher of citizenship. maxlen: 16
+259 	 two strikes. 	 second move. maxlen: 8
+260 	 l-i've been seeing ms. baerly, and i should never have brought gob into it. 	 i've been seeing mrs. baerly, and i should never have dragged gob into this. maxlen: 29
+261 	 but that day you told me you liked her, i didn't know what else to do. 	 but the day you told me you liked her, i didn't know what else to do. maxlen: 24
+262 	 i never wanted to hurt you. 	 i never meant to hurt you. maxlen: 12
+263 	 i didn't know you were that serious. 	 i didn't know you two were serious. maxlen: 14
+264 	 well, you know, i'm open to it. 	 well, you know, i'm open to this. maxlen: 13
+265 	 we're open to it. 	 we're open to this. maxlen: 8
+266 	 wow! 	 wow! maxlen: 7
+267 	 no, no, no, no. 	 no, no, no, no. maxlen: 10
+268 	 i'm just saying someday, you know. 	 just one day, you know. maxlen: 12
+269 	 i'm not really into kids. 	 i'm not good with kids. maxlen: 8
+270 	 the lady said no, man. 	 the lady said no, man. maxlen: 12
+271 	 look, michael, i hope you find what you're looking for. 	 listen, michael, i hope you find what you're looking for. maxlen: 15
+272 	 i mean we had some laughs about some very sad things, but... 	 i mean, we laughed on some sad things, but... maxlen: 19
+273 	 i don't think we have a future. 	 i don't think we'll have a future. maxlen: 16
+274 	 and, jeremy, i will take that cupcake. 	 and, jeremy, i'm getting this cake. maxlen: 15
+275 	 hey, uh, you wanna dance? 	 hey, you wanna dance? maxlen: 10
+276 	 i can't believe that would have worked. 	 i can't believe this is working. maxlen: 12
+277 	 on the next arrested development. 	 next arrested in developement. maxlen: 14
+278 	 buster's competition heats up. 	 buster's pull is sore. maxlen: 13
+279 	 whoa, whoa, whoa, whoa.! 	 stop, stop, stop! maxlen: 11
+280 	 we are not allowed to have candles in here. 	 no candles here. maxlen: 9
+281 	 mom would freak. 	 mom's going crazy. maxlen: 8
+282 	 oh, no, it's fine. 	 no, it's okay. maxlen: 8
+283 	 i'll light a candle of my own. 	 i light my candle. maxlen: 12
+284 	 that's exactly what i'll do. 	 yeah, that's exactly what i'm gonna maxlen: 13
+285 	 you okay? 	 are you okay? maxlen: 8
+286 	 i'm so sorry. 	 i'm so sorry. maxlen: 7
+287 	 no, that's all right. 	 no, it's okay. maxlen: 8
+288 	 really, it is. 	 really. maxlen: 3
+289 	 you want me to help you out with this? 	 you want me to help you carry these? maxlen: 13
+290 	 no problem. 	 no problem. maxlen: 4
+291 	 here, let me just help you out here. 	 right here, let me help you. maxlen: 12
+292 	 these, too? 	 these? maxlen: 5
+293 	 okay, here, let me get that for you. 	 okay, i'll move it for you. maxlen: 14
+294 	 yeah. 	 yeah. maxlen: 4
+295 	 come on, boy! 	 come on, boy! maxlen: 7
+296 	 connie. 	 connie. maxlen: 4
+297 	 bob. 	 bob. maxlen: 3
+298 	 what you're proposing, connie, is, to say the very least, extreme. 	 what you're suggesting is, connie, it's really maxlen: 15
+299 	 very extreme. 	 very extreme. maxlen: 4
+300 	 come on! 	 come on! maxlen: 4
+301 	 come on! 	 come on! maxlen: 4
+302 	 okay! 	 ok! maxlen: 3
+303 	 okay! 	 ok! maxlen: 3
+304 	 come on! 	 come on! maxlen: 4
+305 	 come on! 	 come on! maxlen: 4
+306 	 move, move, move! 	 go, go, go! maxlen: 11
+307 	 what are you doing? 	 what are you doing? maxlen: 7
+308 	 get off me. 	 stay away. maxlen: 4
+309 	 i don't wanna die. 	 i don't want to die maxlen: 7
+310 	 we all gotta go sometime, huh? 	 we all go one day, right? maxlen: 14
+311 	 four months ago, each of you little piggies attended auditions to be on a never-before-seen reality tv game show. 	 four months ago, each of you joined an interview to join a never-before-seen tv show. maxlen: 33
+312 	 and guess what? 	 and guess what? maxlen: 9
+313 	 you won. 	 you win. maxlen: 5
+314 	 i think, in life, some people are meant to be on tv, and i'm one of them. 	 i think some people came to life on tv, and i'm one of them. maxlen: 22
+315 	 my favorite color is yellow, like the sun. 	 my favorite color is yellow, just like the sun. maxlen: 15
+316 	 hi, i'm randall, and i'm totally off-the-hook gay and proud of it. 	 hi, i'm randall, and i'm a real gay guy and i'm proud of maxlen: 24
+317 	 you're a cutie, aren't you? 	 you're so sweet, aren't maxlen: 10
+318 	 i wanna lead our country. 	 i want to rule our country. maxlen: 10
+319 	 next question. 	 next question. maxlen: 4
+320 	 my name is angel, on loan from england. 	 my name is angel from england. maxlen: 14
+321 	 me, too. 	 me too. maxlen: 4
+322 	 he's my brother stanton/parole officer. 	 that's my brother stanton, my parole officer. maxlen: 16
+323 	 hello. 	 hello. maxlen: 5
+324 	 when stanton and i were two, our mother dropped him on his head. 	 when stanton and i were two, our mother hit her head. maxlen: 19
+325 	 and he doesn't know. 	 she doesn't know maxlen: 5
+326 	 well, but i do. 	 but i do. maxlen: 7
+327 	 dixon, 0'0", 000 pounds. 	 dixon, 0:00, 00 pounds. maxlen: 13
+328 	 you know, people used to say i look like will smith. 	 people say i look like will smith. maxlen: 17
+329 	 now they say barack obama. 	 they look like barack obama these days. maxlen: 16
+330 	 to win $00,000 each, all you have to do is spend one night in a prison. 	 each of you will make $00,000, all you have to do is spend one night in this prison. maxlen: 29
+331 	 that abandoned prison. 	 this abandoned prison. maxlen: 8
+332 	 whoa. 	 wow! maxlen: 7
+333 	 holy shit! 	 damn! maxlen: 5
+334 	 cool. 	 cool. maxlen: 3
+335 	 how come i've never heard of this show? 	 how come i never heard of this show? maxlen: 13
+336 	 like, how do we know this is not some sort of frat house prank? 	 how do we know if this is a prank? maxlen: 19
+337 	 right. 	 right. maxlen: 3
+338 	 this is actually our third show, but we won't be on-air until the fall. 	 it's our third show, but we're not gonna publish until the fall. maxlen: 21
+339 	 and as for knowing if this is anything more than a college prank, you'll just have to play for the money to find out. 	 to find out if this is a prank, you're gonna have to play and earn the money. maxlen: 27
+340 	 you'll be asked to perform a series of tasks. 	 you'll be asked to perform a series of duty. maxlen: 12
+341 	 tasks that will test your nerves, your courage and your sanity. 	 the missions will force your borders, your courage and thought. maxlen: 27
+342 	 sounds like fun, right? 	 that sounds fun, right? maxlen: 12
+343 	 what kind of task are we talking about, dawg? 	 what kind of mission are they, man? maxlen: 10
+344 	 make your decision now. 	 make up your mind now. maxlen: 9
+345 	 i'm in. 	 i'm in. maxlen: 5
+346 	 where do i sign? 	 where am i signing? maxlen: 9
+347 	 i can't have no girl do this while i take off. 	 i didn't have a girlfriend to admit it even when she was maxlen: 16
+348 	 i have to look after my baby sister. 	 i have to take care of my little brother. maxlen: 10
+349 	 i'm in. 	 i'm in. maxlen: 5
+350 	 you guys are insane. 	 you guys are insane. maxlen: 10
+351 	 do any of you know the history of that prison? 	 do you know the history of this prison? maxlen: 13
+352 	 some really fucked up shit went down in there. 	 some of them died there. maxlen: 10
+353 	 like what? 	 like what? maxlen: 4
+354 	 stick around. 	 come around. maxlen: 7
+355 	 you'll find out. 	 you'll notice. maxlen: 9
+356 	 the total money will be divided equally between the survivors, but if all of you make it through the night, there will be a substantial bonus. 	 the money will be spent equally in the survival of the survivors, but if you all take the night out, there's a wealthy prize. maxlen: 36
+357 	 ain't enough money in the world to make me stay in that place. 	 no money can spend the night here. maxlen: 13
+358 	 anybody else wanna join him? 	 anyone else want to join him? maxlen: 10
+359 	 not me. 	 i'm not. maxlen: 5
+360 	 well, there's no way i'm riding all the way back to the city with urine boy. 	 there's no way i'm going to the city with this maxlen: 14
+361 	 oh, i'm in. 	 i'm in maxlen: 4
+362 	 just get me the hell out of here. 	 get me out of here. maxlen: 7
+363 	 your chariot awaits. 	 your car's waiting. maxlen: 8
+364 	 unlock him. 	 untie him maxlen: 4
+365 	 bye. 	 bye. maxlen: 5
+366 	 you guys are idiots. 	 you guys are idiots. maxlen: 9

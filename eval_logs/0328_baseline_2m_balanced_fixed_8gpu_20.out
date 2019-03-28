@@ -2224,3 +2224,52 @@ Evaluating BLEU
 2200 	 it'll be a catastrophe. 	 you'll be a disaster. maxlen: 9
 2201 	 hey, don't worry. 	 oh, don't be alarmed. maxlen: 12
 2202 	 i'll knock it out and keep this affair from escalating. 	 i'm gonna get through this before i get too hot. maxlen: 20
+2203 	 lt. kilgore has taken off on the madox recovery mission with a high-mobility airborne tank and anti-tank helicopters! 	 lieutenant kilgore is using the most advanced tank and anti-tank helicopters and his promise to take the madox off duty as a "buy." maxlen: 41
+2204 	 as it stands, the heart of the city will be in a huge panic. 	 in that case, there's gonna be a big pan maxlen: 13
+2205 	 it may be that nobody will be able to stop kilgore and the madox. 	 under the circumstances, there must be someone who can stop kilgore and madox. maxlen: 22
+2206 	 is there anything we can do? 	 what can we do? maxlen: 8
+2207 	 the madox's goal is as yet unknown. 	 we don't know the madox's target yet. maxlen: 13
+2208 	 but if i can reach him before lt. kilgore does, i think we'll have a chance. 	 if i manage to find her before lieutenant kilgore, then maybe we'll have a chance. maxlen: 34
+2209 	 but, the madox is... 	 but the madox situation... maxlen: 9
+2210 	 i'll take unit #0, from the motive-power test bed. 	 i'm using unit #0, she's successfully out of power tests. maxlen: 19
+2211 	 is there any chance of success? 	 what are the chances of success maxlen: 7
+2212 	 come on, you heard me! 	 hey, you heard me! maxlen: 10
+2213 	 wait for me! 	 wait for me. maxlen: 5
+2214 	 cool! 	 that's it! maxlen: 7
+2215 	 what a ride! 	 how you doing! maxlen: 7
+2216 	 hey, what're you doing? 	 what are you doing on the road? maxlen: 11
+2217 	 i don't put up with weirdos hogging the road! 	 i can't wait by the side of the side of the road like maxlen: 15
+2218 	 you're really hot, man! 	 you're a real driver, man! maxlen: 12
+2219 	 i still got 00 more loan payments to make! 	 i've still got a lot to finish their installments maxlen: 12
+2220 	 it's a cabriolet now! 	 cabriolette's back! maxlen: 9
+2221 	 so long, suckers! 	 goodbye, motherfuckers! maxlen: 10
+2222 	 oh yeah, cars are not allowed in some areas of shinjuku on saturdays. 	 yeah, he was really off on saturday night, somewhere near shinjuku, car traffic. maxlen: 26
+2223 	 i can't cut loose in this crowd! 	 i can't lose my mark in this crowd! maxlen: 14
+2224 	 this "madox" must really be important. 	 this "madox" must be really valuable. maxlen: 15
+2225 	 spider 0 to jackal 0. 	 spider 0 to jackal 0. maxlen: 10
+2226 	 it's still moving! 	 target movement! maxlen: 7
+2227 	 the right arm's moving on its own... 	 she's moving on her own maxlen: 7
+2228 	 one of the apaches was shot down. 	 one of the apaches was shot down. maxlen: 10
+2229 	 the full unit has authorization to destroy the madox! 	 all units are authorized to destroy the madox. maxlen: 16
+2230 	 that's just what kilgore wants. 	 just as kilgore wanted. maxlen: 12
+2231 	 it's heading towards the skyscrapers with the apaches in pursuit. 	 he's heading for the skyscrapers with the apaches in maxlen: 17
+2232 	 evacuate the civilians, quickly! 	 he must evacuate the civilians immediately! maxlen: 12
+2233 	 they're ganging up on me! 	 they're all over me! maxlen: 12
+2234 	 by going straight this way, i should come out at the west entrance. 	 i gotta go that way and use the west exit. maxlen: 17
+2235 	 another lunatic's popped up! 	 there's been another crazy armored rag standing! maxlen: 14
+2236 	 okay, move it, madox! 	 all right, back to work, madox! maxlen: 12
+2237 	 i can hear you. 	 i hear you. maxlen: 8
+2238 	 you're giving me a headache! 	 and i say, "you're a pain in the head." maxlen: 16
+2239 	 you're the ones who are causing an uproar! 	 if anyone's causing a disturbance, it's you. maxlen: 17
+2240 	 "just..." what? 	 "just" what? maxlen: 9
+2241 	 none of your business. 	 it's none of your business. maxlen: 8
+2242 	 that's something i won't know if i don't try! 	 i can't do anything i don't know what maxlen: 12
+2243 	 great! 	 oh, no! maxlen: 4
+2244 	 all right, captain! 	 okay, captain! maxlen: 7
+2245 	 sign: "nsr building parking area - 	 "nsr park parking spot - " maxlen: 8
+2246 	 exit elevator" 	 exit " exit maxlen: 3
+2247 	 all right! 	 i did it! maxlen: 4
+2248 	 shiori's up there! 	 shiori's upstairs! maxlen: 9
+2249 	 i won't let you go any further! 	 i won't let you... take another step. maxlen: 19
+2250 	 damn it! 	 i can't fight back! maxlen: 10
+2251 	 i don't want anything more to do with you! 	 i can't waste any more time with you! maxlen: 12
