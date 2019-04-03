@@ -46,4 +46,7 @@ if __name__ == "__main__":
 			
 			if (nrows % 1000) == 0:
 				outfile.flush()
+
+			if (nrows % 10000) == 0:
+				print(nrows)
 	outfile.close()
